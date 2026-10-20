@@ -1,0 +1,602 @@
+[
+  {
+    "term": "ability",
+    "meaning": "yetenek",
+    "example": "She has the ability to solve hard problems."
+  },
+  {
+    "term": "abroad",
+    "meaning": "yurt dışında",
+    "example": "He spent a semester studying abroad."
+  },
+  {
+    "term": "accept",
+    "meaning": "kabul etmek",
+    "example": "The company accepted my job offer."
+  },
+  {
+    "term": "account",
+    "meaning": "hesap",
+    "example": "I created a new account on the website."
+  },
+  {
+    "term": "achieve",
+    "meaning": "başarmak",
+    "example": "They achieved their goal in only one month."
+  },
+  {
+    "term": "active",
+    "meaning": "etkin",
+    "example": "He stays active by running every morning."
+  },
+  {
+    "term": "advice",
+    "meaning": "tavsiye",
+    "example": "Can you give me some advice about the exam?"
+  },
+  {
+    "term": "affect",
+    "meaning": "etkilemek",
+    "example": "Lack of sleep can affect your memory."
+  },
+  {
+    "term": "agree",
+    "meaning": "anlaşmak",
+    "example": "I don't agree with this plan."
+  },
+  {
+    "term": "allow",
+    "meaning": "izin vermek",
+    "example": "The school allows students to use laptops in class."
+  },
+  {
+    "term": "amount",
+    "meaning": "miktar",
+    "example": "She spent a large amount of money on books."
+  },
+  {
+    "term": "ancient",
+    "meaning": "antik",
+    "example": "We visited an ancient temple last summer."
+  },
+  {
+    "term": "announce",
+    "meaning": "duyurmak",
+    "example": "The teacher will announce the results tomorrow."
+  },
+  {
+    "term": "appear",
+    "meaning": "görünmek",
+    "example": "A new problem appeared after lunch."
+  },
+  {
+    "term": "apply",
+    "meaning": "başvurmak",
+    "example": "I applied for a scholarship last week."
+  },
+  {
+    "term": "approach",
+    "meaning": "yaklaşım",
+    "example": "We need a different approach to this task."
+  },
+  {
+    "term": "argue",
+    "meaning": "tartışmak",
+    "example": "They argued about the price for an hour."
+  },
+  {
+    "term": "arrange",
+    "meaning": "düzenlemek",
+    "example": "Let's arrange a meeting on Friday."
+  },
+  {
+    "term": "attend",
+    "meaning": "katılmak",
+    "example": "She attended the conference last spring."
+  },
+  {
+    "term": "avoid",
+    "meaning": "kaçınmak",
+    "example": "Try to avoid sugar after eight o'clock."
+  },
+  {
+    "term": "balance",
+    "meaning": "denge",
+    "example": "He lost his balance and fell down."
+  },
+  {
+    "term": "behaviour",
+    "meaning": "davranış",
+    "example": "The teacher's behaviour was calm and patient."
+  },
+  {
+    "term": "belief",
+    "meaning": "inanç",
+    "example": "Their belief grew stronger over the years."
+  },
+  {
+    "term": "benefit",
+    "meaning": "fayda",
+    "example": "Daily walks have a clear benefit for your health."
+  },
+  {
+    "term": "borrow",
+    "meaning": "ödünç almak",
+    "example": "Can I borrow your pen for a moment?"
+  },
+  {
+    "term": "brief",
+    "meaning": "kısa ve öz",
+    "example": "The manager gave a brief summary of the plan."
+  },
+  {
+    "term": "budget",
+    "meaning": "bütçe",
+    "example": "We are on a tight budget this month."
+  },
+  {
+    "term": "career",
+    "meaning": "kariyer",
+    "example": "She started her career in a small clinic."
+  },
+  {
+    "term": "cause",
+    "meaning": "neden olmak",
+    "example": "Smoking can cause serious health problems."
+  },
+  {
+    "term": "challenge",
+    "meaning": "zorluk",
+    "example": "Finding a good job was the biggest challenge."
+  },
+  {
+    "term": "choice",
+    "meaning": "seçim",
+    "example": "It was a difficult choice between two jobs."
+  },
+  {
+    "term": "climate",
+    "meaning": "iklim",
+    "example": "The climate here is warm all year long."
+  },
+  {
+    "term": "collect",
+    "meaning": "toplamak",
+    "example": "My grandfather collects old coins."
+  },
+  {
+    "term": "compare",
+    "meaning": "karşılaştırmak",
+    "example": "Compare the two plans before you choose one."
+  },
+  {
+    "term": "concern",
+    "meaning": "endişe",
+    "example": "Her main concern was the cost of the trip."
+  },
+  {
+    "term": "condition",
+    "meaning": "koşul ve durum",
+    "example": "The old house is in very good condition."
+  },
+  {
+    "term": "confident",
+    "meaning": "kendine güvenen",
+    "example": "He felt confident before the interview."
+  },
+  {
+    "term": "connect",
+    "meaning": "bağlanmak",
+    "example": "The new train line connects three small towns."
+  },
+  {
+    "term": "consider",
+    "meaning": "değerlendirmek",
+    "example": "Please consider my offer carefully."
+  },
+  {
+    "term": "contain",
+    "meaning": "içermek",
+    "example": "This drink contains too much sugar."
+  },
+  {
+    "term": "continue",
+    "meaning": "devam etmek",
+    "example": "The rain continued for three more days."
+  },
+  {
+    "term": "contribute",
+    "meaning": "katkıda bulunmak",
+    "example": "Everyone contributed something to the project."
+  },
+  {
+    "term": "convenient",
+    "meaning": "kullanışlı",
+    "example": "Is Friday convenient for you?"
+  },
+  {
+    "term": "convince",
+    "meaning": "ikna etmek",
+    "example": "He convinced me to join the club."
+  },
+  {
+    "term": "courage",
+    "meaning": "cesaret",
+    "example": "It takes courage to speak in public."
+  },
+  {
+    "term": "create",
+    "meaning": "yaratmak",
+    "example": "The artist created a beautiful painting."
+  },
+  {
+    "term": "curious",
+    "meaning": "meraklı",
+    "example": "The children were curious about the new teacher."
+  },
+  {
+    "term": "decide",
+    "meaning": "karar vermek",
+    "example": "We decided to leave the hotel early."
+  },
+  {
+    "term": "decrease",
+    "meaning": "azalmak",
+    "example": "Traffic decreased after the road works."
+  },
+  {
+    "term": "deliver",
+    "meaning": "teslim etmek",
+    "example": "The package will be delivered tomorrow."
+  },
+  {
+    "term": "depend",
+    "meaning": "bağımlı olmak",
+    "example": "The result depends on the weather."
+  },
+  {
+    "term": "describe",
+    "meaning": "betimlemek",
+    "example": "Can you describe the man you saw?"
+  },
+  {
+    "term": "design",
+    "meaning": "tasarım",
+    "example": "The design of this chair is very simple."
+  },
+  {
+    "term": "develop",
+    "meaning": "geliştirmek",
+    "example": "He developed a new method for learning languages."
+  },
+  {
+    "term": "difference",
+    "meaning": "fark",
+    "example": "What is the difference between these two words?"
+  },
+  {
+    "term": "discuss",
+    "meaning": "görüşmek",
+    "example": "We discussed the plan over dinner."
+  },
+  {
+    "term": "divide",
+    "meaning": "bölmek",
+    "example": "Divide the class into small groups."
+  },
+  {
+    "term": "doubt",
+    "meaning": "şüphe",
+    "example": "He had no doubt that she was right."
+  },
+  {
+    "term": "effort",
+    "meaning": "çaba",
+    "example": "Learning a language takes daily effort."
+  },
+  {
+    "term": "encourage",
+    "meaning": "teşvik etmek",
+    "example": "My teacher encouraged me to keep writing."
+  },
+  {
+    "term": "environment",
+    "meaning": "çevre",
+    "example": "We must protect the environment for the future."
+  },
+  {
+    "term": "equal",
+    "meaning": "eşit",
+    "example": "All members have equal rights in the club."
+  },
+  {
+    "term": "escape",
+    "meaning": "kaçmak",
+    "example": "The cat escaped through the open window."
+  },
+  {
+    "term": "especially",
+    "meaning": "özellikle",
+    "example": "I like long words, especially when they are useful."
+  },
+  {
+    "term": "event",
+    "meaning": "etkinlik",
+    "example": "The school event starts at nine in the morning."
+  },
+  {
+    "term": "evidence",
+    "meaning": "kanıt",
+    "example": "There is no evidence that the medicine works."
+  },
+  {
+    "term": "examine",
+    "meaning": "incelemek",
+    "example": "The doctor examined my left knee."
+  },
+  {
+    "term": "example",
+    "meaning": "örnek",
+    "example": "Can you give me an example of a compound word?"
+  },
+  {
+    "term": "excellent",
+    "meaning": "mükemmel",
+    "example": "Her presentation was excellent."
+  },
+  {
+    "term": "except",
+    "meaning": "hariç",
+    "example": "Everyone came to the meeting except for two people."
+  },
+  {
+    "term": "explain",
+    "meaning": "açıklamak",
+    "example": "Could you explain this rule again?"
+  },
+  {
+    "term": "express",
+    "meaning": "ifade etmek",
+    "example": "It is hard to express your feelings in words."
+  },
+  {
+    "term": "familiar",
+    "meaning": "tanıdık",
+    "example": "This street looks familiar to me."
+  },
+  {
+    "term": "focus",
+    "meaning": "odaklanmak",
+    "example": "Try to focus on one task at a time."
+  },
+  {
+    "term": "forget",
+    "meaning": "unutmak",
+    "example": "Don't forget to close the window."
+  },
+  {
+    "term": "gather",
+    "meaning": "toplanmak",
+    "example": "The students gathered in the schoolyard."
+  },
+  {
+    "term": "generate",
+    "meaning": "üretmek",
+    "example": "Wind farms generate electricity for thousands of homes."
+  },
+  {
+    "term": "generous",
+    "meaning": "cömert",
+    "example": "She was generous with her time and money."
+  },
+  {
+    "term": "gradually",
+    "meaning": "yavaş yavaş",
+    "example": "His English improved gradually."
+  },
+  {
+    "term": "guarantee",
+    "meaning": "garanti",
+    "example": "The phone has a two-year guarantee."
+  },
+  {
+    "term": "handle",
+    "meaning": "başa çıkmak",
+    "example": "She handled the difficult question calmly."
+  },
+  {
+    "term": "happen",
+    "meaning": "olmak",
+    "example": "What happened during the meeting?"
+  },
+  {
+    "term": "healthy",
+    "meaning": "sağlıklı",
+    "example": "A healthy breakfast is important for students."
+  },
+  {
+    "term": "hesitate",
+    "meaning": "tereddüt etmek",
+    "example": "He hesitated before answering the question."
+  },
+  {
+    "term": "humour",
+    "meaning": "mizah",
+    "example": "The teacher has a great sense of humour."
+  },
+  {
+    "term": "identify",
+    "meaning": "tanımak",
+    "example": "Can you identify the main idea of the text?"
+  },
+  {
+    "term": "ignore",
+    "meaning": "görmezden gelmek",
+    "example": "Don't ignore the warning signs."
+  },
+  {
+    "term": "imagine",
+    "meaning": "hayal etmek",
+    "example": "Imagine living by the sea."
+  },
+  {
+    "term": "improve",
+    "meaning": "iyileştirmek",
+    "example": "Regular reading improves your vocabulary."
+  },
+  {
+    "term": "include",
+    "meaning": "dahil etmek",
+    "example": "The price includes breakfast and dinner."
+  },
+  {
+    "term": "increase",
+    "meaning": "artırmak",
+    "example": "He increased his running distance every week."
+  },
+  {
+    "term": "influence",
+    "meaning": "etkilemek",
+    "example": "Teachers influence how students think."
+  },
+  {
+    "term": "introduce",
+    "meaning": "tanıştırmak",
+    "example": "Let me introduce you to my sister."
+  },
+  {
+    "term": "invest",
+    "meaning": "yatırım yapmak",
+    "example": "They invested in a small software company."
+  },
+  {
+    "term": "involve",
+    "meaning": "içermek",
+    "example": "The job involves a lot of travelling."
+  },
+  {
+    "term": "knowledge",
+    "meaning": "bilgi",
+    "example": "Practical knowledge is as valuable as theory."
+  },
+  {
+    "term": "language",
+    "meaning": "dil",
+    "example": "She speaks three languages fluently."
+  },
+  {
+    "term": "lead",
+    "meaning": "yönlendirmek",
+    "example": "Her calm voice led the group to a solution."
+  },
+  {
+    "term": "level",
+    "meaning": "seviye",
+    "example": "This book is at an intermediate level."
+  },
+  {
+    "term": "limit",
+    "meaning": "sınır",
+    "example": "There is a limit to how much tea I can drink."
+  },
+  {
+    "term": "local",
+    "meaning": "yerel",
+    "example": "We bought bread from a local shop."
+  },
+  {
+    "term": "maintain",
+    "meaning": "sürdürmek",
+    "example": "Maintaining a habit takes patience."
+  },
+  {
+    "term": "measure",
+    "meaning": "ölçmek",
+    "example": "Please measure the length of the table."
+  },
+  {
+    "term": "mention",
+    "meaning": "bahsetmek",
+    "example": "He didn't mention the cost of the trip."
+  },
+  {
+    "term": "method",
+    "meaning": "yöntem",
+    "example": "This method helps you remember new words faster."
+  },
+  {
+    "term": "notice",
+    "meaning": "fark etmek",
+    "example": "Did you notice the sign on the door?"
+  },
+  {
+    "term": "obtain",
+    "meaning": "elde etmek",
+    "example": "You can obtain a form at the front desk."
+  },
+  {
+    "term": "obvious",
+    "meaning": "apaçık",
+    "example": "The answer was obvious from the start."
+  },
+  {
+    "term": "opinion",
+    "meaning": "görüş",
+    "example": "In my opinion, the plan needs more time."
+  },
+  {
+    "term": "opportunity",
+    "meaning": "fırsat",
+    "example": "The internship was a great opportunity to learn."
+  },
+  {
+    "term": "patient",
+    "meaning": "hasta",
+    "example": "The patient recovered after two weeks."
+  },
+  {
+    "term": "perform",
+    "meaning": "gerçekleştirmek",
+    "example": "The team performed well under pressure."
+  },
+  {
+    "term": "perhaps",
+    "meaning": "belki",
+    "example": "Perhaps we should leave a little earlier."
+  },
+  {
+    "term": "plan",
+    "meaning": "plan",
+    "example": "We need a clear plan for the next term."
+  },
+  {
+    "term": "prefer",
+    "meaning": "tercih etmek",
+    "example": "I prefer reading in the morning to studying at night."
+  },
+  {
+    "term": "prepare",
+    "meaning": "hazırlamak",
+    "example": "She prepared for the interview all week."
+  },
+  {
+    "term": "pressure",
+    "meaning": "baskı",
+    "example": "He felt pressure from his family to choose a job."
+  },
+  {
+    "term": "produce",
+    "meaning": "üretmek",
+    "example": "This factory produces tea for the whole region."
+  },
+  {
+    "term": "progress",
+    "meaning": "ilerleme",
+    "example": "You can see real progress after three months."
+  },
+  {
+    "term": "purpose",
+    "meaning": "amaç",
+    "example": "The purpose of the meeting is to plan the trip."
+  }
+]

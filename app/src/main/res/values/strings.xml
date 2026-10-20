@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tekrar</string>
+
+    <string name="dashboard_settings">Ayarlar</string>
+    <string name="dashboard_subtitle">Aralıklı tekrar · aktif hatırlama</string>
+    <string name="dashboard_due_now">Tekrar edilecek</string>
+    <string name="dashboard_new_words">Yeni kelime</string>
+    <string name="dashboard_total_words">Toplam</string>
+    <string name="dashboard_reviewed_today">Bugün yapılan tekrar</string>
+    <string name="dashboard_next_due">Sıradaki tekrar: %1$s</string>
+    <string name="dashboard_empty_title">Henüz kelime yok</string>
+    <string name="dashboard_empty_hint">Başlamak için ilk kelimeni ekle.</string>
+    <string name="dashboard_start">Çalışmaya başla</string>
+    <string name="dashboard_only_reviews">Sadece tekrarlar</string>
+    <string name="dashboard_only_new">Sadece yeniler</string>
+    <string name="dashboard_add_word">Kelime ekle</string>
+
+    <string name="study_back">Geri</string>
+    <string name="study_progress">%1$d / %2$d</string>
+    <string name="study_tap_to_reveal">Cevabı görmek için dokun</string>
+    <string name="study_reveal">Cevabı göster</string>
+    <string name="study_example_line">"Örnek: %1$s"</string>
+    <string name="study_notes_line">"Not: %1$s"</string>
+    <string name="study_empty_title">Bugün tekrar edilecek kelime yok.</string>
+    <string name="study_empty_hint">Yeni kelime ekle ya da bir sonraki tekrar tarihine kadar bekle.</string>
+    <string name="study_finished_title">Oturum bitti</string>
+    <string name="study_finished_subtitle">Bugünlük bu kadar.</string>
+    <string name="study_restart">Yeni oturum</string>
+    <string name="study_rating_again">Tekrar</string>
+    <string name="study_rating_hard">Zor</string>
+    <string name="study_rating_good">İyi</string>
+    <string name="study_rating_easy">Kolay</string>
+
+    <string name="add_back">Geri</string>
+    <string name="add_title">Yeni kelime</string>
+    <string name="add_field_term">Kelime (İngilizce)</string>
+    <string name="add_field_meaning">Anlamı (Türkçe)</string>
+    <string name="add_field_example">Örnek cümle (isteğe bağlı)</string>
+    <string name="add_field_notes">Not (isteğe bağlı)</string>
+    <string name="add_helper">Kelime ve anlam zorunlu.</string>
+    <string name="add_save">Kaydet</string>
+    <string name="add_cancel">Vazgeç</string>
+
+    <string name="settings_back">Geri</string>
+    <string name="settings_title">Ayarlar</string>
+    <string name="settings_loading">Yükleniyor…</string>
+    <string name="settings_new_per_day">Günlük yeni kelime</string>
+    <string name="settings_minus">−</string>
+    <string name="settings_plus">+</string>
+    <string name="settings_decrease_cd">Azalt</string>
+    <string name="settings_increase_cd">Artır</string>
+    <string name="settings_new_per_day_hint">Günde en fazla kaç yeni kelime gösterileceğini belirler.</string>
+    <string name="settings_info_title">Aralıklı tekrar</string>
+    <string name="settings_info_body" formatted="false">Her kelime, hatırlama olasılığına göre (FSRS-5) ileri bir tarihe planlanır. Hedef hatırlama: %90. Bildirim, seri veya puan yoktur.</string>
+    <string name="settings_total_words">Toplam kelime: %1$d</string>
+    <string name="settings_reviewed_today">Bugün yapılan tekrar: %1$d</string>
+</resources>
