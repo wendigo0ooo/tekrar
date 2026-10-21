@@ -54,8 +54,8 @@ fun TekrarNavHost(container: AppContainer) {
                 factory = viewModelFactory { AddWordViewModel(container.repository) },
             )
             AddWordScreen(
-                onSave = { term, meaning, example, notes ->
-                    vm.save(term, meaning, example, notes) {
+                onSave = { term, meaning, example, exampleTr, notes ->
+                    vm.save(term, meaning, example, exampleTr, notes) {
                         navController.popBackStack()
                     }
                 },

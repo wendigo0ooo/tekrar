@@ -111,6 +111,7 @@ class StudyViewModel(
                 term = word.term,
                 meaning = word.meaning,
                 example = word.example,
+                exampleTr = word.exampleTr,
                 notes = word.notes,
             ),
             revealed = false,
@@ -127,11 +128,12 @@ class AddWordViewModel(private val repository: WordRepository) : ViewModel() {
         term: String,
         meaning: String,
         example: String,
+        exampleTr: String,
         notes: String,
         onSaved: () -> Unit,
     ) {
         viewModelScope.launch {
-            repository.addWord(term, meaning, example, notes)
+            repository.addWord(term, meaning, example, exampleTr, notes)
             onSaved()
         }
     }

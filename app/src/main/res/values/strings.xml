@@ -21,6 +21,7 @@
     <string name="study_tap_to_reveal">Cevabı görmek için dokun</string>
     <string name="study_reveal">Cevabı göster</string>
     <string name="study_example_line">"Örnek: %1$s"</string>
+    <string name="study_example_tr_line">"Çeviri: %1$s"</string>
     <string name="study_notes_line">"Not: %1$s"</string>
     <string name="study_empty_title">Bugün tekrar edilecek kelime yok.</string>
     <string name="study_empty_hint">Yeni kelime ekle ya da bir sonraki tekrar tarihine kadar bekle.</string>
@@ -36,7 +37,8 @@
     <string name="add_title">Yeni kelime</string>
     <string name="add_field_term">Kelime (İngilizce)</string>
     <string name="add_field_meaning">Anlamı (Türkçe)</string>
-    <string name="add_field_example">Örnek cümle (isteğe bağlı)</string>
+    <string name="add_field_example">Örnek cümle (İngilizce, isteğe bağlı)</string>
+    <string name="add_field_example_tr">Örnek cümlenin çevirisi (isteğe bağlı)</string>
     <string name="add_field_notes">Not (isteğe bağlı)</string>
     <string name="add_helper">Kelime ve anlam zorunlu.</string>
     <string name="add_save">Kaydet</string>

@@ -37,12 +37,19 @@ import com.wendigo.tekrar.R
 
 @Composable
 fun AddWordScreen(
-    onSave: (term: String, meaning: String, example: String, notes: String) -> Unit,
+    onSave: (
+        term: String,
+        meaning: String,
+        example: String,
+        exampleTr: String,
+        notes: String,
+    ) -> Unit,
     onBack: () -> Unit,
 ) {
     var term by remember { mutableStateOf("") }
     var meaning by remember { mutableStateOf("") }
     var example by remember { mutableStateOf("") }
+    var exampleTr by remember { mutableStateOf("") }
     var notes by remember { mutableStateOf("") }
 
     val canSave = term.isNotBlank() && meaning.isNotBlank()
@@ -108,6 +115,15 @@ fun AddWordScreen(
             )
 
             OutlinedTextField(
+                value = exampleTr,
+                onValueChange = { exampleTr = it },
+                modifier = Modifier.fillMaxWidth(),
+                label = { Text(text = stringResource(R.string.add_field_example_tr)) },
+                minLines = 2,
+                keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Sentences),
+            )
+
+            OutlinedTextField(
                 value = notes,
                 onValueChange = { notes = it },
                 modifier = Modifier.fillMaxWidth(),
@@ -128,6 +144,7 @@ fun AddWordScreen(
                         term.trim(),
                         meaning.trim(),
                         example.trim(),
+                        exampleTr.trim(),
                         notes.trim(),
                     )
                 },

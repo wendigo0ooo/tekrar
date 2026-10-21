@@ -292,6 +292,13 @@ private fun FlipCard(
                                 color = MaterialTheme.colorScheme.onSurface,
                             )
                         }
+                        if (card.exampleTr.isNotBlank()) {
+                            Text(
+                                text = stringResource(R.string.study_example_tr_line, card.exampleTr),
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
                         if (card.notes.isNotBlank()) {
                             Text(
                                 text = stringResource(R.string.study_notes_line, card.notes),

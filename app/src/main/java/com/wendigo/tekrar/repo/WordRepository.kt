@@ -146,13 +146,20 @@ class WordRepository(
         return updated
     }
 
-    suspend fun addWord(term: String, meaning: String, example: String, notes: String): Long {
+    suspend fun addWord(
+        term: String,
+        meaning: String,
+        example: String,
+        exampleTr: String,
+        notes: String,
+    ): Long {
         val now = System.currentTimeMillis()
         return words.insert(
             Word(
                 term = term,
                 meaning = meaning,
                 example = example,
+                exampleTr = exampleTr,
                 notes = notes,
                 createdAt = now,
                 dueAt = now,
@@ -178,12 +185,40 @@ class WordRepository(
                 term = term,
                 meaning = meaning,
                 example = item.optString("example").trim(),
+                exampleTr = item.optString("exampleTr").trim(),
                 createdAt = now,
                 dueAt = now,
             )
         }
         db.withTransaction {
             batch.forEach { words.insert(it) }
+        }
+    }
+
+    suspend fun backfillExampleTr() {
+        val raw = context.assets.open(SEED_ASSET).bufferedReader().use { it.readText() }
+        val array = JSONArray(raw)
+        val translations = HashMap<String, Pair<String, String>>()
+        for (index in 0 until array.length()) {
+            val item = array.getJSONObject(index)
+            val term = item.optString("term").trim().lowercase(Locale.ROOT)
+            val example = item.optString("example").trim()
+            val exampleTr = item.optString("exampleTr").trim()
+            if (term.isNotEmpty() && exampleTr.isNotEmpty()) {
+                translations[term] = example to exampleTr
+            }
+        }
+        val pending = words.allWords().filter { word ->
+            word.exampleTr.isBlank() &&
+                translations[word.term.trim().lowercase(Locale.ROOT)]
+                    ?.first == word.example.trim()
+        }
+        if (pending.isEmpty()) return
+        db.withTransaction {
+            pending.forEach { word ->
+                val tr = translations.getValue(word.term.trim().lowercase(Locale.ROOT)).second
+                words.updateExampleTr(word.id, tr)
+            }
         }
     }
 

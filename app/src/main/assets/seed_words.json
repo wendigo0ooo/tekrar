@@ -2,601 +2,721 @@
   {
     "term": "ability",
     "meaning": "yetenek",
-    "example": "She has the ability to solve hard problems."
+    "example": "She has the ability to solve hard problems.",
+    "exampleTr": "Zor problemleri çözme yeteneği var."
   },
   {
     "term": "abroad",
     "meaning": "yurt dışında",
-    "example": "He spent a semester studying abroad."
+    "example": "He spent a semester studying abroad.",
+    "exampleTr": "Bir dönem yurt dışında okuyarak geçirdi."
   },
   {
     "term": "accept",
     "meaning": "kabul etmek",
-    "example": "The company accepted my job offer."
+    "example": "The company accepted my job offer.",
+    "exampleTr": "Şirket iş teklifimi kabul etti."
   },
   {
     "term": "account",
     "meaning": "hesap",
-    "example": "I created a new account on the website."
+    "example": "I created a new account on the website.",
+    "exampleTr": "Web sitesinde yeni bir hesap oluşturdum."
   },
   {
     "term": "achieve",
     "meaning": "başarmak",
-    "example": "They achieved their goal in only one month."
+    "example": "They achieved their goal in only one month.",
+    "exampleTr": "Hedeflerine sadece bir ayda ulaştılar."
   },
   {
     "term": "active",
     "meaning": "etkin",
-    "example": "He stays active by running every morning."
+    "example": "He stays active by running every morning.",
+    "exampleTr": "Her sabah koşarak aktif kalıyor."
   },
   {
     "term": "advice",
     "meaning": "tavsiye",
-    "example": "Can you give me some advice about the exam?"
+    "example": "Can you give me some advice about the exam?",
+    "exampleTr": "Sınav hakkında bana biraz tavsiye verebilir misin?"
   },
   {
     "term": "affect",
     "meaning": "etkilemek",
-    "example": "Lack of sleep can affect your memory."
+    "example": "Lack of sleep can affect your memory.",
+    "exampleTr": "Uykusuzluk hafızanı etkileyebilir."
   },
   {
     "term": "agree",
     "meaning": "anlaşmak",
-    "example": "I don't agree with this plan."
+    "example": "I don't agree with this plan.",
+    "exampleTr": "Bu plana katılmıyorum."
   },
   {
     "term": "allow",
     "meaning": "izin vermek",
-    "example": "The school allows students to use laptops in class."
+    "example": "The school allows students to use laptops in class.",
+    "exampleTr": "Okul, öğrencilerin derste dizüstü bilgisayar kullanmasına izin veriyor."
   },
   {
     "term": "amount",
     "meaning": "miktar",
-    "example": "She spent a large amount of money on books."
+    "example": "She spent a large amount of money on books.",
+    "exampleTr": "Kitaplara büyük bir miktar para harcadı."
   },
   {
     "term": "ancient",
     "meaning": "antik",
-    "example": "We visited an ancient temple last summer."
+    "example": "We visited an ancient temple last summer.",
+    "exampleTr": "Geçen yaz antik bir tapınağı ziyaret ettik."
   },
   {
     "term": "announce",
     "meaning": "duyurmak",
-    "example": "The teacher will announce the results tomorrow."
+    "example": "The teacher will announce the results tomorrow.",
+    "exampleTr": "Öğretmen sonuçları yarın açıklayacak."
   },
   {
     "term": "appear",
     "meaning": "görünmek",
-    "example": "A new problem appeared after lunch."
+    "example": "A new problem appeared after lunch.",
+    "exampleTr": "Öğle yemeğinden sonra yeni bir sorun ortaya çıktı."
   },
   {
     "term": "apply",
     "meaning": "başvurmak",
-    "example": "I applied for a scholarship last week."
+    "example": "I applied for a scholarship last week.",
+    "exampleTr": "Geçen hafta burs başvurusu yaptım."
   },
   {
     "term": "approach",
     "meaning": "yaklaşım",
-    "example": "We need a different approach to this task."
+    "example": "We need a different approach to this task.",
+    "exampleTr": "Bu göreve farklı bir yaklaşım gerekiyor."
   },
   {
     "term": "argue",
     "meaning": "tartışmak",
-    "example": "They argued about the price for an hour."
+    "example": "They argued about the price for an hour.",
+    "exampleTr": "Bir saat boyunca fiyat konusunda tartıştılar."
   },
   {
     "term": "arrange",
     "meaning": "düzenlemek",
-    "example": "Let's arrange a meeting on Friday."
+    "example": "Let's arrange a meeting on Friday.",
+    "exampleTr": "Cuma günü bir toplantı ayarlayalım."
   },
   {
     "term": "attend",
     "meaning": "katılmak",
-    "example": "She attended the conference last spring."
+    "example": "She attended the conference last spring.",
+    "exampleTr": "Geçen bahar konferansa katıldı."
   },
   {
     "term": "avoid",
     "meaning": "kaçınmak",
-    "example": "Try to avoid sugar after eight o'clock."
+    "example": "Try to avoid sugar after eight o'clock.",
+    "exampleTr": "Saat sekizden sonra şekerden kaçınmaya çalış."
   },
   {
     "term": "balance",
     "meaning": "denge",
-    "example": "He lost his balance and fell down."
+    "example": "He lost his balance and fell down.",
+    "exampleTr": "Dengesini kaybedip düştü."
   },
   {
     "term": "behaviour",
     "meaning": "davranış",
-    "example": "The teacher's behaviour was calm and patient."
+    "example": "The teacher's behaviour was calm and patient.",
+    "exampleTr": "Öğretmenin davranışı sakin ve sabırlıydı."
   },
   {
     "term": "belief",
     "meaning": "inanç",
-    "example": "Their belief grew stronger over the years."
+    "example": "Their belief grew stronger over the years.",
+    "exampleTr": "İnançları yıllar içinde daha da güçlendi."
   },
   {
     "term": "benefit",
     "meaning": "fayda",
-    "example": "Daily walks have a clear benefit for your health."
+    "example": "Daily walks have a clear benefit for your health.",
+    "exampleTr": "Her gün yürümenin sağlığına açık bir faydası var."
   },
   {
     "term": "borrow",
     "meaning": "ödünç almak",
-    "example": "Can I borrow your pen for a moment?"
+    "example": "Can I borrow your pen for a moment?",
+    "exampleTr": "Kalemini bir an ödünç alabilir miyim?"
   },
   {
     "term": "brief",
     "meaning": "kısa ve öz",
-    "example": "The manager gave a brief summary of the plan."
+    "example": "The manager gave a brief summary of the plan.",
+    "exampleTr": "Müdür planın kısa bir özetini verdi."
   },
   {
     "term": "budget",
     "meaning": "bütçe",
-    "example": "We are on a tight budget this month."
+    "example": "We are on a tight budget this month.",
+    "exampleTr": "Bu ay sıkı bir bütçeyle idare ediyoruz."
   },
   {
     "term": "career",
     "meaning": "kariyer",
-    "example": "She started her career in a small clinic."
+    "example": "She started her career in a small clinic.",
+    "exampleTr": "Kariyerine küçük bir klinikte başladı."
   },
   {
     "term": "cause",
     "meaning": "neden olmak",
-    "example": "Smoking can cause serious health problems."
+    "example": "Smoking can cause serious health problems.",
+    "exampleTr": "Sigara içmek ciddi sağlık sorunlarına neden olabilir."
   },
   {
     "term": "challenge",
     "meaning": "zorluk",
-    "example": "Finding a good job was the biggest challenge."
+    "example": "Finding a good job was the biggest challenge.",
+    "exampleTr": "İyi bir iş bulmak en büyük zorluktu."
   },
   {
     "term": "choice",
     "meaning": "seçim",
-    "example": "It was a difficult choice between two jobs."
+    "example": "It was a difficult choice between two jobs.",
+    "exampleTr": "İki iş arasında zor bir seçimdi."
   },
   {
     "term": "climate",
     "meaning": "iklim",
-    "example": "The climate here is warm all year long."
+    "example": "The climate here is warm all year long.",
+    "exampleTr": "Buradaki iklim yıl boyunca ılık."
   },
   {
     "term": "collect",
     "meaning": "toplamak",
-    "example": "My grandfather collects old coins."
+    "example": "My grandfather collects old coins.",
+    "exampleTr": "Dedem eski madeni paralar biriktirir."
   },
   {
     "term": "compare",
     "meaning": "karşılaştırmak",
-    "example": "Compare the two plans before you choose one."
+    "example": "Compare the two plans before you choose one.",
+    "exampleTr": "Birini seçmeden önce iki planı karşılaştır."
   },
   {
     "term": "concern",
     "meaning": "endişe",
-    "example": "Her main concern was the cost of the trip."
+    "example": "Her main concern was the cost of the trip.",
+    "exampleTr": "En büyük endişesi yolculuğun masrafıydı."
   },
   {
     "term": "condition",
     "meaning": "koşul ve durum",
-    "example": "The old house is in very good condition."
+    "example": "The old house is in very good condition.",
+    "exampleTr": "Eski ev çok iyi durumda."
   },
   {
     "term": "confident",
     "meaning": "kendine güvenen",
-    "example": "He felt confident before the interview."
+    "example": "He felt confident before the interview.",
+    "exampleTr": "Mülakattan önce kendine güveniyordu."
   },
   {
     "term": "connect",
     "meaning": "bağlanmak",
-    "example": "The new train line connects three small towns."
+    "example": "The new train line connects three small towns.",
+    "exampleTr": "Yeni tren hattı üç küçük kasabayı birbirine bağlıyor."
   },
   {
     "term": "consider",
     "meaning": "değerlendirmek",
-    "example": "Please consider my offer carefully."
+    "example": "Please consider my offer carefully.",
+    "exampleTr": "Lütfen teklifimi dikkatlice değerlendir."
   },
   {
     "term": "contain",
     "meaning": "içermek",
-    "example": "This drink contains too much sugar."
+    "example": "This drink contains too much sugar.",
+    "exampleTr": "Bu içecek çok fazla şeker içeriyor."
   },
   {
     "term": "continue",
     "meaning": "devam etmek",
-    "example": "The rain continued for three more days."
+    "example": "The rain continued for three more days.",
+    "exampleTr": "Yağmur üç gün daha devam etti."
   },
   {
     "term": "contribute",
     "meaning": "katkıda bulunmak",
-    "example": "Everyone contributed something to the project."
+    "example": "Everyone contributed something to the project.",
+    "exampleTr": "Herkes projeye bir şeyler kattı."
   },
   {
     "term": "convenient",
     "meaning": "kullanışlı",
-    "example": "Is Friday convenient for you?"
+    "example": "Is Friday convenient for you?",
+    "exampleTr": "Cuma günü senin için uygun mu?"
   },
   {
     "term": "convince",
     "meaning": "ikna etmek",
-    "example": "He convinced me to join the club."
+    "example": "He convinced me to join the club.",
+    "exampleTr": "Beni kulübe katılmaya ikna etti."
   },
   {
     "term": "courage",
     "meaning": "cesaret",
-    "example": "It takes courage to speak in public."
+    "example": "It takes courage to speak in public.",
+    "exampleTr": "Topluluk önünde konuşmak cesaret ister."
   },
   {
     "term": "create",
     "meaning": "yaratmak",
-    "example": "The artist created a beautiful painting."
+    "example": "The artist created a beautiful painting.",
+    "exampleTr": "Sanatçı güzel bir resim yaptı."
   },
   {
     "term": "curious",
     "meaning": "meraklı",
-    "example": "The children were curious about the new teacher."
+    "example": "The children were curious about the new teacher.",
+    "exampleTr": "Çocuklar yeni öğretmeni merak ediyordu."
   },
   {
     "term": "decide",
     "meaning": "karar vermek",
-    "example": "We decided to leave the hotel early."
+    "example": "We decided to leave the hotel early.",
+    "exampleTr": "Otelden erken ayrılmaya karar verdik."
   },
   {
     "term": "decrease",
     "meaning": "azalmak",
-    "example": "Traffic decreased after the road works."
+    "example": "Traffic decreased after the road works.",
+    "exampleTr": "Yol çalışmalarından sonra trafik azaldı."
   },
   {
     "term": "deliver",
     "meaning": "teslim etmek",
-    "example": "The package will be delivered tomorrow."
+    "example": "The package will be delivered tomorrow.",
+    "exampleTr": "Paket yarın teslim edilecek."
   },
   {
     "term": "depend",
     "meaning": "bağımlı olmak",
-    "example": "The result depends on the weather."
+    "example": "The result depends on the weather.",
+    "exampleTr": "Sonuç havaya bağlı."
   },
   {
     "term": "describe",
     "meaning": "betimlemek",
-    "example": "Can you describe the man you saw?"
+    "example": "Can you describe the man you saw?",
+    "exampleTr": "Gördüğün adamı tarif edebilir misin?"
   },
   {
     "term": "design",
     "meaning": "tasarım",
-    "example": "The design of this chair is very simple."
+    "example": "The design of this chair is very simple.",
+    "exampleTr": "Bu sandalyenin tasarımı çok sade."
   },
   {
     "term": "develop",
     "meaning": "geliştirmek",
-    "example": "He developed a new method for learning languages."
+    "example": "He developed a new method for learning languages.",
+    "exampleTr": "Dil öğrenmek için yeni bir yöntem geliştirdi."
   },
   {
     "term": "difference",
     "meaning": "fark",
-    "example": "What is the difference between these two words?"
+    "example": "What is the difference between these two words?",
+    "exampleTr": "Bu iki kelime arasındaki fark nedir?"
   },
   {
     "term": "discuss",
     "meaning": "görüşmek",
-    "example": "We discussed the plan over dinner."
+    "example": "We discussed the plan over dinner.",
+    "exampleTr": "Planı akşam yemeğinde tartıştık."
   },
   {
     "term": "divide",
     "meaning": "bölmek",
-    "example": "Divide the class into small groups."
+    "example": "Divide the class into small groups.",
+    "exampleTr": "Sınıfı küçük gruplara böl."
   },
   {
     "term": "doubt",
     "meaning": "şüphe",
-    "example": "He had no doubt that she was right."
+    "example": "He had no doubt that she was right.",
+    "exampleTr": "Onun haklı olduğundan hiç şüphesi yoktu."
   },
   {
     "term": "effort",
     "meaning": "çaba",
-    "example": "Learning a language takes daily effort."
+    "example": "Learning a language takes daily effort.",
+    "exampleTr": "Bir dil öğrenmek her gün çaba ister."
   },
   {
     "term": "encourage",
     "meaning": "teşvik etmek",
-    "example": "My teacher encouraged me to keep writing."
+    "example": "My teacher encouraged me to keep writing.",
+    "exampleTr": "Öğretmenim beni yazmaya devam etmem için cesaretlendirdi."
   },
   {
     "term": "environment",
     "meaning": "çevre",
-    "example": "We must protect the environment for the future."
+    "example": "We must protect the environment for the future.",
+    "exampleTr": "Gelecek için çevreyi korumalıyız."
   },
   {
     "term": "equal",
     "meaning": "eşit",
-    "example": "All members have equal rights in the club."
+    "example": "All members have equal rights in the club.",
+    "exampleTr": "Kulüpte tüm üyelerin eşit hakları var."
   },
   {
     "term": "escape",
     "meaning": "kaçmak",
-    "example": "The cat escaped through the open window."
+    "example": "The cat escaped through the open window.",
+    "exampleTr": "Kedi açık pencereden kaçtı."
   },
   {
     "term": "especially",
     "meaning": "özellikle",
-    "example": "I like long words, especially when they are useful."
+    "example": "I like long words, especially when they are useful.",
+    "exampleTr": "Uzun kelimeleri severim, özellikle işe yaradıklarında."
   },
   {
     "term": "event",
     "meaning": "etkinlik",
-    "example": "The school event starts at nine in the morning."
+    "example": "The school event starts at nine in the morning.",
+    "exampleTr": "Okul etkinliği sabah dokuzda başlıyor."
   },
   {
     "term": "evidence",
     "meaning": "kanıt",
-    "example": "There is no evidence that the medicine works."
+    "example": "There is no evidence that the medicine works.",
+    "exampleTr": "İlacın işe yaradığına dair hiçbir kanıt yok."
   },
   {
     "term": "examine",
     "meaning": "incelemek",
-    "example": "The doctor examined my left knee."
+    "example": "The doctor examined my left knee.",
+    "exampleTr": "Doktor sol dizimi muayene etti."
   },
   {
     "term": "example",
     "meaning": "örnek",
-    "example": "Can you give me an example of a compound word?"
+    "example": "Can you give me an example of a compound word?",
+    "exampleTr": "Bana birleşik bir kelimeye örnek verebilir misin?"
   },
   {
     "term": "excellent",
     "meaning": "mükemmel",
-    "example": "Her presentation was excellent."
+    "example": "Her presentation was excellent.",
+    "exampleTr": "Sunumu mükemmeldi."
   },
   {
     "term": "except",
     "meaning": "hariç",
-    "example": "Everyone came to the meeting except for two people."
+    "example": "Everyone came to the meeting except for two people.",
+    "exampleTr": "İki kişi dışında herkes toplantıya geldi."
   },
   {
     "term": "explain",
     "meaning": "açıklamak",
-    "example": "Could you explain this rule again?"
+    "example": "Could you explain this rule again?",
+    "exampleTr": "Bu kuralı tekrar açıklayabilir misin?"
   },
   {
     "term": "express",
     "meaning": "ifade etmek",
-    "example": "It is hard to express your feelings in words."
+    "example": "It is hard to express your feelings in words.",
+    "exampleTr": "Duygularını kelimelerle ifade etmek zor."
   },
   {
     "term": "familiar",
     "meaning": "tanıdık",
-    "example": "This street looks familiar to me."
+    "example": "This street looks familiar to me.",
+    "exampleTr": "Bu sokak bana tanıdık geliyor."
   },
   {
     "term": "focus",
     "meaning": "odaklanmak",
-    "example": "Try to focus on one task at a time."
+    "example": "Try to focus on one task at a time.",
+    "exampleTr": "Bir seferde tek bir göreve odaklanmaya çalış."
   },
   {
     "term": "forget",
     "meaning": "unutmak",
-    "example": "Don't forget to close the window."
+    "example": "Don't forget to close the window.",
+    "exampleTr": "Pencereyi kapatmayı unutma."
   },
   {
     "term": "gather",
     "meaning": "toplanmak",
-    "example": "The students gathered in the schoolyard."
+    "example": "The students gathered in the schoolyard.",
+    "exampleTr": "Öğrenciler okul bahçesinde toplandı."
   },
   {
     "term": "generate",
     "meaning": "üretmek",
-    "example": "Wind farms generate electricity for thousands of homes."
+    "example": "Wind farms generate electricity for thousands of homes.",
+    "exampleTr": "Rüzgâr santralleri binlerce eve elektrik üretir."
   },
   {
     "term": "generous",
     "meaning": "cömert",
-    "example": "She was generous with her time and money."
+    "example": "She was generous with her time and money.",
+    "exampleTr": "Zamanı ve parası konusunda cömertti."
   },
   {
     "term": "gradually",
     "meaning": "yavaş yavaş",
-    "example": "His English improved gradually."
+    "example": "His English improved gradually.",
+    "exampleTr": "İngilizcesi yavaş yavaş gelişti."
   },
   {
     "term": "guarantee",
     "meaning": "garanti",
-    "example": "The phone has a two-year guarantee."
+    "example": "The phone has a two-year guarantee.",
+    "exampleTr": "Telefonun iki yıl garantisi var."
   },
   {
     "term": "handle",
     "meaning": "başa çıkmak",
-    "example": "She handled the difficult question calmly."
+    "example": "She handled the difficult question calmly.",
+    "exampleTr": "Zor soruyu sakince ele aldı."
   },
   {
     "term": "happen",
     "meaning": "olmak",
-    "example": "What happened during the meeting?"
+    "example": "What happened during the meeting?",
+    "exampleTr": "Toplantı sırasında ne oldu?"
   },
   {
     "term": "healthy",
     "meaning": "sağlıklı",
-    "example": "A healthy breakfast is important for students."
+    "example": "A healthy breakfast is important for students.",
+    "exampleTr": "Sağlıklı bir kahvaltı öğrenciler için önemlidir."
   },
   {
     "term": "hesitate",
     "meaning": "tereddüt etmek",
-    "example": "He hesitated before answering the question."
+    "example": "He hesitated before answering the question.",
+    "exampleTr": "Soruyu cevaplamadan önce tereddüt etti."
   },
   {
     "term": "humour",
     "meaning": "mizah",
-    "example": "The teacher has a great sense of humour."
+    "example": "The teacher has a great sense of humour.",
+    "exampleTr": "Öğretmenin harika bir espri anlayışı var."
   },
   {
     "term": "identify",
     "meaning": "tanımak",
-    "example": "Can you identify the main idea of the text?"
+    "example": "Can you identify the main idea of the text?",
+    "exampleTr": "Metnin ana fikrini belirleyebilir misin?"
   },
   {
     "term": "ignore",
     "meaning": "görmezden gelmek",
-    "example": "Don't ignore the warning signs."
+    "example": "Don't ignore the warning signs.",
+    "exampleTr": "Uyarı işaretlerini görmezden gelme."
   },
   {
     "term": "imagine",
     "meaning": "hayal etmek",
-    "example": "Imagine living by the sea."
+    "example": "Imagine living by the sea.",
+    "exampleTr": "Deniz kenarında yaşamayı hayal et."
   },
   {
     "term": "improve",
     "meaning": "iyileştirmek",
-    "example": "Regular reading improves your vocabulary."
+    "example": "Regular reading improves your vocabulary.",
+    "exampleTr": "Düzenli okuma kelime dağarcığını geliştirir."
   },
   {
     "term": "include",
     "meaning": "dahil etmek",
-    "example": "The price includes breakfast and dinner."
+    "example": "The price includes breakfast and dinner.",
+    "exampleTr": "Fiyata kahvaltı ve akşam yemeği dahil."
   },
   {
     "term": "increase",
     "meaning": "artırmak",
-    "example": "He increased his running distance every week."
+    "example": "He increased his running distance every week.",
+    "exampleTr": "Koşu mesafesini her hafta artırdı."
   },
   {
     "term": "influence",
     "meaning": "etkilemek",
-    "example": "Teachers influence how students think."
+    "example": "Teachers influence how students think.",
+    "exampleTr": "Öğretmenler öğrencilerin düşünme biçimini etkiler."
   },
   {
     "term": "introduce",
     "meaning": "tanıştırmak",
-    "example": "Let me introduce you to my sister."
+    "example": "Let me introduce you to my sister.",
+    "exampleTr": "Seni kız kardeşimle tanıştırayım."
   },
   {
     "term": "invest",
     "meaning": "yatırım yapmak",
-    "example": "They invested in a small software company."
+    "example": "They invested in a small software company.",
+    "exampleTr": "Küçük bir yazılım şirketine yatırım yaptılar."
   },
   {
     "term": "involve",
     "meaning": "içermek",
-    "example": "The job involves a lot of travelling."
+    "example": "The job involves a lot of travelling.",
+    "exampleTr": "İş, çok fazla seyahat etmeyi gerektiriyor."
   },
   {
     "term": "knowledge",
     "meaning": "bilgi",
-    "example": "Practical knowledge is as valuable as theory."
+    "example": "Practical knowledge is as valuable as theory.",
+    "exampleTr": "Pratik bilgi, teori kadar değerlidir."
   },
   {
     "term": "language",
     "meaning": "dil",
-    "example": "She speaks three languages fluently."
+    "example": "She speaks three languages fluently.",
+    "exampleTr": "Üç dili akıcı konuşuyor."
   },
   {
     "term": "lead",
     "meaning": "yönlendirmek",
-    "example": "Her calm voice led the group to a solution."
+    "example": "Her calm voice led the group to a solution.",
+    "exampleTr": "Sakin sesi grubu bir çözüme yönlendirdi."
   },
   {
     "term": "level",
     "meaning": "seviye",
-    "example": "This book is at an intermediate level."
+    "example": "This book is at an intermediate level.",
+    "exampleTr": "Bu kitap orta seviyede."
   },
   {
     "term": "limit",
     "meaning": "sınır",
-    "example": "There is a limit to how much tea I can drink."
+    "example": "There is a limit to how much tea I can drink.",
+    "exampleTr": "İçebileceğim çayın bir sınırı var."
   },
   {
     "term": "local",
     "meaning": "yerel",
-    "example": "We bought bread from a local shop."
+    "example": "We bought bread from a local shop.",
+    "exampleTr": "Yerel bir dükkândan ekmek aldık."
   },
   {
     "term": "maintain",
     "meaning": "sürdürmek",
-    "example": "Maintaining a habit takes patience."
+    "example": "Maintaining a habit takes patience.",
+    "exampleTr": "Bir alışkanlığı sürdürmek sabır ister."
   },
   {
     "term": "measure",
     "meaning": "ölçmek",
-    "example": "Please measure the length of the table."
+    "example": "Please measure the length of the table.",
+    "exampleTr": "Lütfen masanın uzunluğunu ölç."
   },
   {
     "term": "mention",
     "meaning": "bahsetmek",
-    "example": "He didn't mention the cost of the trip."
+    "example": "He didn't mention the cost of the trip.",
+    "exampleTr": "Yolculuğun masrafından bahsetmedi."
   },
   {
     "term": "method",
     "meaning": "yöntem",
-    "example": "This method helps you remember new words faster."
+    "example": "This method helps you remember new words faster.",
+    "exampleTr": "Bu yöntem yeni kelimeleri daha hızlı hatırlamana yardımcı olur."
   },
   {
     "term": "notice",
     "meaning": "fark etmek",
-    "example": "Did you notice the sign on the door?"
+    "example": "Did you notice the sign on the door?",
+    "exampleTr": "Kapıdaki tabelayı fark ettin mi?"
   },
   {
     "term": "obtain",
     "meaning": "elde etmek",
-    "example": "You can obtain a form at the front desk."
+    "example": "You can obtain a form at the front desk.",
+    "exampleTr": "Resepsiyondan bir form alabilirsin."
   },
   {
     "term": "obvious",
     "meaning": "apaçık",
-    "example": "The answer was obvious from the start."
+    "example": "The answer was obvious from the start.",
+    "exampleTr": "Cevap başından belliydi."
   },
   {
     "term": "opinion",
     "meaning": "görüş",
-    "example": "In my opinion, the plan needs more time."
+    "example": "In my opinion, the plan needs more time.",
+    "exampleTr": "Bence plan daha fazla zamana ihtiyaç duyuyor."
   },
   {
     "term": "opportunity",
     "meaning": "fırsat",
-    "example": "The internship was a great opportunity to learn."
+    "example": "The internship was a great opportunity to learn.",
+    "exampleTr": "Staj, öğrenmek için harika bir fırsattı."
   },
   {
     "term": "patient",
     "meaning": "hasta",
-    "example": "The patient recovered after two weeks."
+    "example": "The patient recovered after two weeks.",
+    "exampleTr": "Hasta iki hafta sonra iyileşti."
   },
   {
     "term": "perform",
     "meaning": "gerçekleştirmek",
-    "example": "The team performed well under pressure."
+    "example": "The team performed well under pressure.",
+    "exampleTr": "Takım baskı altında iyi performans gösterdi."
   },
   {
     "term": "perhaps",
     "meaning": "belki",
-    "example": "Perhaps we should leave a little earlier."
+    "example": "Perhaps we should leave a little earlier.",
+    "exampleTr": "Belki biraz daha erken çıkmalıyız."
   },
   {
     "term": "plan",
     "meaning": "plan",
-    "example": "We need a clear plan for the next term."
+    "example": "We need a clear plan for the next term.",
+    "exampleTr": "Gelecek dönem için net bir plana ihtiyacımız var."
   },
   {
     "term": "prefer",
     "meaning": "tercih etmek",
-    "example": "I prefer reading in the morning to studying at night."
+    "example": "I prefer reading in the morning to studying at night.",
+    "exampleTr": "Sabah okumayı gece ders çalışmaya tercih ederim."
   },
   {
     "term": "prepare",
     "meaning": "hazırlamak",
-    "example": "She prepared for the interview all week."
+    "example": "She prepared for the interview all week.",
+    "exampleTr": "Bütün hafta mülakata hazırlandı."
   },
   {
     "term": "pressure",
     "meaning": "baskı",
-    "example": "He felt pressure from his family to choose a job."
+    "example": "He felt pressure from his family to choose a job.",
+    "exampleTr": "Bir iş seçmesi konusunda ailesinden baskı gördü."
   },
   {
     "term": "produce",
     "meaning": "üretmek",
-    "example": "This factory produces tea for the whole region."
+    "example": "This factory produces tea for the whole region.",
+    "exampleTr": "Bu fabrika bütün bölge için çay üretiyor."
   },
   {
     "term": "progress",
     "meaning": "ilerleme",
-    "example": "You can see real progress after three months."
+    "example": "You can see real progress after three months.",
+    "exampleTr": "Üç ay sonra gerçek bir ilerleme görebilirsin."
   },
   {
     "term": "purpose",
     "meaning": "amaç",
-    "example": "The purpose of the meeting is to plan the trip."
+    "example": "The purpose of the meeting is to plan the trip.",
+    "exampleTr": "Toplantının amacı yolculuğu planlamak."
   }
 ]

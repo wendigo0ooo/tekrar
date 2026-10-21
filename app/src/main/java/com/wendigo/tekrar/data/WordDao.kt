@@ -43,6 +43,12 @@ interface WordDao {
     @Query("SELECT * FROM words WHERE id = :id")
     suspend fun getById(id: Long): Word?
 
+    @Query("SELECT * FROM words")
+    suspend fun allWords(): List<Word>
+
+    @Query("UPDATE words SET exampleTr = :exampleTr WHERE id = :id")
+    suspend fun updateExampleTr(id: Long, exampleTr: String)
+
     @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun insert(word: Word): Long
 

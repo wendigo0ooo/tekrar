@@ -16,6 +16,7 @@ data class StudyCardUi(
     val term: String,
     val meaning: String,
     val example: String,
+    val exampleTr: String,
     val notes: String,
 )
 

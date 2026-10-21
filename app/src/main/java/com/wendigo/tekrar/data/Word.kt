@@ -1,5 +1,6 @@
 package com.wendigo.tekrar.data
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -9,6 +10,8 @@ data class Word(
     val term: String,
     val meaning: String,
     val example: String = "",
+    @ColumnInfo(defaultValue = "''")
+    val exampleTr: String = "",
     val notes: String = "",
     val createdAt: Long = System.currentTimeMillis(),
     val state: Int = STATE_NEW,

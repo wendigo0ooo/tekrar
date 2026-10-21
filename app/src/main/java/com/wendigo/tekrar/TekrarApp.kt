@@ -23,7 +23,10 @@ class AppContainer(context: Context) {
 
     fun seed() {
         scope.launch {
-            runCatching { repository.seedIfEmpty() }
+            runCatching {
+                repository.seedIfEmpty()
+                repository.backfillExampleTr()
+            }
         }
     }
 }
