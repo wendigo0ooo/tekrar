@@ -48,6 +48,22 @@ data class DeckInstallResult(
     val skipped: Int,
 )
 
+data class NewWordDraft(
+    val term: String,
+    val meaning: String,
+    val example: String = "",
+    val exampleTr: String = "",
+    val notes: String = "",
+    val tags: String = "",
+    val pos: String = "",
+    val cefr: String = "",
+)
+
+data class BulkAddResult(
+    val added: Int,
+    val skipped: Int,
+)
+
 sealed interface WordWriteResult {
     data class Saved(val id: Long) : WordWriteResult
     data object DuplicateTerm : WordWriteResult
@@ -344,6 +360,7 @@ class WordRepository(
         notes: String,
         tags: String,
         pos: String,
+        cefr: String = "",
     ): WordWriteResult {
         val now = System.currentTimeMillis()
         val key = TermKey.normalize(term)
@@ -360,12 +377,55 @@ class WordRepository(
                     notes = notes,
                     tags = tags,
                     pos = pos,
+                    cefr = cefr,
                     createdAt = now,
                     dueAt = now,
                     state = Word.STATE_NEW,
                 )
             )
             WordWriteResult.Saved(id)
+        }
+    }
+
+    /**
+     * Birden fazla kelimeyi tek bir Room transaction'ında ekler. [addWord] ile
+     * aynı normalleştirme ve mükerrer atlama kuralları geçerlidir; parti içindeki
+     * mükerrerler de atlanır.
+     */
+    suspend fun addWords(drafts: List<NewWordDraft>): BulkAddResult {
+        if (drafts.isEmpty()) return BulkAddResult(0, 0)
+        val now = System.currentTimeMillis()
+        return db.withTransaction {
+            val seen = words.allWords()
+                .map { TermKey.normalize(it.term) }
+                .filter { it.isNotEmpty() }
+                .toHashSet()
+            var added = 0
+            var skipped = 0
+            for (draft in drafts) {
+                val key = TermKey.normalize(draft.term)
+                if (key.isEmpty() || !seen.add(key)) {
+                    skipped++
+                    continue
+                }
+                words.insert(
+                    Word(
+                        term = draft.term,
+                        meaning = draft.meaning,
+                        example = draft.example,
+                        exampleTr = draft.exampleTr,
+                        notes = draft.notes,
+                        tags = draft.tags,
+                        pos = draft.pos,
+                        cefr = draft.cefr,
+                        createdAt = now,
+                        dueAt = now,
+                        state = Word.STATE_NEW,
+                    )
+                )
+                added++
+            }
+            BulkAddResult(added, skipped)
         }
     }
 

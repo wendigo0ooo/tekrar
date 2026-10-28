@@ -8,19 +8,25 @@ import androidx.lifecycle.viewModelScope
 import com.wendigo.tekrar.R
 import com.wendigo.tekrar.core.AnswerCheck
 import com.wendigo.tekrar.core.Cloze
+import com.wendigo.tekrar.core.ContextMining
 import com.wendigo.tekrar.core.CustomSession
 import com.wendigo.tekrar.core.LeechPolicy
+import com.wendigo.tekrar.core.MiningDefinition
+import com.wendigo.tekrar.core.MinedWord
 import com.wendigo.tekrar.core.Placement
 import com.wendigo.tekrar.core.SessionSummary
 import com.wendigo.tekrar.core.Srs
 import com.wendigo.tekrar.core.StudySession
+import com.wendigo.tekrar.core.TermKey
 import com.wendigo.tekrar.data.Word
 import com.wendigo.tekrar.notify.Notifications
 import com.wendigo.tekrar.notify.ReminderScheduler
 import com.wendigo.tekrar.notify.WeeklySummaryScheduler
 import com.wendigo.tekrar.repo.BackupManager
 import com.wendigo.tekrar.repo.BundledDeck
+import com.wendigo.tekrar.repo.DictionaryRepository
 import com.wendigo.tekrar.repo.FileIo
+import com.wendigo.tekrar.repo.NewWordDraft
 import com.wendigo.tekrar.repo.SettingsStore
 import com.wendigo.tekrar.repo.WordRepository
 import com.wendigo.tekrar.repo.WordWriteResult
@@ -33,6 +39,8 @@ import com.wendigo.tekrar.ui.contracts.LeechesUiState
 import com.wendigo.tekrar.ui.contracts.LibraryFilter
 import com.wendigo.tekrar.ui.contracts.LibrarySort
 import com.wendigo.tekrar.ui.contracts.LibraryUiState
+import com.wendigo.tekrar.ui.contracts.MineCandidateUi
+import com.wendigo.tekrar.ui.contracts.MineUiState
 import com.wendigo.tekrar.ui.contracts.PlacementQuestionUi
 import com.wendigo.tekrar.ui.contracts.PlacementUiState
 import com.wendigo.tekrar.ui.contracts.SettingsUiState
@@ -651,6 +659,233 @@ class WordEditorViewModel(
             onDeleted()
         }
     }
+}
+
+class MineViewModel(
+    private val repository: WordRepository,
+    private val dictionary: DictionaryRepository,
+    private val appContext: Context,
+) : ViewModel() {
+
+    private val _state = MutableStateFlow(MineUiState())
+    val state: StateFlow<MineUiState> = _state.asStateFlow()
+
+    fun setInput(value: String) {
+        _state.update { it.copy(input = value) }
+    }
+
+    fun clearMessage() {
+        _state.update { if (it.message != null) it.copy(message = null) else it }
+    }
+
+    fun analyze() {
+        val current = _state.value
+        if (current.analyzing) return
+        val text = current.input
+        if (text.isBlank()) {
+            _state.update { it.copy(analyzed = true, candidates = emptyList()) }
+            return
+        }
+        _state.update { it.copy(analyzing = true, analyzed = false, candidates = emptyList()) }
+        viewModelScope.launch {
+            val result = runCatching {
+                val known = repository.allWords().map { it.term }
+                val snapshot = dictionary.snapshot()
+                withContext(Dispatchers.Default) {
+                    ContextMining.mine(text, known) { key ->
+                        snapshot.lookupHit(key)?.let { hit ->
+                            MiningDefinition(
+                                term = hit.entry.term,
+                                meaning = hit.entry.meaning,
+                                pos = hit.entry.pos,
+                                cefr = hit.entry.cefr,
+                                source = hit.source,
+                            )
+                        }
+                    }
+                }
+            }
+            result.fold(
+                onSuccess = { words ->
+                    _state.update {
+                        it.copy(
+                            analyzing = false,
+                            analyzed = true,
+                            candidates = words.map(::toCandidateUi),
+                        )
+                    }
+                },
+                onFailure = { error ->
+                    _state.update {
+                        it.copy(
+                            analyzing = false,
+                            analyzed = true,
+                            candidates = emptyList(),
+                            message = appContext.getString(
+                                R.string.mine_analyze_failed,
+                                error.message ?: "",
+                            ),
+                        )
+                    }
+                },
+            )
+        }
+    }
+
+    fun add(candidate: MineCandidateUi) {
+        if (_state.value.adding) return
+        _state.update { it.copy(adding = true) }
+        viewModelScope.launch {
+            val result = runCatching {
+                repository.addWord(
+                    term = candidate.term,
+                    meaning = candidate.meaning,
+                    example = candidate.context,
+                    exampleTr = "",
+                    notes = "",
+                    tags = "",
+                    pos = candidate.pos,
+                    cefr = candidate.cefr,
+                )
+            }
+            result.fold(
+                onSuccess = { outcome ->
+                    val key = TermKey.normalize(candidate.term)
+                    _state.update { state ->
+                        state.copy(
+                            adding = false,
+                            candidates = state.candidates.filterNot {
+                                TermKey.normalize(it.term) == key
+                            },
+                            message = when (outcome) {
+                                is WordWriteResult.Saved ->
+                                    appContext.getString(R.string.mine_word_added, candidate.term)
+                                WordWriteResult.DuplicateTerm ->
+                                    appContext.getString(R.string.mine_word_known, candidate.term)
+                                WordWriteResult.NotFound -> null
+                            },
+                        )
+                    }
+                },
+                onFailure = {
+                    _state.update { state ->
+                        state.copy(
+                            adding = false,
+                            message = appContext.getString(R.string.mine_add_failed),
+                        )
+                    }
+                },
+            )
+        }
+    }
+
+    fun addAll() {
+        val current = _state.value
+        if (current.adding || current.candidates.isEmpty()) return
+        _state.update { it.copy(adding = true) }
+        viewModelScope.launch {
+            val result = runCatching {
+                val known = repository.allWords().map { it.term }
+                val batch = ContextMining.planAdd(
+                    current.candidates.map(::toMinedWord),
+                    known,
+                )
+                if (batch.words.isEmpty()) {
+                    return@runCatching batch.words.size to current.candidates.size
+                }
+                val write = repository.addWords(
+                    batch.words.map {
+                        NewWordDraft(
+                            term = it.term,
+                            meaning = it.meaning,
+                            example = it.context,
+                            pos = it.pos,
+                            cefr = it.cefr,
+                        )
+                    }
+                )
+                write.added to (write.skipped + batch.skipped)
+            }
+            result.fold(
+                onSuccess = { (added, skipped) ->
+                    _state.update {
+                        it.copy(
+                            adding = false,
+                            candidates = emptyList(),
+                            message = appContext.getString(
+                                R.string.mine_bulk_result,
+                                added,
+                                skipped,
+                            ),
+                        )
+                    }
+                },
+                onFailure = {
+                    _state.update { state ->
+                        state.copy(
+                            adding = false,
+                            message = appContext.getString(R.string.mine_add_failed),
+                        )
+                    }
+                },
+            )
+        }
+    }
+
+    fun importDictionary(uri: Uri) {
+        _state.update { it.copy(adding = true) }
+        viewModelScope.launch {
+            val result = runCatching {
+                val raw = withContext(Dispatchers.IO) { FileIo.readText(appContext, uri) }
+                dictionary.importUserJson(raw)
+            }
+            result.fold(
+                onSuccess = { imported ->
+                    _state.update {
+                        it.copy(
+                            adding = false,
+                            message = appContext.getString(
+                                R.string.mine_dictionary_imported,
+                                imported.entries,
+                                imported.skipped + imported.duplicates,
+                            ),
+                        )
+                    }
+                },
+                onFailure = { error ->
+                    _state.update {
+                        it.copy(
+                            adding = false,
+                            message = appContext.getString(
+                                R.string.mine_dictionary_failed,
+                                error.message ?: "",
+                            ),
+                        )
+                    }
+                },
+            )
+        }
+    }
+
+    private fun toCandidateUi(word: MinedWord): MineCandidateUi =
+        MineCandidateUi(
+            term = word.term,
+            meaning = word.meaning,
+            context = word.context,
+            pos = word.pos,
+            cefr = word.cefr,
+            source = word.source,
+        )
+
+    private fun toMinedWord(candidate: MineCandidateUi): MinedWord =
+        MinedWord(
+            term = candidate.term,
+            meaning = candidate.meaning,
+            pos = candidate.pos,
+            cefr = candidate.cefr,
+            context = candidate.context,
+            source = candidate.source,
+        )
 }
 
 class StudyViewModel(

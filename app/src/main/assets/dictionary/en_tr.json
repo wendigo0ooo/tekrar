@@ -1,0 +1,9164 @@
+[
+  {
+    "term": "accept",
+    "meaning": "kabul etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "achieve",
+    "meaning": "başarmak, elde etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "acquire",
+    "meaning": "edinmek, kazanmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "adapt",
+    "meaning": "uyum sağlamak, uyarlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "add",
+    "meaning": "eklemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "adjust",
+    "meaning": "ayarlamak, uyum sağlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "admire",
+    "meaning": "hayran olmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "admit",
+    "meaning": "kabul etmek, itiraf etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "adopt",
+    "meaning": "benimsemek, evlat edinmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "advise",
+    "meaning": "tavsiye etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "affect",
+    "meaning": "etkilemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "agree",
+    "meaning": "katılmak, anlaşmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "aim",
+    "meaning": "amaçlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "allow",
+    "meaning": "izin vermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "announce",
+    "meaning": "duyurmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "answer",
+    "meaning": "cevaplamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "apologize",
+    "meaning": "özür dilemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "appear",
+    "meaning": "görünmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "apply",
+    "meaning": "başvurmak, uygulamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "appreciate",
+    "meaning": "takdir etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "approach",
+    "meaning": "yaklaşmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "argue",
+    "meaning": "tartışmak, savunmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "arrange",
+    "meaning": "düzenlemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "arrive",
+    "meaning": "varmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "ask",
+    "meaning": "sormak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "assist",
+    "meaning": "yardım etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "attach",
+    "meaning": "iliştirmek, eklemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "attack",
+    "meaning": "saldırmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "attempt",
+    "meaning": "denemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "attend",
+    "meaning": "katılmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "attract",
+    "meaning": "çekmek, cezbetmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "avoid",
+    "meaning": "kaçınmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "bake",
+    "meaning": "fırında pişirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "balance",
+    "meaning": "dengelemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "believe",
+    "meaning": "inanmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "belong",
+    "meaning": "ait olmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "borrow",
+    "meaning": "borç almak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "break",
+    "meaning": "kırmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "bring",
+    "meaning": "getirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "build",
+    "meaning": "inşa etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "burn",
+    "meaning": "yakmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "buy",
+    "meaning": "satın almak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "calculate",
+    "meaning": "hesaplamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "call",
+    "meaning": "aramak, çağırmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "cancel",
+    "meaning": "iptal etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "carry",
+    "meaning": "taşımak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "catch",
+    "meaning": "yakalamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "cause",
+    "meaning": "neden olmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "celebrate",
+    "meaning": "kutlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "change",
+    "meaning": "değiştirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "check",
+    "meaning": "kontrol etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "choose",
+    "meaning": "seçmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "claim",
+    "meaning": "iddia etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "clean",
+    "meaning": "temizlemek",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "climb",
+    "meaning": "tırmanmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "close",
+    "meaning": "kapatmak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "collect",
+    "meaning": "toplamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "combine",
+    "meaning": "birleştirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "come",
+    "meaning": "gelmek",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "communicate",
+    "meaning": "iletişim kurmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "compare",
+    "meaning": "karşılaştırmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "compete",
+    "meaning": "yarışmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "complain",
+    "meaning": "şikayet etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "complete",
+    "meaning": "tamamlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "concentrate",
+    "meaning": "odaklanmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "concern",
+    "meaning": "endişelendirmek, ilgilendirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "conclude",
+    "meaning": "sonuca varmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "confirm",
+    "meaning": "doğrulamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "connect",
+    "meaning": "bağlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "consider",
+    "meaning": "düşünmek, göz önünde bulundurmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "consist",
+    "meaning": "oluşmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "contain",
+    "meaning": "içermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "continue",
+    "meaning": "devam etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "contribute",
+    "meaning": "katkıda bulunmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "control",
+    "meaning": "kontrol etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "convince",
+    "meaning": "ikna etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "cook",
+    "meaning": "yemek yapmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "copy",
+    "meaning": "kopyalamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "correct",
+    "meaning": "düzeltmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "cost",
+    "meaning": "maliyeti olmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "cover",
+    "meaning": "kaplamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "create",
+    "meaning": "oluşturmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "cross",
+    "meaning": "geçmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "cry",
+    "meaning": "ağlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "cut",
+    "meaning": "kesmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "damage",
+    "meaning": "zarar vermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "dance",
+    "meaning": "dans etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "deal",
+    "meaning": "ilgilenmek, başa çıkmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "decide",
+    "meaning": "karar vermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "declare",
+    "meaning": "beyan etmek, ilan etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "decrease",
+    "meaning": "azalmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "defend",
+    "meaning": "savunmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "define",
+    "meaning": "tanımlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "deliver",
+    "meaning": "teslim etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "demand",
+    "meaning": "talep etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "deny",
+    "meaning": "inkar etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "depend",
+    "meaning": "bağlı olmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "describe",
+    "meaning": "tanımlamak, betimlemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "design",
+    "meaning": "tasarlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "destroy",
+    "meaning": "yok etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "develop",
+    "meaning": "geliştirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "die",
+    "meaning": "ölmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "differ",
+    "meaning": "farklı olmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "discover",
+    "meaning": "keşfetmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "discuss",
+    "meaning": "tartışmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "divide",
+    "meaning": "bölmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "draw",
+    "meaning": "çizmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "dream",
+    "meaning": "hayal etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "drink",
+    "meaning": "içmek",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "drive",
+    "meaning": "sürmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "drop",
+    "meaning": "düşürmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "earn",
+    "meaning": "kazanmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "eat",
+    "meaning": "yemek",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "educate",
+    "meaning": "eğitmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "elect",
+    "meaning": "seçmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "employ",
+    "meaning": "işe almak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "enable",
+    "meaning": "olanak tanımak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "encourage",
+    "meaning": "teşvik etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "end",
+    "meaning": "bitirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "enjoy",
+    "meaning": "keyif almak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "enter",
+    "meaning": "girmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "establish",
+    "meaning": "kurmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "estimate",
+    "meaning": "tahmin etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "evaluate",
+    "meaning": "değerlendirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "exist",
+    "meaning": "var olmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "expect",
+    "meaning": "beklemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "experience",
+    "meaning": "deneyimlemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "explain",
+    "meaning": "açıklamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "explore",
+    "meaning": "keşfetmek, araştırmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "express",
+    "meaning": "ifade etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "extend",
+    "meaning": "genişletmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "face",
+    "meaning": "yüzleşmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "fail",
+    "meaning": "başarısız olmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "fall",
+    "meaning": "düşmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "feel",
+    "meaning": "hissetmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "fight",
+    "meaning": "savaşmak, kavga etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "fill",
+    "meaning": "doldurmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "find",
+    "meaning": "bulmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "finish",
+    "meaning": "bitirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "fit",
+    "meaning": "uymak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "fix",
+    "meaning": "düzeltmek, tamir etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "fly",
+    "meaning": "uçmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "focus",
+    "meaning": "odaklanmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "follow",
+    "meaning": "takip etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "forget",
+    "meaning": "unutmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "forgive",
+    "meaning": "affetmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "form",
+    "meaning": "oluşturmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "gain",
+    "meaning": "kazanmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "gather",
+    "meaning": "toplanmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "get",
+    "meaning": "almak, elde etmek",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "give",
+    "meaning": "vermek",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "grow",
+    "meaning": "büyümek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "guess",
+    "meaning": "tahmin etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "handle",
+    "meaning": "ele almak, başa çıkmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "happen",
+    "meaning": "olmak, meydana gelmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "hate",
+    "meaning": "nefret etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "hear",
+    "meaning": "duymak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "help",
+    "meaning": "yardım etmek",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "hide",
+    "meaning": "saklamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "hold",
+    "meaning": "tutmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "hope",
+    "meaning": "ummak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "identify",
+    "meaning": "tanımlamak, belirlemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "ignore",
+    "meaning": "görmezden gelmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "imagine",
+    "meaning": "hayal etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "improve",
+    "meaning": "iyileştirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "include",
+    "meaning": "içermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "increase",
+    "meaning": "artmak, artırmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "indicate",
+    "meaning": "belirtmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "influence",
+    "meaning": "etkilemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "inform",
+    "meaning": "bilgilendirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "insist",
+    "meaning": "ısrar etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "introduce",
+    "meaning": "tanıtmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "invest",
+    "meaning": "yatırım yapmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "invite",
+    "meaning": "davet etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "involve",
+    "meaning": "içermek, dahil etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "join",
+    "meaning": "katılmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "judge",
+    "meaning": "yargılamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "keep",
+    "meaning": "tutmak, saklamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "kill",
+    "meaning": "öldürmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "know",
+    "meaning": "bilmek",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "land",
+    "meaning": "inmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "last",
+    "meaning": "sürmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "laugh",
+    "meaning": "gülmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "lead",
+    "meaning": "yönetmek, yol açmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "learn",
+    "meaning": "öğrenmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "leave",
+    "meaning": "ayrılmak, bırakmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "lend",
+    "meaning": "borç vermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "let",
+    "meaning": "izin vermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "lie",
+    "meaning": "uzanmak, yalan söylemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "lift",
+    "meaning": "kaldırmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "like",
+    "meaning": "sevmek",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "limit",
+    "meaning": "sınırlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "listen",
+    "meaning": "dinlemek",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "live",
+    "meaning": "yaşamak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "look",
+    "meaning": "bakmak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "lose",
+    "meaning": "kaybetmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "love",
+    "meaning": "sevmek",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "maintain",
+    "meaning": "sürdürmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "make",
+    "meaning": "yapmak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "manage",
+    "meaning": "yönetmek, başarmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "matter",
+    "meaning": "önemli olmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "mean",
+    "meaning": "anlamına gelmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "measure",
+    "meaning": "ölçmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "meet",
+    "meaning": "buluşmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "mention",
+    "meaning": "bahsetmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "mind",
+    "meaning": "aldırmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "miss",
+    "meaning": "kaçırmak, özlemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "move",
+    "meaning": "hareket etmek, taşınmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "need",
+    "meaning": "ihtiyaç duymak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "notice",
+    "meaning": "fark etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "obtain",
+    "meaning": "elde etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "occur",
+    "meaning": "meydana gelmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "offer",
+    "meaning": "teklif etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "open",
+    "meaning": "açmak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "operate",
+    "meaning": "çalıştırmak, işletmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "order",
+    "meaning": "sipariş vermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "organize",
+    "meaning": "düzenlemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "own",
+    "meaning": "sahip olmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "pass",
+    "meaning": "geçmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "pay",
+    "meaning": "ödemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "perform",
+    "meaning": "gerçekleştirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "permit",
+    "meaning": "izin vermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "persuade",
+    "meaning": "ikna etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "pick",
+    "meaning": "seçmek, almak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "plan",
+    "meaning": "planlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "play",
+    "meaning": "oynamak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "point",
+    "meaning": "işaret etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "prefer",
+    "meaning": "tercih etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "prepare",
+    "meaning": "hazırlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "present",
+    "meaning": "sunmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "prevent",
+    "meaning": "önlemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "produce",
+    "meaning": "üretmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "promise",
+    "meaning": "söz vermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "protect",
+    "meaning": "korumak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "prove",
+    "meaning": "kanıtlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "provide",
+    "meaning": "sağlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "publish",
+    "meaning": "yayımlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "pull",
+    "meaning": "çekmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "push",
+    "meaning": "itmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "put",
+    "meaning": "koymak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "raise",
+    "meaning": "artırmak, kaldırmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "reach",
+    "meaning": "ulaşmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "read",
+    "meaning": "okumak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "realize",
+    "meaning": "farkına varmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "receive",
+    "meaning": "almak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "recognize",
+    "meaning": "tanımak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "recommend",
+    "meaning": "önermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "reduce",
+    "meaning": "azaltmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "refer",
+    "meaning": "atıfta bulunmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "reflect",
+    "meaning": "yansıtmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "refuse",
+    "meaning": "reddetmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "regard",
+    "meaning": "saymak, göz önünde bulundurmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "relate",
+    "meaning": "ilişkilendirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "release",
+    "meaning": "serbest bırakmak, yayımlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "remain",
+    "meaning": "kalmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "remember",
+    "meaning": "hatırlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "remind",
+    "meaning": "hatırlatmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "remove",
+    "meaning": "kaldırmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "repeat",
+    "meaning": "tekrarlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "replace",
+    "meaning": "değiştirmek, yerine koymak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "reply",
+    "meaning": "yanıtlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "report",
+    "meaning": "bildirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "represent",
+    "meaning": "temsil etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "require",
+    "meaning": "gerektirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "rescue",
+    "meaning": "kurtarmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "respond",
+    "meaning": "yanıt vermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "rest",
+    "meaning": "dinlenmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "result",
+    "meaning": "sonuçlanmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "return",
+    "meaning": "dönmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "reveal",
+    "meaning": "açığa çıkarmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "ride",
+    "meaning": "binmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "ring",
+    "meaning": "çalmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "rise",
+    "meaning": "yükselmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "run",
+    "meaning": "koşmak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "save",
+    "meaning": "kurtarmak, biriktirmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "say",
+    "meaning": "söylemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "see",
+    "meaning": "görmek",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "seek",
+    "meaning": "aramak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "seem",
+    "meaning": "görünmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "sell",
+    "meaning": "satmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "send",
+    "meaning": "göndermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "serve",
+    "meaning": "hizmet etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "set",
+    "meaning": "ayarlamak, kurmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "settle",
+    "meaning": "yerleşmek, çözmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "share",
+    "meaning": "paylaşmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "shift",
+    "meaning": "kaydırmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "shine",
+    "meaning": "parlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "show",
+    "meaning": "göstermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "shut",
+    "meaning": "kapatmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "sign",
+    "meaning": "imzalamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "sing",
+    "meaning": "şarkı söylemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "sit",
+    "meaning": "oturmak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "sleep",
+    "meaning": "uyumak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "smile",
+    "meaning": "gülümsemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "solve",
+    "meaning": "çözmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "speak",
+    "meaning": "konuşmak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "spend",
+    "meaning": "harcamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "spread",
+    "meaning": "yaymak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "stand",
+    "meaning": "ayakta durmak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "start",
+    "meaning": "başlamak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "stay",
+    "meaning": "kalmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "steal",
+    "meaning": "çalmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "stop",
+    "meaning": "durmak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "study",
+    "meaning": "çalışmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "succeed",
+    "meaning": "başarılı olmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "suffer",
+    "meaning": "acı çekmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "suggest",
+    "meaning": "önermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "supply",
+    "meaning": "tedarik etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "support",
+    "meaning": "desteklemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "suppose",
+    "meaning": "varsaymak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "survive",
+    "meaning": "hayatta kalmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "take",
+    "meaning": "almak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "talk",
+    "meaning": "konuşmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "teach",
+    "meaning": "öğretmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "tell",
+    "meaning": "söylemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "tend",
+    "meaning": "eğiliminde olmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "test",
+    "meaning": "test etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "thank",
+    "meaning": "teşekkür etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "think",
+    "meaning": "düşünmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "throw",
+    "meaning": "atmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "touch",
+    "meaning": "dokunmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "train",
+    "meaning": "eğitmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "travel",
+    "meaning": "seyahat etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "treat",
+    "meaning": "tedavi etmek, davranmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "trust",
+    "meaning": "güvenmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "try",
+    "meaning": "denemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "turn",
+    "meaning": "dönmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "understand",
+    "meaning": "anlamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "use",
+    "meaning": "kullanmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "value",
+    "meaning": "değer vermek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "visit",
+    "meaning": "ziyaret etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "wait",
+    "meaning": "beklemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "walk",
+    "meaning": "yürümek",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "want",
+    "meaning": "istemek",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "warn",
+    "meaning": "uyarmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "wash",
+    "meaning": "yıkamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "watch",
+    "meaning": "izlemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "wear",
+    "meaning": "giymek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "welcome",
+    "meaning": "karşılamak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "win",
+    "meaning": "kazanmak",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "wish",
+    "meaning": "dilemek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "wonder",
+    "meaning": "merak etmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "work",
+    "meaning": "çalışmak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "worry",
+    "meaning": "endişelenmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "write",
+    "meaning": "yazmak",
+    "pos": "verb",
+    "cefr": "A1"
+  },
+  {
+    "term": "yield",
+    "meaning": "getirmek, boyun eğmek",
+    "pos": "verb",
+    "cefr": "A2"
+  },
+  {
+    "term": "ability",
+    "meaning": "yetenek",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "access",
+    "meaning": "erişim",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "accident",
+    "meaning": "kaza",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "account",
+    "meaning": "hesap",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "action",
+    "meaning": "eylem, hareket",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "activity",
+    "meaning": "etkinlik",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "actor",
+    "meaning": "oyuncu",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "advice",
+    "meaning": "tavsiye",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "age",
+    "meaning": "yaş",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "agency",
+    "meaning": "ajans, kurum",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "agent",
+    "meaning": "temsilci",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "air",
+    "meaning": "hava",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "airport",
+    "meaning": "havaalanı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "amount",
+    "meaning": "miktar",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "analysis",
+    "meaning": "analiz",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "animal",
+    "meaning": "hayvan",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "apartment",
+    "meaning": "apartman dairesi",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "application",
+    "meaning": "başvuru, uygulama",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "area",
+    "meaning": "alan, bölge",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "argument",
+    "meaning": "tartışma, argüman",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "army",
+    "meaning": "ordu",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "art",
+    "meaning": "sanat",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "article",
+    "meaning": "makale",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "aspect",
+    "meaning": "yön, boyut",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "attention",
+    "meaning": "dikkat",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "attitude",
+    "meaning": "tutum",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "author",
+    "meaning": "yazar",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "authority",
+    "meaning": "yetki, otorite",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "baby",
+    "meaning": "bebek",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "background",
+    "meaning": "geçmiş, arka plan",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "bag",
+    "meaning": "çanta",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "ball",
+    "meaning": "top",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "bank",
+    "meaning": "banka",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "base",
+    "meaning": "temel",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "battery",
+    "meaning": "pil",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "beach",
+    "meaning": "plaj",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "beauty",
+    "meaning": "güzellik",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "bed",
+    "meaning": "yatak",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "beginning",
+    "meaning": "başlangıç",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "behavior",
+    "meaning": "davranış",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "belief",
+    "meaning": "inanç",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "bike",
+    "meaning": "bisiklet",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "bird",
+    "meaning": "kuş",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "blood",
+    "meaning": "kan",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "board",
+    "meaning": "tahta, kurul",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "boat",
+    "meaning": "tekne",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "body",
+    "meaning": "vücut",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "book",
+    "meaning": "kitap",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "bottle",
+    "meaning": "şişe",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "box",
+    "meaning": "kutu",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "boy",
+    "meaning": "erkek çocuk",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "brain",
+    "meaning": "beyin",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "branch",
+    "meaning": "dal, şube",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "bread",
+    "meaning": "ekmek",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "breakfast",
+    "meaning": "kahvaltı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "bridge",
+    "meaning": "köprü",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "brother",
+    "meaning": "erkek kardeş",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "budget",
+    "meaning": "bütçe",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "building",
+    "meaning": "bina",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "bus",
+    "meaning": "otobüs",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "business",
+    "meaning": "iş, ticaret",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "camera",
+    "meaning": "kamera",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "campaign",
+    "meaning": "kampanya",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "cancer",
+    "meaning": "kanser",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "candidate",
+    "meaning": "aday",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "capital",
+    "meaning": "başkent, sermaye",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "car",
+    "meaning": "araba",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "card",
+    "meaning": "kart",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "career",
+    "meaning": "kariyer",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "case",
+    "meaning": "durum, dava",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "cash",
+    "meaning": "nakit",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "cat",
+    "meaning": "kedi",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "category",
+    "meaning": "kategori",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "cell",
+    "meaning": "hücre",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "center",
+    "meaning": "merkez",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "century",
+    "meaning": "yüzyıl",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "chair",
+    "meaning": "sandalye",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "challenge",
+    "meaning": "zorluk, meydan okuma",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "chance",
+    "meaning": "şans",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "chapter",
+    "meaning": "bölüm",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "character",
+    "meaning": "karakter",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "charge",
+    "meaning": "ücret, suçlama",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "child",
+    "meaning": "çocuk",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "choice",
+    "meaning": "seçim",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "church",
+    "meaning": "kilise",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "city",
+    "meaning": "şehir",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "class",
+    "meaning": "sınıf",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "climate",
+    "meaning": "iklim",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "clock",
+    "meaning": "saat",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "club",
+    "meaning": "kulüp",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "coast",
+    "meaning": "kıyı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "coffee",
+    "meaning": "kahve",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "collection",
+    "meaning": "koleksiyon",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "college",
+    "meaning": "kolej, üniversite",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "color",
+    "meaning": "renk",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "community",
+    "meaning": "topluluk",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "company",
+    "meaning": "şirket",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "computer",
+    "meaning": "bilgisayar",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "concept",
+    "meaning": "kavram",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "condition",
+    "meaning": "durum, koşul",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "conference",
+    "meaning": "konferans",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "confidence",
+    "meaning": "özgüven",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "conflict",
+    "meaning": "çatışma",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "connection",
+    "meaning": "bağlantı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "contact",
+    "meaning": "iletişim",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "content",
+    "meaning": "içerik",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "context",
+    "meaning": "bağlam",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "contract",
+    "meaning": "sözleşme",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "conversation",
+    "meaning": "konuşma",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "country",
+    "meaning": "ülke",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "course",
+    "meaning": "kurs, ders",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "court",
+    "meaning": "mahkeme",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "cousin",
+    "meaning": "kuzen",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "crime",
+    "meaning": "suç",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "crisis",
+    "meaning": "kriz",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "culture",
+    "meaning": "kültür",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "cup",
+    "meaning": "fincan",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "customer",
+    "meaning": "müşteri",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "data",
+    "meaning": "veri",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "date",
+    "meaning": "tarih",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "daughter",
+    "meaning": "kız çocuk",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "day",
+    "meaning": "gün",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "death",
+    "meaning": "ölüm",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "debate",
+    "meaning": "tartışma",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "decade",
+    "meaning": "on yıl",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "decision",
+    "meaning": "karar",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "degree",
+    "meaning": "derece",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "department",
+    "meaning": "departman",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "desk",
+    "meaning": "masa",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "detail",
+    "meaning": "ayrıntı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "device",
+    "meaning": "cihaz",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "difference",
+    "meaning": "fark",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "difficulty",
+    "meaning": "zorluk",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "dinner",
+    "meaning": "akşam yemeği",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "direction",
+    "meaning": "yön",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "director",
+    "meaning": "yönetici",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "discussion",
+    "meaning": "tartışma",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "disease",
+    "meaning": "hastalık",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "doctor",
+    "meaning": "doktor",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "dog",
+    "meaning": "köpek",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "door",
+    "meaning": "kapı",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "doubt",
+    "meaning": "şüphe",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "dress",
+    "meaning": "elbise",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "driver",
+    "meaning": "sürücü",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "duty",
+    "meaning": "görev",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "ear",
+    "meaning": "kulak",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "earth",
+    "meaning": "dünya, toprak",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "economy",
+    "meaning": "ekonomi",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "edge",
+    "meaning": "kenar",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "education",
+    "meaning": "eğitim",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "effect",
+    "meaning": "etki",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "effort",
+    "meaning": "çaba",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "egg",
+    "meaning": "yumurta",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "election",
+    "meaning": "seçim",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "employee",
+    "meaning": "çalışan",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "employer",
+    "meaning": "işveren",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "energy",
+    "meaning": "enerji",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "engine",
+    "meaning": "motor",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "environment",
+    "meaning": "çevre",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "equipment",
+    "meaning": "ekipman",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "error",
+    "meaning": "hata",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "event",
+    "meaning": "olay",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "evidence",
+    "meaning": "kanıt",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "example",
+    "meaning": "örnek",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "exercise",
+    "meaning": "egzersiz",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "expert",
+    "meaning": "uzman",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "explanation",
+    "meaning": "açıklama",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "eye",
+    "meaning": "göz",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "fact",
+    "meaning": "gerçek",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "factor",
+    "meaning": "etken",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "factory",
+    "meaning": "fabrika",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "failure",
+    "meaning": "başarısızlık",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "family",
+    "meaning": "aile",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "farm",
+    "meaning": "çiftlik",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "father",
+    "meaning": "baba",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "fear",
+    "meaning": "korku",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "feature",
+    "meaning": "özellik",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "feeling",
+    "meaning": "duygu",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "field",
+    "meaning": "alan",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "figure",
+    "meaning": "rakam, figür",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "film",
+    "meaning": "film",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "finger",
+    "meaning": "parmak",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "fire",
+    "meaning": "yangın, ateş",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "fish",
+    "meaning": "balık",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "floor",
+    "meaning": "zemin, kat",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "flower",
+    "meaning": "çiçek",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "food",
+    "meaning": "yiyecek",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "foot",
+    "meaning": "ayak",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "force",
+    "meaning": "güç",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "forest",
+    "meaning": "orman",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "friend",
+    "meaning": "arkadaş",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "fruit",
+    "meaning": "meyve",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "function",
+    "meaning": "işlev",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "future",
+    "meaning": "gelecek",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "game",
+    "meaning": "oyun",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "garden",
+    "meaning": "bahçe",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "gas",
+    "meaning": "gaz",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "girl",
+    "meaning": "kız",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "glass",
+    "meaning": "cam, bardak",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "goal",
+    "meaning": "hedef",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "government",
+    "meaning": "hükümet",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "group",
+    "meaning": "grup",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "growth",
+    "meaning": "büyüme",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "gun",
+    "meaning": "silah",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "guy",
+    "meaning": "adam",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "hair",
+    "meaning": "saç",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "half",
+    "meaning": "yarım",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "hand",
+    "meaning": "el",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "head",
+    "meaning": "baş",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "health",
+    "meaning": "sağlık",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "heart",
+    "meaning": "kalp",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "heat",
+    "meaning": "ısı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "height",
+    "meaning": "yükseklik",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "history",
+    "meaning": "tarih",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "hole",
+    "meaning": "delik",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "home",
+    "meaning": "ev",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "horse",
+    "meaning": "at",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "hospital",
+    "meaning": "hastane",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "hotel",
+    "meaning": "otel",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "hour",
+    "meaning": "saat",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "house",
+    "meaning": "ev",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "housing",
+    "meaning": "konut",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "idea",
+    "meaning": "fikir",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "image",
+    "meaning": "görüntü",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "impact",
+    "meaning": "etki",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "importance",
+    "meaning": "önem",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "income",
+    "meaning": "gelir",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "industry",
+    "meaning": "sektör, endüstri",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "information",
+    "meaning": "bilgi",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "instance",
+    "meaning": "örnek, durum",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "institution",
+    "meaning": "kurum",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "insurance",
+    "meaning": "sigorta",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "interest",
+    "meaning": "ilgi, faiz",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "internet",
+    "meaning": "internet",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "investment",
+    "meaning": "yatırım",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "issue",
+    "meaning": "konu, sorun",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "item",
+    "meaning": "madde, öğe",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "job",
+    "meaning": "iş",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "journey",
+    "meaning": "yolculuk",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "key",
+    "meaning": "anahtar",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "kid",
+    "meaning": "çocuk",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "kind",
+    "meaning": "tür",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "king",
+    "meaning": "kral",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "kitchen",
+    "meaning": "mutfak",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "knowledge",
+    "meaning": "bilgi",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "lady",
+    "meaning": "hanım",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "lake",
+    "meaning": "göl",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "language",
+    "meaning": "dil",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "law",
+    "meaning": "yasa",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "lawyer",
+    "meaning": "avukat",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "leader",
+    "meaning": "lider",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "leaf",
+    "meaning": "yaprak",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "level",
+    "meaning": "seviye",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "library",
+    "meaning": "kütüphane",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "life",
+    "meaning": "yaşam",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "light",
+    "meaning": "ışık",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "line",
+    "meaning": "çizgi, sıra",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "list",
+    "meaning": "liste",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "literature",
+    "meaning": "edebiyat",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "loan",
+    "meaning": "kredi",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "location",
+    "meaning": "konum",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "loss",
+    "meaning": "kayıp",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "machine",
+    "meaning": "makine",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "magazine",
+    "meaning": "dergi",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "mail",
+    "meaning": "posta",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "man",
+    "meaning": "adam",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "manager",
+    "meaning": "yönetici",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "map",
+    "meaning": "harita",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "market",
+    "meaning": "pazar, piyasa",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "marriage",
+    "meaning": "evlilik",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "material",
+    "meaning": "malzeme",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "meal",
+    "meaning": "öğün",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "meaning",
+    "meaning": "anlam",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "media",
+    "meaning": "medya",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "medicine",
+    "meaning": "ilaç, tıp",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "meeting",
+    "meaning": "toplantı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "member",
+    "meaning": "üye",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "memory",
+    "meaning": "bellek, anı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "message",
+    "meaning": "mesaj",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "method",
+    "meaning": "yöntem",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "middle",
+    "meaning": "orta",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "milk",
+    "meaning": "süt",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "minute",
+    "meaning": "dakika",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "mistake",
+    "meaning": "hata",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "model",
+    "meaning": "model",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "moment",
+    "meaning": "an",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "money",
+    "meaning": "para",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "month",
+    "meaning": "ay",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "mood",
+    "meaning": "ruh hali",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "morning",
+    "meaning": "sabah",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "mother",
+    "meaning": "anne",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "mountain",
+    "meaning": "dağ",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "mouth",
+    "meaning": "ağız",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "movement",
+    "meaning": "hareket",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "movie",
+    "meaning": "film",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "music",
+    "meaning": "müzik",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "name",
+    "meaning": "isim",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "nation",
+    "meaning": "ulus",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "nature",
+    "meaning": "doğa",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "neck",
+    "meaning": "boyun",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "news",
+    "meaning": "haber",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "newspaper",
+    "meaning": "gazete",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "night",
+    "meaning": "gece",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "noise",
+    "meaning": "gürültü",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "north",
+    "meaning": "kuzey",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "note",
+    "meaning": "not",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "number",
+    "meaning": "sayı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "object",
+    "meaning": "nesne",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "ocean",
+    "meaning": "okyanus",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "office",
+    "meaning": "ofis",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "officer",
+    "meaning": "memur, subay",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "oil",
+    "meaning": "yağ, petrol",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "operation",
+    "meaning": "operasyon",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "opinion",
+    "meaning": "görüş",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "opportunity",
+    "meaning": "fırsat",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "option",
+    "meaning": "seçenek",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "organization",
+    "meaning": "kuruluş",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "outcome",
+    "meaning": "sonuç",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "output",
+    "meaning": "çıktı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "owner",
+    "meaning": "sahip",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "page",
+    "meaning": "sayfa",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "pain",
+    "meaning": "acı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "paint",
+    "meaning": "boya",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "paper",
+    "meaning": "kağıt",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "parent",
+    "meaning": "ebeveyn",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "park",
+    "meaning": "park",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "part",
+    "meaning": "parça",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "partner",
+    "meaning": "ortak",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "party",
+    "meaning": "parti, davet",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "passage",
+    "meaning": "pasaj, geçiş",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "past",
+    "meaning": "geçmiş",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "path",
+    "meaning": "yol",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "patient",
+    "meaning": "hasta",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "pattern",
+    "meaning": "desen, örüntü",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "peace",
+    "meaning": "barış",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "people",
+    "meaning": "insanlar",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "period",
+    "meaning": "dönem",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "person",
+    "meaning": "kişi",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "phone",
+    "meaning": "telefon",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "photo",
+    "meaning": "fotoğraf",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "picture",
+    "meaning": "resim",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "piece",
+    "meaning": "parça",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "place",
+    "meaning": "yer",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "plant",
+    "meaning": "bitki, fabrika",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "player",
+    "meaning": "oyuncu",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "pleasure",
+    "meaning": "zevk",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "pocket",
+    "meaning": "cep",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "poem",
+    "meaning": "şiir",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "police",
+    "meaning": "polis",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "policy",
+    "meaning": "politika",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "population",
+    "meaning": "nüfus",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "position",
+    "meaning": "konum",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "possibility",
+    "meaning": "olasılık",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "power",
+    "meaning": "güç",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "practice",
+    "meaning": "pratik, uygulama",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "president",
+    "meaning": "başkan",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "pressure",
+    "meaning": "baskı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "price",
+    "meaning": "fiyat",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "problem",
+    "meaning": "sorun",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "process",
+    "meaning": "süreç",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "product",
+    "meaning": "ürün",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "professor",
+    "meaning": "profesör",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "profit",
+    "meaning": "kâr",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "program",
+    "meaning": "program",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "project",
+    "meaning": "proje",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "property",
+    "meaning": "mülk",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "purpose",
+    "meaning": "amaç",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "quality",
+    "meaning": "kalite",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "question",
+    "meaning": "soru",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "race",
+    "meaning": "yarış, ırk",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "radio",
+    "meaning": "radyo",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "rain",
+    "meaning": "yağmur",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "range",
+    "meaning": "aralık",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "rate",
+    "meaning": "oran",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "reason",
+    "meaning": "neden",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "relationship",
+    "meaning": "ilişki",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "research",
+    "meaning": "araştırma",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "resource",
+    "meaning": "kaynak",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "response",
+    "meaning": "yanıt",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "responsibility",
+    "meaning": "sorumluluk",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "restaurant",
+    "meaning": "restoran",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "review",
+    "meaning": "inceleme",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "risk",
+    "meaning": "risk",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "river",
+    "meaning": "nehir",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "road",
+    "meaning": "yol",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "rock",
+    "meaning": "kaya",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "role",
+    "meaning": "rol",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "room",
+    "meaning": "oda",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "rule",
+    "meaning": "kural",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "safety",
+    "meaning": "güvenlik",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "sale",
+    "meaning": "satış",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "school",
+    "meaning": "okul",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "science",
+    "meaning": "bilim",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "screen",
+    "meaning": "ekran",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "sea",
+    "meaning": "deniz",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "season",
+    "meaning": "sezon, mevsim",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "seat",
+    "meaning": "koltuk",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "second",
+    "meaning": "saniye",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "secretary",
+    "meaning": "sekreter",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "section",
+    "meaning": "bölüm",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "security",
+    "meaning": "güvenlik",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "sense",
+    "meaning": "duyu, anlam",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "series",
+    "meaning": "seri",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "service",
+    "meaning": "hizmet",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "session",
+    "meaning": "oturum",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "shape",
+    "meaning": "şekil",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "ship",
+    "meaning": "gemi",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "shop",
+    "meaning": "dükkân",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "shot",
+    "meaning": "atış, fotoğraf",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "side",
+    "meaning": "taraf",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "situation",
+    "meaning": "durum",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "size",
+    "meaning": "boyut",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "skill",
+    "meaning": "beceri",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "sky",
+    "meaning": "gökyüzü",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "snow",
+    "meaning": "kar",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "society",
+    "meaning": "toplum",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "solution",
+    "meaning": "çözüm",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "son",
+    "meaning": "erkek evlat",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "song",
+    "meaning": "şarkı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "sound",
+    "meaning": "ses",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "source",
+    "meaning": "kaynak",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "south",
+    "meaning": "güney",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "space",
+    "meaning": "uzay, alan",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "speed",
+    "meaning": "hız",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "sport",
+    "meaning": "spor",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "spring",
+    "meaning": "ilkbahar, yay",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "staff",
+    "meaning": "personel",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "stage",
+    "meaning": "aşama, sahne",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "standard",
+    "meaning": "standart",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "star",
+    "meaning": "yıldız",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "state",
+    "meaning": "devlet, durum",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "statement",
+    "meaning": "ifade, açıklama",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "station",
+    "meaning": "istasyon",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "step",
+    "meaning": "adım",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "stock",
+    "meaning": "stok, hisse",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "stone",
+    "meaning": "taş",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "story",
+    "meaning": "hikâye",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "strategy",
+    "meaning": "strateji",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "street",
+    "meaning": "sokak",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "stress",
+    "meaning": "stres",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "structure",
+    "meaning": "yapı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "student",
+    "meaning": "öğrenci",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "studio",
+    "meaning": "stüdyo",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "subject",
+    "meaning": "konu, ders",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "success",
+    "meaning": "başarı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "summer",
+    "meaning": "yaz",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "sun",
+    "meaning": "güneş",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "system",
+    "meaning": "sistem",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "table",
+    "meaning": "masa",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "task",
+    "meaning": "görev",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "tax",
+    "meaning": "vergi",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "tea",
+    "meaning": "çay",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "teacher",
+    "meaning": "öğretmen",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "team",
+    "meaning": "ekip",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "technology",
+    "meaning": "teknoloji",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "television",
+    "meaning": "televizyon",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "temperature",
+    "meaning": "sıcaklık",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "term",
+    "meaning": "terim, dönem",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "text",
+    "meaning": "metin",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "theory",
+    "meaning": "teori",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "thing",
+    "meaning": "şey",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "thought",
+    "meaning": "düşünce",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "time",
+    "meaning": "zaman",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "title",
+    "meaning": "başlık",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "today",
+    "meaning": "bugün",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "tool",
+    "meaning": "araç",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "top",
+    "meaning": "üst",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "town",
+    "meaning": "kasaba",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "trade",
+    "meaning": "ticaret",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "tradition",
+    "meaning": "gelenek",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "traffic",
+    "meaning": "trafik",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "tree",
+    "meaning": "ağaç",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "trip",
+    "meaning": "gezi",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "trouble",
+    "meaning": "sorun",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "truth",
+    "meaning": "gerçek",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "type",
+    "meaning": "tür",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "unit",
+    "meaning": "birim",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "university",
+    "meaning": "üniversite",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "user",
+    "meaning": "kullanıcı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "variety",
+    "meaning": "çeşitlilik",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "vehicle",
+    "meaning": "araç",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "version",
+    "meaning": "sürüm",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "victim",
+    "meaning": "kurban",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "video",
+    "meaning": "video",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "view",
+    "meaning": "görüş, manzara",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "village",
+    "meaning": "köy",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "voice",
+    "meaning": "ses",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "war",
+    "meaning": "savaş",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "water",
+    "meaning": "su",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "way",
+    "meaning": "yol, yöntem",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "weather",
+    "meaning": "hava durumu",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "week",
+    "meaning": "hafta",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "weight",
+    "meaning": "ağırlık",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "west",
+    "meaning": "batı",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "wife",
+    "meaning": "eş",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "wind",
+    "meaning": "rüzgar",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "window",
+    "meaning": "pencere",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "winter",
+    "meaning": "kış",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "woman",
+    "meaning": "kadın",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "word",
+    "meaning": "kelime",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "worker",
+    "meaning": "işçi",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "world",
+    "meaning": "dünya",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "writer",
+    "meaning": "yazar",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "year",
+    "meaning": "yıl",
+    "pos": "noun",
+    "cefr": "A1"
+  },
+  {
+    "term": "youth",
+    "meaning": "gençlik",
+    "pos": "noun",
+    "cefr": "A2"
+  },
+  {
+    "term": "able",
+    "meaning": "yapabilen, muktedir",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "absent",
+    "meaning": "yok, devamsız",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "absolute",
+    "meaning": "mutlak",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "academic",
+    "meaning": "akademik",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "acceptable",
+    "meaning": "kabul edilebilir",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "accurate",
+    "meaning": "doğru, isabetli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "active",
+    "meaning": "aktif",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "actual",
+    "meaning": "gerçek",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "additional",
+    "meaning": "ek",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "adequate",
+    "meaning": "yeterli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "advanced",
+    "meaning": "ileri düzey",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "afraid",
+    "meaning": "korkmuş",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "alive",
+    "meaning": "canlı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "alternative",
+    "meaning": "alternatif",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "amazing",
+    "meaning": "şaşırtıcı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "ancient",
+    "meaning": "antik",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "angry",
+    "meaning": "kızgın",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "annual",
+    "meaning": "yıllık",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "anxious",
+    "meaning": "endişeli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "appropriate",
+    "meaning": "uygun",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "available",
+    "meaning": "mevcut",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "average",
+    "meaning": "ortalama",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "aware",
+    "meaning": "farkında",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "bad",
+    "meaning": "kötü",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "basic",
+    "meaning": "temel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "beautiful",
+    "meaning": "güzel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "best",
+    "meaning": "en iyi",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "better",
+    "meaning": "daha iyi",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "big",
+    "meaning": "büyük",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "bitter",
+    "meaning": "acı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "black",
+    "meaning": "siyah",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "blind",
+    "meaning": "kör",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "blue",
+    "meaning": "mavi",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "bold",
+    "meaning": "cesur",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "brave",
+    "meaning": "cesur",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "brief",
+    "meaning": "kısa",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "bright",
+    "meaning": "parlak",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "brilliant",
+    "meaning": "harika, zeki",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "broad",
+    "meaning": "geniş",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "brown",
+    "meaning": "kahverengi",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "busy",
+    "meaning": "meşgul",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "calm",
+    "meaning": "sakin",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "capable",
+    "meaning": "yetenekli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "careful",
+    "meaning": "dikkatli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "central",
+    "meaning": "merkezi",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "certain",
+    "meaning": "belirli, emin",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "cheap",
+    "meaning": "ucuz",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "chemical",
+    "meaning": "kimyasal",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "chief",
+    "meaning": "baş, ana",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "civil",
+    "meaning": "sivil",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "classical",
+    "meaning": "klasik",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "clever",
+    "meaning": "zeki",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "cold",
+    "meaning": "soğuk",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "comfortable",
+    "meaning": "rahat",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "common",
+    "meaning": "yaygın",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "complex",
+    "meaning": "karmaşık",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "concerned",
+    "meaning": "endişeli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "confident",
+    "meaning": "kendinden emin",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "consistent",
+    "meaning": "tutarlı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "constant",
+    "meaning": "sabit",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "continuous",
+    "meaning": "sürekli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "cool",
+    "meaning": "serin",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "costly",
+    "meaning": "pahalı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "creative",
+    "meaning": "yaratıcı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "critical",
+    "meaning": "kritik",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "cultural",
+    "meaning": "kültürel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "curious",
+    "meaning": "meraklı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "current",
+    "meaning": "güncel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "dangerous",
+    "meaning": "tehlikeli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "dark",
+    "meaning": "karanlık",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "dead",
+    "meaning": "ölü",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "deep",
+    "meaning": "derin",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "definite",
+    "meaning": "kesin",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "delicious",
+    "meaning": "lezzetli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "democratic",
+    "meaning": "demokratik",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "different",
+    "meaning": "farklı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "difficult",
+    "meaning": "zor",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "digital",
+    "meaning": "dijital",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "direct",
+    "meaning": "doğrudan",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "dirty",
+    "meaning": "kirli",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "distinct",
+    "meaning": "belirgin",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "diverse",
+    "meaning": "çeşitli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "double",
+    "meaning": "çift",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "dry",
+    "meaning": "kuru",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "early",
+    "meaning": "erken",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "easy",
+    "meaning": "kolay",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "economic",
+    "meaning": "ekonomik",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "educational",
+    "meaning": "eğitsel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "effective",
+    "meaning": "etkili",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "efficient",
+    "meaning": "verimli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "elderly",
+    "meaning": "yaşlı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "electric",
+    "meaning": "elektrikli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "electronic",
+    "meaning": "elektronik",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "emotional",
+    "meaning": "duygusal",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "empty",
+    "meaning": "boş",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "enormous",
+    "meaning": "muazzam",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "entire",
+    "meaning": "tüm",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "environmental",
+    "meaning": "çevresel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "equal",
+    "meaning": "eşit",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "essential",
+    "meaning": "temel, vazgeçilmez",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "exact",
+    "meaning": "kesin",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "excellent",
+    "meaning": "mükemmel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "excited",
+    "meaning": "heyecanlı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "exciting",
+    "meaning": "heyecan verici",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "expensive",
+    "meaning": "pahalı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "extreme",
+    "meaning": "aşırı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "fair",
+    "meaning": "adil",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "familiar",
+    "meaning": "tanıdık",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "famous",
+    "meaning": "ünlü",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "fast",
+    "meaning": "hızlı",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "fat",
+    "meaning": "şişman",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "federal",
+    "meaning": "federal",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "final",
+    "meaning": "son",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "financial",
+    "meaning": "finansal",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "fine",
+    "meaning": "iyi, ince",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "firm",
+    "meaning": "kararlı, sağlam",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "flat",
+    "meaning": "düz",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "foreign",
+    "meaning": "yabancı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "formal",
+    "meaning": "resmi",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "former",
+    "meaning": "önceki",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "free",
+    "meaning": "özgür, ücretsiz",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "frequent",
+    "meaning": "sık",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "fresh",
+    "meaning": "taze",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "friendly",
+    "meaning": "arkadaş canlısı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "front",
+    "meaning": "ön",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "full",
+    "meaning": "dolu",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "fun",
+    "meaning": "eğlenceli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "funny",
+    "meaning": "komik",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "general",
+    "meaning": "genel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "generous",
+    "meaning": "cömert",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "gentle",
+    "meaning": "nazik",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "genuine",
+    "meaning": "gerçek, samimi",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "giant",
+    "meaning": "dev",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "glad",
+    "meaning": "memnun",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "global",
+    "meaning": "küresel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "golden",
+    "meaning": "altın renkli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "good",
+    "meaning": "iyi",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "grand",
+    "meaning": "görkemli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "grateful",
+    "meaning": "minnettar",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "great",
+    "meaning": "harika",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "green",
+    "meaning": "yeşil",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "happy",
+    "meaning": "mutlu",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "hard",
+    "meaning": "zor, sert",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "healthy",
+    "meaning": "sağlıklı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "heavy",
+    "meaning": "ağır",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "helpful",
+    "meaning": "yardımcı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "high",
+    "meaning": "yüksek",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "historical",
+    "meaning": "tarihi",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "honest",
+    "meaning": "dürüst",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "hot",
+    "meaning": "sıcak",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "huge",
+    "meaning": "kocaman",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "human",
+    "meaning": "insan",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "hungry",
+    "meaning": "aç",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "ideal",
+    "meaning": "ideal",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "ill",
+    "meaning": "hasta",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "illegal",
+    "meaning": "yasa dışı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "important",
+    "meaning": "önemli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "impossible",
+    "meaning": "imkansız",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "independent",
+    "meaning": "bağımsız",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "individual",
+    "meaning": "bireysel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "industrial",
+    "meaning": "endüstriyel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "informal",
+    "meaning": "gayri resmi",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "initial",
+    "meaning": "ilk",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "inner",
+    "meaning": "iç",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "innocent",
+    "meaning": "masum",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "intelligent",
+    "meaning": "zeki",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "interesting",
+    "meaning": "ilginç",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "internal",
+    "meaning": "iç",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "international",
+    "meaning": "uluslararası",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "large",
+    "meaning": "büyük",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "late",
+    "meaning": "geç",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "legal",
+    "meaning": "yasal",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "likely",
+    "meaning": "muhtemel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "limited",
+    "meaning": "sınırlı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "little",
+    "meaning": "küçük",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "local",
+    "meaning": "yerel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "lonely",
+    "meaning": "yalnız",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "long",
+    "meaning": "uzun",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "loose",
+    "meaning": "gevşek",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "loud",
+    "meaning": "yüksek sesli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "lovely",
+    "meaning": "hoş",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "low",
+    "meaning": "düşük",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "lucky",
+    "meaning": "şanslı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "main",
+    "meaning": "ana",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "major",
+    "meaning": "önemli, büyük",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "male",
+    "meaning": "erkek",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "married",
+    "meaning": "evli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "medical",
+    "meaning": "tıbbi",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "mental",
+    "meaning": "zihinsel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "modern",
+    "meaning": "modern",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "moral",
+    "meaning": "ahlaki",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "national",
+    "meaning": "ulusal",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "natural",
+    "meaning": "doğal",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "nearby",
+    "meaning": "yakın",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "necessary",
+    "meaning": "gerekli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "negative",
+    "meaning": "olumsuz",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "nervous",
+    "meaning": "gergin",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "new",
+    "meaning": "yeni",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "nice",
+    "meaning": "hoş",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "normal",
+    "meaning": "normal",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "northern",
+    "meaning": "kuzey",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "obvious",
+    "meaning": "apaçık",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "official",
+    "meaning": "resmi",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "old",
+    "meaning": "eski, yaşlı",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "ordinary",
+    "meaning": "sıradan",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "original",
+    "meaning": "özgün",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "outdoor",
+    "meaning": "açık hava",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "outside",
+    "meaning": "dışarı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "outstanding",
+    "meaning": "olağanüstü",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "particular",
+    "meaning": "belirli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "peaceful",
+    "meaning": "huzurlu",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "perfect",
+    "meaning": "mükemmel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "permanent",
+    "meaning": "kalıcı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "personal",
+    "meaning": "kişisel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "physical",
+    "meaning": "fiziksel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "political",
+    "meaning": "siyasi",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "poor",
+    "meaning": "yoksul",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "popular",
+    "meaning": "popüler",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "positive",
+    "meaning": "olumlu",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "possible",
+    "meaning": "mümkün",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "potential",
+    "meaning": "potansiyel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "powerful",
+    "meaning": "güçlü",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "practical",
+    "meaning": "pratik",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "precious",
+    "meaning": "değerli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "pregnant",
+    "meaning": "hamile",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "pretty",
+    "meaning": "güzel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "previous",
+    "meaning": "önceki",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "primary",
+    "meaning": "birincil",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "prime",
+    "meaning": "başlıca",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "private",
+    "meaning": "özel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "probable",
+    "meaning": "olası",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "professional",
+    "meaning": "profesyonel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "proper",
+    "meaning": "uygun",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "proud",
+    "meaning": "gururlu",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "public",
+    "meaning": "kamusal",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "pure",
+    "meaning": "saf",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "quick",
+    "meaning": "hızlı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "quiet",
+    "meaning": "sessiz",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "rare",
+    "meaning": "nadir",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "raw",
+    "meaning": "çiğ",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "ready",
+    "meaning": "hazır",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "real",
+    "meaning": "gerçek",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "reasonable",
+    "meaning": "makul",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "recent",
+    "meaning": "son",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "red",
+    "meaning": "kırmızı",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "regional",
+    "meaning": "bölgesel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "regular",
+    "meaning": "düzenli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "relevant",
+    "meaning": "ilgili",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "religious",
+    "meaning": "dini",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "responsible",
+    "meaning": "sorumlu",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "rich",
+    "meaning": "zengin",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "right",
+    "meaning": "doğru, sağ",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "rough",
+    "meaning": "pürüzlü, kaba",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "round",
+    "meaning": "yuvarlak",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "rural",
+    "meaning": "kırsal",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "sad",
+    "meaning": "üzgün",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "safe",
+    "meaning": "güvenli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "scientific",
+    "meaning": "bilimsel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "secret",
+    "meaning": "gizli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "secure",
+    "meaning": "güvenli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "serious",
+    "meaning": "ciddi",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "several",
+    "meaning": "birkaç",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "sharp",
+    "meaning": "keskin",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "short",
+    "meaning": "kısa",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "shy",
+    "meaning": "utangaç",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "sick",
+    "meaning": "hasta",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "significant",
+    "meaning": "önemli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "silent",
+    "meaning": "sessiz",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "silly",
+    "meaning": "aptalca",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "similar",
+    "meaning": "benzer",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "simple",
+    "meaning": "basit",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "single",
+    "meaning": "tek",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "slight",
+    "meaning": "hafif",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "slow",
+    "meaning": "yavaş",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "small",
+    "meaning": "küçük",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "smart",
+    "meaning": "akıllı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "smooth",
+    "meaning": "pürüzsüz",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "social",
+    "meaning": "sosyal",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "soft",
+    "meaning": "yumuşak",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "solid",
+    "meaning": "katı, sağlam",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "sorry",
+    "meaning": "üzgün",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "special",
+    "meaning": "özel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "specific",
+    "meaning": "belirli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "spiritual",
+    "meaning": "manevi",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "stable",
+    "meaning": "istikrarlı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "steady",
+    "meaning": "sabit",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "strange",
+    "meaning": "garip",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "strong",
+    "meaning": "güçlü",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "structural",
+    "meaning": "yapısal",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "stupid",
+    "meaning": "aptal",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "successful",
+    "meaning": "başarılı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "sudden",
+    "meaning": "ani",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "sufficient",
+    "meaning": "yeterli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "suitable",
+    "meaning": "uygun",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "super",
+    "meaning": "harika",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "sure",
+    "meaning": "emin",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "surprising",
+    "meaning": "şaşırtıcı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "sweet",
+    "meaning": "tatlı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "tall",
+    "meaning": "uzun boylu",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "technical",
+    "meaning": "teknik",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "temporary",
+    "meaning": "geçici",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "terrible",
+    "meaning": "korkunç",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "thick",
+    "meaning": "kalın",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "thin",
+    "meaning": "ince",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "third",
+    "meaning": "üçüncü",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "tight",
+    "meaning": "dar",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "tiny",
+    "meaning": "minik",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "tired",
+    "meaning": "yorgun",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "total",
+    "meaning": "toplam",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "tough",
+    "meaning": "zorlu",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "traditional",
+    "meaning": "geleneksel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "true",
+    "meaning": "doğru",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "typical",
+    "meaning": "tipik",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "ugly",
+    "meaning": "çirkin",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "unable",
+    "meaning": "yapamaz",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "unhappy",
+    "meaning": "mutsuz",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "unique",
+    "meaning": "benzersiz",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "universal",
+    "meaning": "evrensel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "unknown",
+    "meaning": "bilinmeyen",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "unusual",
+    "meaning": "alışılmadık",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "urban",
+    "meaning": "kentsel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "useful",
+    "meaning": "faydalı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "usual",
+    "meaning": "olağan",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "valuable",
+    "meaning": "değerli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "various",
+    "meaning": "çeşitli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "vast",
+    "meaning": "geniş",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "visible",
+    "meaning": "görünür",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "visual",
+    "meaning": "görsel",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "warm",
+    "meaning": "ılık",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "weak",
+    "meaning": "zayıf",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "wealthy",
+    "meaning": "zengin",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "weekly",
+    "meaning": "haftalık",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "weird",
+    "meaning": "tuhaf",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "western",
+    "meaning": "batılı",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "wet",
+    "meaning": "ıslak",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "white",
+    "meaning": "beyaz",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "whole",
+    "meaning": "bütün",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "wide",
+    "meaning": "geniş",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "wild",
+    "meaning": "vahşi",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "willing",
+    "meaning": "istekli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "wise",
+    "meaning": "bilge",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "wonderful",
+    "meaning": "harika",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "wooden",
+    "meaning": "ahşap",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "working",
+    "meaning": "çalışan",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "worried",
+    "meaning": "endişeli",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "wrong",
+    "meaning": "yanlış",
+    "pos": "adjective",
+    "cefr": "A2"
+  },
+  {
+    "term": "yellow",
+    "meaning": "sarı",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "young",
+    "meaning": "genç",
+    "pos": "adjective",
+    "cefr": "A1"
+  },
+  {
+    "term": "abroad",
+    "meaning": "yurt dışında",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "absolutely",
+    "meaning": "kesinlikle",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "actually",
+    "meaning": "aslında",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "almost",
+    "meaning": "neredeyse",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "alone",
+    "meaning": "yalnız",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "already",
+    "meaning": "çoktan",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "although",
+    "meaning": "rağmen",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "always",
+    "meaning": "her zaman",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "apart",
+    "meaning": "ayrı",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "apparently",
+    "meaning": "görünüşe göre",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "around",
+    "meaning": "etrafında",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "away",
+    "meaning": "uzakta",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "barely",
+    "meaning": "neredeyse hiç",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "basically",
+    "meaning": "temelde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "behind",
+    "meaning": "arkasında",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "beside",
+    "meaning": "yanında",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "beyond",
+    "meaning": "ötesinde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "briefly",
+    "meaning": "kısaca",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "carefully",
+    "meaning": "dikkatlice",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "certainly",
+    "meaning": "elbette",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "clearly",
+    "meaning": "açıkça",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "closely",
+    "meaning": "yakından",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "completely",
+    "meaning": "tamamen",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "currently",
+    "meaning": "şu anda",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "daily",
+    "meaning": "günlük olarak",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "definitely",
+    "meaning": "kesinlikle",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "deliberately",
+    "meaning": "kasten",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "directly",
+    "meaning": "doğrudan",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "easily",
+    "meaning": "kolayca",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "effectively",
+    "meaning": "etkili biçimde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "elsewhere",
+    "meaning": "başka yerde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "enough",
+    "meaning": "yeterince",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "entirely",
+    "meaning": "tamamen",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "especially",
+    "meaning": "özellikle",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "even",
+    "meaning": "hatta",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "eventually",
+    "meaning": "sonunda",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "exactly",
+    "meaning": "tam olarak",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "extremely",
+    "meaning": "aşırı derecede",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "fairly",
+    "meaning": "oldukça",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "finally",
+    "meaning": "sonunda",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "forward",
+    "meaning": "ileri",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "frequently",
+    "meaning": "sıklıkla",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "fully",
+    "meaning": "tamamen",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "generally",
+    "meaning": "genellikle",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "gradually",
+    "meaning": "kademeli olarak",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "greatly",
+    "meaning": "büyük ölçüde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "hardly",
+    "meaning": "neredeyse hiç",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "heavily",
+    "meaning": "ağır biçimde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "highly",
+    "meaning": "son derece",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "honestly",
+    "meaning": "dürüstçe",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "however",
+    "meaning": "ancak",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "immediately",
+    "meaning": "derhal",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "increasingly",
+    "meaning": "giderek artan biçimde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "indeed",
+    "meaning": "gerçekten",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "instead",
+    "meaning": "onun yerine",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "largely",
+    "meaning": "büyük ölçüde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "lately",
+    "meaning": "son zamanlarda",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "later",
+    "meaning": "daha sonra",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "meanwhile",
+    "meaning": "bu arada",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "merely",
+    "meaning": "sadece",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "moreover",
+    "meaning": "üstelik",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "mostly",
+    "meaning": "çoğunlukla",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "naturally",
+    "meaning": "doğal olarak",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "nearly",
+    "meaning": "neredeyse",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "necessarily",
+    "meaning": "zorunlu olarak",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "nevertheless",
+    "meaning": "yine de",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "normally",
+    "meaning": "normalde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "obviously",
+    "meaning": "apaçık",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "occasionally",
+    "meaning": "ara sıra",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "often",
+    "meaning": "sık sık",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "otherwise",
+    "meaning": "aksi halde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "overall",
+    "meaning": "genel olarak",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "perhaps",
+    "meaning": "belki",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "personally",
+    "meaning": "kişisel olarak",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "poorly",
+    "meaning": "kötü biçimde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "possibly",
+    "meaning": "muhtemelen",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "previously",
+    "meaning": "önceden",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "probably",
+    "meaning": "muhtemelen",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "properly",
+    "meaning": "düzgünce",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "quickly",
+    "meaning": "hızlıca",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "rarely",
+    "meaning": "nadiren",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "rather",
+    "meaning": "oldukça",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "really",
+    "meaning": "gerçekten",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "recently",
+    "meaning": "son zamanlarda",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "regardless",
+    "meaning": "bakılmaksızın",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "relatively",
+    "meaning": "nispeten",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "repeatedly",
+    "meaning": "tekrar tekrar",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "roughly",
+    "meaning": "kabaca",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "seriously",
+    "meaning": "ciddi olarak",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "significantly",
+    "meaning": "önemli ölçüde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "similarly",
+    "meaning": "benzer biçimde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "simply",
+    "meaning": "basitçe",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "slightly",
+    "meaning": "hafifçe",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "slowly",
+    "meaning": "yavaşça",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "sometimes",
+    "meaning": "bazen",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "soon",
+    "meaning": "yakında",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "specifically",
+    "meaning": "özellikle",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "still",
+    "meaning": "hâlâ",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "strongly",
+    "meaning": "güçlü biçimde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "suddenly",
+    "meaning": "aniden",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "surely",
+    "meaning": "elbette",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "therefore",
+    "meaning": "bu nedenle",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "though",
+    "meaning": "yine de",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "thus",
+    "meaning": "böylece",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "together",
+    "meaning": "birlikte",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "tomorrow",
+    "meaning": "yarın",
+    "pos": "adverb",
+    "cefr": "A1"
+  },
+  {
+    "term": "tonight",
+    "meaning": "bu gece",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "totally",
+    "meaning": "tamamen",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "truly",
+    "meaning": "gerçekten",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "typically",
+    "meaning": "tipik olarak",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "ultimately",
+    "meaning": "nihayetinde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "unfortunately",
+    "meaning": "ne yazık ki",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "usually",
+    "meaning": "genellikle",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "virtually",
+    "meaning": "neredeyse",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "widely",
+    "meaning": "geniş ölçüde",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "yesterday",
+    "meaning": "dün",
+    "pos": "adverb",
+    "cefr": "A1"
+  },
+  {
+    "term": "yet",
+    "meaning": "henüz",
+    "pos": "adverb",
+    "cefr": "B1"
+  },
+  {
+    "term": "abolish",
+    "meaning": "yürürlükten kaldırmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "abandon",
+    "meaning": "terk etmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "absorb",
+    "meaning": "emmek, özümsemek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "accommodate",
+    "meaning": "barındırmak, uyum sağlamak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "accompany",
+    "meaning": "eşlik etmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "accumulate",
+    "meaning": "birikmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "acknowledge",
+    "meaning": "kabul etmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "activate",
+    "meaning": "etkinleştirmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "adhere",
+    "meaning": "bağlı kalmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "administer",
+    "meaning": "yönetmek, uygulamak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "advocate",
+    "meaning": "savunmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "allocate",
+    "meaning": "tahsis etmek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "alter",
+    "meaning": "değiştirmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "anticipate",
+    "meaning": "öngörmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "appeal",
+    "meaning": "cazip gelmek, temyiz etmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "appoint",
+    "meaning": "atamak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "assess",
+    "meaning": "değerlendirmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "assign",
+    "meaning": "atamak, görevlendirmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "assume",
+    "meaning": "varsaymak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "attain",
+    "meaning": "elde etmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "attribute",
+    "meaning": "atfetmek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "authorize",
+    "meaning": "yetkilendirmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "cease",
+    "meaning": "son vermek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "cite",
+    "meaning": "alıntı yapmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "clarify",
+    "meaning": "açıklığa kavuşturmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "collapse",
+    "meaning": "çökmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "commence",
+    "meaning": "başlamak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "commit",
+    "meaning": "taahhüt etmek, işlemek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "compensate",
+    "meaning": "telafi etmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "compile",
+    "meaning": "derlemek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "complement",
+    "meaning": "tamamlamak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "comply",
+    "meaning": "uymak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "compose",
+    "meaning": "oluşturmak, bestelemek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "comprise",
+    "meaning": "oluşmak, kapsamak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "conceive",
+    "meaning": "tasavvur etmek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "conduct",
+    "meaning": "yürütmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "confine",
+    "meaning": "sınırlamak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "confront",
+    "meaning": "yüzleşmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "conserve",
+    "meaning": "korumak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "constitute",
+    "meaning": "oluşturmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "constrain",
+    "meaning": "kısıtlamak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "construct",
+    "meaning": "inşa etmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "consult",
+    "meaning": "danışmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "consume",
+    "meaning": "tüketmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "contradict",
+    "meaning": "çelişmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "contrast",
+    "meaning": "karşılaştırmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "convert",
+    "meaning": "dönüştürmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "cooperate",
+    "meaning": "işbirliği yapmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "coordinate",
+    "meaning": "koordine etmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "correspond",
+    "meaning": "karşılık gelmek, yazışmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "criticize",
+    "meaning": "eleştirmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "deduce",
+    "meaning": "çıkarım yapmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "demonstrate",
+    "meaning": "göstermek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "denote",
+    "meaning": "göstermek, ifade etmek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "derive",
+    "meaning": "türetmek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "detect",
+    "meaning": "saptamak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "deviate",
+    "meaning": "sapmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "diminish",
+    "meaning": "azalmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "discriminate",
+    "meaning": "ayrım yapmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "displace",
+    "meaning": "yerinden etmek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "dispose",
+    "meaning": "elden çıkarmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "distribute",
+    "meaning": "dağıtmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "dominate",
+    "meaning": "hâkim olmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "elaborate",
+    "meaning": "ayrıntılandırmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "eliminate",
+    "meaning": "ortadan kaldırmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "emerge",
+    "meaning": "ortaya çıkmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "emphasize",
+    "meaning": "vurgulamak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "enhance",
+    "meaning": "geliştirmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "ensure",
+    "meaning": "sağlamak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "evolve",
+    "meaning": "evrilmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "exceed",
+    "meaning": "aşmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "exclude",
+    "meaning": "dışlamak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "exhibit",
+    "meaning": "sergilemek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "expand",
+    "meaning": "genişlemek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "exploit",
+    "meaning": "yararlanmak, sömürmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "facilitate",
+    "meaning": "kolaylaştırmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "fluctuate",
+    "meaning": "dalgalanmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "formulate",
+    "meaning": "formüle etmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "generate",
+    "meaning": "üretmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "imply",
+    "meaning": "ima etmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "impose",
+    "meaning": "dayatmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "incorporate",
+    "meaning": "dahil etmek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "infer",
+    "meaning": "çıkarım yapmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "initiate",
+    "meaning": "başlatmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "integrate",
+    "meaning": "bütünleştirmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "interpret",
+    "meaning": "yorumlamak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "intervene",
+    "meaning": "müdahale etmek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "justify",
+    "meaning": "haklı çıkarmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "legislate",
+    "meaning": "yasama yapmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "manipulate",
+    "meaning": "manipüle etmek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "maximize",
+    "meaning": "en üst düzeye çıkarmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "mediate",
+    "meaning": "arabuluculuk yapmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "minimize",
+    "meaning": "en aza indirmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "modify",
+    "meaning": "değiştirmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "monitor",
+    "meaning": "izlemek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "negotiate",
+    "meaning": "müzakere etmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "oblige",
+    "meaning": "zorunlu kılmak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "offset",
+    "meaning": "dengelemek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "perceive",
+    "meaning": "algılamak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "persist",
+    "meaning": "ısrar etmek, sürmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "predict",
+    "meaning": "öngörmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "precede",
+    "meaning": "önce gelmek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "presume",
+    "meaning": "varsaymak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "proceed",
+    "meaning": "devam etmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "prohibit",
+    "meaning": "yasaklamak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "promote",
+    "meaning": "desteklemek, terfi ettirmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "pursue",
+    "meaning": "peşinden gitmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "react",
+    "meaning": "tepki vermek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "reconstruct",
+    "meaning": "yeniden inşa etmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "refine",
+    "meaning": "arıtmak, geliştirmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "regulate",
+    "meaning": "düzenlemek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "reinforce",
+    "meaning": "güçlendirmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "reject",
+    "meaning": "reddetmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "render",
+    "meaning": "kılmak, sunmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "replicate",
+    "meaning": "kopyalamak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "restrain",
+    "meaning": "dizginlemek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "retain",
+    "meaning": "elde tutmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "retrieve",
+    "meaning": "geri almak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "specify",
+    "meaning": "belirtmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "substitute",
+    "meaning": "yerine koymak",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "sustain",
+    "meaning": "sürdürmek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "terminate",
+    "meaning": "sonlandırmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "transmit",
+    "meaning": "iletmek",
+    "pos": "verb",
+    "cefr": "B2"
+  },
+  {
+    "term": "undergo",
+    "meaning": "geçirmek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "underlie",
+    "meaning": "altında yatmak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "undertake",
+    "meaning": "üstlenmek",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "verify",
+    "meaning": "doğrulamak",
+    "pos": "verb",
+    "cefr": "C1"
+  },
+  {
+    "term": "abstract",
+    "meaning": "soyut",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "adjacent",
+    "meaning": "bitişik",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "aesthetic",
+    "meaning": "estetik",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "ambiguous",
+    "meaning": "belirsiz, muğlak",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "apparent",
+    "meaning": "apaçık",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "arbitrary",
+    "meaning": "keyfi",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "authentic",
+    "meaning": "özgün",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "coherent",
+    "meaning": "tutarlı",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "concurrent",
+    "meaning": "eşzamanlı",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "considerable",
+    "meaning": "hatırı sayılır",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "contemporary",
+    "meaning": "çağdaş",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "contrary",
+    "meaning": "karşıt",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "conventional",
+    "meaning": "geleneksel",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "corporate",
+    "meaning": "kurumsal",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "crucial",
+    "meaning": "çok önemli",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "cumulative",
+    "meaning": "birikimli",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "discrete",
+    "meaning": "ayrı, kesikli",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "dynamic",
+    "meaning": "dinamik",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "empirical",
+    "meaning": "deneysel",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "equivalent",
+    "meaning": "eşdeğer",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "ethical",
+    "meaning": "etik",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "evident",
+    "meaning": "aşikâr",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "explicit",
+    "meaning": "açık, net",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "feasible",
+    "meaning": "uygulanabilir",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "fundamental",
+    "meaning": "temel",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "inherent",
+    "meaning": "doğasında olan",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "innovative",
+    "meaning": "yenilikçi",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "intrinsic",
+    "meaning": "içsel",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "legitimate",
+    "meaning": "meşru",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "mutual",
+    "meaning": "karşılıklı",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "objective",
+    "meaning": "nesnel",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "ongoing",
+    "meaning": "süregelen",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "precise",
+    "meaning": "kesin",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "preliminary",
+    "meaning": "ön",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "profound",
+    "meaning": "derin",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "qualitative",
+    "meaning": "nitel",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "quantitative",
+    "meaning": "nicel",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "radical",
+    "meaning": "radikal",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "random",
+    "meaning": "rastgele",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "rational",
+    "meaning": "akılcı",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "rigid",
+    "meaning": "katı",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "sole",
+    "meaning": "tek",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "subsequent",
+    "meaning": "sonraki",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "theoretical",
+    "meaning": "kuramsal",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "transparent",
+    "meaning": "şeffaf",
+    "pos": "adjective",
+    "cefr": "B2"
+  },
+  {
+    "term": "valid",
+    "meaning": "geçerli",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "viable",
+    "meaning": "uygulanabilir",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "voluntary",
+    "meaning": "gönüllü",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "widespread",
+    "meaning": "yaygın",
+    "pos": "adjective",
+    "cefr": "C1"
+  },
+  {
+    "term": "bias",
+    "meaning": "önyargı",
+    "pos": "noun",
+    "cefr": "C1"
+  },
+  {
+    "term": "capacity",
+    "meaning": "kapasite",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "criterion",
+    "meaning": "ölçüt",
+    "pos": "noun",
+    "cefr": "C1"
+  },
+  {
+    "term": "currency",
+    "meaning": "para birimi",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "deficiency",
+    "meaning": "eksiklik",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "domain",
+    "meaning": "alan",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "entity",
+    "meaning": "varlık",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "framework",
+    "meaning": "çerçeve",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "hypothesis",
+    "meaning": "hipotez",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "incentive",
+    "meaning": "teşvik",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "insight",
+    "meaning": "içgörü",
+    "pos": "noun",
+    "cefr": "C1"
+  },
+  {
+    "term": "integrity",
+    "meaning": "bütünlük",
+    "pos": "noun",
+    "cefr": "C1"
+  },
+  {
+    "term": "magnitude",
+    "meaning": "büyüklük",
+    "pos": "noun",
+    "cefr": "C1"
+  },
+  {
+    "term": "mechanism",
+    "meaning": "mekanizma",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "notion",
+    "meaning": "kavram, fikir",
+    "pos": "noun",
+    "cefr": "C1"
+  },
+  {
+    "term": "paradigm",
+    "meaning": "paradigma",
+    "pos": "noun",
+    "cefr": "C1"
+  },
+  {
+    "term": "parameter",
+    "meaning": "değişken, sınır",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "perspective",
+    "meaning": "bakış açısı",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "phenomenon",
+    "meaning": "olgu",
+    "pos": "noun",
+    "cefr": "C1"
+  },
+  {
+    "term": "principle",
+    "meaning": "ilke",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "proportion",
+    "meaning": "oran",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "prospect",
+    "meaning": "olasılık, ihtimal",
+    "pos": "noun",
+    "cefr": "C1"
+  },
+  {
+    "term": "revenue",
+    "meaning": "gelir",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "scenario",
+    "meaning": "senaryo",
+    "pos": "noun",
+    "cefr": "C1"
+  },
+  {
+    "term": "scheme",
+    "meaning": "plan, düzen",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "scope",
+    "meaning": "kapsam",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "sector",
+    "meaning": "sektör",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "sequence",
+    "meaning": "dizi, sıra",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "statistic",
+    "meaning": "istatistik",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "subsidy",
+    "meaning": "sübvansiyon",
+    "pos": "noun",
+    "cefr": "C1"
+  },
+  {
+    "term": "symbol",
+    "meaning": "sembol",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "tension",
+    "meaning": "gerilim",
+    "pos": "noun",
+    "cefr": "C1"
+  },
+  {
+    "term": "theme",
+    "meaning": "tema",
+    "pos": "noun",
+    "cefr": "B2"
+  },
+  {
+    "term": "transition",
+    "meaning": "geçiş",
+    "pos": "noun",
+    "cefr": "C1"
+  },
+  {
+    "term": "transparency",
+    "meaning": "şeffaflık",
+    "pos": "noun",
+    "cefr": "C1"
+  }
+]

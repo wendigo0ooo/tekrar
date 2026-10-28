@@ -50,6 +50,7 @@ fun TodayScreen(
     onDecks: () -> Unit,
     onPlacement: () -> Unit,
     onCustomSession: () -> Unit,
+    onMine: () -> Unit,
 ) {
     val dateText = LocalDate.now().format(
         DateTimeFormatter.ofPattern("d MMMM EEEE", Locale.forLanguageTag("tr"))
@@ -240,6 +241,24 @@ fun TodayScreen(
                     ) {
                         Text(text = stringResource(R.string.today_placement))
                     }
+                }
+            }
+
+            Panel {
+                SectionTitle(text = stringResource(R.string.today_mine))
+                Text(
+                    text = stringResource(R.string.today_mine_hint),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                OutlinedButton(
+                    onClick = onMine,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(48.dp),
+                    shape = RoundedCornerShape(14.dp),
+                ) {
+                    Text(text = stringResource(R.string.today_mine_open))
                 }
             }
 
