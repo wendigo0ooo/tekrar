@@ -101,4 +101,5 @@ data class WordEditorUiState(
     val isEdit: Boolean = false,
     val saving: Boolean = false,
     val duplicateTerm: Boolean = false,
+    val saveFailed: Boolean = false,
 )

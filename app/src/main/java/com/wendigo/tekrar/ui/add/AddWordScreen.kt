@@ -163,6 +163,13 @@ fun AddWordScreen(
             style = MaterialTheme.typography.labelMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
+        if (state.saveFailed) {
+            Text(
+                text = stringResource(R.string.add_save_failed),
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.error,
+            )
+        }
         Spacer(modifier = Modifier.height(4.dp))
         PrimaryButton(
             text = stringResource(R.string.add_save),

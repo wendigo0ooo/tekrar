@@ -3,6 +3,7 @@ package com.wendigo.tekrar.ui.settings
 import android.Manifest
 import android.app.TimePickerDialog
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -82,6 +83,7 @@ fun SettingsScreen(
     val snackbar = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     var showReset by remember { mutableStateOf(false) }
+    var pendingJsonUri by remember { mutableStateOf<Uri?>(null) }
 
     val notificationPermission = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.RequestPermission(),
@@ -103,7 +105,7 @@ fun SettingsScreen(
 
     val jsonImport = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.OpenDocument(),
-    ) { uri -> if (uri != null) onImportJson(uri) }
+    ) { uri -> if (uri != null) pendingJsonUri = uri }
 
     val csvExport = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.CreateDocument("text/csv"),
@@ -424,6 +426,33 @@ fun SettingsScreen(
             modifier = Modifier
                 .align(Alignment.BottomCenter)
                 .padding(12.dp),
+        )
+    }
+
+    pendingJsonUri?.let { uri ->
+        AlertDialog(
+            onDismissRequest = { pendingJsonUri = null },
+            title = { Text(text = stringResource(R.string.settings_restore_confirm_title)) },
+            text = { Text(text = stringResource(R.string.settings_restore_confirm_text)) },
+            confirmButton = {
+                Button(
+                    onClick = {
+                        pendingJsonUri = null
+                        onImportJson(uri)
+                    },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = MaterialTheme.colorScheme.error,
+                        contentColor = MaterialTheme.colorScheme.onError,
+                    ),
+                ) {
+                    Text(text = stringResource(R.string.settings_restore_confirm))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { pendingJsonUri = null }) {
+                    Text(text = stringResource(R.string.common_cancel))
+                }
+            },
         )
     }
 

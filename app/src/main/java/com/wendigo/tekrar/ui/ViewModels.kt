@@ -224,20 +224,31 @@ class WordEditorViewModel(
         onSaved: () -> Unit,
     ) {
         if (_state.value.saving) return
-        _state.update { it.copy(saving = true, duplicateTerm = false) }
+        _state.update {
+            it.copy(saving = true, duplicateTerm = false, saveFailed = false)
+        }
         viewModelScope.launch {
-            val result = if (id == null) {
-                repository.addWord(term, meaning, example, exampleTr, notes, tags, pos)
-            } else {
-                repository.updateWord(id, term, meaning, example, exampleTr, notes, tags, pos)
+            val result = runCatching {
+                if (id == null) {
+                    repository.addWord(term, meaning, example, exampleTr, notes, tags, pos)
+                } else {
+                    repository.updateWord(id, term, meaning, example, exampleTr, notes, tags, pos)
+                }
             }
             _state.update { it.copy(saving = false) }
-            when (result) {
-                is WordWriteResult.Saved -> onSaved()
-                WordWriteResult.DuplicateTerm ->
-                    _state.update { it.copy(duplicateTerm = true) }
-                WordWriteResult.NotFound -> onSaved()
-            }
+            result.fold(
+                onSuccess = { outcome ->
+                    when (outcome) {
+                        is WordWriteResult.Saved -> onSaved()
+                        WordWriteResult.DuplicateTerm ->
+                            _state.update { it.copy(duplicateTerm = true) }
+                        WordWriteResult.NotFound -> onSaved()
+                    }
+                },
+                onFailure = {
+                    _state.update { it.copy(saveFailed = true) }
+                },
+            )
         }
     }
 
@@ -626,6 +637,22 @@ class SettingsViewModel(
             val result = runCatching {
                 val text = withContext(Dispatchers.IO) { FileIo.readText(appContext, uri) }
                 backupManager.importJson(text)
+            }
+            result.onSuccess {
+                val restored = settings.settings.first()
+                if (restored.reminderEnabled) {
+                    if (Notifications.canPost(appContext)) {
+                        ReminderScheduler.schedule(
+                            appContext,
+                            restored.reminderHour,
+                            restored.reminderMinute,
+                        )
+                    } else {
+                        ReminderScheduler.cancel(appContext)
+                    }
+                } else {
+                    ReminderScheduler.cancel(appContext)
+                }
             }
             _message.value = result.fold(
                 { appContext.getString(R.string.settings_restore_done, it.summary) },

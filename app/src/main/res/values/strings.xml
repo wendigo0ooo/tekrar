@@ -69,7 +69,7 @@
     <string name="study_prompt_choice">Doğru anlamı seç.</string>
     <string name="study_prompt_typing">İngilizce karşılığını yaz.</string>
     <string name="study_prompt_listen">Dinle ve doğru anlamı seç.</string>
-    <string name="study_prompt_cloze_fallback">Örnek cümle yok. İngilizce karşılığını yaz.</string>
+    <string name="study_prompt_cloze_fallback">Boşluklu cümle kurulamadı. İngilizce karşılığını yaz.</string>
     <string name="study_play">Sesi çal</string>
     <string name="study_reveal">Anlamı göster</string>
     <string name="study_rating_hint">Ne kadar kolay hatırladın?</string>
@@ -128,6 +128,7 @@
     <string name="field_notes">Notlar</string>
     <string name="add_required_hint">Kelime ve anlam zorunlu.</string>
     <string name="add_save">Kaydet</string>
+    <string name="add_save_failed">Kaydedilemedi; tekrar dene.</string>
     <string name="add_delete">Kelimeyi sil</string>
     <string name="add_delete_title">Kelimeyi sil?</string>
     <string name="add_delete_text">%1$s kalıcı olarak silinsin mi? Bu işlem geri alınamaz.</string>
@@ -200,6 +201,9 @@
     <string name="settings_backup_saved">Yedek kaydedildi.</string>
     <string name="settings_csv_saved">CSV kaydedildi.</string>
     <string name="settings_backup_error">İşlem başarısız: %1$s</string>
+    <string name="settings_restore_confirm_title">Yedekten geri yükle?</string>
+    <string name="settings_restore_confirm_text">Mevcut tüm kelimeler ve tekrar geçmişi silinip yedekteki verilerle değiştirilecek. Bu işlem geri alınamaz.</string>
+    <string name="settings_restore_confirm">Geri yükle</string>
     <string name="settings_restore_done">Geri yükleme tamamlandı. %1$s</string>
     <string name="settings_reset_all">Tüm ilerlemeyi sıfırla</string>
     <string name="settings_reset_all_title">İlerlemeyi sıfırla?</string>
