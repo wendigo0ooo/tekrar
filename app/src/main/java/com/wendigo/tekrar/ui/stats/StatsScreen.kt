@@ -170,6 +170,30 @@ fun StatsScreen(state: StatsUiState, onLeeches: () -> Unit) {
                         color = MaterialTheme.colorScheme.primary,
                     )
                     Text(
+                        text = stringResource(
+                            R.string.today_weekly_goal,
+                            state.weeklyActiveDays,
+                            state.weeklyGoalDays,
+                        ),
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Text(
+                        text = stringResource(
+                            R.string.today_freeze_stock,
+                            state.streakFreezes,
+                        ) + if (state.frozenDays > 0) {
+                            " · " + stringResource(
+                                R.string.today_frozen_days,
+                                state.frozenDays,
+                            )
+                        } else {
+                            ""
+                        },
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Text(
                         text = state.retention?.let {
                             stringResource(
                                 R.string.stats_retention_value,

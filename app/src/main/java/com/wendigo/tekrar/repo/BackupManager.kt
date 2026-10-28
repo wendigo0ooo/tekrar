@@ -76,6 +76,7 @@ class BackupManager(
             }
         }
         settings.setSeedApplied(true)
+        settings.clearFreezeState()
         payload.settings?.let { settings.applyAll(it) }
         ImportResult(
             added = wordCount,
@@ -150,6 +151,7 @@ class BackupManager(
     private fun AppSettings.toBackupSettings(): BackupSettings = BackupSettings(
         newPerDay = newPerDay,
         dailyGoal = dailyGoal,
+        weeklyGoalDays = weeklyGoalDays,
         desiredRetention = desiredRetention,
         themeMode = themeMode,
         autoSpeak = autoSpeak,

@@ -13,6 +13,9 @@
     <string name="today_goal_progress">%1$d / %2$d tekrar</string>
     <string name="today_streak">%1$d günlük seri</string>
     <string name="today_streak_none">Bugün ilk tekrarını yap</string>
+    <string name="today_weekly_goal">Bu hafta %1$d/%2$d gün</string>
+    <string name="today_freeze_stock">Seri dondurma: %1$d/2</string>
+    <string name="today_frozen_days">%1$d donmuş gün</string>
     <string name="today_due">Tekrar</string>
     <string name="today_new">Yeni</string>
     <string name="today_total">Toplam</string>
@@ -186,6 +189,9 @@
     <string name="settings_new_per_day_desc">Bir günde tanıtılacak en fazla yeni kelime.</string>
     <string name="settings_daily_goal">Günlük hedef</string>
     <string name="settings_daily_goal_desc">Günlük tekrar hedefi (kart).</string>
+    <string name="settings_weekly_goal">Haftalık hedef</string>
+    <string name="settings_weekly_goal_desc">Haftada en az kaç gün çalışmak istediğin (3–7).</string>
+    <string name="settings_weekly_goal_suffix">gün</string>
     <string name="settings_retention">Hedef hatırlama</string>
     <string name="settings_retention_desc">FSRS hedef hatırlama oranı. Yüksek = daha sık tekrar.</string>
     <string name="settings_appearance">Görünüm</string>
@@ -199,7 +205,7 @@
     <string name="settings_speech_rate_value">%1$s×</string>
     <string name="settings_reminder">Hatırlatıcı</string>
     <string name="settings_reminder_time">Günlük hatırlatıcı</string>
-    <string name="settings_reminder_desc">Her gün seçtiğin saatte tekrar hatırlatması.</string>
+    <string name="settings_reminder_desc">Her gün seçtiğin saatte tekrar hatırlatması. 22:00–08:00 arasında seçilirse 08:00'e alınır.</string>
     <string name="settings_reminder_change">Saati değiştir</string>
     <string name="settings_test_notification">Test bildirimi</string>
     <string name="settings_reminder_on">Hatırlatıcı açıldı.</string>
@@ -233,7 +239,8 @@
     <string name="notif_channel_name">Günlük tekrar</string>
     <string name="notif_channel_desc">Tekrar zamanı geldiğinde hatırlatır.</string>
     <string name="notif_reminder_title">Tekrar zamanı</string>
-    <string name="notif_reminder_text">Bugünkü kelimelerini tekrar etmeyi unutma.</string>
+    <string name="notif_due_text">%1$d kelime seni bekliyor</string>
+    <string name="notif_new_text">Bugün öğrenecek %1$d yeni kelimen var</string>
     <string name="notif_test_title">Test bildirimi</string>
     <string name="notif_test_text">Bildirimler çalışıyor. Tekrar zamanı geldiğinde haber vereceğiz.</string>
 </resources>

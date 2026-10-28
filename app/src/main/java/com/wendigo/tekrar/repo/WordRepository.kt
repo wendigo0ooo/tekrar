@@ -6,7 +6,9 @@ import com.wendigo.tekrar.core.DueFormat
 import com.wendigo.tekrar.core.LeechPolicy
 import com.wendigo.tekrar.core.Srs
 import com.wendigo.tekrar.core.StatsMath
+import com.wendigo.tekrar.core.StreakFreeze
 import com.wendigo.tekrar.core.TermKey
+import com.wendigo.tekrar.core.WeeklyGoal
 import com.wendigo.tekrar.data.AppDatabase
 import com.wendigo.tekrar.data.ReviewLog
 import com.wendigo.tekrar.data.Word
@@ -44,6 +46,7 @@ class WordRepository(
     private val words = db.wordDao()
     private val logs = db.reviewLogDao()
     private val seedMutex = Mutex()
+    private val streakMutex = Mutex()
 
     fun observeDashboard(): Flow<DashboardUiState> = combine(
         words.observeAllWords(),
@@ -274,6 +277,42 @@ class WordRepository(
             words.resetAllProgress(System.currentTimeMillis())
             logs.deleteAll()
         }
+        settings.clearFreezeState()
+    }
+
+    /**
+     * Günlük seri dondurma kontrolü. Kaçırılan günleri (varsa) dondurur, ardından
+     * 7'nin katına ulaşan seri için dondurma kazandırır. Idempotenttir; eşzamanlı
+     * çağrılar mutex ile sıraya girer.
+     */
+    suspend fun syncStreakFreezes(
+        zone: ZoneId = ZoneId.systemDefault(),
+        today: LocalDate = LocalDate.now(zone),
+    ) = streakMutex.withLock {
+        val snapshot = settings.settings.first()
+        val byDay = StatsMath.reviewsByDay(logs.allLogs(), zone)
+        val reviewedDays = byDay.filterValues { it > 0 }.keys
+        var frozenDays = snapshot.frozenDays
+        var stock = snapshot.streakFreezes
+        var milestone = snapshot.lastFreezeMilestone
+
+        val decision = StreakFreeze.decide(reviewedDays, frozenDays, today, stock)
+        if (decision.consumed > 0) {
+            frozenDays = frozenDays + decision.days
+            stock = decision.stockAfter
+        }
+
+        val streak = StatsMath.streak(byDay, today, frozenDays)
+        val grant = StreakFreeze.grant(streak, milestone, stock)
+        stock = (stock + grant.granted).coerceAtMost(StreakFreeze.MAX_FREEZES)
+        milestone = grant.milestone
+
+        if (frozenDays != snapshot.frozenDays ||
+            stock != snapshot.streakFreezes ||
+            milestone != snapshot.lastFreezeMilestone
+        ) {
+            settings.setFreezeState(stock, frozenDays, milestone)
+        }
     }
 
     suspend fun allWords(): List<Word> = words.allWords()
@@ -361,6 +400,7 @@ class WordRepository(
             .filter { !it.suspended && !it.isNew && it.dueAt > now }
             .map { it.dueAt }
             .minOrNull()
+        val weekly = WeeklyGoal.progress(byDay, today, appSettings.weeklyGoalDays)
         return DashboardUiState(
             loading = false,
             dueNow = dueNow,
@@ -371,7 +411,10 @@ class WordRepository(
             mature = allWords.count { !it.suspended && !it.isNew && it.stability >= 21.0 },
             reviewedToday = byDay[today] ?: 0,
             dailyGoal = appSettings.dailyGoal,
-            streak = StatsMath.streak(byDay, today),
+            streak = StatsMath.streak(byDay, today, appSettings.frozenDays),
+            streakFreezes = appSettings.streakFreezes,
+            weeklyActiveDays = weekly.days,
+            weeklyGoalDays = weekly.goal,
             nextDueText = nextDue?.let { DueFormat.relative(it, now) },
             last7 = StatsMath.lastNDays(byDay, today, 7),
         )
@@ -387,6 +430,7 @@ class WordRepository(
         val today = LocalDate.now(zone)
         val byDay = StatsMath.reviewsByDay(allLogs, zone)
         val active = allWords.filter { !it.suspended }
+        val weekly = WeeklyGoal.progress(byDay, today, appSettings.weeklyGoalDays)
         return StatsUiState(
             loading = false,
             totalWords = allWords.size,
@@ -398,7 +442,11 @@ class WordRepository(
             retention = StatsMath.retention(allLogs),
             reviewedToday = byDay[today] ?: 0,
             dailyGoal = appSettings.dailyGoal,
-            streak = StatsMath.streak(byDay, today),
+            streak = StatsMath.streak(byDay, today, appSettings.frozenDays),
+            streakFreezes = appSettings.streakFreezes,
+            frozenDays = appSettings.frozenDays.size,
+            weeklyActiveDays = weekly.days,
+            weeklyGoalDays = weekly.goal,
             heatmap = StatsMath.lastNDays(byDay, today, 91),
             last30 = StatsMath.lastNDays(byDay, today, 30),
             forecast = StatsMath.forecast(allWords, today, 7, now, zone),

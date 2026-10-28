@@ -118,6 +118,23 @@ fun TodayScreen(
                             style = MaterialTheme.typography.labelMedium,
                             color = MaterialTheme.colorScheme.primary,
                         )
+                        Text(
+                            text = stringResource(
+                                R.string.today_weekly_goal,
+                                state.weeklyActiveDays,
+                                state.weeklyGoalDays,
+                            ),
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                        Text(
+                            text = stringResource(
+                                R.string.today_freeze_stock,
+                                state.streakFreezes,
+                            ),
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
                     }
                 }
             }

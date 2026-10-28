@@ -10,6 +10,7 @@ import com.wendigo.tekrar.data.Word
 data class BackupSettings(
     val newPerDay: Int = DEFAULT_NEW_PER_DAY,
     val dailyGoal: Int = DEFAULT_DAILY_GOAL,
+    val weeklyGoalDays: Int = DEFAULT_WEEKLY_GOAL_DAYS,
     val desiredRetention: Int = DEFAULT_RETENTION,
     val themeMode: Int = 0,
     val autoSpeak: Boolean = true,
@@ -21,6 +22,7 @@ data class BackupSettings(
     companion object {
         const val DEFAULT_NEW_PER_DAY = 20
         const val DEFAULT_DAILY_GOAL = 20
+        const val DEFAULT_WEEKLY_GOAL_DAYS = 5
         const val DEFAULT_RETENTION = 90
     }
 }
@@ -191,6 +193,10 @@ object BackupFormat {
             BackupSettings(
                 newPerDay = item.int("newPerDay", BackupSettings.DEFAULT_NEW_PER_DAY),
                 dailyGoal = item.int("dailyGoal", BackupSettings.DEFAULT_DAILY_GOAL),
+                weeklyGoalDays = item.int(
+                    "weeklyGoalDays",
+                    BackupSettings.DEFAULT_WEEKLY_GOAL_DAYS,
+                ),
                 desiredRetention = item.int(
                     "desiredRetention",
                     BackupSettings.DEFAULT_RETENTION,
@@ -258,6 +264,7 @@ object BackupFormat {
         linkedMapOf(
             "newPerDay" to J.of(settings.newPerDay),
             "dailyGoal" to J.of(settings.dailyGoal),
+            "weeklyGoalDays" to J.of(settings.weeklyGoalDays),
             "desiredRetention" to J.of(settings.desiredRetention),
             "themeMode" to J.of(settings.themeMode),
             "autoSpeak" to J.of(settings.autoSpeak),

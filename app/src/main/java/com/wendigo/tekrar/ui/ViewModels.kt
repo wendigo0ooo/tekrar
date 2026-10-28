@@ -33,6 +33,7 @@ import com.wendigo.tekrar.ui.contracts.StudyMode
 import com.wendigo.tekrar.ui.contracts.StudyUiState
 import com.wendigo.tekrar.ui.contracts.WordEditorUiState
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -44,6 +45,8 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.time.LocalDate
+import java.time.ZoneId
 import java.util.Locale
 
 fun <T : ViewModel> viewModelFactory(create: () -> T): ViewModelProvider.Factory =
@@ -52,7 +55,7 @@ fun <T : ViewModel> viewModelFactory(create: () -> T): ViewModelProvider.Factory
         override fun <VM : ViewModel> create(modelClass: Class<VM>): VM = create() as VM
     }
 
-class DashboardViewModel(repository: WordRepository) : ViewModel() {
+class DashboardViewModel(private val repository: WordRepository) : ViewModel() {
 
     val state: StateFlow<DashboardUiState> = repository.observeDashboard()
         .stateIn(
@@ -60,6 +63,31 @@ class DashboardViewModel(repository: WordRepository) : ViewModel() {
             started = SharingStarted.WhileSubscribed(5_000),
             initialValue = DashboardUiState(),
         )
+
+    init {
+        viewModelScope.launch(Dispatchers.IO) {
+            while (true) {
+                val zone = ZoneId.systemDefault()
+                val nextMidnight = LocalDate.now(zone)
+                    .plusDays(1)
+                    .atStartOfDay(zone)
+                    .toInstant()
+                    .toEpochMilli()
+                delay((nextMidnight - System.currentTimeMillis()).coerceAtLeast(MIN_TICK_MS))
+                runCatching { repository.syncStreakFreezes() }
+            }
+        }
+    }
+
+    fun refresh() {
+        viewModelScope.launch(Dispatchers.IO) {
+            runCatching { repository.syncStreakFreezes() }
+        }
+    }
+
+    private companion object {
+        const val MIN_TICK_MS = 60_000L
+    }
 }
 
 class StatsViewModel(repository: WordRepository) : ViewModel() {
@@ -631,6 +659,10 @@ class SettingsViewModel(
 
     fun setDailyGoal(value: Int) {
         viewModelScope.launch { settings.setDailyGoal(value) }
+    }
+
+    fun setWeeklyGoal(value: Int) {
+        viewModelScope.launch { settings.setWeeklyGoalDays(value) }
     }
 
     fun setRetention(value: Int) {

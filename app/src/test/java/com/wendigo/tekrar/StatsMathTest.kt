@@ -53,6 +53,22 @@ class StatsMathTest {
     }
 
     @Test
+    fun frozenDayExtendsStreakWithoutReviews() {
+        val days = mapOf(today to 1, today.minusDays(2) to 2)
+        val frozen = setOf(today.minusDays(1))
+        assertEquals(3, StatsMath.streak(days, today, frozen))
+    }
+
+    @Test
+    fun frozenDaysDoNotAppearInHeatmapOrRetention() {
+        val days = mapOf(today.minusDays(2) to 2)
+        val frozen = setOf(today.minusDays(1))
+        val recent = StatsMath.lastNDays(days, today, 3)
+        assertEquals(listOf(2, 0, 0), recent.map { it.count })
+        assertEquals(2, StatsMath.streak(days, today, frozen))
+    }
+
+    @Test
     fun lastNDaysFillsMissingDays() {
         val days = mapOf(today to 4, today.minusDays(2) to 1)
         val result = StatsMath.lastNDays(days, today, 3)
