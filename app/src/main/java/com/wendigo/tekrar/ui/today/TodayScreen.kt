@@ -235,6 +235,21 @@ fun TodayScreen(
                     onClick = { onStudy(StudyMode.REVIEW, StudyFormat.FLASHCARD) },
                 )
             }
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
+                PracticeButton(
+                    title = stringResource(R.string.format_cloze),
+                    modifier = Modifier.weight(1f),
+                    onClick = { onStudy(StudyMode.MIXED, StudyFormat.CLOZE) },
+                )
+            }
+            Text(
+                text = stringResource(R.string.format_cloze_hint),
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
 
             Panel {
                 SectionTitle(text = stringResource(R.string.today_last7))
