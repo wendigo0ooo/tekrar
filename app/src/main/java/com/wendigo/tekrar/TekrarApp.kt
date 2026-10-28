@@ -3,16 +3,20 @@ package com.wendigo.tekrar
 import android.app.Application
 import android.content.Context
 import com.wendigo.tekrar.data.AppDatabase
+import com.wendigo.tekrar.notify.Notifications
+import com.wendigo.tekrar.notify.ReminderScheduler
+import com.wendigo.tekrar.repo.BackupManager
 import com.wendigo.tekrar.repo.SettingsStore
 import com.wendigo.tekrar.repo.WordRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 class AppContainer(context: Context) {
 
-    private val appContext = context.applicationContext
+    val appContext: Context = context.applicationContext
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
     val database: AppDatabase by lazy { AppDatabase.get(appContext) }
@@ -20,12 +24,26 @@ class AppContainer(context: Context) {
     val repository: WordRepository by lazy {
         WordRepository(appContext, database, settings)
     }
+    val backupManager: BackupManager by lazy {
+        BackupManager(appContext, database, settings)
+    }
 
-    fun seed() {
+    fun start() {
+        Notifications.ensureChannel(appContext)
         scope.launch {
             runCatching {
                 repository.seedIfEmpty()
                 repository.backfillExampleTr()
+            }
+            runCatching {
+                val current = settings.settings.first()
+                if (current.reminderEnabled) {
+                    ReminderScheduler.schedule(
+                        appContext,
+                        current.reminderHour,
+                        current.reminderMinute,
+                    )
+                }
             }
         }
     }
@@ -39,6 +57,6 @@ class TekrarApp : Application() {
     override fun onCreate() {
         super.onCreate()
         container = AppContainer(this)
-        container.seed()
+        container.start()
     }
 }

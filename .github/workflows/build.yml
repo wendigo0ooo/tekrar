@@ -3,6 +3,8 @@ name: Build APK
 on:
   push:
     branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
   workflow_dispatch:
 
 permissions:
@@ -63,13 +65,14 @@ jobs:
           if-no-files-found: error
 
       - name: Publish release
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.0-build${{ github.run_number }}
+          tag_name: v2.0-build${{ github.run_number }}
           name: Tekrar (build ${{ github.run_number }})
           body: |
             Otomatik derlenen Tekrar APK'ları (debug + imzalı release).
+            Sürüm: 2.0
             Commit: ${{ github.sha }}
           files: out/*.apk
           fail_on_unmatched_files: true
