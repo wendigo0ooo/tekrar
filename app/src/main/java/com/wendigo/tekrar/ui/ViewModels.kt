@@ -16,6 +16,7 @@ import com.wendigo.tekrar.repo.BackupManager
 import com.wendigo.tekrar.repo.FileIo
 import com.wendigo.tekrar.repo.SettingsStore
 import com.wendigo.tekrar.repo.WordRepository
+import com.wendigo.tekrar.repo.WordWriteResult
 import com.wendigo.tekrar.ui.contracts.DashboardUiState
 import com.wendigo.tekrar.ui.contracts.LibraryFilter
 import com.wendigo.tekrar.ui.contracts.LibrarySort
@@ -221,14 +222,26 @@ class WordEditorViewModel(
         pos: String,
         onSaved: () -> Unit,
     ) {
+        if (_state.value.saving) return
+        _state.update { it.copy(saving = true, duplicateTerm = false) }
         viewModelScope.launch {
-            if (id == null) {
+            val result = if (id == null) {
                 repository.addWord(term, meaning, example, exampleTr, notes, tags, pos)
             } else {
                 repository.updateWord(id, term, meaning, example, exampleTr, notes, tags, pos)
             }
-            onSaved()
+            _state.update { it.copy(saving = false) }
+            when (result) {
+                is WordWriteResult.Saved -> onSaved()
+                WordWriteResult.DuplicateTerm ->
+                    _state.update { it.copy(duplicateTerm = true) }
+                WordWriteResult.NotFound -> onSaved()
+            }
         }
+    }
+
+    fun clearDuplicateError() {
+        _state.update { if (it.duplicateTerm) it.copy(duplicateTerm = false) else it }
     }
 
     fun delete(onDeleted: () -> Unit) {

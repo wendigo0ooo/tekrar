@@ -20,6 +20,9 @@ interface ReviewLogDao {
     @Query("SELECT * FROM review_logs WHERE reviewedAt >= :since ORDER BY reviewedAt ASC, id ASC")
     fun observeSince(since: Long): Flow<List<ReviewLog>>
 
+    @Query("SELECT * FROM review_logs ORDER BY reviewedAt ASC, id ASC")
+    suspend fun allLogs(): List<ReviewLog>
+
     @Query("DELETE FROM review_logs WHERE id = :id")
     suspend fun deleteById(id: Long)
 

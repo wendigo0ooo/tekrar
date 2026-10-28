@@ -50,6 +50,7 @@ fun AddWordScreen(
         onSaved: () -> Unit,
     ) -> Unit,
     onDelete: (onDeleted: () -> Unit) -> Unit,
+    onClearDuplicateError: () -> Unit,
     onBack: () -> Unit,
 ) {
     val word = state.word
@@ -94,10 +95,19 @@ fun AddWordScreen(
         Spacer(modifier = Modifier.height(4.dp))
         OutlinedTextField(
             value = term,
-            onValueChange = { term = it },
+            onValueChange = {
+                term = it
+                if (state.duplicateTerm) onClearDuplicateError()
+            },
             modifier = Modifier.fillMaxWidth(),
             label = { Text(text = stringResource(R.string.field_term)) },
             singleLine = true,
+            isError = state.duplicateTerm,
+            supportingText = if (state.duplicateTerm) {
+                { Text(text = stringResource(R.string.add_duplicate_term)) }
+            } else {
+                null
+            },
             shape = RoundedCornerShape(14.dp),
         )
         OutlinedTextField(
@@ -168,7 +178,7 @@ fun AddWordScreen(
                     onBack,
                 )
             },
-            enabled = term.isNotBlank() && meaning.isNotBlank(),
+            enabled = !state.saving && term.isNotBlank() && meaning.isNotBlank(),
         )
         if (state.isEdit) {
             TextButton(

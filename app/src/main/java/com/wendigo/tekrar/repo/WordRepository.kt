@@ -5,6 +5,7 @@ import androidx.room.withTransaction
 import com.wendigo.tekrar.core.DueFormat
 import com.wendigo.tekrar.core.Srs
 import com.wendigo.tekrar.core.StatsMath
+import com.wendigo.tekrar.core.TermKey
 import com.wendigo.tekrar.data.AppDatabase
 import com.wendigo.tekrar.data.ReviewLog
 import com.wendigo.tekrar.data.Word
@@ -14,6 +15,8 @@ import com.wendigo.tekrar.ui.contracts.StudyMode
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.json.JSONArray
 import java.time.LocalDate
 import java.time.ZoneId
@@ -24,6 +27,12 @@ data class ReviewOutcome(
     val logId: Long,
 )
 
+sealed interface WordWriteResult {
+    data class Saved(val id: Long) : WordWriteResult
+    data object DuplicateTerm : WordWriteResult
+    data object NotFound : WordWriteResult
+}
+
 class WordRepository(
     context: Context,
     private val db: AppDatabase,
@@ -33,6 +42,7 @@ class WordRepository(
     private val appContext = context.applicationContext
     private val words = db.wordDao()
     private val logs = db.reviewLogDao()
+    private val seedMutex = Mutex()
 
     fun observeDashboard(): Flow<DashboardUiState> = combine(
         words.observeAllWords(),
@@ -163,22 +173,29 @@ class WordRepository(
         notes: String,
         tags: String,
         pos: String,
-    ): Long {
+    ): WordWriteResult {
         val now = System.currentTimeMillis()
-        return words.insert(
-            Word(
-                term = term,
-                meaning = meaning,
-                example = example,
-                exampleTr = exampleTr,
-                notes = notes,
-                tags = tags,
-                pos = pos,
-                createdAt = now,
-                dueAt = now,
-                state = Word.STATE_NEW,
+        val key = TermKey.normalize(term)
+        return db.withTransaction {
+            if (key.isNotEmpty() && words.allWords().any { TermKey.normalize(it.term) == key }) {
+                return@withTransaction WordWriteResult.DuplicateTerm
+            }
+            val id = words.insert(
+                Word(
+                    term = term,
+                    meaning = meaning,
+                    example = example,
+                    exampleTr = exampleTr,
+                    notes = notes,
+                    tags = tags,
+                    pos = pos,
+                    createdAt = now,
+                    dueAt = now,
+                    state = Word.STATE_NEW,
+                )
             )
-        )
+            WordWriteResult.Saved(id)
+        }
     }
 
     suspend fun updateWord(
@@ -190,19 +207,29 @@ class WordRepository(
         notes: String,
         tags: String,
         pos: String,
-    ): Word? {
-        val word = words.getById(id) ?: return null
-        val updated = word.copy(
-            term = term,
-            meaning = meaning,
-            example = example,
-            exampleTr = exampleTr,
-            notes = notes,
-            tags = tags,
-            pos = pos,
-        )
-        words.update(updated)
-        return updated
+    ): WordWriteResult {
+        val key = TermKey.normalize(term)
+        return db.withTransaction {
+            val word = words.getById(id) ?: return@withTransaction WordWriteResult.NotFound
+            val previousKey = TermKey.normalize(word.term)
+            if (key != previousKey && key.isNotEmpty() &&
+                words.allWords().any { it.id != id && TermKey.normalize(it.term) == key }
+            ) {
+                return@withTransaction WordWriteResult.DuplicateTerm
+            }
+            words.update(
+                word.copy(
+                    term = term,
+                    meaning = meaning,
+                    example = example,
+                    exampleTr = exampleTr,
+                    notes = notes,
+                    tags = tags,
+                    pos = pos,
+                )
+            )
+            WordWriteResult.Saved(id)
+        }
     }
 
     suspend fun setFavorite(id: Long, favorite: Boolean) {
@@ -241,8 +268,12 @@ class WordRepository(
 
     suspend fun allWords(): List<Word> = words.allWords()
 
-    suspend fun seedIfEmpty() {
-        if (words.countAll() > 0) return
+    suspend fun seedIfEmpty() = seedMutex.withLock {
+        if (settings.settings.first().seedApplied) return@withLock
+        if (words.countAll() > 0) {
+            settings.setSeedApplied(true)
+            return@withLock
+        }
         val raw = appContext.assets.open(SEED_ASSET).bufferedReader().use { it.readText() }
         val array = JSONArray(raw)
         val now = System.currentTimeMillis()
@@ -253,7 +284,7 @@ class WordRepository(
             val term = item.optString("term").trim()
             val meaning = item.optString("meaning").trim()
             if (term.isEmpty() || meaning.isEmpty()) continue
-            if (!seen.add(term.lowercase(Locale.ROOT))) continue
+            if (!seen.add(TermKey.normalize(term))) continue
             batch += Word(
                 term = term,
                 meaning = meaning,
@@ -265,9 +296,12 @@ class WordRepository(
                 dueAt = now,
             )
         }
-        db.withTransaction {
-            batch.forEach { words.insert(it) }
+        if (batch.isNotEmpty()) {
+            db.withTransaction {
+                batch.forEach { words.insert(it) }
+            }
         }
+        settings.setSeedApplied(true)
     }
 
     suspend fun backfillExampleTr() {
