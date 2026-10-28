@@ -47,7 +47,5 @@ object DueFormat {
 
     fun shortWeekday(date: LocalDate): String = WEEKDAYS[date.dayOfWeek.value - 1]
 
-    companion object {
-        val WEEKDAYS = listOf("Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz")
-    }
+    val WEEKDAYS = listOf("Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz")
 }
