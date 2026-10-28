@@ -3,7 +3,6 @@ package com.wendigo.tekrar.ui.stats
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -12,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.HorizontalDivider
@@ -21,8 +21,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.wendigo.tekrar.R
+import com.wendigo.tekrar.core.RetentionBucket
+import com.wendigo.tekrar.core.StatsAnalysis
+import com.wendigo.tekrar.core.TagPerformance
 import com.wendigo.tekrar.ui.components.ForecastRows
 import com.wendigo.tekrar.ui.components.GoalRing
 import com.wendigo.tekrar.ui.components.Heatmap
@@ -193,17 +197,97 @@ fun StatsScreen(state: StatsUiState, onLeeches: () -> Unit) {
                         style = MaterialTheme.typography.labelMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
-                    Text(
-                        text = state.retention?.let {
-                            stringResource(
-                                R.string.stats_retention_value,
-                                String.format(Locale.US, "%.0f", it * 100),
-                            )
-                        } ?: stringResource(R.string.stats_retention_none),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
                 }
+            }
+        }
+
+        SectionTitle(text = stringResource(R.string.stats_true_retention))
+        Panel {
+            Row(modifier = Modifier.fillMaxWidth()) {
+                StatTile(
+                    label = stringResource(R.string.stats_retention_general),
+                    value = percentLabel(state.trueRetention),
+                    modifier = Modifier.weight(1f),
+                )
+                StatTile(
+                    label = stringResource(R.string.stats_retention_mature),
+                    value = percentLabel(state.matureRetention),
+                    modifier = Modifier.weight(1f),
+                )
+                StatTile(
+                    label = stringResource(R.string.stats_retention_sample),
+                    value = state.retentionSample.toString(),
+                    modifier = Modifier.weight(1f),
+                )
+            }
+            if (state.retentionSample < StatsAnalysis.MIN_RETENTION_SAMPLE) {
+                Text(
+                    text = stringResource(R.string.stats_retention_hint),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            HorizontalDivider(
+                color = MaterialTheme.colorScheme.outline.copy(alpha = 0.4f),
+            )
+            val totalReviews = state.retentionBuckets.sumOf { it.reviews }
+            if (totalReviews == 0) {
+                Text(
+                    text = stringResource(R.string.stats_retention_empty),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            } else {
+                Text(
+                    text = stringResource(R.string.stats_retention_curve),
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                RetentionRows(buckets = state.retentionBuckets)
+            }
+        }
+
+        SectionTitle(text = stringResource(R.string.stats_workload))
+        Panel {
+            Row(modifier = Modifier.fillMaxWidth()) {
+                StatTile(
+                    label = stringResource(R.string.stats_workload_7),
+                    value = state.workload7.toString(),
+                    modifier = Modifier.weight(1f),
+                )
+                StatTile(
+                    label = stringResource(R.string.stats_workload_30),
+                    value = state.workload30.toString(),
+                    modifier = Modifier.weight(1f),
+                )
+                StatTile(
+                    label = stringResource(R.string.stats_workload_overdue),
+                    value = state.overdueNow.toString(),
+                    modifier = Modifier.weight(1f),
+                    accent = if (state.overdueNow > 0) {
+                        MaterialTheme.colorScheme.error
+                    } else {
+                        MaterialTheme.colorScheme.onSurface
+                    },
+                )
+            }
+            Text(
+                text = stringResource(R.string.stats_workload_hint),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+
+        SectionTitle(text = stringResource(R.string.stats_tag_title))
+        Panel {
+            if (state.tagPerformance.isEmpty()) {
+                Text(
+                    text = stringResource(R.string.stats_tag_empty),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            } else {
+                TagRows(tags = state.tagPerformance)
             }
         }
 
@@ -242,3 +326,79 @@ fun StatsScreen(state: StatsUiState, onLeeches: () -> Unit) {
         Spacer(modifier = Modifier.height(12.dp))
     }
 }
+
+@Composable
+private fun RetentionRows(buckets: List<RetentionBucket>) {
+    Column(verticalArrangement = Arrangement.spacedBy(9.dp)) {
+        buckets.forEach { bucket ->
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                Text(
+                    text = bucket.label,
+                    modifier = Modifier.width(64.dp),
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                ProgressBar(
+                    fraction = (bucket.accuracy ?: 0.0).toFloat(),
+                    modifier = Modifier.weight(1f),
+                    height = 7.dp,
+                )
+                Text(
+                    text = percentLabel(bucket.accuracy),
+                    modifier = Modifier.width(42.dp),
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    textAlign = TextAlign.End,
+                )
+                Text(
+                    text = bucket.reviews.toString(),
+                    modifier = Modifier.width(28.dp),
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = TextAlign.End,
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun TagRows(tags: List<TagPerformance>) {
+    Column(verticalArrangement = Arrangement.spacedBy(9.dp)) {
+        tags.forEach { tag ->
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                Text(
+                    text = tag.tag,
+                    modifier = Modifier.weight(1f),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
+                Text(
+                    text = percentLabel(tag.accuracy),
+                    modifier = Modifier.width(44.dp),
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    textAlign = TextAlign.End,
+                )
+                Text(
+                    text = stringResource(R.string.stats_tag_due, tag.dueNow),
+                    modifier = Modifier.width(62.dp),
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = TextAlign.End,
+                )
+            }
+        }
+    }
+}
+
+private fun percentLabel(value: Double?): String =
+    value?.let { String.format(Locale.US, "%.0f%%", it * 100) } ?: "—"

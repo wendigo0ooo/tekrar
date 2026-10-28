@@ -57,26 +57,34 @@ object StatsMath {
             DayCount(date, days[date] ?: 0)
         }
 
+    /**
+     * Günlük tekrar tahmini. İlk kova "gecikmiş + bugün"dür: vadesi bugünden
+     * önce olan kartlar da ilk güne yazılır. Sonraki kovalar tam gün eşleşir.
+     * Yeni ve askıdaki kartlar sayılmaz. [horizon] gün sayısıdır (bugün dahil).
+     */
     fun forecast(
         words: List<Word>,
         today: LocalDate,
         horizon: Int,
-        now: Long = System.currentTimeMillis(),
         zone: ZoneId = ZoneId.systemDefault(),
     ): List<DayCount> {
-        val buckets = (0 until horizon).associate { offset ->
-            today.plusDays(offset.toLong()) to 0
-        }.toMutableMap()
+        if (horizon <= 0) return emptyList()
+        val counts = IntArray(horizon)
+        val todayStart = startOfDay(today, zone)
         for (word in words) {
             if (word.suspended || word.isNew) continue
-            val date = dayKey(word.dueAt, zone)
-            if (date in buckets.keys) {
-                buckets[date] = (buckets[date] ?: 0) + 1
+            val due = word.dueAt
+            if (due < todayStart) {
+                counts[0]++
+                continue
+            }
+            val offset = ChronoUnit.DAYS.between(today, dayKey(due, zone)).toInt()
+            if (offset in 0 until horizon) {
+                counts[offset]++
             }
         }
         return (0 until horizon).map { offset ->
-            val date = today.plusDays(offset.toLong())
-            DayCount(date, buckets[date] ?: 0)
+            DayCount(today.plusDays(offset.toLong()), counts[offset])
         }
     }
 

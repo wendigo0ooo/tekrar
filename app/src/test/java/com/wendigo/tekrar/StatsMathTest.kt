@@ -84,12 +84,28 @@ class StatsMathTest {
             Word(term = "c", meaning = "c", state = Word.STATE_NEW, dueAt = millis(today)),
             Word(term = "d", meaning = "d", state = Word.STATE_REVIEW, dueAt = millis(today), suspended = true),
             Word(term = "e", meaning = "e", state = Word.STATE_REVIEW, dueAt = millis(today.plusDays(5))),
+            Word(term = "f", meaning = "f", state = Word.STATE_REVIEW, dueAt = millis(today.minusDays(3))),
+            Word(term = "g", meaning = "g", state = Word.STATE_REVIEW, dueAt = millis(today.minusDays(1))),
         )
         val result = StatsMath.forecast(words, today, horizon = 3, zone = zone)
         assertEquals(3, result.size)
-        assertEquals(1, result[0].count)
+        assertEquals(3, result[0].count)
         assertEquals(1, result[1].count)
         assertEquals(0, result[2].count)
+    }
+
+    @Test
+    fun forecastUsesRequestedHorizon() {
+        val words = listOf(
+            Word(term = "a", meaning = "a", state = Word.STATE_REVIEW, dueAt = millis(today.plusDays(29))),
+            Word(term = "b", meaning = "b", state = Word.STATE_REVIEW, dueAt = millis(today.plusDays(30))),
+        )
+        val week = StatsMath.forecast(words, today, horizon = 7, zone = zone)
+        val month = StatsMath.forecast(words, today, horizon = 30, zone = zone)
+        assertEquals(7, week.size)
+        assertEquals(0, week.sumOf { it.count })
+        assertEquals(30, month.size)
+        assertEquals(1, month.sumOf { it.count })
     }
 
     @Test

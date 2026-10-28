@@ -9,6 +9,7 @@ import com.wendigo.tekrar.core.DueFormat
 import com.wendigo.tekrar.core.LeechPolicy
 import com.wendigo.tekrar.core.ReviewPolicy
 import com.wendigo.tekrar.core.Srs
+import com.wendigo.tekrar.core.StatsAnalysis
 import com.wendigo.tekrar.core.StatsMath
 import com.wendigo.tekrar.core.StreakFreeze
 import com.wendigo.tekrar.core.TermKey
@@ -588,7 +589,8 @@ class WordRepository(
         val now = System.currentTimeMillis()
         val zone = ZoneId.systemDefault()
         val today = LocalDate.now(zone)
-        val byDay = StatsMath.reviewsByDay(allLogs, zone)
+        val snapshot = StatsAnalysis.analyze(allWords, allLogs, today, now, zone)
+        val byDay = snapshot.byDay
         val active = allWords.filter { !it.suspended }
         val weekly = WeeklyGoal.progress(byDay, today, appSettings.weeklyGoalDays)
         return StatsUiState(
@@ -599,7 +601,10 @@ class WordRepository(
             mature = active.count { !it.isNew && it.stability >= 21.0 },
             leech = active.count { it.isLeech },
             suspended = allWords.count { it.suspended },
-            retention = StatsMath.retention(allLogs),
+            trueRetention = snapshot.retention.trueRetention,
+            matureRetention = snapshot.retention.matureRetention,
+            retentionBuckets = snapshot.retention.buckets,
+            retentionSample = snapshot.retention.sample,
             reviewedToday = byDay[today] ?: 0,
             dailyGoal = appSettings.dailyGoal,
             streak = StatsMath.streak(byDay, today, appSettings.frozenDays),
@@ -609,7 +614,11 @@ class WordRepository(
             weeklyGoalDays = weekly.goal,
             heatmap = StatsMath.lastNDays(byDay, today, 91),
             last30 = StatsMath.lastNDays(byDay, today, 30),
-            forecast = StatsMath.forecast(allWords, today, 7, now, zone),
+            forecast = snapshot.forecast,
+            workload7 = snapshot.workload7,
+            workload30 = snapshot.workload30,
+            overdueNow = snapshot.overdueNow,
+            tagPerformance = snapshot.tagPerformance,
         )
     }
 
