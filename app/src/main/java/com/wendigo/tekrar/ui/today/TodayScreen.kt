@@ -49,6 +49,7 @@ fun TodayScreen(
     onLibrary: () -> Unit,
     onDecks: () -> Unit,
     onPlacement: () -> Unit,
+    onCustomSession: () -> Unit,
 ) {
     val dateText = LocalDate.now().format(
         DateTimeFormatter.ofPattern("d MMMM EEEE", Locale.forLanguageTag("tr"))
@@ -191,6 +192,24 @@ fun TodayScreen(
                 style = MaterialTheme.typography.labelMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
+
+            Panel {
+                SectionTitle(text = stringResource(R.string.today_custom_session))
+                Text(
+                    text = stringResource(R.string.today_custom_session_hint),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                OutlinedButton(
+                    onClick = onCustomSession,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(48.dp),
+                    shape = RoundedCornerShape(14.dp),
+                ) {
+                    Text(text = stringResource(R.string.today_custom_session_open))
+                }
+            }
 
             Panel {
                 SectionTitle(text = stringResource(R.string.today_decks))

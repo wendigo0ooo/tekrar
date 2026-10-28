@@ -72,6 +72,37 @@ data class StudyUiState(
     val accuracyPercent: Int = 0,
     val tomorrowDue: Int? = null,
     val hardWords: List<SessionHardWord> = emptyList(),
+    val cram: Boolean = false,
+)
+
+data class CustomSessionDeckUi(
+    val label: String,
+    val value: String?,
+    val wordCount: Int = 0,
+)
+
+data class CustomSessionUiState(
+    val loading: Boolean = true,
+    val empty: Boolean = false,
+    val totalWords: Int = 0,
+    val matchingWords: Int = 0,
+    val decks: List<CustomSessionDeckUi> = emptyList(),
+    val tags: List<String> = emptyList(),
+    val mode: StudyMode = StudyMode.MIXED,
+    val deck: String? = null,
+    val tag: String? = null,
+    val limit: Int? = 20,
+    val format: StudyFormat = StudyFormat.FLASHCARD,
+    val cram: Boolean = false,
+)
+
+data class CustomSessionRequest(
+    val mode: StudyMode,
+    val deck: String?,
+    val tag: String?,
+    val limit: Int?,
+    val format: StudyFormat,
+    val cram: Boolean,
 )
 
 data class StatsUiState(

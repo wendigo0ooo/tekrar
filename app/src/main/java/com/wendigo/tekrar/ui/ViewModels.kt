@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.wendigo.tekrar.R
 import com.wendigo.tekrar.core.AnswerCheck
 import com.wendigo.tekrar.core.Cloze
+import com.wendigo.tekrar.core.CustomSession
 import com.wendigo.tekrar.core.LeechPolicy
 import com.wendigo.tekrar.core.Placement
 import com.wendigo.tekrar.core.SessionSummary
@@ -22,6 +23,8 @@ import com.wendigo.tekrar.repo.FileIo
 import com.wendigo.tekrar.repo.SettingsStore
 import com.wendigo.tekrar.repo.WordRepository
 import com.wendigo.tekrar.repo.WordWriteResult
+import com.wendigo.tekrar.ui.contracts.CustomSessionDeckUi
+import com.wendigo.tekrar.ui.contracts.CustomSessionUiState
 import com.wendigo.tekrar.ui.contracts.DashboardUiState
 import com.wendigo.tekrar.ui.contracts.DeckCardUi
 import com.wendigo.tekrar.ui.contracts.DecksUiState
@@ -191,6 +194,127 @@ class LibraryViewModel(repository: WordRepository) : ViewModel() {
         append(word.notes.lowercase(Locale.ROOT))
         append(' ')
         append(word.example.lowercase(Locale.ROOT))
+    }
+}
+
+class CustomSessionViewModel(
+    private val repository: WordRepository,
+    private val appContext: Context,
+) : ViewModel() {
+
+    private data class Selection(
+        val mode: StudyMode,
+        val deck: String?,
+        val tag: String?,
+        val limit: Int?,
+        val format: StudyFormat,
+    )
+
+    private val mode = MutableStateFlow(StudyMode.MIXED)
+    private val deck = MutableStateFlow<String?>(null)
+    private val tag = MutableStateFlow<String?>(null)
+    private val limit = MutableStateFlow<Int?>(DEFAULT_LIMIT)
+    private val format = MutableStateFlow(StudyFormat.FLASHCARD)
+    private val cram = MutableStateFlow(false)
+
+    private val selection = combine(mode, deck, tag, limit, format) {
+        currentMode, currentDeck, currentTag, currentLimit, currentFormat ->
+        Selection(currentMode, currentDeck, currentTag, currentLimit, currentFormat)
+    }
+
+    val state: StateFlow<CustomSessionUiState> = combine(
+        repository.observeLibrary(),
+        selection,
+        cram,
+    ) { words, current, crammed ->
+        buildState(words, current, crammed)
+    }.stateIn(
+        scope = viewModelScope,
+        started = SharingStarted.WhileSubscribed(5_000),
+        initialValue = CustomSessionUiState(),
+    )
+
+    fun setMode(value: StudyMode) {
+        mode.value = value
+    }
+
+    fun setDeck(value: String?) {
+        deck.value = value
+    }
+
+    fun setTag(value: String?) {
+        tag.value = value
+    }
+
+    fun setLimit(value: Int?) {
+        limit.value = value
+    }
+
+    fun setFormat(value: StudyFormat) {
+        format.value = value
+    }
+
+    fun setCram(value: Boolean) {
+        cram.value = value
+    }
+
+    private fun buildState(
+        words: List<Word>,
+        current: Selection,
+        crammed: Boolean,
+    ): CustomSessionUiState {
+        val active = words.filter { !it.suspended }
+        val decks = ArrayList<CustomSessionDeckUi>()
+        decks += CustomSessionDeckUi(
+            label = appContext.getString(R.string.custom_deck_all),
+            value = null,
+            wordCount = active.size,
+        )
+        decks += CustomSessionDeckUi(
+            label = appContext.getString(R.string.decks_library),
+            value = "",
+            wordCount = active.count { it.deck.isBlank() },
+        )
+        words.asSequence()
+            .filter { it.deck.isNotBlank() }
+            .groupBy { it.deck }
+            .toSortedMap(compareBy { it.lowercase(Locale.ROOT) })
+            .forEach { (name, items) ->
+                decks += CustomSessionDeckUi(
+                    label = name,
+                    value = name,
+                    wordCount = items.count { !it.suspended },
+                )
+            }
+        val matchingWords = CustomSession.selectQueue(
+            words = words,
+            now = System.currentTimeMillis(),
+            query = CustomSession.Query(
+                mode = current.mode,
+                deck = current.deck,
+                tag = current.tag,
+                cram = crammed,
+            ),
+            shuffle = { it },
+        ).size
+        return CustomSessionUiState(
+            loading = false,
+            empty = words.isEmpty(),
+            totalWords = words.size,
+            matchingWords = matchingWords,
+            decks = decks,
+            tags = CustomSession.tags(words),
+            mode = current.mode,
+            deck = current.deck,
+            tag = current.tag,
+            limit = current.limit,
+            format = current.format,
+            cram = crammed,
+        )
+    }
+
+    private companion object {
+        const val DEFAULT_LIMIT = 20
     }
 }
 
@@ -534,9 +658,12 @@ class StudyViewModel(
     val format: StudyFormat,
     private val deck: String? = null,
     private val maxCards: Int? = null,
+    private val tag: String? = null,
+    private val cram: Boolean = false,
+    private val custom: Boolean = false,
 ) : ViewModel() {
 
-    private val _state = MutableStateFlow(StudyUiState(format = format))
+    private val _state = MutableStateFlow(StudyUiState(format = format, cram = cram))
     val state: StateFlow<StudyUiState> = _state.asStateFlow()
 
     private val session = StudySession()
@@ -569,16 +696,37 @@ class StudyViewModel(
         if (!session.occupy()) return
         viewModelScope.launch {
             try {
-                _state.value = StudyUiState(loading = true, format = format)
+                _state.value = StudyUiState(loading = true, format = format, cram = cram)
                 val allWords = runCatching { repository.allWords() }.getOrDefault(emptyList())
-                pool = if (deck == null) {
+                pool = if (custom || cram) {
+                    allWords.filter { word ->
+                        !word.suspended &&
+                            (deck == null || word.deck == deck) &&
+                            CustomSession.hasTag(word, tag)
+                    }
+                } else if (deck == null) {
                     allWords
                 } else {
                     allWords.filter { it.deck == deck }
                 }
                 val queue = runCatching {
-                    if (deck == null) repository.loadQueue(mode)
-                    else repository.loadDeckQueue(deck)
+                    if (custom || cram) {
+                        CustomSession.selectQueue(
+                            words = allWords,
+                            now = System.currentTimeMillis(),
+                            query = CustomSession.Query(
+                                mode = mode,
+                                deck = deck,
+                                tag = tag,
+                                maxCards = maxCards,
+                                cram = cram,
+                            ),
+                        )
+                    } else if (deck == null) {
+                        repository.loadQueue(mode)
+                    } else {
+                        repository.loadDeckQueue(deck)
+                    }
                 }.getOrDefault(emptyList())
                 val limit = maxCards?.takeIf { it > 0 }
                 val items = if (limit != null) queue.take(limit) else queue
@@ -600,6 +748,7 @@ class StudyViewModel(
                         loading = false,
                         empty = true,
                         format = format,
+                        cram = cram,
                     )
                 } else {
                     showCurrent()
@@ -680,6 +829,7 @@ class StudyViewModel(
     }
 
     fun undo() {
+        if (cram) return
         val undo = lastUndo ?: return
         if (!session.occupy()) return
         pendingWord = null
@@ -718,6 +868,10 @@ class StudyViewModel(
     }
 
     private fun record(word: Word, rating: Int) {
+        if (cram) {
+            recordCram(word, rating)
+            return
+        }
         viewModelScope.launch {
             try {
                 val outcome = runCatching { repository.review(word.id, rating) }.getOrNull()
@@ -750,6 +904,33 @@ class StudyViewModel(
         }
     }
 
+    private fun recordCram(word: Word, rating: Int) {
+        viewModelScope.launch {
+            try {
+                done++
+                if (rating == Srs.AGAIN) {
+                    againCount++
+                    val previous = againWords[word.id]
+                    againWords[word.id] = word to ((previous?.second ?: 0) + 1)
+                } else {
+                    correctCount++
+                    if (rating == Srs.GOOD || rating == Srs.EASY) strengthenedCount++
+                }
+                val requeue = rating == Srs.AGAIN &&
+                    (attempts[word.id] ?: 0) < MAX_REQUEUE_ATTEMPTS
+                val removed = session.finish(word.id, if (requeue) word else null)
+                if (requeue && removed) {
+                    attempts[word.id] = (attempts[word.id] ?: 0) + 1
+                    requeues++
+                }
+                lastUndo = null
+                showCurrent()
+            } finally {
+                session.release()
+            }
+        }
+    }
+
     private suspend fun showCurrent(reveal: Boolean = false) {
         val word = session.advance()
         if (word == null) {
@@ -774,7 +955,7 @@ class StudyViewModel(
             clozePrompt = cloze?.sentence,
             clozeAnswer = cloze?.answer,
             options = options,
-            intervalLabels = if (format == StudyFormat.FLASHCARD) {
+            intervalLabels = if (format == StudyFormat.FLASHCARD && !cram) {
                 repository.previewIntervals(word)
             } else {
                 emptyList()
@@ -788,6 +969,7 @@ class StudyViewModel(
             strengthenedCount = strengthenedCount,
             strugglingCount = againCount,
             accuracyPercent = SessionSummary.accuracyPercent(correctCount, done),
+            cram = cram,
         )
     }
 
@@ -795,14 +977,18 @@ class StudyViewModel(
         val hardWords = SessionSummary.hardestWords(
             againWords.values.associate { (word, failures) -> word.term to failures }
         )
-        val tomorrowDue = runCatching { repository.dueTomorrowCount() }.getOrNull()
+        val tomorrowDue = if (cram) {
+            null
+        } else {
+            runCatching { repository.dueTomorrowCount() }.getOrNull()
+        }
         _state.value = StudyUiState(
             loading = false,
             finished = true,
             format = format,
             position = done,
             total = done,
-            canUndo = lastUndo != null,
+            canUndo = !cram && lastUndo != null,
             reviewed = done,
             againCount = againCount,
             correctCount = correctCount,
@@ -812,6 +998,7 @@ class StudyViewModel(
             accuracyPercent = SessionSummary.accuracyPercent(correctCount, done),
             tomorrowDue = tomorrowDue,
             hardWords = hardWords,
+            cram = cram,
         )
     }
 

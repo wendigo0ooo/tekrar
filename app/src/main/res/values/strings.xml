@@ -44,6 +44,30 @@
     <string name="today_decks_hint">Hazır kelime listeleriyle çalış veya seviyeni belirle.</string>
     <string name="today_decks_open">Desteleri aç</string>
     <string name="today_placement">Seviyeni belirle</string>
+    <string name="today_custom_session">Özel oturum</string>
+    <string name="today_custom_session_hint">Deste, etiket ve kart sayısını seçerek kendi oturumunu oluştur.</string>
+    <string name="today_custom_session_open">Özel oturum oluştur</string>
+
+    <string name="custom_title">Özel oturum</string>
+    <string name="custom_subtitle">Filtreleri seç, kendi oturumunu başlat.</string>
+    <string name="custom_mode">Mod</string>
+    <string name="custom_mode_due">Tekrar</string>
+    <string name="custom_mode_new">Yeni</string>
+    <string name="custom_mode_mixed">Karışık</string>
+    <string name="custom_deck">Deste</string>
+    <string name="custom_deck_all">Tüm desteler</string>
+    <string name="custom_tag">Etiket</string>
+    <string name="custom_tag_all">Tüm etiketler</string>
+    <string name="custom_limit">Kart sayısı</string>
+    <string name="custom_limit_all">Tümü</string>
+    <string name="custom_format">Biçim</string>
+    <string name="custom_cram_title">FSRS\'e işleme</string>
+    <string name="custom_cram_desc">Açıkken puanlar yalnız bu oturumda tutulur; FSRS\'e kaydedilmez.</string>
+    <string name="custom_match_count">%1$d kelime eşleşiyor</string>
+    <string name="custom_no_match">Bu filtrelerle eşleşen kelime yok.</string>
+    <string name="custom_start">Başlat</string>
+    <string name="custom_empty_title">Kütüphane boş</string>
+    <string name="custom_empty_hint">Özel oturum oluşturmak için önce kelime ekle veya bir deste kur.</string>
 
     <string name="decks_title">Desteler</string>
     <string name="decks_subtitle">Hazır kelime listeleri</string>
@@ -135,6 +159,9 @@
     <string name="study_elapsed">Süre: %1$s</string>
     <string name="study_finished_title">Tur tamamlandı</string>
     <string name="study_finished_hint">Bugünlük bu kadar. İlerlemen kaydedildi.</string>
+    <string name="study_cram_badge">Sınav modu · kaydedilmez</string>
+    <string name="study_cram_hint">Puanlama yalnız bu oturum için; FSRS\'e işlenmez.</string>
+    <string name="study_cram_finished_hint">Sınav modu tamamlandı. Bu oturumdaki puanlar kaydedilmedi.</string>
     <string name="study_restart">Yeniden çalış</string>
     <string name="study_finish">Bitir</string>
     <string name="study_empty_title">Şimdilik tekrar yok</string>

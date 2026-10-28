@@ -217,6 +217,20 @@ private fun StudyContent(
             },
         )
 
+        if (state.cram) {
+            Text(
+                text = stringResource(R.string.study_cram_badge),
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier
+                    .background(
+                        MaterialTheme.colorScheme.primary.copy(alpha = 0.12f),
+                        RoundedCornerShape(50),
+                    )
+                    .padding(horizontal = 10.dp, vertical = 4.dp),
+            )
+        }
+
         if (card.isLeech) {
             Text(
                 text = stringResource(R.string.study_leech_badge),
@@ -285,7 +299,9 @@ private fun StudyContent(
                     )
                 } else {
                     Text(
-                        text = stringResource(R.string.study_rating_hint),
+                        text = stringResource(
+                            if (state.cram) R.string.study_cram_hint else R.string.study_rating_hint
+                        ),
                         style = MaterialTheme.typography.labelMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -762,7 +778,9 @@ private fun FinishedContent(
             color = MaterialTheme.colorScheme.onBackground,
         )
         Text(
-            text = stringResource(R.string.study_finished_hint),
+            text = stringResource(
+                if (state.cram) R.string.study_cram_finished_hint else R.string.study_finished_hint
+            ),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             textAlign = TextAlign.Center,

@@ -23,8 +23,11 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.wendigo.tekrar.AppContainer
 import com.wendigo.tekrar.R
+import com.wendigo.tekrar.core.CustomSession
 import com.wendigo.tekrar.ui.add.AddWordScreen
 import com.wendigo.tekrar.ui.components.BottomBar
+import com.wendigo.tekrar.ui.contracts.CustomSessionRequest
+import com.wendigo.tekrar.ui.custom.CustomSessionScreen
 import com.wendigo.tekrar.ui.decks.DecksScreen
 import com.wendigo.tekrar.ui.contracts.LibraryFilter
 import com.wendigo.tekrar.ui.contracts.LibrarySort
@@ -81,6 +84,7 @@ fun TekrarNavHost(
                     onLibrary = { navController.navigateTab(ROUTE_LIBRARY) },
                     onDecks = { navController.navigate(ROUTE_DECKS) },
                     onPlacement = { navController.navigate(ROUTE_PLACEMENT) },
+                    onCustomSession = { navController.navigate(ROUTE_CUSTOM_SESSION) },
                 )
             }
 
@@ -125,6 +129,26 @@ fun TekrarNavHost(
                     onNext = vm::next,
                     onApply = vm::apply,
                     onRetry = vm::load,
+                    onBack = { navController.popBackStack() },
+                )
+            }
+
+            composable(ROUTE_CUSTOM_SESSION) {
+                val vm: CustomSessionViewModel = viewModel(
+                    factory = viewModelFactory {
+                        CustomSessionViewModel(container.repository, container.appContext)
+                    },
+                )
+                val state by vm.state.collectAsStateWithLifecycle()
+                CustomSessionScreen(
+                    state = state,
+                    onMode = vm::setMode,
+                    onDeck = vm::setDeck,
+                    onTag = vm::setTag,
+                    onLimit = vm::setLimit,
+                    onFormat = vm::setFormat,
+                    onCram = vm::setCram,
+                    onStart = { request -> navController.navigate(customStudyRoute(request)) },
                     onBack = { navController.popBackStack() },
                 )
             }
@@ -301,6 +325,96 @@ fun TekrarNavHost(
             }
 
             composable(
+                route = "$ROUTE_CUSTOM_STUDY?mode={mode}&format={format}&deck={deck}" +
+                    "&tag={tag}&limit={limit}&cram={cram}",
+                arguments = listOf(
+                    navArgument("mode") {
+                        type = NavType.StringType
+                        defaultValue = StudyMode.MIXED.name
+                    },
+                    navArgument("format") {
+                        type = NavType.StringType
+                        defaultValue = StudyFormat.FLASHCARD.name
+                    },
+                    navArgument("deck") {
+                        type = NavType.StringType
+                        nullable = true
+                        defaultValue = null
+                    },
+                    navArgument("tag") {
+                        type = NavType.StringType
+                        nullable = true
+                        defaultValue = null
+                    },
+                    navArgument("limit") {
+                        type = NavType.IntType
+                        defaultValue = 0
+                    },
+                    navArgument("cram") {
+                        type = NavType.BoolType
+                        defaultValue = false
+                    },
+                ),
+            ) { entry ->
+                val mode = runCatching {
+                    StudyMode.valueOf(entry.arguments?.getString("mode") ?: StudyMode.MIXED.name)
+                }.getOrDefault(StudyMode.MIXED)
+                val format = runCatching {
+                    StudyFormat.valueOf(
+                        entry.arguments?.getString("format") ?: StudyFormat.FLASHCARD.name
+                    )
+                }.getOrDefault(StudyFormat.FLASHCARD)
+                val deck = CustomSession.deckFromArg(
+                    entry.arguments?.getString("deck")?.let { Uri.decode(it) }
+                )
+                val tag = CustomSession.tagFromArg(
+                    entry.arguments?.getString("tag")?.let { Uri.decode(it) }
+                )
+                val limit = entry.arguments?.getInt("limit") ?: 0
+                val cram = entry.arguments?.getBoolean("cram") ?: false
+                val vm: StudyViewModel = viewModel(
+                    factory = viewModelFactory {
+                        StudyViewModel(
+                            repository = container.repository,
+                            mode = mode,
+                            format = format,
+                            deck = deck,
+                            maxCards = limit.takeIf { it > 0 },
+                            tag = tag,
+                            cram = cram,
+                            custom = true,
+                        )
+                    },
+                )
+                val state by vm.state.collectAsStateWithLifecycle()
+                val settings by container.settings.settings.collectAsStateWithLifecycle(
+                    initialValue = com.wendigo.tekrar.repo.AppSettings(),
+                )
+                LaunchedEffect(state.finished, state.empty) {
+                    if (state.finished || state.empty) {
+                        DueWidgetProvider.refresh(container.appContext)
+                    }
+                }
+                StudyScreen(
+                    state = state,
+                    autoSpeak = settings.autoSpeak,
+                    speechRate = settings.speechRate,
+                    onReveal = vm::reveal,
+                    onRate = vm::rate,
+                    onChoose = vm::choose,
+                    onSubmitTyping = vm::submitTyping,
+                    onContinue = vm::continueAfterAnswer,
+                    onUndo = vm::undo,
+                    onReload = vm::load,
+                    onExit = {
+                        DueWidgetProvider.refresh(container.appContext)
+                        navController.popBackStack()
+                    },
+                    onLibrary = { navController.navigateTab(ROUTE_LIBRARY) },
+                )
+            }
+
+            composable(
                 route = "$ROUTE_WORD_NEW?term={term}",
                 arguments = listOf(
                     navArgument("term") {
@@ -416,12 +530,23 @@ private fun studyRoute(mode: StudyMode, format: StudyFormat, limit: Int? = null)
     return if (limit != null && limit > 0) "$base?limit=$limit" else base
 }
 
+private fun customStudyRoute(request: CustomSessionRequest): String {
+    val base = "$ROUTE_CUSTOM_STUDY?mode=${request.mode.name}&format=${request.format.name}"
+    return base +
+        "&deck=${Uri.encode(CustomSession.deckArg(request.deck))}" +
+        "&tag=${Uri.encode(CustomSession.tagArg(request.tag))}" +
+        "&limit=${request.limit ?: 0}" +
+        "&cram=${request.cram}"
+}
+
 private const val ROUTE_TODAY = "today"
 private const val ROUTE_LIBRARY = "library"
 private const val ROUTE_STATS = "stats"
 private const val ROUTE_SETTINGS = "settings"
 private const val ROUTE_STUDY = "study"
 private const val ROUTE_STUDY_DECK = "study-deck"
+private const val ROUTE_CUSTOM_SESSION = "custom-session"
+private const val ROUTE_CUSTOM_STUDY = "custom-study"
 private const val ROUTE_DECKS = "decks"
 private const val ROUTE_PLACEMENT = "placement"
 private const val ROUTE_LEECHES = "leeches"
