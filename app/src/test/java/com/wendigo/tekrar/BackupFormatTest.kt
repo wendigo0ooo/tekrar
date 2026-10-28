@@ -24,6 +24,8 @@ class BackupFormatTest {
             notes = "not; ters bölü \\ testi",
             tags = "fiil, günlük",
             pos = "verb",
+            deck = "Başlangıç",
+            cefr = "B1",
             favorite = true,
             createdAt = 100L,
             state = Word.STATE_REVIEW,

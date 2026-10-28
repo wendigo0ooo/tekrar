@@ -22,6 +22,7 @@ class ReminderReceiver : BroadcastReceiver() {
         if (intent.action != ReminderScheduler.ACTION_REMIND) return
         val hour = intent.getIntExtra(ReminderScheduler.EXTRA_HOUR, 20)
         val minute = intent.getIntExtra(ReminderScheduler.EXTRA_MINUTE, 0)
+        val snooze = intent.getBooleanExtra(ReminderScheduler.EXTRA_SNOOZE, false)
         val pending = goAsync()
         val appContext = context.applicationContext
         CoroutineScope(SupervisorJob() + Dispatchers.IO).launch {
@@ -36,7 +37,9 @@ class ReminderReceiver : BroadcastReceiver() {
                 }
             } finally {
                 try {
-                    ReminderScheduler.schedule(appContext, hour, minute)
+                    if (!snooze) {
+                        ReminderScheduler.schedule(appContext, hour, minute)
+                    }
                 } finally {
                     pending.finish()
                 }

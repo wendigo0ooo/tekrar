@@ -8,6 +8,7 @@ import com.wendigo.tekrar.notify.ReminderScheduler
 import com.wendigo.tekrar.repo.BackupManager
 import com.wendigo.tekrar.repo.SettingsStore
 import com.wendigo.tekrar.repo.WordRepository
+import com.wendigo.tekrar.widget.DueWidgetProvider
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -30,11 +31,13 @@ class AppContainer(context: Context) {
 
     fun start() {
         Notifications.ensureChannel(appContext)
+        DueWidgetProvider.refresh(appContext)
         scope.launch {
             runCatching {
                 repository.seedIfEmpty()
                 repository.backfillExampleTr()
             }
+            DueWidgetProvider.refresh(appContext)
             runCatching { repository.syncStreakFreezes() }
             runCatching {
                 val current = settings.settings.first()

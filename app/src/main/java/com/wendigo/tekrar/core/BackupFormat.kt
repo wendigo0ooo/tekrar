@@ -126,6 +126,8 @@ object BackupFormat {
                 notes = item.string("notes").orEmpty(),
                 tags = item.string("tags").orEmpty(),
                 pos = item.string("pos").orEmpty(),
+                deck = item.string("deck").orEmpty().trim(),
+                cefr = DeckCatalog.parseCefr(item.string("cefr")),
                 favorite = item.bool("favorite", false),
                 createdAt = now,
                 state = if (item.int("state", Word.STATE_NEW) == Word.STATE_REVIEW) {
@@ -230,6 +232,8 @@ object BackupFormat {
             "notes" to J.of(word.notes),
             "tags" to J.of(word.tags),
             "pos" to J.of(word.pos),
+            "deck" to J.of(word.deck),
+            "cefr" to J.of(word.cefr),
             "favorite" to J.of(word.favorite),
             "createdAt" to J.of(word.createdAt),
             "state" to J.of(word.state),

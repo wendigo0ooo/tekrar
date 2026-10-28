@@ -163,4 +163,5 @@ data class WordEditorUiState(
     val saving: Boolean = false,
     val duplicateTerm: Boolean = false,
     val saveFailed: Boolean = false,
+    val initialTerm: String = "",
 )

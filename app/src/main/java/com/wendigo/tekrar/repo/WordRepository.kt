@@ -224,6 +224,7 @@ class WordRepository(
                     word.copy(
                         state = Word.STATE_REVIEW,
                         stability = PLACEMENT_STABILITY,
+                        difficulty = PLACEMENT_DIFFICULTY,
                         dueAt = dueAt,
                         introducedAt = now,
                         reps = 1,
@@ -623,6 +624,7 @@ class WordRepository(
         private const val SEED_DECK = "Başlangıç"
         private const val PLACEMENT_INTERVAL_MS = 60 * DAY_MS
         private const val PLACEMENT_STABILITY = 30.0
+        private const val PLACEMENT_DIFFICULTY = 5.0
         private val BUNDLED_DECK_ASSETS = listOf("yds.json", "phrasal.json")
     }
 }

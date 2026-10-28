@@ -7,6 +7,11 @@
     <string name="nav_stats">İstatistik</string>
     <string name="nav_settings">Ayarlar</string>
 
+    <string name="widget_due_label">Tekrar</string>
+    <string name="widget_due_count">%1$d kelime hazır</string>
+    <string name="widget_due_zero">Bugün tekrar yok</string>
+    <string name="widget_due_action">10 kart</string>
+
     <string name="today_title">Bugün</string>
     <string name="today_goal_title">Günlük hedef</string>
     <string name="today_goal_caption">hedef</string>
@@ -284,4 +289,6 @@
     <string name="notif_new_text">Bugün öğrenecek %1$d yeni kelimen var</string>
     <string name="notif_test_title">Test bildirimi</string>
     <string name="notif_test_text">Bildirimler çalışıyor. Tekrar zamanı geldiğinde haber vereceğiz.</string>
+    <string name="notif_action_start">10 kart başlat</string>
+    <string name="notif_action_snooze">1 saat ertele</string>
 </resources>

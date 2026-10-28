@@ -5,15 +5,19 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import com.wendigo.tekrar.core.QuietHours
+import com.wendigo.tekrar.core.SnoozeTime
 import java.util.Calendar
 
 object ReminderScheduler {
 
     const val ACTION_REMIND = "com.wendigo.tekrar.action.REMIND"
+    const val ACTION_SNOOZE = "com.wendigo.tekrar.action.SNOOZE"
     const val EXTRA_HOUR = "hour"
     const val EXTRA_MINUTE = "minute"
+    const val EXTRA_SNOOZE = "snooze"
 
     private const val REQUEST_CODE = 4101
+    private const val REQUEST_CODE_SNOOZE = 4102
 
     fun schedule(context: Context, hour: Int, minute: Int) {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
@@ -30,6 +34,17 @@ object ReminderScheduler {
     fun cancel(context: Context) {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         alarmManager.cancel(pendingIntent(context, 0, 0, update = false))
+    }
+
+    fun scheduleSnooze(context: Context, now: Long = System.currentTimeMillis()) {
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val triggerAt = SnoozeTime.next(now)
+        val pending = snoozePendingIntent(context)
+        runCatching {
+            alarmManager.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerAt, pending)
+        }.recoverCatching {
+            alarmManager.set(AlarmManager.RTC_WAKEUP, triggerAt, pending)
+        }
     }
 
     fun nextTrigger(hour: Int, minute: Int, now: Long = System.currentTimeMillis()): Long {
@@ -63,5 +78,18 @@ object ReminderScheduler {
             PendingIntent.FLAG_IMMUTABLE
         }
         return PendingIntent.getBroadcast(context, REQUEST_CODE, intent, flags)
+    }
+
+    private fun snoozePendingIntent(context: Context): PendingIntent {
+        val intent = Intent(context, ReminderReceiver::class.java).apply {
+            action = ACTION_REMIND
+            putExtra(EXTRA_SNOOZE, true)
+        }
+        return PendingIntent.getBroadcast(
+            context,
+            REQUEST_CODE_SNOOZE,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+        )
     }
 }
