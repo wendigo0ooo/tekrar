@@ -7,6 +7,7 @@ import com.wendigo.tekrar.notify.Notifications
 import com.wendigo.tekrar.notify.ReminderScheduler
 import com.wendigo.tekrar.notify.WeeklySummaryScheduler
 import com.wendigo.tekrar.repo.BackupManager
+import com.wendigo.tekrar.repo.DictionaryRepository
 import com.wendigo.tekrar.repo.SettingsStore
 import com.wendigo.tekrar.repo.WordRepository
 import com.wendigo.tekrar.widget.DueWidgetProvider
@@ -28,6 +29,9 @@ class AppContainer(context: Context) {
     }
     val backupManager: BackupManager by lazy {
         BackupManager(appContext, database, settings)
+    }
+    val dictionary: DictionaryRepository by lazy {
+        DictionaryRepository(appContext)
     }
 
     fun start() {

@@ -53,6 +53,7 @@ fun LibraryScreen(
     onSort: (LibrarySort) -> Unit,
     onWord: (Long) -> Unit,
     onAdd: () -> Unit,
+    onMine: () -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -66,8 +67,13 @@ fun LibraryScreen(
             title = stringResource(R.string.library_title),
             subtitle = stringResource(R.string.library_count, state.words.size),
             trailing = {
-                TextButton(onClick = onAdd) {
-                    Text(text = stringResource(R.string.library_add))
+                Row {
+                    TextButton(onClick = onMine) {
+                        Text(text = stringResource(R.string.library_mine))
+                    }
+                    TextButton(onClick = onAdd) {
+                        Text(text = stringResource(R.string.library_add))
+                    }
                 }
             },
         )

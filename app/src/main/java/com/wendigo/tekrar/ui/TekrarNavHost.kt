@@ -35,6 +35,7 @@ import com.wendigo.tekrar.ui.contracts.StudyFormat
 import com.wendigo.tekrar.ui.contracts.StudyMode
 import com.wendigo.tekrar.ui.leech.LeechesScreen
 import com.wendigo.tekrar.ui.library.LibraryScreen
+import com.wendigo.tekrar.ui.mine.MineScreen
 import com.wendigo.tekrar.ui.placement.PlacementScreen
 import com.wendigo.tekrar.ui.settings.SettingsScreen
 import com.wendigo.tekrar.ui.stats.StatsScreen
@@ -85,6 +86,30 @@ fun TekrarNavHost(
                     onDecks = { navController.navigate(ROUTE_DECKS) },
                     onPlacement = { navController.navigate(ROUTE_PLACEMENT) },
                     onCustomSession = { navController.navigate(ROUTE_CUSTOM_SESSION) },
+                    onMine = { navController.navigate(ROUTE_MINE) },
+                )
+            }
+
+            composable(ROUTE_MINE) {
+                val vm: MineViewModel = viewModel(
+                    factory = viewModelFactory {
+                        MineViewModel(
+                            container.repository,
+                            container.dictionary,
+                            container.appContext,
+                        )
+                    },
+                )
+                val state by vm.state.collectAsStateWithLifecycle()
+                MineScreen(
+                    state = state,
+                    onInput = vm::setInput,
+                    onAnalyze = vm::analyze,
+                    onAdd = vm::add,
+                    onAddAll = vm::addAll,
+                    onImportDictionary = vm::importDictionary,
+                    onClearMessage = vm::clearMessage,
+                    onBack = { navController.popBackStack() },
                 )
             }
 
@@ -165,6 +190,7 @@ fun TekrarNavHost(
                     onSort = vm::setSort,
                     onWord = { id -> navController.navigate("$ROUTE_WORD_PREFIX/$id") },
                     onAdd = { navController.navigate(ROUTE_WORD_NEW) },
+                    onMine = { navController.navigate(ROUTE_MINE) },
                 )
             }
 
@@ -548,6 +574,7 @@ private const val ROUTE_STUDY = "study"
 private const val ROUTE_STUDY_DECK = "study-deck"
 private const val ROUTE_CUSTOM_SESSION = "custom-session"
 private const val ROUTE_CUSTOM_STUDY = "custom-study"
+private const val ROUTE_MINE = "mine"
 private const val ROUTE_DECKS = "decks"
 private const val ROUTE_PLACEMENT = "placement"
 private const val ROUTE_LEECHES = "leeches"

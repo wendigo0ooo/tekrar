@@ -47,6 +47,9 @@
     <string name="today_custom_session">Özel oturum</string>
     <string name="today_custom_session_hint">Deste, etiket ve kart sayısını seçerek kendi oturumunu oluştur.</string>
     <string name="today_custom_session_open">Özel oturum oluştur</string>
+    <string name="today_mine">Metinden kelime çıkar</string>
+    <string name="today_mine_hint">Yapıştırdığın metindeki bilinmeyen kelimeleri sözlükle eşleştir.</string>
+    <string name="today_mine_open">Metni analiz et</string>
 
     <string name="custom_title">Özel oturum</string>
     <string name="custom_subtitle">Filtreleri seç, kendi oturumunu başlat.</string>
@@ -115,6 +118,7 @@
     <string name="library_count">%1$d kelime</string>
     <string name="library_search">Kelime, anlam veya etiket ara</string>
     <string name="library_add">Ekle</string>
+    <string name="library_mine">Çıkar</string>
     <string name="library_empty_title">Sonuç yok</string>
     <string name="library_empty_hint">Arama metnini veya filtreyi değiştir.</string>
     <string name="lib_filter_all">Tümü</string>
@@ -127,6 +131,34 @@
     <string name="sort_az">A-Z</string>
     <string name="sort_newest">Yeni</string>
     <string name="sort_hardest">Zor</string>
+
+    <string name="mine_title">Metinden kelime çıkar</string>
+    <string name="mine_subtitle">Bir metin yapıştır, sözlükteki bilinmeyen kelimeleri bul.</string>
+    <string name="mine_input_hint">İngilizce bir metin yapıştır…</string>
+    <string name="mine_analyze">Analiz et</string>
+    <string name="mine_found_count">%1$d aday kelime</string>
+    <string name="mine_found_hint">Anlamlar sözlükten veya deste dosyalarından gelir; bağlam cümlesi kartın örneği olur.</string>
+    <string name="mine_add">Ekle</string>
+    <string name="mine_add_all">Bulunanları ekle</string>
+    <string name="mine_add_all_title">Bulunan kelimeler eklensin mi?</string>
+    <string name="mine_add_all_text">%1$d kelime tek işlemde kütüphaneye eklenecek. Zaten var olanlar atlanır.</string>
+    <string name="mine_add_all_confirm">Ekle</string>
+    <string name="mine_speak_word">Kelime</string>
+    <string name="mine_speak_context">Bağlam</string>
+    <string name="mine_source_dictionary">Sözlük</string>
+    <string name="mine_source_deck">Deste</string>
+    <string name="mine_no_text_title">Metin yok</string>
+    <string name="mine_no_text_hint">Önce üstteki alana bir İngilizce metin yapıştır.</string>
+    <string name="mine_empty_title">Yeni kelime yok</string>
+    <string name="mine_empty_hint">Metindeki kelimeler zaten kütüphanede ya da sözlükte/destelerde bulunamadı.</string>
+    <string name="mine_word_added">%1$s eklendi.</string>
+    <string name="mine_word_known">%1$s zaten kütüphanede.</string>
+    <string name="mine_add_failed">Kelime eklenemedi; tekrar dene.</string>
+    <string name="mine_bulk_result">%1$d kelime eklendi, %2$d atlandı.</string>
+    <string name="mine_analyze_failed">Analiz başarısız: %1$s</string>
+    <string name="mine_dictionary_import">Sözlük</string>
+    <string name="mine_dictionary_imported">Sözlük içe aktarıldı: %1$d kelime, %2$d atlandı.</string>
+    <string name="mine_dictionary_failed">Sözlük içe aktarılamadı: %1$s</string>
 
     <string name="study_close">Kapat</string>
     <string name="study_undo">Geri al</string>

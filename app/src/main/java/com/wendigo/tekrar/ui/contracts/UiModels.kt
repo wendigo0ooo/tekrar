@@ -1,6 +1,7 @@
 package com.wendigo.tekrar.ui.contracts
 
 import com.wendigo.tekrar.core.DayCount
+import com.wendigo.tekrar.core.MiningSource
 import com.wendigo.tekrar.core.RetentionBucket
 import com.wendigo.tekrar.core.SessionHardWord
 import com.wendigo.tekrar.core.TagPerformance
@@ -206,4 +207,22 @@ data class WordEditorUiState(
     val duplicateTerm: Boolean = false,
     val saveFailed: Boolean = false,
     val initialTerm: String = "",
+)
+
+data class MineCandidateUi(
+    val term: String,
+    val meaning: String,
+    val context: String,
+    val pos: String = "",
+    val cefr: String = "",
+    val source: MiningSource = MiningSource.DICTIONARY,
+)
+
+data class MineUiState(
+    val input: String = "",
+    val analyzing: Boolean = false,
+    val analyzed: Boolean = false,
+    val candidates: List<MineCandidateUi> = emptyList(),
+    val adding: Boolean = false,
+    val message: String? = null,
 )
