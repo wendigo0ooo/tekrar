@@ -13,11 +13,15 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import com.wendigo.tekrar.MainActivity
 import com.wendigo.tekrar.R
+import com.wendigo.tekrar.StudyRequest
 
 object Notifications {
 
     const val CHANNEL_REMINDER = "tekrar_reminder"
     const val REMINDER_ID = 2001
+
+    private const val START_STUDY_REQUEST_CODE = 7301
+    private const val SNOOZE_REQUEST_CODE = 7302
 
     fun ensureChannel(context: Context) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return
@@ -58,6 +62,22 @@ object Notifications {
             contentIntent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
         )
+        val startIntent = StudyRequest.activityIntent(context, StudyRequest.DEFAULT_LIMIT)
+        val startPending = PendingIntent.getActivity(
+            context,
+            START_STUDY_REQUEST_CODE,
+            startIntent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+        )
+        val snoozeIntent = Intent(context, ReminderActionReceiver::class.java).apply {
+            action = ReminderScheduler.ACTION_SNOOZE
+        }
+        val snoozePending = PendingIntent.getBroadcast(
+            context,
+            SNOOZE_REQUEST_CODE,
+            snoozeIntent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+        )
         val notification = NotificationCompat.Builder(context, CHANNEL_REMINDER)
             .setSmallIcon(R.drawable.ic_notif)
             .setContentTitle(title)
@@ -67,10 +87,26 @@ object Notifications {
             .setAutoCancel(true)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setCategory(NotificationCompat.CATEGORY_REMINDER)
+            .addAction(
+                R.drawable.ic_notif,
+                context.getString(R.string.notif_action_start),
+                startPending,
+            )
+            .addAction(
+                R.drawable.ic_notif,
+                context.getString(R.string.notif_action_snooze),
+                snoozePending,
+            )
             .build()
         return runCatching {
             NotificationManagerCompat.from(context).notify(REMINDER_ID, notification)
             true
         }.getOrDefault(false)
+    }
+
+    fun cancelReminder(context: Context) {
+        runCatching {
+            NotificationManagerCompat.from(context).cancel(REMINDER_ID)
+        }
     }
 }

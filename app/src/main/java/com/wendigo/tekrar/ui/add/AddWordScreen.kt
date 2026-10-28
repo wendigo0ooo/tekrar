@@ -22,12 +22,15 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
@@ -55,7 +58,9 @@ fun AddWordScreen(
 ) {
     val word = state.word
     val wordId = word?.id
-    var term by remember(wordId) { mutableStateOf(word?.term ?: "") }
+    val initialTerm = state.initialTerm
+    val meaningFocus = remember { FocusRequester() }
+    var term by remember(wordId, initialTerm) { mutableStateOf(word?.term ?: initialTerm) }
     var meaning by remember(wordId) { mutableStateOf(word?.meaning ?: "") }
     var example by remember(wordId) { mutableStateOf(word?.example ?: "") }
     var exampleTr by remember(wordId) { mutableStateOf(word?.exampleTr ?: "") }
@@ -63,6 +68,12 @@ fun AddWordScreen(
     var tags by remember(wordId) { mutableStateOf(word?.tags ?: "") }
     var pos by remember(wordId) { mutableStateOf(word?.pos ?: "") }
     var showDelete by remember { mutableStateOf(false) }
+
+    LaunchedEffect(state.loading, initialTerm) {
+        if (!state.loading && initialTerm.isNotBlank()) {
+            runCatching { meaningFocus.requestFocus() }
+        }
+    }
 
     if (state.loading) {
         Box(
@@ -113,7 +124,9 @@ fun AddWordScreen(
         OutlinedTextField(
             value = meaning,
             onValueChange = { meaning = it },
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .focusRequester(meaningFocus),
             label = { Text(text = stringResource(R.string.field_meaning)) },
             singleLine = true,
             shape = RoundedCornerShape(14.dp),

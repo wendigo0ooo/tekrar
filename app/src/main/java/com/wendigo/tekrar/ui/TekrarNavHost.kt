@@ -1,5 +1,6 @@
 package com.wendigo.tekrar.ui
 
+import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,10 +15,12 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.wendigo.tekrar.AppContainer
 import com.wendigo.tekrar.R
 import com.wendigo.tekrar.ui.add.AddWordScreen
@@ -33,9 +36,14 @@ import com.wendigo.tekrar.ui.stats.StatsScreen
 import com.wendigo.tekrar.ui.study.StudyScreen
 import com.wendigo.tekrar.ui.today.TodayScreen
 import com.wendigo.tekrar.ui.word.WordDetailScreen
+import com.wendigo.tekrar.widget.DueWidgetProvider
 
 @Composable
-fun TekrarNavHost(container: AppContainer) {
+fun TekrarNavHost(
+    container: AppContainer,
+    launchRequest: LaunchRequest? = null,
+    onLaunchRequestConsumed: () -> Unit = {},
+) {
     val navController = rememberNavController()
     val backStackEntry by navController.currentBackStackEntryAsState()
     val route = backStackEntry?.destination?.route
@@ -150,7 +158,15 @@ fun TekrarNavHost(container: AppContainer) {
                 )
             }
 
-            composable("$ROUTE_STUDY/{mode}/{format}") { entry ->
+            composable(
+                route = "$ROUTE_STUDY/{mode}/{format}?limit={limit}",
+                arguments = listOf(
+                    navArgument("limit") {
+                        type = NavType.IntType
+                        defaultValue = 0
+                    },
+                ),
+            ) { entry ->
                 val mode = runCatching {
                     StudyMode.valueOf(entry.arguments?.getString("mode") ?: StudyMode.MIXED.name)
                 }.getOrDefault(StudyMode.MIXED)
@@ -159,15 +175,26 @@ fun TekrarNavHost(container: AppContainer) {
                         entry.arguments?.getString("format") ?: StudyFormat.FLASHCARD.name
                     )
                 }.getOrDefault(StudyFormat.FLASHCARD)
+                val limit = entry.arguments?.getInt("limit") ?: 0
                 val vm: StudyViewModel = viewModel(
                     factory = viewModelFactory {
-                        StudyViewModel(container.repository, mode, format)
+                        StudyViewModel(
+                            container.repository,
+                            mode,
+                            format,
+                            maxCards = limit.takeIf { it > 0 },
+                        )
                     },
                 )
                 val state by vm.state.collectAsStateWithLifecycle()
                 val settings by container.settings.settings.collectAsStateWithLifecycle(
                     initialValue = com.wendigo.tekrar.repo.AppSettings(),
                 )
+                LaunchedEffect(state.finished, state.empty) {
+                    if (state.finished || state.empty) {
+                        DueWidgetProvider.refresh(container.appContext)
+                    }
+                }
                 StudyScreen(
                     state = state,
                     autoSpeak = settings.autoSpeak,
@@ -179,14 +206,29 @@ fun TekrarNavHost(container: AppContainer) {
                     onContinue = vm::continueAfterAnswer,
                     onUndo = vm::undo,
                     onReload = vm::load,
-                    onExit = { navController.popBackStack() },
+                    onExit = {
+                        DueWidgetProvider.refresh(container.appContext)
+                        navController.popBackStack()
+                    },
                     onLibrary = { navController.navigateTab(ROUTE_LIBRARY) },
                 )
             }
 
-            composable(ROUTE_WORD_NEW) {
+            composable(
+                route = "$ROUTE_WORD_NEW?term={term}",
+                arguments = listOf(
+                    navArgument("term") {
+                        type = NavType.StringType
+                        nullable = true
+                        defaultValue = null
+                    },
+                ),
+            ) { entry ->
+                val initialTerm = entry.arguments?.getString("term")
                 val vm: WordEditorViewModel = viewModel(
-                    factory = viewModelFactory { WordEditorViewModel(container.repository, null) },
+                    factory = viewModelFactory {
+                        WordEditorViewModel(container.repository, null, initialTerm)
+                    },
                 )
                 val state by vm.state.collectAsStateWithLifecycle()
                 AddWordScreen(
@@ -241,6 +283,21 @@ fun TekrarNavHost(container: AppContainer) {
             }
         }
 
+        LaunchedEffect(launchRequest) {
+            val request = launchRequest ?: return@LaunchedEffect
+            val limit = request.studyLimit
+            val term = request.initialTerm
+            when {
+                limit != null -> navController.navigate(
+                    studyRoute(StudyMode.MIXED, StudyFormat.FLASHCARD, limit)
+                )
+                term != null -> navController.navigate(
+                    "$ROUTE_WORD_NEW?term=${Uri.encode(term)}"
+                )
+            }
+            onLaunchRequestConsumed()
+        }
+
         val tabs = listOf(ROUTE_TODAY, ROUTE_LIBRARY, ROUTE_STATS, ROUTE_SETTINGS)
         val selectedIndex = tabs.indexOf(route)
         if (selectedIndex >= 0) {
@@ -266,6 +323,11 @@ private fun NavHostController.navigateTab(route: String) {
         launchSingleTop = true
         restoreState = true
     }
+}
+
+private fun studyRoute(mode: StudyMode, format: StudyFormat, limit: Int? = null): String {
+    val base = "$ROUTE_STUDY/${mode.name}/${format.name}"
+    return if (limit != null && limit > 0) "$base?limit=$limit" else base
 }
 
 private const val ROUTE_TODAY = "today"

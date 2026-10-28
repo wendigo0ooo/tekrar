@@ -248,10 +248,15 @@ class WordDetailViewModel(
 class WordEditorViewModel(
     private val repository: WordRepository,
     private val id: Long?,
+    initialTerm: String? = null,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(
-        WordEditorUiState(loading = id != null, isEdit = id != null)
+        WordEditorUiState(
+            loading = id != null,
+            isEdit = id != null,
+            initialTerm = if (id == null) initialTerm.orEmpty() else "",
+        )
     )
     val state: StateFlow<WordEditorUiState> = _state.asStateFlow()
 
@@ -320,6 +325,7 @@ class StudyViewModel(
     private val repository: WordRepository,
     private val mode: StudyMode,
     val format: StudyFormat,
+    private val maxCards: Int? = null,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(StudyUiState(format = format))
@@ -357,7 +363,9 @@ class StudyViewModel(
             try {
                 _state.value = StudyUiState(loading = true, format = format)
                 pool = runCatching { repository.allWords() }.getOrDefault(emptyList())
-                val items = runCatching { repository.loadQueue(mode) }.getOrDefault(emptyList())
+                val queue = runCatching { repository.loadQueue(mode) }.getOrDefault(emptyList())
+                val limit = maxCards?.takeIf { it > 0 }
+                val items = if (limit != null) queue.take(limit) else queue
                 session.load(items)
                 initialTotal = items.size
                 requeues = 0
