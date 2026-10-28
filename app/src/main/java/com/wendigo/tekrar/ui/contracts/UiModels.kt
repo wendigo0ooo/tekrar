@@ -1,7 +1,9 @@
 package com.wendigo.tekrar.ui.contracts
 
 import com.wendigo.tekrar.core.DayCount
+import com.wendigo.tekrar.core.RetentionBucket
 import com.wendigo.tekrar.core.SessionHardWord
+import com.wendigo.tekrar.core.TagPerformance
 import com.wendigo.tekrar.data.Word
 import com.wendigo.tekrar.repo.AppSettings
 
@@ -115,7 +117,10 @@ data class StatsUiState(
     val mature: Int = 0,
     val leech: Int = 0,
     val suspended: Int = 0,
-    val retention: Double? = null,
+    val trueRetention: Double? = null,
+    val matureRetention: Double? = null,
+    val retentionBuckets: List<RetentionBucket> = emptyList(),
+    val retentionSample: Int = 0,
     val reviewedToday: Int = 0,
     val dailyGoal: Int = 20,
     val streak: Int = 0,
@@ -126,6 +131,10 @@ data class StatsUiState(
     val heatmap: List<DayCount> = emptyList(),
     val last30: List<DayCount> = emptyList(),
     val forecast: List<DayCount> = emptyList(),
+    val workload7: Int = 0,
+    val workload30: Int = 0,
+    val overdueNow: Int = 0,
+    val tagPerformance: List<TagPerformance> = emptyList(),
 )
 
 data class SettingsUiState(
