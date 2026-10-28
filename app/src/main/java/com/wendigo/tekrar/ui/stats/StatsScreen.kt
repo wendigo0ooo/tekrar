@@ -1,6 +1,7 @@
 package com.wendigo.tekrar.ui.stats
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -35,7 +36,7 @@ import com.wendigo.tekrar.ui.contracts.StatsUiState
 import java.util.Locale
 
 @Composable
-fun StatsScreen(state: StatsUiState) {
+fun StatsScreen(state: StatsUiState, onLeeches: () -> Unit) {
     val goalProgress = if (state.dailyGoal > 0) {
         state.reviewedToday.toFloat() / state.dailyGoal
     } else {
@@ -96,6 +97,35 @@ fun StatsScreen(state: StatsUiState) {
                     label = stringResource(R.string.stats_suspended),
                     value = state.suspended.toString(),
                     modifier = Modifier.weight(1f),
+                )
+            }
+        }
+
+        Panel(modifier = Modifier.clickable(onClick = onLeeches)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                Column(
+                    modifier = Modifier.weight(1f),
+                    verticalArrangement = Arrangement.spacedBy(2.dp),
+                ) {
+                    Text(
+                        text = stringResource(R.string.leech_title),
+                        style = MaterialTheme.typography.titleLarge,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                    Text(
+                        text = stringResource(R.string.leech_count, state.leech),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                Text(
+                    text = "›",
+                    style = MaterialTheme.typography.headlineSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
         }

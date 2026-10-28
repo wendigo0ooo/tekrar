@@ -8,6 +8,8 @@ import androidx.lifecycle.viewModelScope
 import com.wendigo.tekrar.R
 import com.wendigo.tekrar.core.AnswerCheck
 import com.wendigo.tekrar.core.Cloze
+import com.wendigo.tekrar.core.LeechPolicy
+import com.wendigo.tekrar.core.SessionSummary
 import com.wendigo.tekrar.core.Srs
 import com.wendigo.tekrar.core.StudySession
 import com.wendigo.tekrar.data.Word
@@ -19,6 +21,7 @@ import com.wendigo.tekrar.repo.SettingsStore
 import com.wendigo.tekrar.repo.WordRepository
 import com.wendigo.tekrar.repo.WordWriteResult
 import com.wendigo.tekrar.ui.contracts.DashboardUiState
+import com.wendigo.tekrar.ui.contracts.LeechesUiState
 import com.wendigo.tekrar.ui.contracts.LibraryFilter
 import com.wendigo.tekrar.ui.contracts.LibrarySort
 import com.wendigo.tekrar.ui.contracts.LibraryUiState
@@ -36,6 +39,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -121,7 +125,7 @@ class LibraryViewModel(repository: WordRepository) : ViewModel() {
                     LibraryFilter.NEW -> !word.suspended && word.isNew
                     LibraryFilter.FAVORITE -> word.favorite
                     LibraryFilter.SUSPENDED -> word.suspended
-                    LibraryFilter.LEECH -> word.isLeech
+                    LibraryFilter.LEECH -> LeechPolicy.isLeech(word)
                 }
             }
             .filter { word ->
@@ -153,6 +157,25 @@ class LibraryViewModel(repository: WordRepository) : ViewModel() {
         append(word.notes.lowercase(Locale.ROOT))
         append(' ')
         append(word.example.lowercase(Locale.ROOT))
+    }
+}
+
+class LeechesViewModel(private val repository: WordRepository) : ViewModel() {
+
+    val state: StateFlow<LeechesUiState> = repository.observeLibrary()
+        .map { words ->
+            LeechesUiState(loading = false, words = LeechPolicy.leeches(words))
+        }
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5_000),
+            initialValue = LeechesUiState(),
+        )
+
+    fun suspendWord(word: Word) {
+        viewModelScope.launch {
+            repository.setSuspended(word.id, true)
+        }
     }
 }
 
@@ -282,6 +305,8 @@ class StudyViewModel(
     private var done = 0
     private var againCount = 0
     private var correctCount = 0
+    private var strengthenedCount = 0
+    private val againWords = LinkedHashMap<Long, Pair<Word, Int>>()
     private var startedAt = 0L
     private var lastUndo: Undo? = null
     private var pendingRating: Int? = null
@@ -311,6 +336,8 @@ class StudyViewModel(
                 done = 0
                 againCount = 0
                 correctCount = 0
+                strengthenedCount = 0
+                againWords.clear()
                 attempts.clear()
                 lastUndo = null
                 pendingRating = null
@@ -412,9 +439,20 @@ class StudyViewModel(
                 done = (done - 1).coerceAtLeast(0)
                 if (undo.rating == Srs.AGAIN) {
                     againCount = (againCount - 1).coerceAtLeast(0)
+                    val previous = againWords[undo.word.id]
+                    if (previous != null) {
+                        if (previous.second <= 1) {
+                            againWords.remove(undo.word.id)
+                        } else {
+                            againWords[undo.word.id] = previous.first to (previous.second - 1)
+                        }
+                    }
                     if (undo.requeued && requeues > 0) requeues--
                 } else {
                     correctCount = (correctCount - 1).coerceAtLeast(0)
+                    if (undo.rating == Srs.GOOD || undo.rating == Srs.EASY) {
+                        strengthenedCount = (strengthenedCount - 1).coerceAtLeast(0)
+                    }
                 }
                 if (undo.requeued) {
                     attempts[undo.word.id] = ((attempts[undo.word.id] ?: 1) - 1).coerceAtLeast(0)
@@ -437,7 +475,14 @@ class StudyViewModel(
                     return@launch
                 }
                 done++
-                if (rating == Srs.AGAIN) againCount++ else correctCount++
+                if (rating == Srs.AGAIN) {
+                    againCount++
+                    val previous = againWords[word.id]
+                    againWords[word.id] = word to ((previous?.second ?: 0) + 1)
+                } else {
+                    correctCount++
+                    if (rating == Srs.GOOD || rating == Srs.EASY) strengthenedCount++
+                }
                 val requeue = rating == Srs.AGAIN &&
                     (attempts[word.id] ?: 0) < MAX_REQUEUE_ATTEMPTS
                 val removed = session.finish(word.id, if (requeue) outcome.word else null)
@@ -488,10 +533,17 @@ class StudyViewModel(
             reviewed = done,
             againCount = againCount,
             correctCount = correctCount,
+            strengthenedCount = strengthenedCount,
+            strugglingCount = againCount,
+            accuracyPercent = SessionSummary.accuracyPercent(correctCount, done),
         )
     }
 
-    private fun finish() {
+    private suspend fun finish() {
+        val hardWords = SessionSummary.hardestWords(
+            againWords.values.associate { (word, failures) -> word.term to failures }
+        )
+        val tomorrowDue = runCatching { repository.dueTomorrowCount() }.getOrNull()
         _state.value = StudyUiState(
             loading = false,
             finished = true,
@@ -503,6 +555,11 @@ class StudyViewModel(
             againCount = againCount,
             correctCount = correctCount,
             elapsedMs = (System.currentTimeMillis() - startedAt).coerceAtLeast(0L),
+            strengthenedCount = strengthenedCount,
+            strugglingCount = againCount,
+            accuracyPercent = SessionSummary.accuracyPercent(correctCount, done),
+            tomorrowDue = tomorrowDue,
+            hardWords = hardWords,
         )
     }
 
@@ -529,6 +586,8 @@ class StudyViewModel(
         tags = tags,
         pos = pos,
         favorite = favorite,
+        lapses = lapses,
+        isLeech = isLeech,
     )
 
     companion object {

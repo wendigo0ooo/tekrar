@@ -19,6 +19,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
@@ -215,6 +216,20 @@ private fun StudyContent(
                 StudyFormat.CLOZE -> stringResource(R.string.study_mode_cloze)
             },
         )
+
+        if (card.isLeech) {
+            Text(
+                text = stringResource(R.string.study_leech_badge),
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.error,
+                modifier = Modifier
+                    .background(
+                        MaterialTheme.colorScheme.error.copy(alpha = 0.12f),
+                        RoundedCornerShape(50),
+                    )
+                    .padding(horizontal = 10.dp, vertical = 4.dp),
+            )
+        }
 
         when (state.format) {
             StudyFormat.FLASHCARD -> FlashcardCard(
@@ -760,21 +775,79 @@ private fun FinishedContent(
                     modifier = Modifier.weight(1f),
                 )
                 com.wendigo.tekrar.ui.components.StatTile(
-                    label = stringResource(R.string.study_correct_count_label),
-                    value = state.correctCount.toString(),
+                    label = stringResource(R.string.study_summary_accuracy),
+                    value = stringResource(
+                        R.string.study_summary_percent,
+                        state.accuracyPercent,
+                    ),
                     modifier = Modifier.weight(1f),
                 )
                 com.wendigo.tekrar.ui.components.StatTile(
-                    label = stringResource(R.string.study_again_count_label),
-                    value = state.againCount.toString(),
+                    label = stringResource(R.string.study_summary_strengthened),
+                    value = state.strengthenedCount.toString(),
                     modifier = Modifier.weight(1f),
                 )
+            }
+            HorizontalDivider(
+                color = MaterialTheme.colorScheme.outline.copy(alpha = 0.4f),
+            )
+            Row(modifier = Modifier.fillMaxWidth()) {
+                com.wendigo.tekrar.ui.components.StatTile(
+                    label = stringResource(R.string.study_summary_struggling),
+                    value = state.strugglingCount.toString(),
+                    modifier = Modifier.weight(1f),
+                    accent = MaterialTheme.colorScheme.error,
+                )
+                val tomorrowDue = state.tomorrowDue
+                if (tomorrowDue != null) {
+                    com.wendigo.tekrar.ui.components.StatTile(
+                        label = stringResource(R.string.study_summary_tomorrow_label),
+                        value = stringResource(
+                            R.string.study_summary_tomorrow_value,
+                            tomorrowDue,
+                        ),
+                        modifier = Modifier.weight(1f),
+                    )
+                } else {
+                    Spacer(modifier = Modifier.weight(1f))
+                }
+                Spacer(modifier = Modifier.weight(1f))
             }
             Text(
                 text = stringResource(R.string.study_elapsed, formatDuration(state.elapsedMs)),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
+            if (state.hardWords.isNotEmpty()) {
+                HorizontalDivider(
+                    color = MaterialTheme.colorScheme.outline.copy(alpha = 0.4f),
+                )
+                Text(
+                    text = stringResource(R.string.study_summary_hardest),
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
+                state.hardWords.forEach { hard ->
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                    ) {
+                        Text(
+                            text = hard.term,
+                            style = MaterialTheme.typography.bodyLarge,
+                            color = MaterialTheme.colorScheme.onSurface,
+                        )
+                        Text(
+                            text = stringResource(
+                                R.string.study_summary_hard_failures,
+                                hard.failures,
+                            ),
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.error,
+                        )
+                    }
+                }
+            }
         }
         PrimaryButton(
             text = stringResource(R.string.study_restart),

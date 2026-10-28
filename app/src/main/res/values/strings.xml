@@ -93,6 +93,15 @@
     <string name="study_empty_title">Şimdilik tekrar yok</string>
     <string name="study_empty_hint">Bu modda gösterilecek kelime kalmadı. Yeni kelime ekleyebilir veya kütüphaneye göz atabilirsin.</string>
     <string name="study_library">Kütüphane</string>
+    <string name="study_leech_badge">Zor kelime</string>
+    <string name="study_summary_accuracy">Doğruluk</string>
+    <string name="study_summary_percent">%1$d%%</string>
+    <string name="study_summary_strengthened">Güçlenen</string>
+    <string name="study_summary_struggling">Zorlanan</string>
+    <string name="study_summary_tomorrow_label">Yarın</string>
+    <string name="study_summary_tomorrow_value">%1$d kart</string>
+    <string name="study_summary_hardest">En zor kelimeler</string>
+    <string name="study_summary_hard_failures">%1$d kez</string>
 
     <string name="rating_again">Tekrar</string>
     <string name="rating_hard">Zor</string>
@@ -115,6 +124,13 @@
     <string name="stats_activity_hint">Son 90 gün</string>
     <string name="stats_forecast">Yaklaşan tekrarlar</string>
     <string name="stats_forecast_empty">Önümüzdeki günlerde tekrar yok.</string>
+
+    <string name="leech_title">Zor kelimeler</string>
+    <string name="leech_count">%1$d kelime</string>
+    <string name="leech_empty_title">Zor kelime yok</string>
+    <string name="leech_empty_hint">Bir kelime %1$d kez unutulduğunda burada listelenir.</string>
+    <string name="leech_lapses">%1$d unutma</string>
+    <string name="leech_study">Çalış</string>
 
     <string name="add_title">Yeni kelime</string>
     <string name="edit_title">Kelimeyi düzenle</string>
