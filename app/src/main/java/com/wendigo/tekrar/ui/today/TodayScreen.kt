@@ -47,6 +47,8 @@ fun TodayScreen(
     onStudy: (StudyMode, StudyFormat) -> Unit,
     onAddWord: () -> Unit,
     onLibrary: () -> Unit,
+    onDecks: () -> Unit,
+    onPlacement: () -> Unit,
 ) {
     val dateText = LocalDate.now().format(
         DateTimeFormatter.ofPattern("d MMMM EEEE", Locale.forLanguageTag("tr"))
@@ -189,6 +191,38 @@ fun TodayScreen(
                 style = MaterialTheme.typography.labelMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
+
+            Panel {
+                SectionTitle(text = stringResource(R.string.today_decks))
+                Text(
+                    text = stringResource(R.string.today_decks_hint),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                ) {
+                    OutlinedButton(
+                        onClick = onDecks,
+                        modifier = Modifier
+                            .weight(1f)
+                            .height(48.dp),
+                        shape = RoundedCornerShape(14.dp),
+                    ) {
+                        Text(text = stringResource(R.string.today_decks_open))
+                    }
+                    OutlinedButton(
+                        onClick = onPlacement,
+                        modifier = Modifier
+                            .weight(1f)
+                            .height(48.dp),
+                        shape = RoundedCornerShape(14.dp),
+                    ) {
+                        Text(text = stringResource(R.string.today_placement))
+                    }
+                }
+            }
 
             Row(
                 modifier = Modifier.fillMaxWidth(),

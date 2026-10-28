@@ -3,720 +3,960 @@
     "term": "ability",
     "meaning": "yetenek",
     "example": "She has the ability to solve hard problems.",
-    "exampleTr": "Zor problemleri çözme yeteneği var."
+    "exampleTr": "Zor problemleri çözme yeteneği var.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "abroad",
     "meaning": "yurt dışında",
     "example": "He spent a semester studying abroad.",
-    "exampleTr": "Bir dönem yurt dışında okuyarak geçirdi."
+    "exampleTr": "Bir dönem yurt dışında okuyarak geçirdi.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "accept",
     "meaning": "kabul etmek",
     "example": "The company accepted my job offer.",
-    "exampleTr": "Şirket iş teklifimi kabul etti."
+    "exampleTr": "Şirket iş teklifimi kabul etti.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "account",
     "meaning": "hesap",
     "example": "I created a new account on the website.",
-    "exampleTr": "Web sitesinde yeni bir hesap oluşturdum."
+    "exampleTr": "Web sitesinde yeni bir hesap oluşturdum.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "achieve",
     "meaning": "başarmak",
     "example": "They achieved their goal in only one month.",
-    "exampleTr": "Hedeflerine sadece bir ayda ulaştılar."
+    "exampleTr": "Hedeflerine sadece bir ayda ulaştılar.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "active",
     "meaning": "etkin",
     "example": "He stays active by running every morning.",
-    "exampleTr": "Her sabah koşarak aktif kalıyor."
+    "exampleTr": "Her sabah koşarak aktif kalıyor.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "advice",
     "meaning": "tavsiye",
     "example": "Can you give me some advice about the exam?",
-    "exampleTr": "Sınav hakkında bana biraz tavsiye verebilir misin?"
+    "exampleTr": "Sınav hakkında bana biraz tavsiye verebilir misin?",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "affect",
     "meaning": "etkilemek",
     "example": "Lack of sleep can affect your memory.",
-    "exampleTr": "Uykusuzluk hafızanı etkileyebilir."
+    "exampleTr": "Uykusuzluk hafızanı etkileyebilir.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "agree",
     "meaning": "anlaşmak",
     "example": "I don't agree with this plan.",
-    "exampleTr": "Bu plana katılmıyorum."
+    "exampleTr": "Bu plana katılmıyorum.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "allow",
     "meaning": "izin vermek",
     "example": "The school allows students to use laptops in class.",
-    "exampleTr": "Okul, öğrencilerin derste dizüstü bilgisayar kullanmasına izin veriyor."
+    "exampleTr": "Okul, öğrencilerin derste dizüstü bilgisayar kullanmasına izin veriyor.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "amount",
     "meaning": "miktar",
     "example": "She spent a large amount of money on books.",
-    "exampleTr": "Kitaplara büyük bir miktar para harcadı."
+    "exampleTr": "Kitaplara büyük bir miktar para harcadı.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "ancient",
     "meaning": "antik",
     "example": "We visited an ancient temple last summer.",
-    "exampleTr": "Geçen yaz antik bir tapınağı ziyaret ettik."
+    "exampleTr": "Geçen yaz antik bir tapınağı ziyaret ettik.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "announce",
     "meaning": "duyurmak",
     "example": "The teacher will announce the results tomorrow.",
-    "exampleTr": "Öğretmen sonuçları yarın açıklayacak."
+    "exampleTr": "Öğretmen sonuçları yarın açıklayacak.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "appear",
     "meaning": "görünmek",
     "example": "A new problem appeared after lunch.",
-    "exampleTr": "Öğle yemeğinden sonra yeni bir sorun ortaya çıktı."
+    "exampleTr": "Öğle yemeğinden sonra yeni bir sorun ortaya çıktı.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "apply",
     "meaning": "başvurmak",
     "example": "I applied for a scholarship last week.",
-    "exampleTr": "Geçen hafta burs başvurusu yaptım."
+    "exampleTr": "Geçen hafta burs başvurusu yaptım.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "approach",
     "meaning": "yaklaşım",
     "example": "We need a different approach to this task.",
-    "exampleTr": "Bu göreve farklı bir yaklaşım gerekiyor."
+    "exampleTr": "Bu göreve farklı bir yaklaşım gerekiyor.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "argue",
     "meaning": "tartışmak",
     "example": "They argued about the price for an hour.",
-    "exampleTr": "Bir saat boyunca fiyat konusunda tartıştılar."
+    "exampleTr": "Bir saat boyunca fiyat konusunda tartıştılar.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "arrange",
     "meaning": "düzenlemek",
     "example": "Let's arrange a meeting on Friday.",
-    "exampleTr": "Cuma günü bir toplantı ayarlayalım."
+    "exampleTr": "Cuma günü bir toplantı ayarlayalım.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "attend",
     "meaning": "katılmak",
     "example": "She attended the conference last spring.",
-    "exampleTr": "Geçen bahar konferansa katıldı."
+    "exampleTr": "Geçen bahar konferansa katıldı.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "avoid",
     "meaning": "kaçınmak",
     "example": "Try to avoid sugar after eight o'clock.",
-    "exampleTr": "Saat sekizden sonra şekerden kaçınmaya çalış."
+    "exampleTr": "Saat sekizden sonra şekerden kaçınmaya çalış.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "balance",
     "meaning": "denge",
     "example": "He lost his balance and fell down.",
-    "exampleTr": "Dengesini kaybedip düştü."
+    "exampleTr": "Dengesini kaybedip düştü.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "behaviour",
     "meaning": "davranış",
     "example": "The teacher's behaviour was calm and patient.",
-    "exampleTr": "Öğretmenin davranışı sakin ve sabırlıydı."
+    "exampleTr": "Öğretmenin davranışı sakin ve sabırlıydı.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "belief",
     "meaning": "inanç",
     "example": "Their belief grew stronger over the years.",
-    "exampleTr": "İnançları yıllar içinde daha da güçlendi."
+    "exampleTr": "İnançları yıllar içinde daha da güçlendi.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "benefit",
     "meaning": "fayda",
     "example": "Daily walks have a clear benefit for your health.",
-    "exampleTr": "Her gün yürümenin sağlığına açık bir faydası var."
+    "exampleTr": "Her gün yürümenin sağlığına açık bir faydası var.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "borrow",
     "meaning": "ödünç almak",
     "example": "Can I borrow your pen for a moment?",
-    "exampleTr": "Kalemini bir an ödünç alabilir miyim?"
+    "exampleTr": "Kalemini bir an ödünç alabilir miyim?",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "brief",
     "meaning": "kısa ve öz",
     "example": "The manager gave a brief summary of the plan.",
-    "exampleTr": "Müdür planın kısa bir özetini verdi."
+    "exampleTr": "Müdür planın kısa bir özetini verdi.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "budget",
     "meaning": "bütçe",
     "example": "We are on a tight budget this month.",
-    "exampleTr": "Bu ay sıkı bir bütçeyle idare ediyoruz."
+    "exampleTr": "Bu ay sıkı bir bütçeyle idare ediyoruz.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "career",
     "meaning": "kariyer",
     "example": "She started her career in a small clinic.",
-    "exampleTr": "Kariyerine küçük bir klinikte başladı."
+    "exampleTr": "Kariyerine küçük bir klinikte başladı.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "cause",
     "meaning": "neden olmak",
     "example": "Smoking can cause serious health problems.",
-    "exampleTr": "Sigara içmek ciddi sağlık sorunlarına neden olabilir."
+    "exampleTr": "Sigara içmek ciddi sağlık sorunlarına neden olabilir.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "challenge",
     "meaning": "zorluk",
     "example": "Finding a good job was the biggest challenge.",
-    "exampleTr": "İyi bir iş bulmak en büyük zorluktu."
+    "exampleTr": "İyi bir iş bulmak en büyük zorluktu.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "choice",
     "meaning": "seçim",
     "example": "It was a difficult choice between two jobs.",
-    "exampleTr": "İki iş arasında zor bir seçimdi."
+    "exampleTr": "İki iş arasında zor bir seçimdi.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "climate",
     "meaning": "iklim",
     "example": "The climate here is warm all year long.",
-    "exampleTr": "Buradaki iklim yıl boyunca ılık."
+    "exampleTr": "Buradaki iklim yıl boyunca ılık.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "collect",
     "meaning": "toplamak",
     "example": "My grandfather collects old coins.",
-    "exampleTr": "Dedem eski madeni paralar biriktirir."
+    "exampleTr": "Dedem eski madeni paralar biriktirir.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "compare",
     "meaning": "karşılaştırmak",
     "example": "Compare the two plans before you choose one.",
-    "exampleTr": "Birini seçmeden önce iki planı karşılaştır."
+    "exampleTr": "Birini seçmeden önce iki planı karşılaştır.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "concern",
     "meaning": "endişe",
     "example": "Her main concern was the cost of the trip.",
-    "exampleTr": "En büyük endişesi yolculuğun masrafıydı."
+    "exampleTr": "En büyük endişesi yolculuğun masrafıydı.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "condition",
     "meaning": "koşul ve durum",
     "example": "The old house is in very good condition.",
-    "exampleTr": "Eski ev çok iyi durumda."
+    "exampleTr": "Eski ev çok iyi durumda.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "confident",
     "meaning": "kendine güvenen",
     "example": "He felt confident before the interview.",
-    "exampleTr": "Mülakattan önce kendine güveniyordu."
+    "exampleTr": "Mülakattan önce kendine güveniyordu.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "connect",
     "meaning": "bağlanmak",
     "example": "The new train line connects three small towns.",
-    "exampleTr": "Yeni tren hattı üç küçük kasabayı birbirine bağlıyor."
+    "exampleTr": "Yeni tren hattı üç küçük kasabayı birbirine bağlıyor.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "consider",
     "meaning": "değerlendirmek",
     "example": "Please consider my offer carefully.",
-    "exampleTr": "Lütfen teklifimi dikkatlice değerlendir."
+    "exampleTr": "Lütfen teklifimi dikkatlice değerlendir.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "contain",
     "meaning": "içermek",
     "example": "This drink contains too much sugar.",
-    "exampleTr": "Bu içecek çok fazla şeker içeriyor."
+    "exampleTr": "Bu içecek çok fazla şeker içeriyor.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "continue",
     "meaning": "devam etmek",
     "example": "The rain continued for three more days.",
-    "exampleTr": "Yağmur üç gün daha devam etti."
+    "exampleTr": "Yağmur üç gün daha devam etti.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "contribute",
     "meaning": "katkıda bulunmak",
     "example": "Everyone contributed something to the project.",
-    "exampleTr": "Herkes projeye bir şeyler kattı."
+    "exampleTr": "Herkes projeye bir şeyler kattı.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "convenient",
     "meaning": "kullanışlı",
     "example": "Is Friday convenient for you?",
-    "exampleTr": "Cuma günü senin için uygun mu?"
+    "exampleTr": "Cuma günü senin için uygun mu?",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "convince",
     "meaning": "ikna etmek",
     "example": "He convinced me to join the club.",
-    "exampleTr": "Beni kulübe katılmaya ikna etti."
+    "exampleTr": "Beni kulübe katılmaya ikna etti.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "courage",
     "meaning": "cesaret",
     "example": "It takes courage to speak in public.",
-    "exampleTr": "Topluluk önünde konuşmak cesaret ister."
+    "exampleTr": "Topluluk önünde konuşmak cesaret ister.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "create",
     "meaning": "yaratmak",
     "example": "The artist created a beautiful painting.",
-    "exampleTr": "Sanatçı güzel bir resim yaptı."
+    "exampleTr": "Sanatçı güzel bir resim yaptı.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "curious",
     "meaning": "meraklı",
     "example": "The children were curious about the new teacher.",
-    "exampleTr": "Çocuklar yeni öğretmeni merak ediyordu."
+    "exampleTr": "Çocuklar yeni öğretmeni merak ediyordu.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "decide",
     "meaning": "karar vermek",
     "example": "We decided to leave the hotel early.",
-    "exampleTr": "Otelden erken ayrılmaya karar verdik."
+    "exampleTr": "Otelden erken ayrılmaya karar verdik.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "decrease",
     "meaning": "azalmak",
     "example": "Traffic decreased after the road works.",
-    "exampleTr": "Yol çalışmalarından sonra trafik azaldı."
+    "exampleTr": "Yol çalışmalarından sonra trafik azaldı.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "deliver",
     "meaning": "teslim etmek",
     "example": "The package will be delivered tomorrow.",
-    "exampleTr": "Paket yarın teslim edilecek."
+    "exampleTr": "Paket yarın teslim edilecek.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "depend",
     "meaning": "bağımlı olmak",
     "example": "The result depends on the weather.",
-    "exampleTr": "Sonuç havaya bağlı."
+    "exampleTr": "Sonuç havaya bağlı.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "describe",
     "meaning": "betimlemek",
     "example": "Can you describe the man you saw?",
-    "exampleTr": "Gördüğün adamı tarif edebilir misin?"
+    "exampleTr": "Gördüğün adamı tarif edebilir misin?",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "design",
     "meaning": "tasarım",
     "example": "The design of this chair is very simple.",
-    "exampleTr": "Bu sandalyenin tasarımı çok sade."
+    "exampleTr": "Bu sandalyenin tasarımı çok sade.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "develop",
     "meaning": "geliştirmek",
     "example": "He developed a new method for learning languages.",
-    "exampleTr": "Dil öğrenmek için yeni bir yöntem geliştirdi."
+    "exampleTr": "Dil öğrenmek için yeni bir yöntem geliştirdi.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "difference",
     "meaning": "fark",
     "example": "What is the difference between these two words?",
-    "exampleTr": "Bu iki kelime arasındaki fark nedir?"
+    "exampleTr": "Bu iki kelime arasındaki fark nedir?",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "discuss",
     "meaning": "görüşmek",
     "example": "We discussed the plan over dinner.",
-    "exampleTr": "Planı akşam yemeğinde tartıştık."
+    "exampleTr": "Planı akşam yemeğinde tartıştık.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "divide",
     "meaning": "bölmek",
     "example": "Divide the class into small groups.",
-    "exampleTr": "Sınıfı küçük gruplara böl."
+    "exampleTr": "Sınıfı küçük gruplara böl.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "doubt",
     "meaning": "şüphe",
     "example": "He had no doubt that she was right.",
-    "exampleTr": "Onun haklı olduğundan hiç şüphesi yoktu."
+    "exampleTr": "Onun haklı olduğundan hiç şüphesi yoktu.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "effort",
     "meaning": "çaba",
     "example": "Learning a language takes daily effort.",
-    "exampleTr": "Bir dil öğrenmek her gün çaba ister."
+    "exampleTr": "Bir dil öğrenmek her gün çaba ister.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "encourage",
     "meaning": "teşvik etmek",
     "example": "My teacher encouraged me to keep writing.",
-    "exampleTr": "Öğretmenim beni yazmaya devam etmem için cesaretlendirdi."
+    "exampleTr": "Öğretmenim beni yazmaya devam etmem için cesaretlendirdi.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "environment",
     "meaning": "çevre",
     "example": "We must protect the environment for the future.",
-    "exampleTr": "Gelecek için çevreyi korumalıyız."
+    "exampleTr": "Gelecek için çevreyi korumalıyız.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "equal",
     "meaning": "eşit",
     "example": "All members have equal rights in the club.",
-    "exampleTr": "Kulüpte tüm üyelerin eşit hakları var."
+    "exampleTr": "Kulüpte tüm üyelerin eşit hakları var.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "escape",
     "meaning": "kaçmak",
     "example": "The cat escaped through the open window.",
-    "exampleTr": "Kedi açık pencereden kaçtı."
+    "exampleTr": "Kedi açık pencereden kaçtı.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "especially",
     "meaning": "özellikle",
     "example": "I like long words, especially when they are useful.",
-    "exampleTr": "Uzun kelimeleri severim, özellikle işe yaradıklarında."
+    "exampleTr": "Uzun kelimeleri severim, özellikle işe yaradıklarında.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "event",
     "meaning": "etkinlik",
     "example": "The school event starts at nine in the morning.",
-    "exampleTr": "Okul etkinliği sabah dokuzda başlıyor."
+    "exampleTr": "Okul etkinliği sabah dokuzda başlıyor.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "evidence",
     "meaning": "kanıt",
     "example": "There is no evidence that the medicine works.",
-    "exampleTr": "İlacın işe yaradığına dair hiçbir kanıt yok."
+    "exampleTr": "İlacın işe yaradığına dair hiçbir kanıt yok.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "examine",
     "meaning": "incelemek",
     "example": "The doctor examined my left knee.",
-    "exampleTr": "Doktor sol dizimi muayene etti."
+    "exampleTr": "Doktor sol dizimi muayene etti.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "example",
     "meaning": "örnek",
     "example": "Can you give me an example of a compound word?",
-    "exampleTr": "Bana birleşik bir kelimeye örnek verebilir misin?"
+    "exampleTr": "Bana birleşik bir kelimeye örnek verebilir misin?",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "excellent",
     "meaning": "mükemmel",
     "example": "Her presentation was excellent.",
-    "exampleTr": "Sunumu mükemmeldi."
+    "exampleTr": "Sunumu mükemmeldi.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "except",
     "meaning": "hariç",
     "example": "Everyone came to the meeting except for two people.",
-    "exampleTr": "İki kişi dışında herkes toplantıya geldi."
+    "exampleTr": "İki kişi dışında herkes toplantıya geldi.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "explain",
     "meaning": "açıklamak",
     "example": "Could you explain this rule again?",
-    "exampleTr": "Bu kuralı tekrar açıklayabilir misin?"
+    "exampleTr": "Bu kuralı tekrar açıklayabilir misin?",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "express",
     "meaning": "ifade etmek",
     "example": "It is hard to express your feelings in words.",
-    "exampleTr": "Duygularını kelimelerle ifade etmek zor."
+    "exampleTr": "Duygularını kelimelerle ifade etmek zor.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "familiar",
     "meaning": "tanıdık",
     "example": "This street looks familiar to me.",
-    "exampleTr": "Bu sokak bana tanıdık geliyor."
+    "exampleTr": "Bu sokak bana tanıdık geliyor.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "focus",
     "meaning": "odaklanmak",
     "example": "Try to focus on one task at a time.",
-    "exampleTr": "Bir seferde tek bir göreve odaklanmaya çalış."
+    "exampleTr": "Bir seferde tek bir göreve odaklanmaya çalış.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "forget",
     "meaning": "unutmak",
     "example": "Don't forget to close the window.",
-    "exampleTr": "Pencereyi kapatmayı unutma."
+    "exampleTr": "Pencereyi kapatmayı unutma.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "gather",
     "meaning": "toplanmak",
     "example": "The students gathered in the schoolyard.",
-    "exampleTr": "Öğrenciler okul bahçesinde toplandı."
+    "exampleTr": "Öğrenciler okul bahçesinde toplandı.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "generate",
     "meaning": "üretmek",
     "example": "Wind farms generate electricity for thousands of homes.",
-    "exampleTr": "Rüzgâr santralleri binlerce eve elektrik üretir."
+    "exampleTr": "Rüzgâr santralleri binlerce eve elektrik üretir.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "generous",
     "meaning": "cömert",
     "example": "She was generous with her time and money.",
-    "exampleTr": "Zamanı ve parası konusunda cömertti."
+    "exampleTr": "Zamanı ve parası konusunda cömertti.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "gradually",
     "meaning": "yavaş yavaş",
     "example": "His English improved gradually.",
-    "exampleTr": "İngilizcesi yavaş yavaş gelişti."
+    "exampleTr": "İngilizcesi yavaş yavaş gelişti.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "guarantee",
     "meaning": "garanti",
     "example": "The phone has a two-year guarantee.",
-    "exampleTr": "Telefonun iki yıl garantisi var."
+    "exampleTr": "Telefonun iki yıl garantisi var.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "handle",
     "meaning": "başa çıkmak",
     "example": "She handled the difficult question calmly.",
-    "exampleTr": "Zor soruyu sakince ele aldı."
+    "exampleTr": "Zor soruyu sakince ele aldı.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "happen",
     "meaning": "olmak",
     "example": "What happened during the meeting?",
-    "exampleTr": "Toplantı sırasında ne oldu?"
+    "exampleTr": "Toplantı sırasında ne oldu?",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "healthy",
     "meaning": "sağlıklı",
     "example": "A healthy breakfast is important for students.",
-    "exampleTr": "Sağlıklı bir kahvaltı öğrenciler için önemlidir."
+    "exampleTr": "Sağlıklı bir kahvaltı öğrenciler için önemlidir.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "hesitate",
     "meaning": "tereddüt etmek",
     "example": "He hesitated before answering the question.",
-    "exampleTr": "Soruyu cevaplamadan önce tereddüt etti."
+    "exampleTr": "Soruyu cevaplamadan önce tereddüt etti.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "humour",
     "meaning": "mizah",
     "example": "The teacher has a great sense of humour.",
-    "exampleTr": "Öğretmenin harika bir espri anlayışı var."
+    "exampleTr": "Öğretmenin harika bir espri anlayışı var.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "identify",
     "meaning": "tanımak",
     "example": "Can you identify the main idea of the text?",
-    "exampleTr": "Metnin ana fikrini belirleyebilir misin?"
+    "exampleTr": "Metnin ana fikrini belirleyebilir misin?",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "ignore",
     "meaning": "görmezden gelmek",
     "example": "Don't ignore the warning signs.",
-    "exampleTr": "Uyarı işaretlerini görmezden gelme."
+    "exampleTr": "Uyarı işaretlerini görmezden gelme.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "imagine",
     "meaning": "hayal etmek",
     "example": "Imagine living by the sea.",
-    "exampleTr": "Deniz kenarında yaşamayı hayal et."
+    "exampleTr": "Deniz kenarında yaşamayı hayal et.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "improve",
     "meaning": "iyileştirmek",
     "example": "Regular reading improves your vocabulary.",
-    "exampleTr": "Düzenli okuma kelime dağarcığını geliştirir."
+    "exampleTr": "Düzenli okuma kelime dağarcığını geliştirir.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "include",
     "meaning": "dahil etmek",
     "example": "The price includes breakfast and dinner.",
-    "exampleTr": "Fiyata kahvaltı ve akşam yemeği dahil."
+    "exampleTr": "Fiyata kahvaltı ve akşam yemeği dahil.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "increase",
     "meaning": "artırmak",
     "example": "He increased his running distance every week.",
-    "exampleTr": "Koşu mesafesini her hafta artırdı."
+    "exampleTr": "Koşu mesafesini her hafta artırdı.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "influence",
     "meaning": "etkilemek",
     "example": "Teachers influence how students think.",
-    "exampleTr": "Öğretmenler öğrencilerin düşünme biçimini etkiler."
+    "exampleTr": "Öğretmenler öğrencilerin düşünme biçimini etkiler.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "introduce",
     "meaning": "tanıştırmak",
     "example": "Let me introduce you to my sister.",
-    "exampleTr": "Seni kız kardeşimle tanıştırayım."
+    "exampleTr": "Seni kız kardeşimle tanıştırayım.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "invest",
     "meaning": "yatırım yapmak",
     "example": "They invested in a small software company.",
-    "exampleTr": "Küçük bir yazılım şirketine yatırım yaptılar."
+    "exampleTr": "Küçük bir yazılım şirketine yatırım yaptılar.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "involve",
     "meaning": "içermek",
     "example": "The job involves a lot of travelling.",
-    "exampleTr": "İş, çok fazla seyahat etmeyi gerektiriyor."
+    "exampleTr": "İş, çok fazla seyahat etmeyi gerektiriyor.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "knowledge",
     "meaning": "bilgi",
     "example": "Practical knowledge is as valuable as theory.",
-    "exampleTr": "Pratik bilgi, teori kadar değerlidir."
+    "exampleTr": "Pratik bilgi, teori kadar değerlidir.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "language",
     "meaning": "dil",
     "example": "She speaks three languages fluently.",
-    "exampleTr": "Üç dili akıcı konuşuyor."
+    "exampleTr": "Üç dili akıcı konuşuyor.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "lead",
     "meaning": "yönlendirmek",
     "example": "Her calm voice led the group to a solution.",
-    "exampleTr": "Sakin sesi grubu bir çözüme yönlendirdi."
+    "exampleTr": "Sakin sesi grubu bir çözüme yönlendirdi.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "level",
     "meaning": "seviye",
     "example": "This book is at an intermediate level.",
-    "exampleTr": "Bu kitap orta seviyede."
+    "exampleTr": "Bu kitap orta seviyede.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "limit",
     "meaning": "sınır",
     "example": "There is a limit to how much tea I can drink.",
-    "exampleTr": "İçebileceğim çayın bir sınırı var."
+    "exampleTr": "İçebileceğim çayın bir sınırı var.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "local",
     "meaning": "yerel",
     "example": "We bought bread from a local shop.",
-    "exampleTr": "Yerel bir dükkândan ekmek aldık."
+    "exampleTr": "Yerel bir dükkândan ekmek aldık.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "maintain",
     "meaning": "sürdürmek",
     "example": "Maintaining a habit takes patience.",
-    "exampleTr": "Bir alışkanlığı sürdürmek sabır ister."
+    "exampleTr": "Bir alışkanlığı sürdürmek sabır ister.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "measure",
     "meaning": "ölçmek",
     "example": "Please measure the length of the table.",
-    "exampleTr": "Lütfen masanın uzunluğunu ölç."
+    "exampleTr": "Lütfen masanın uzunluğunu ölç.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "mention",
     "meaning": "bahsetmek",
     "example": "He didn't mention the cost of the trip.",
-    "exampleTr": "Yolculuğun masrafından bahsetmedi."
+    "exampleTr": "Yolculuğun masrafından bahsetmedi.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "method",
     "meaning": "yöntem",
     "example": "This method helps you remember new words faster.",
-    "exampleTr": "Bu yöntem yeni kelimeleri daha hızlı hatırlamana yardımcı olur."
+    "exampleTr": "Bu yöntem yeni kelimeleri daha hızlı hatırlamana yardımcı olur.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "notice",
     "meaning": "fark etmek",
     "example": "Did you notice the sign on the door?",
-    "exampleTr": "Kapıdaki tabelayı fark ettin mi?"
+    "exampleTr": "Kapıdaki tabelayı fark ettin mi?",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "obtain",
     "meaning": "elde etmek",
     "example": "You can obtain a form at the front desk.",
-    "exampleTr": "Resepsiyondan bir form alabilirsin."
+    "exampleTr": "Resepsiyondan bir form alabilirsin.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "obvious",
     "meaning": "apaçık",
     "example": "The answer was obvious from the start.",
-    "exampleTr": "Cevap başından belliydi."
+    "exampleTr": "Cevap başından belliydi.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "opinion",
     "meaning": "görüş",
     "example": "In my opinion, the plan needs more time.",
-    "exampleTr": "Bence plan daha fazla zamana ihtiyaç duyuyor."
+    "exampleTr": "Bence plan daha fazla zamana ihtiyaç duyuyor.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "opportunity",
     "meaning": "fırsat",
     "example": "The internship was a great opportunity to learn.",
-    "exampleTr": "Staj, öğrenmek için harika bir fırsattı."
+    "exampleTr": "Staj, öğrenmek için harika bir fırsattı.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "patient",
     "meaning": "hasta",
     "example": "The patient recovered after two weeks.",
-    "exampleTr": "Hasta iki hafta sonra iyileşti."
+    "exampleTr": "Hasta iki hafta sonra iyileşti.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "perform",
     "meaning": "gerçekleştirmek",
     "example": "The team performed well under pressure.",
-    "exampleTr": "Takım baskı altında iyi performans gösterdi."
+    "exampleTr": "Takım baskı altında iyi performans gösterdi.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "perhaps",
     "meaning": "belki",
     "example": "Perhaps we should leave a little earlier.",
-    "exampleTr": "Belki biraz daha erken çıkmalıyız."
+    "exampleTr": "Belki biraz daha erken çıkmalıyız.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "plan",
     "meaning": "plan",
     "example": "We need a clear plan for the next term.",
-    "exampleTr": "Gelecek dönem için net bir plana ihtiyacımız var."
+    "exampleTr": "Gelecek dönem için net bir plana ihtiyacımız var.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "prefer",
     "meaning": "tercih etmek",
     "example": "I prefer reading in the morning to studying at night.",
-    "exampleTr": "Sabah okumayı gece ders çalışmaya tercih ederim."
+    "exampleTr": "Sabah okumayı gece ders çalışmaya tercih ederim.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "prepare",
     "meaning": "hazırlamak",
     "example": "She prepared for the interview all week.",
-    "exampleTr": "Bütün hafta mülakata hazırlandı."
+    "exampleTr": "Bütün hafta mülakata hazırlandı.",
+    "deck": "Başlangıç",
+    "cefr": "A1"
   },
   {
     "term": "pressure",
     "meaning": "baskı",
     "example": "He felt pressure from his family to choose a job.",
-    "exampleTr": "Bir iş seçmesi konusunda ailesinden baskı gördü."
+    "exampleTr": "Bir iş seçmesi konusunda ailesinden baskı gördü.",
+    "deck": "Başlangıç",
+    "cefr": "B1"
   },
   {
     "term": "produce",
     "meaning": "üretmek",
     "example": "This factory produces tea for the whole region.",
-    "exampleTr": "Bu fabrika bütün bölge için çay üretiyor."
+    "exampleTr": "Bu fabrika bütün bölge için çay üretiyor.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "progress",
     "meaning": "ilerleme",
     "example": "You can see real progress after three months.",
-    "exampleTr": "Üç ay sonra gerçek bir ilerleme görebilirsin."
+    "exampleTr": "Üç ay sonra gerçek bir ilerleme görebilirsin.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   },
   {
     "term": "purpose",
     "meaning": "amaç",
     "example": "The purpose of the meeting is to plan the trip.",
-    "exampleTr": "Toplantının amacı yolculuğu planlamak."
+    "exampleTr": "Toplantının amacı yolculuğu planlamak.",
+    "deck": "Başlangıç",
+    "cefr": "A2"
   }
 ]

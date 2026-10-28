@@ -2,6 +2,9 @@ package com.wendigo.tekrar.repo
 
 import android.content.Context
 import androidx.room.withTransaction
+import com.wendigo.tekrar.core.DeckCatalog
+import com.wendigo.tekrar.core.DeckDefinition
+import com.wendigo.tekrar.core.DeckFormatException
 import com.wendigo.tekrar.core.DueFormat
 import com.wendigo.tekrar.core.LeechPolicy
 import com.wendigo.tekrar.core.Srs
@@ -15,11 +18,13 @@ import com.wendigo.tekrar.data.Word
 import com.wendigo.tekrar.ui.contracts.DashboardUiState
 import com.wendigo.tekrar.ui.contracts.StatsUiState
 import com.wendigo.tekrar.ui.contracts.StudyMode
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import java.time.LocalDate
 import java.time.ZoneId
@@ -28,6 +33,17 @@ import java.util.Locale
 data class ReviewOutcome(
     val word: Word,
     val logId: Long,
+)
+
+data class BundledDeck(
+    val assetName: String,
+    val definition: DeckDefinition,
+)
+
+data class DeckInstallResult(
+    val deckName: String,
+    val added: Int,
+    val skipped: Int,
 )
 
 sealed interface WordWriteResult {
@@ -92,6 +108,140 @@ class WordRepository(
             StudyMode.LEECH -> LeechPolicy.leeches(words.allWords())
         }
     }
+
+    /**
+     * Bir desteye ait karışık oturum kuyruğu: vadesi gelen tekrarlar + günlük
+     * kotaya göre yeni kelimeler. Yalnızca [deck] etiketli kelimeler seçilir.
+     */
+    suspend fun loadDeckQueue(deck: String): List<Word> {
+        val now = System.currentTimeMillis()
+        val zone = ZoneId.systemDefault()
+        val today = LocalDate.now(zone)
+        val appSettings = settings.settings.first()
+        val scoped = words.allWords().filter { !it.suspended && it.deck == deck }
+        val due = scoped
+            .filter { !it.isNew && it.dueAt <= now }
+            .sortedWith(compareBy({ it.dueAt }, { it.id }))
+        val introducedToday = scoped.count {
+            it.introducedAt?.let { stamp -> StatsMath.dayKey(stamp, zone) == today } == true
+        }
+        val newAllowed = (appSettings.newPerDay - introducedToday).coerceAtLeast(0)
+        val fresh = if (newAllowed > 0) {
+            scoped.filter { it.isNew }.sortedBy { it.id }.take(newAllowed)
+        } else {
+            emptyList()
+        }
+        return due + fresh
+    }
+
+    suspend fun bundledDecks(): List<BundledDeck> = withContext(Dispatchers.IO) {
+        BUNDLED_DECK_ASSETS.mapNotNull { assetName ->
+            runCatching {
+                BundledDeck(assetName, readDeckAsset(assetName))
+            }.getOrNull()
+        }
+    }
+
+    suspend fun installDeck(assetName: String): DeckInstallResult {
+        if (assetName !in BUNDLED_DECK_ASSETS) {
+            throw DeckFormatException("Bilinmeyen deste: $assetName")
+        }
+        val definition = readDeckAsset(assetName)
+        val now = System.currentTimeMillis()
+        return db.withTransaction {
+            val existing = words.allWords()
+                .map { TermKey.normalize(it.term) }
+                .toHashSet()
+            var added = 0
+            var skipped = 0
+            for (item in definition.words) {
+                if (!existing.add(TermKey.normalize(item.term))) {
+                    skipped++
+                    continue
+                }
+                words.insert(
+                    Word(
+                        term = item.term,
+                        meaning = item.meaning,
+                        example = item.example,
+                        exampleTr = item.exampleTr,
+                        pos = item.pos,
+                        deck = definition.name,
+                        cefr = item.cefr,
+                        createdAt = now,
+                        dueAt = now,
+                    )
+                )
+                added++
+            }
+            DeckInstallResult(definition.name, added, skipped)
+        }
+    }
+
+    /**
+     * Seviye testi için adaylar. Başlangıç destesi kuruluysa yalnız ondan, değilse
+     * tüm kelimelerden CEFR bantlarına yayılmış biçimde en fazla [limit] kelime seçer.
+     */
+    suspend fun placementWords(limit: Int = 15): List<Word> {
+        val active = words.allWords().filter { !it.suspended }
+        val preferred = active.filter { it.deck == SEED_DECK }
+        val source = if (preferred.isNotEmpty()) preferred else active
+        if (source.isEmpty() || limit <= 0) return emptyList()
+        val bands = DeckCatalog.CEFR_LEVELS + ""
+        val grouped = source.groupBy { DeckCatalog.parseCefr(it.cefr) }
+            .mapValues { (_, items) -> items.shuffled() }
+        val picked = ArrayList<Word>(limit)
+        val cursors = HashMap<String, Int>()
+        var progressed = true
+        while (picked.size < limit && progressed) {
+            progressed = false
+            for (band in bands) {
+                if (picked.size >= limit) break
+                val items = grouped[band] ?: continue
+                val cursor = cursors[band] ?: 0
+                if (cursor < items.size) {
+                    picked += items[cursor]
+                    cursors[band] = cursor + 1
+                    progressed = true
+                }
+            }
+        }
+        return picked
+    }
+
+    /**
+     * Bilinen yeni kelimeleri pürüzlü bir başlangıç planıyla işaretler. Mevcut
+     * ilerlemesi olan kelimelere dokunmaz; böylece geçmiş kaybolmaz.
+     */
+    suspend fun applyPlacement(knownIds: Collection<Long>, newPerDay: Int) {
+        val now = System.currentTimeMillis()
+        val dueAt = now + PLACEMENT_INTERVAL_MS
+        db.withTransaction {
+            for (id in knownIds.toSet()) {
+                val word = words.getById(id) ?: continue
+                if (!word.isNew || word.suspended) continue
+                words.update(
+                    word.copy(
+                        state = Word.STATE_REVIEW,
+                        stability = PLACEMENT_STABILITY,
+                        dueAt = dueAt,
+                        introducedAt = now,
+                        reps = 1,
+                    )
+                )
+            }
+        }
+        settings.setNewPerDay(newPerDay)
+    }
+
+    private suspend fun readDeckAsset(assetName: String): DeckDefinition =
+        withContext(Dispatchers.IO) {
+            val raw = appContext.assets
+                .open("decks/$assetName")
+                .bufferedReader()
+                .use { it.readText() }
+            DeckCatalog.parse(raw).deck
+        }
 
     suspend fun dueTomorrowCount(): Int {
         val zone = ZoneId.systemDefault()
@@ -341,6 +491,8 @@ class WordRepository(
                 exampleTr = item.optString("exampleTr").trim(),
                 tags = item.optString("tags").trim(),
                 pos = item.optString("pos").trim(),
+                deck = item.optString("deck").trim().ifEmpty { SEED_DECK },
+                cefr = DeckCatalog.parseCefr(item.optString("cefr")),
                 createdAt = now,
                 dueAt = now,
             )
@@ -468,6 +620,10 @@ class WordRepository(
         private const val DAY_MS = 86_400_000L
         private const val RELEARN_DELAY_MS = 10 * 60 * 1000L
         private const val SEED_ASSET = "seed_words.json"
+        private const val SEED_DECK = "Başlangıç"
+        private const val PLACEMENT_INTERVAL_MS = 60 * DAY_MS
+        private const val PLACEMENT_STABILITY = 30.0
+        private val BUNDLED_DECK_ASSETS = listOf("yds.json", "phrasal.json")
     }
 }
 

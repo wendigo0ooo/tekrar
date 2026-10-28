@@ -35,6 +35,45 @@
     <string name="today_add_word">Kelime ekle</string>
     <string name="today_add_word_short">Ekle</string>
     <string name="today_library">Kütüphane</string>
+    <string name="today_decks">Desteler</string>
+    <string name="today_decks_hint">Hazır kelime listeleriyle çalış veya seviyeni belirle.</string>
+    <string name="today_decks_open">Desteleri aç</string>
+    <string name="today_placement">Seviyeni belirle</string>
+
+    <string name="decks_title">Desteler</string>
+    <string name="decks_subtitle">Hazır kelime listeleri</string>
+    <string name="decks_available">Kullanılabilir desteler</string>
+    <string name="decks_installed">Kurulu desteler</string>
+    <string name="decks_words">%1$d kelime</string>
+    <string name="decks_due">%1$d tekrar</string>
+    <string name="decks_install">Ekle</string>
+    <string name="decks_study">Çalış</string>
+    <string name="decks_library">Kitaplığım</string>
+    <string name="decks_library_desc">Elle eklediğin kelimeler</string>
+    <string name="decks_placement">Seviye testi</string>
+    <string name="decks_message_dismiss">Tamam</string>
+    <string name="decks_added">%1$s: %2$d kelime eklendi, %3$d atlandı.</string>
+    <string name="decks_install_failed">Deste eklenemedi: %1$s</string>
+    <string name="decks_empty_available">Tüm desteler kurulu.</string>
+    <string name="decks_empty_installed">Henüz kurulu deste yok.</string>
+
+    <string name="placement_title">Seviye testi</string>
+    <string name="placement_subtitle">Kaba yerleştirme</string>
+    <string name="placement_question">Bu kelimeyi biliyor musun?</string>
+    <string name="placement_know">Biliyorum</string>
+    <string name="placement_dont_know">Bilmiyorum</string>
+    <string name="placement_reveal">Anlamı: %1$s</string>
+    <string name="placement_next">Devam</string>
+    <string name="placement_progress">Soru %1$d / %2$d</string>
+    <string name="placement_question_cefr">%1$s seviyesi</string>
+    <string name="placement_known_count">Bilinen: %1$d / %2$d</string>
+    <string name="placement_result_title">Seviyen: %1$s</string>
+    <string name="placement_result_desc">Önerilen günlük yeni kelime: %1$d. Bu sonuç kaba bir tahmindir; kesin bir FSRS ölçümü değildir.</string>
+    <string name="placement_apply">Öneriyi uygula</string>
+    <string name="placement_applied">Uygulandı: bilinen yeni kelimeler 60 gün sonrasına planlandı, günlük yeni kelime %1$d oldu.</string>
+    <string name="placement_retry">Yeniden dene</string>
+    <string name="placement_empty_title">Test için kelime yok</string>
+    <string name="placement_empty_hint">Önce bir deste ekle veya kendi kelimelerini oluştur.</string>
 
     <string name="format_flashcard">Kart</string>
     <string name="format_choice">Seçmeli</string>
@@ -160,6 +199,8 @@
     <string name="word_example">Örnek cümle</string>
     <string name="word_notes">Notlar</string>
     <string name="word_tags">Etiketler</string>
+    <string name="word_deck">Deste</string>
+    <string name="word_cefr">Seviye</string>
     <string name="word_memory">Bellek</string>
     <string name="word_status">Durum</string>
     <string name="word_status_new">Yeni</string>

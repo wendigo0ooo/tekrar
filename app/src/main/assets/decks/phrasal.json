@@ -1,0 +1,847 @@
+{
+  "deck": "Phrasal Verbs",
+  "description": "Günlük ve sınav İngilizcesinde sık kullanılan phrasal verb'ler.",
+  "cefr": "A2-B2",
+  "words": [
+    {
+      "term": "give up",
+      "meaning": "vazgeçmek",
+      "example": "He gave up smoking last year.",
+      "exampleTr": "Geçen yıl sigarayı bıraktı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "look after",
+      "meaning": "bakmak, ilgilenmek",
+      "example": "She looks after her younger brother.",
+      "exampleTr": "Küçük kardeşine bakıyor.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "look for",
+      "meaning": "aramak",
+      "example": "I am looking for my keys.",
+      "exampleTr": "Anahtarlarımı arıyorum.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "look forward to",
+      "meaning": "sabırsızlıkla beklemek",
+      "example": "We look forward to seeing you.",
+      "exampleTr": "Sizi görmeyi sabırsızlıkla bekliyoruz.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "look up",
+      "meaning": "sözlükte aramak",
+      "example": "Look up the word in a dictionary.",
+      "exampleTr": "Kelimeyi sözlükte ara.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "look into",
+      "meaning": "araştırmak",
+      "example": "The police will look into the case.",
+      "exampleTr": "Polis davayı araştıracak.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "look out",
+      "meaning": "dikkat etmek",
+      "example": "Look out! There is a car coming.",
+      "exampleTr": "Dikkat et! Bir araba geliyor.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "put off",
+      "meaning": "ertelemek",
+      "example": "They put off the meeting until Friday.",
+      "exampleTr": "Toplantıyı cumaya erteledi.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "put up with",
+      "meaning": "katlanmak, tahammül etmek",
+      "example": "I cannot put up with this noise.",
+      "exampleTr": "Bu gürültüye katlanamıyorum.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "put on",
+      "meaning": "giymek",
+      "example": "Put on your coat; it is cold.",
+      "exampleTr": "Montunu giy; hava soğuk.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "put out",
+      "meaning": "söndürmek",
+      "example": "Firefighters put out the fire quickly.",
+      "exampleTr": "İtfaiyeciler yangını hızla söndürdü.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "take after",
+      "meaning": "benzemek",
+      "example": "She takes after her mother.",
+      "exampleTr": "Annesine benziyor.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "take off",
+      "meaning": "çıkarmak; havalanmak",
+      "example": "The plane took off on time.",
+      "exampleTr": "Uçak zamanında havalandı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "take over",
+      "meaning": "devralmak",
+      "example": "A new manager took over the team.",
+      "exampleTr": "Yeni bir yönetici ekibi devraldı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "take up",
+      "meaning": "başlamak; yer kaplamak",
+      "example": "He took up painting last year.",
+      "exampleTr": "Geçen yıl resme başladı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "turn on",
+      "meaning": "açmak",
+      "example": "Turn on the lights, please.",
+      "exampleTr": "Lütfen ışıkları aç.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "turn off",
+      "meaning": "kapatmak",
+      "example": "Please turn off your phone.",
+      "exampleTr": "Lütfen telefonunu kapat.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "turn down",
+      "meaning": "reddetmek; sesini kısmak",
+      "example": "She turned down the job offer.",
+      "exampleTr": "İş teklifini reddetti.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "turn up",
+      "meaning": "ortaya çıkmak; sesini açmak",
+      "example": "He turned up late again.",
+      "exampleTr": "Yine geç geldi.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "turn out",
+      "meaning": "sonuçlanmak",
+      "example": "The plan turned out well.",
+      "exampleTr": "Plan iyi sonuçlandı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "come across",
+      "meaning": "rastlamak",
+      "example": "I came across an old photo.",
+      "exampleTr": "Eski bir fotoğrafa rastladım.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "come up with",
+      "meaning": "fikir bulmak, üretmek",
+      "example": "She came up with a clever solution.",
+      "exampleTr": "Zekice bir çözüm buldu.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "come over",
+      "meaning": "uğramak, ziyaret etmek",
+      "example": "Come over for dinner tonight.",
+      "exampleTr": "Bu akşam yemeğe uğra.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "come down with",
+      "meaning": "hastalanmak",
+      "example": "I think I am coming down with a cold.",
+      "exampleTr": "Sanırım soğuk algınlığına yakalanıyorum.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "get along",
+      "meaning": "iyi geçinmek",
+      "example": "They get along very well.",
+      "exampleTr": "Çok iyi geçiniyorlar.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "get over",
+      "meaning": "atlatmak",
+      "example": "It took him weeks to get over the flu.",
+      "exampleTr": "Gribi atlatması haftalar aldı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "get rid of",
+      "meaning": "kurtulmak",
+      "example": "We need to get rid of this old furniture.",
+      "exampleTr": "Bu eski mobilyadan kurtulmamız gerekiyor.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "get up",
+      "meaning": "kalkmak",
+      "example": "I get up at seven every morning.",
+      "exampleTr": "Her sabah yedide kalkarım.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "get away",
+      "meaning": "kaçmak",
+      "example": "The thief got away in a car.",
+      "exampleTr": "Hırsız bir arabayla kaçtı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "get by",
+      "meaning": "geçinmek",
+      "example": "They manage to get by on little money.",
+      "exampleTr": "Az parayla geçinmeyi başarıyorlar.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "go on",
+      "meaning": "devam etmek",
+      "example": "Please go on with your story.",
+      "exampleTr": "Lütfen hikâyene devam et.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "go over",
+      "meaning": "gözden geçirmek",
+      "example": "Let us go over the report together.",
+      "exampleTr": "Raporu birlikte gözden geçirelim.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "go through",
+      "meaning": "yaşamak, geçirmek",
+      "example": "She went through a difficult period.",
+      "exampleTr": "Zor bir dönem geçirdi.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "go off",
+      "meaning": "patlamak; bozulmak, çalmak",
+      "example": "The alarm went off at midnight.",
+      "exampleTr": "Alarm gece yarısı çaldı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "go along with",
+      "meaning": "kabul etmek",
+      "example": "I will go along with your plan.",
+      "exampleTr": "Planını kabul edeceğim.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "break down",
+      "meaning": "bozulmak",
+      "example": "Our car broke down on the way.",
+      "exampleTr": "Arabamız yolda bozuldu.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "break up",
+      "meaning": "ayrılmak",
+      "example": "They broke up after two years.",
+      "exampleTr": "İki yıl sonra ayrıldılar.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "break out",
+      "meaning": "patlak vermek",
+      "example": "A fire broke out in the kitchen.",
+      "exampleTr": "Mutfakta yangın çıktı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "break in",
+      "meaning": "zorla girmek",
+      "example": "Someone broke in through the window.",
+      "exampleTr": "Biri pencereden zorla girdi.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "bring up",
+      "meaning": "büyütmek; gündeme getirmek",
+      "example": "She brought up three children alone.",
+      "exampleTr": "Üç çocuğu tek başına büyüttü.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "bring about",
+      "meaning": "yol açmak",
+      "example": "The new law brought about major changes.",
+      "exampleTr": "Yeni yasa büyük değişikliklere yol açtı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "call off",
+      "meaning": "iptal etmek",
+      "example": "They called off the match because of rain.",
+      "exampleTr": "Yağmur yüzünden maçı iptal ettiler.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "call back",
+      "meaning": "geri aramak",
+      "example": "I will call you back in ten minutes.",
+      "exampleTr": "Seni on dakika içinde geri arayacağım.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "call on",
+      "meaning": "ziyaret etmek",
+      "example": "We called on our neighbours yesterday.",
+      "exampleTr": "Dün komşularımızı ziyaret ettik.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "carry on",
+      "meaning": "devam etmek",
+      "example": "Carry on with your work.",
+      "exampleTr": "İşine devam et.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "carry out",
+      "meaning": "yerine getirmek, gerçekleştirmek",
+      "example": "The team carried out the experiment.",
+      "exampleTr": "Ekip deneyi gerçekleştirdi.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "check in",
+      "meaning": "giriş yapmak",
+      "example": "We checked in at the hotel early.",
+      "exampleTr": "Otele erken giriş yaptık.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "check out",
+      "meaning": "çıkış yapmak; göz atmak",
+      "example": "Check out this new restaurant.",
+      "exampleTr": "Şu yeni restorana bir göz at.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "cut down on",
+      "meaning": "azaltmak",
+      "example": "You should cut down on sugar.",
+      "exampleTr": "Şekeri azaltmalısın.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "cut off",
+      "meaning": "kesmek",
+      "example": "The phone call was cut off.",
+      "exampleTr": "Telefon görüşmesi kesildi.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "cut out",
+      "meaning": "kesip çıkarmak",
+      "example": "She cut out the picture from the magazine.",
+      "exampleTr": "Resmi dergiden kesip çıkardı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "deal with",
+      "meaning": "başa çıkmak, ilgilenmek",
+      "example": "We must deal with this problem today.",
+      "exampleTr": "Bu sorunla bugün başa çıkmalıyız.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "drop off",
+      "meaning": "bırakmak; uyuyakalmak",
+      "example": "I will drop you off at the station.",
+      "exampleTr": "Seni istasyonda bırakacağım.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "drop out",
+      "meaning": "okulu bırakmak",
+      "example": "He dropped out of university.",
+      "exampleTr": "Üniversiteyi bıraktı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "fill in",
+      "meaning": "doldurmak",
+      "example": "Please fill in this form.",
+      "exampleTr": "Lütfen bu formu doldur.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "fill up",
+      "meaning": "depoyu doldurmak",
+      "example": "We need to fill up the car before the trip.",
+      "exampleTr": "Yolculuktan önce arabanın deposunu doldurmamız gerekiyor.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "find out",
+      "meaning": "öğrenmek",
+      "example": "I found out the truth later.",
+      "exampleTr": "Gerçeği sonradan öğrendim.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "figure out",
+      "meaning": "çözmek, anlamak",
+      "example": "I cannot figure out how this works.",
+      "exampleTr": "Bunun nasıl çalıştığını çözemiyorum.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "give in",
+      "meaning": "boyun eğmek",
+      "example": "He finally gave in to their demands.",
+      "exampleTr": "Sonunda taleplerine boyun eğdi.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "give away",
+      "meaning": "ele vermek; bağışlamak",
+      "example": "She gave away her old clothes.",
+      "exampleTr": "Eski kıyafetlerini bağışladı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "hand in",
+      "meaning": "teslim etmek",
+      "example": "Hand in your homework on Monday.",
+      "exampleTr": "Ödevini pazartesi teslim et.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "hang up",
+      "meaning": "telefonu kapatmak",
+      "example": "Do not hang up yet.",
+      "exampleTr": "Henüz telefonu kapatma.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "hold on",
+      "meaning": "beklemek",
+      "example": "Hold on a moment, please.",
+      "exampleTr": "Lütfen bir dakika bekle.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "keep up with",
+      "meaning": "ayak uydurmak",
+      "example": "It is hard to keep up with technology.",
+      "exampleTr": "Teknolojiye ayak uydurmak zor.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "let down",
+      "meaning": "hayal kırıklığına uğratmak",
+      "example": "I hope I did not let you down.",
+      "exampleTr": "Umarım seni hayal kırıklığına uğratmadım.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "make up",
+      "meaning": "uydurmak; telafi etmek",
+      "example": "He made up an excuse.",
+      "exampleTr": "Bir bahane uydurdu.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "make out",
+      "meaning": "anlamak; seçmek",
+      "example": "I could not make out what he said.",
+      "exampleTr": "Ne söylediğini anlayamadım.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "pass away",
+      "meaning": "vefat etmek",
+      "example": "Her grandfather passed away last winter.",
+      "exampleTr": "Büyükbabası geçen kış vefat etti.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "pass out",
+      "meaning": "bayılmak",
+      "example": "He passed out from the heat.",
+      "exampleTr": "Sıcaktan bayıldı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "pick up",
+      "meaning": "almak, gidip almak",
+      "example": "I will pick you up at the airport.",
+      "exampleTr": "Seni havaalanından alacağım.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "point out",
+      "meaning": "işaret etmek, belirtmek",
+      "example": "She pointed out a mistake in the report.",
+      "exampleTr": "Raporda bir hataya işaret etti.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "run out of",
+      "meaning": "tükenmek",
+      "example": "We ran out of milk this morning.",
+      "exampleTr": "Bu sabah sütümüz bitti.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "run into",
+      "meaning": "rastlamak",
+      "example": "I ran into an old friend downtown.",
+      "exampleTr": "Şehir merkezinde eski bir arkadaşa rastladım.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "set up",
+      "meaning": "kurmak",
+      "example": "They set up a small company.",
+      "exampleTr": "Küçük bir şirket kurdular.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "show up",
+      "meaning": "gelmek, ortaya çıkmak",
+      "example": "He showed up an hour late.",
+      "exampleTr": "Bir saat gecikmeyle geldi.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "sort out",
+      "meaning": "çözmek, düzenlemek",
+      "example": "We sorted out the payment problem.",
+      "exampleTr": "Ödeme sorununu çözdük.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "stand by",
+      "meaning": "desteklemek",
+      "example": "Her family stood by her during the trial.",
+      "exampleTr": "Ailesi duruşma boyunca onu destekledi.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "take part in",
+      "meaning": "katılmak",
+      "example": "She took part in the competition.",
+      "exampleTr": "Yarışmaya katıldı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "work out",
+      "meaning": "egzersiz yapmak; çözüme ulaşmak",
+      "example": "Everything worked out in the end.",
+      "exampleTr": "Sonunda her şey yoluna girdi.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "wipe out",
+      "meaning": "yok etmek",
+      "example": "The storm wiped out the crops.",
+      "exampleTr": "Fırtına ekinleri yok etti.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "wear out",
+      "meaning": "yıpratmak, eskitmek",
+      "example": "These shoes wear out quickly.",
+      "exampleTr": "Bu ayakkabılar çabuk yıpranıyor.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "back up",
+      "meaning": "yedeklemek; desteklemek",
+      "example": "Back up your files regularly.",
+      "exampleTr": "Dosyalarını düzenli olarak yedekle.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "blow up",
+      "meaning": "patlatmak",
+      "example": "They had to blow up the old building.",
+      "exampleTr": "Eski binayı patlatmak zorunda kaldılar.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "burn out",
+      "meaning": "tükenmek",
+      "example": "Many nurses burn out after years of stress.",
+      "exampleTr": "Birçok hemşire yıllarca stresten sonra tükeniyor.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "calm down",
+      "meaning": "sakinleşmek",
+      "example": "Take a deep breath and calm down.",
+      "exampleTr": "Derin bir nefes al ve sakinleş.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "cheer up",
+      "meaning": "neşelendirmek",
+      "example": "The good news cheered her up.",
+      "exampleTr": "İyi haber onu neşelendirdi.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "dress up",
+      "meaning": "giyinmek, süslenmek",
+      "example": "We dressed up for the wedding.",
+      "exampleTr": "Düğün için giyindik.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "eat out",
+      "meaning": "dışarıda yemek",
+      "example": "We eat out once a week.",
+      "exampleTr": "Haftada bir kez dışarıda yemek yeriz.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "end up",
+      "meaning": "sonunda bir duruma gelmek",
+      "example": "We ended up walking home.",
+      "exampleTr": "Sonunda eve yürüyerek gittik.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "fall apart",
+      "meaning": "dağılmak",
+      "example": "The old chair fell apart.",
+      "exampleTr": "Eski sandalye dağıldı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "fall behind",
+      "meaning": "geri kalmak",
+      "example": "He fell behind in his studies.",
+      "exampleTr": "Derslerinde geri kaldı.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "focus on",
+      "meaning": "odaklanmak",
+      "example": "Focus on one task at a time.",
+      "exampleTr": "Bir seferde tek bir göreve odaklan.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "give back",
+      "meaning": "geri vermek",
+      "example": "Please give back my book.",
+      "exampleTr": "Lütfen kitabımı geri ver.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "grow up",
+      "meaning": "büyümek",
+      "example": "She grew up in a small village.",
+      "exampleTr": "Küçük bir köyde büyüdü.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "look down on",
+      "meaning": "küçümsemek",
+      "example": "Do not look down on other people.",
+      "exampleTr": "Diğer insanları küçümseme.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "look up to",
+      "meaning": "hayran olmak, örnek almak",
+      "example": "Young players look up to him.",
+      "exampleTr": "Genç oyuncular ona hayran.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "pay back",
+      "meaning": "geri ödemek",
+      "example": "I will pay you back next week.",
+      "exampleTr": "Sana gelecek hafta geri ödeyeceğim.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "put away",
+      "meaning": "kaldırmak, yerine koymak",
+      "example": "Put away your toys, please.",
+      "exampleTr": "Lütfen oyuncaklarını kaldır.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "set off",
+      "meaning": "yola çıkmak",
+      "example": "We set off early in the morning.",
+      "exampleTr": "Sabah erkenden yola çıktık.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "settle down",
+      "meaning": "yerleşmek",
+      "example": "They settled down in a quiet town.",
+      "exampleTr": "Sakin bir kasabaya yerleştiler.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "take care of",
+      "meaning": "ilgilenmek, bakmak",
+      "example": "She takes care of her elderly father.",
+      "exampleTr": "Yaşlı babasıyla ilgileniyor.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "try on",
+      "meaning": "denemek (giysi)",
+      "example": "Can I try on this jacket?",
+      "exampleTr": "Bu ceketi deneyebilir miyim?",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "wake up",
+      "meaning": "uyanmak",
+      "example": "I wake up at six on weekdays.",
+      "exampleTr": "Hafta içi altıda uyanırım.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "warm up",
+      "meaning": "ısınmak",
+      "example": "Warm up before you run.",
+      "exampleTr": "Koşmadan önce ısın.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "write down",
+      "meaning": "yazmak, not almak",
+      "example": "Write down the address.",
+      "exampleTr": "Adresi yaz.",
+      "pos": "phrasal verb",
+      "cefr": "B1"
+    }
+  ]
+}

@@ -19,6 +19,10 @@ data class Word(
     val pos: String = "",
     @ColumnInfo(defaultValue = "0")
     val favorite: Boolean = false,
+    @ColumnInfo(defaultValue = "''")
+    val deck: String = "",
+    @ColumnInfo(defaultValue = "''")
+    val cefr: String = "",
     val createdAt: Long = System.currentTimeMillis(),
     val state: Int = STATE_NEW,
     val stability: Double = 0.0,
