@@ -1,13 +1,16 @@
 package com.wendigo.tekrar.notify
 
+import android.Manifest
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.core.content.ContextCompat
 import com.wendigo.tekrar.MainActivity
 import com.wendigo.tekrar.R
 
@@ -31,7 +34,20 @@ object Notifications {
         manager.createNotificationChannel(channel)
     }
 
-    fun showReminder(context: Context, title: String, text: String) {
+    fun canPost(context: Context): Boolean {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
+            ContextCompat.checkSelfPermission(
+                context,
+                Manifest.permission.POST_NOTIFICATIONS,
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            return false
+        }
+        return NotificationManagerCompat.from(context).areNotificationsEnabled()
+    }
+
+    fun showReminder(context: Context, title: String, text: String): Boolean {
+        if (!canPost(context)) return false
         ensureChannel(context)
         val contentIntent = Intent(context, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -52,8 +68,9 @@ object Notifications {
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setCategory(NotificationCompat.CATEGORY_REMINDER)
             .build()
-        runCatching {
+        return runCatching {
             NotificationManagerCompat.from(context).notify(REMINDER_ID, notification)
-        }
+            true
+        }.getOrDefault(false)
     }
 }

@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.wendigo.tekrar.R
 import com.wendigo.tekrar.core.AnswerCheck
 import com.wendigo.tekrar.core.Srs
+import com.wendigo.tekrar.core.StudySession
 import com.wendigo.tekrar.data.Word
 import com.wendigo.tekrar.notify.Notifications
 import com.wendigo.tekrar.notify.ReminderScheduler
@@ -248,7 +249,7 @@ class StudyViewModel(
     private val _state = MutableStateFlow(StudyUiState(format = format))
     val state: StateFlow<StudyUiState> = _state.asStateFlow()
 
-    private val queue = ArrayDeque<Word>()
+    private val session = StudySession()
     private val attempts = HashMap<Long, Int>()
     private var pool: List<Word> = emptyList()
     private var initialTotal = 0
@@ -257,7 +258,6 @@ class StudyViewModel(
     private var againCount = 0
     private var correctCount = 0
     private var startedAt = 0L
-    private var busy = false
     private var lastUndo: Undo? = null
     private var pendingRating: Int? = null
     private var pendingWord: Word? = null
@@ -274,33 +274,34 @@ class StudyViewModel(
     }
 
     fun load() {
-        if (busy) return
-        busy = true
+        if (!session.occupy()) return
         viewModelScope.launch {
-            _state.value = StudyUiState(loading = true, format = format)
-            pool = runCatching { repository.allWords() }.getOrDefault(emptyList())
-            val items = runCatching { repository.loadQueue(mode) }.getOrDefault(emptyList())
-            queue.clear()
-            queue.addAll(items)
-            initialTotal = items.size
-            requeues = 0
-            done = 0
-            againCount = 0
-            correctCount = 0
-            attempts.clear()
-            lastUndo = null
-            pendingRating = null
-            pendingWord = null
-            startedAt = System.currentTimeMillis()
-            busy = false
-            if (items.isEmpty()) {
-                _state.value = StudyUiState(
-                    loading = false,
-                    empty = true,
-                    format = format,
-                )
-            } else {
-                showCurrent()
+            try {
+                _state.value = StudyUiState(loading = true, format = format)
+                pool = runCatching { repository.allWords() }.getOrDefault(emptyList())
+                val items = runCatching { repository.loadQueue(mode) }.getOrDefault(emptyList())
+                session.load(items)
+                initialTotal = items.size
+                requeues = 0
+                done = 0
+                againCount = 0
+                correctCount = 0
+                attempts.clear()
+                lastUndo = null
+                pendingRating = null
+                pendingWord = null
+                startedAt = System.currentTimeMillis()
+                if (items.isEmpty()) {
+                    _state.value = StudyUiState(
+                        loading = false,
+                        empty = true,
+                        format = format,
+                    )
+                } else {
+                    showCurrent()
+                }
+            } finally {
+                session.release()
             }
         }
     }
@@ -313,19 +314,20 @@ class StudyViewModel(
     }
 
     fun rate(rating: Int) {
-        if (busy || format != StudyFormat.FLASHCARD) return
+        if (format != StudyFormat.FLASHCARD) return
         val current = _state.value
         if (!current.revealed || current.card == null) return
-        val word = queue.firstOrNull() ?: return
+        val word = session.begin(current.card.id) ?: return
         record(word, rating)
     }
 
     fun choose(option: String) {
-        if (busy) return
+        if (session.isBusy) return
         if (format != StudyFormat.CHOICE && format != StudyFormat.LISTEN) return
         val current = _state.value
         if (current.answered || current.card == null) return
-        val word = queue.firstOrNull() ?: return
+        val word = session.current ?: return
+        if (word.id != current.card.id) return
         val correct = option == current.card.meaning
         pendingWord = word
         pendingRating = if (correct) Srs.GOOD else Srs.AGAIN
@@ -340,10 +342,11 @@ class StudyViewModel(
     }
 
     fun submitTyping(value: String) {
-        if (busy || format != StudyFormat.TYPING) return
+        if (session.isBusy || format != StudyFormat.TYPING) return
         val current = _state.value
         if (current.answered || current.card == null) return
-        val word = queue.firstOrNull() ?: return
+        val word = session.current ?: return
+        if (word.id != current.card.id) return
         val correct = AnswerCheck.matches(value, current.card.term)
         pendingWord = word
         pendingRating = if (correct) Srs.GOOD else Srs.AGAIN
@@ -358,65 +361,69 @@ class StudyViewModel(
     }
 
     fun continueAfterAnswer() {
-        if (busy) return
         val word = pendingWord ?: return
         val rating = pendingRating ?: Srs.GOOD
+        val started = session.begin(word.id) ?: return
         pendingWord = null
         pendingRating = null
-        record(word, rating)
+        record(started, rating)
     }
 
     fun undo() {
         val undo = lastUndo ?: return
-        if (busy) return
-        busy = true
+        if (!session.occupy()) return
+        pendingWord = null
+        pendingRating = null
         viewModelScope.launch {
-            runCatching { repository.undoReview(undo.logId, undo.word) }
-            queue.removeAll { it.id == undo.word.id }
-            queue.addFirst(undo.word)
-            done = (done - 1).coerceAtLeast(0)
-            if (undo.rating == Srs.AGAIN) {
-                againCount = (againCount - 1).coerceAtLeast(0)
-                if (undo.requeued && requeues > 0) requeues--
-            } else {
-                correctCount = (correctCount - 1).coerceAtLeast(0)
+            try {
+                runCatching { repository.undoReview(undo.logId, undo.word) }
+                session.undo(undo.word)
+                done = (done - 1).coerceAtLeast(0)
+                if (undo.rating == Srs.AGAIN) {
+                    againCount = (againCount - 1).coerceAtLeast(0)
+                    if (undo.requeued && requeues > 0) requeues--
+                } else {
+                    correctCount = (correctCount - 1).coerceAtLeast(0)
+                }
+                if (undo.requeued) {
+                    attempts[undo.word.id] = ((attempts[undo.word.id] ?: 1) - 1).coerceAtLeast(0)
+                }
+                lastUndo = null
+                showCurrent(reveal = format == StudyFormat.FLASHCARD)
+            } finally {
+                session.release()
             }
-            if (undo.requeued) {
-                attempts[undo.word.id] = ((attempts[undo.word.id] ?: 1) - 1).coerceAtLeast(0)
-            }
-            lastUndo = null
-            busy = false
-            showCurrent(reveal = format == StudyFormat.FLASHCARD)
         }
     }
 
     private fun record(word: Word, rating: Int) {
-        if (busy) return
-        busy = true
         viewModelScope.launch {
-            val outcome = runCatching { repository.review(word.id, rating) }.getOrNull()
-            if (outcome == null) {
-                busy = false
-                return@launch
+            try {
+                val outcome = runCatching { repository.review(word.id, rating) }.getOrNull()
+                if (outcome == null) {
+                    pendingWord = word
+                    pendingRating = rating
+                    return@launch
+                }
+                done++
+                if (rating == Srs.AGAIN) againCount++ else correctCount++
+                val requeue = rating == Srs.AGAIN &&
+                    (attempts[word.id] ?: 0) < MAX_REQUEUE_ATTEMPTS
+                val removed = session.finish(word.id, if (requeue) outcome.word else null)
+                if (requeue && removed) {
+                    attempts[word.id] = (attempts[word.id] ?: 0) + 1
+                    requeues++
+                }
+                lastUndo = Undo(word, outcome.logId, rating, requeue && removed)
+                showCurrent()
+            } finally {
+                session.release()
             }
-            done++
-            if (rating == Srs.AGAIN) againCount++ else correctCount++
-            val requeue = rating == Srs.AGAIN &&
-                (attempts[word.id] ?: 0) < MAX_REQUEUE_ATTEMPTS
-            queue.removeFirstOrNull()
-            if (requeue) {
-                attempts[word.id] = (attempts[word.id] ?: 0) + 1
-                queue.addLast(outcome.word)
-                requeues++
-            }
-            lastUndo = Undo(word, outcome.logId, rating, requeue)
-            busy = false
-            showCurrent()
         }
     }
 
     private suspend fun showCurrent(reveal: Boolean = false) {
-        val word = queue.firstOrNull()
+        val word = session.advance()
         if (word == null) {
             finish()
             return
@@ -547,6 +554,11 @@ class SettingsViewModel(
 
     fun setReminder(enabled: Boolean, hour: Int, minute: Int) {
         viewModelScope.launch {
+            if (enabled && !Notifications.canPost(appContext)) {
+                _message.value =
+                    appContext.getString(R.string.settings_reminder_permission_denied)
+                return@launch
+            }
             settings.setReminder(enabled, hour, minute)
             if (enabled) {
                 ReminderScheduler.schedule(appContext, hour, minute)
@@ -559,12 +571,14 @@ class SettingsViewModel(
     }
 
     fun testNotification() {
-        Notifications.showReminder(
+        val sent = Notifications.showReminder(
             appContext,
             appContext.getString(R.string.notif_test_title),
             appContext.getString(R.string.notif_test_text),
         )
-        _message.value = appContext.getString(R.string.settings_reminder_test_sent)
+        _message.value = appContext.getString(
+            if (sent) R.string.settings_reminder_test_sent else R.string.settings_notification_failed,
+        )
     }
 
     fun exportJson(uri: Uri) {

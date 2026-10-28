@@ -149,7 +149,7 @@
     <string name="word_suspend">Askıya al</string>
     <string name="word_unsuspend">Askıdan çıkar</string>
     <string name="word_reset">İlerlemeyi sıfırla</string>
-    <string name="word_reset_text">Bu kelimenin tekrar geçmişi ve planı sıfırlanır; kelime yeni kabul edilir.</string>
+    <string name="word_reset_text">Bu kelimenin tekrar geçmişi silinir ve planı sıfırlanır; kelime yeni kabul edilir. Askı durumu korunur.</string>
     <string name="word_reset_confirm">Sıfırla</string>
     <string name="word_delete">Sil</string>
     <string name="word_delete_title">Kelimeyi sil?</string>
@@ -181,7 +181,9 @@
     <string name="settings_test_notification">Test bildirimi</string>
     <string name="settings_reminder_on">Hatırlatıcı açıldı.</string>
     <string name="settings_reminder_off">Hatırlatıcı kapatıldı.</string>
+    <string name="settings_reminder_permission_denied">Bildirim izni verilmedi; hatırlatıcı açılamadı.</string>
     <string name="settings_reminder_test_sent">Test bildirimi gönderildi.</string>
+    <string name="settings_notification_failed">Bildirim gönderilemedi; izin veya sistem bildirim ayarlarını kontrol et.</string>
     <string name="settings_data">Veriler</string>
     <string name="settings_total_words">Toplam kelime</string>
     <string name="settings_reviewed_today">Bugünkü tekrar</string>
@@ -195,7 +197,7 @@
     <string name="settings_restore_done">Geri yükleme tamamlandı. %1$s</string>
     <string name="settings_reset_all">Tüm ilerlemeyi sıfırla</string>
     <string name="settings_reset_all_title">İlerlemeyi sıfırla?</string>
-    <string name="settings_reset_all_text">Tüm kelimelerin tekrar geçmişi silinir; kelimeler korunur.</string>
+    <string name="settings_reset_all_text">Tüm kelimelerin tekrar geçmişi silinir; kelimeler ve askı durumları korunur.</string>
     <string name="settings_reset_confirm">Sıfırla</string>
     <string name="settings_reset_done">İlerleme sıfırlandı.</string>
     <string name="settings_about">Hakkında</string>

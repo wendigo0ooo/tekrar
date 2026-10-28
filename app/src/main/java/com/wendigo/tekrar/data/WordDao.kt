@@ -66,14 +66,7 @@ interface WordDao {
 
     @Query(
         "UPDATE words SET state = 0, stability = 0, difficulty = 0, dueAt = :now, " +
-            "lastReviewAt = NULL, introducedAt = NULL, reps = 0, lapses = 0, suspended = 0 " +
-            "WHERE id = :id"
-    )
-    suspend fun resetProgress(id: Long, now: Long)
-
-    @Query(
-        "UPDATE words SET state = 0, stability = 0, difficulty = 0, dueAt = :now, " +
-            "lastReviewAt = NULL, introducedAt = NULL, reps = 0, lapses = 0, suspended = 0"
+            "lastReviewAt = NULL, introducedAt = NULL, reps = 0, lapses = 0"
     )
     suspend fun resetAllProgress(now: Long)
 

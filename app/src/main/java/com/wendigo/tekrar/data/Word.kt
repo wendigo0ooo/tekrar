@@ -33,6 +33,17 @@ data class Word(
     val isNew: Boolean get() = state == STATE_NEW
     val isLeech: Boolean get() = lapses >= LEECH_LAPSES
 
+    fun resetProgress(now: Long): Word = copy(
+        state = STATE_NEW,
+        stability = 0.0,
+        difficulty = 0.0,
+        dueAt = now,
+        lastReviewAt = null,
+        introducedAt = null,
+        reps = 0,
+        lapses = 0,
+    )
+
     companion object {
         const val STATE_NEW = 0
         const val STATE_REVIEW = 1

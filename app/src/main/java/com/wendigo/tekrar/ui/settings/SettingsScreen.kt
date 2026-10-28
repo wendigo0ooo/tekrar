@@ -36,6 +36,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -55,6 +56,7 @@ import com.wendigo.tekrar.ui.components.Segmented
 import com.wendigo.tekrar.ui.components.Stepper
 import com.wendigo.tekrar.ui.contracts.SettingsUiState
 import java.util.Locale
+import kotlinx.coroutines.launch
 
 @Composable
 fun SettingsScreen(
@@ -78,11 +80,22 @@ fun SettingsScreen(
     val settings = state.settings
     val context = LocalContext.current
     val snackbar = remember { SnackbarHostState() }
+    val scope = rememberCoroutineScope()
     var showReset by remember { mutableStateOf(false) }
 
     val notificationPermission = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.RequestPermission(),
-    ) { }
+    ) { granted ->
+        if (granted) {
+            onReminder(true, settings.reminderHour, settings.reminderMinute)
+        } else {
+            scope.launch {
+                snackbar.showSnackbar(
+                    context.getString(R.string.settings_reminder_permission_denied)
+                )
+            }
+        }
+    }
 
     val jsonExport = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.CreateDocument("application/json"),
@@ -256,8 +269,9 @@ fun SettingsScreen(
                             ) != PackageManager.PERMISSION_GRANTED
                         ) {
                             notificationPermission.launch(Manifest.permission.POST_NOTIFICATIONS)
+                        } else {
+                            onReminder(enabled, settings.reminderHour, settings.reminderMinute)
                         }
-                        onReminder(enabled, settings.reminderHour, settings.reminderMinute)
                     },
                 )
                 Row(

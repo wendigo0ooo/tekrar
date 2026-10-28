@@ -217,7 +217,12 @@ class WordRepository(
     }
 
     suspend fun resetProgress(id: Long) {
-        words.resetProgress(id, System.currentTimeMillis())
+        val now = System.currentTimeMillis()
+        db.withTransaction {
+            val word = words.getById(id) ?: return@withTransaction
+            words.update(word.resetProgress(now))
+            logs.deleteForWord(id)
+        }
     }
 
     suspend fun deleteWord(id: Long) {
