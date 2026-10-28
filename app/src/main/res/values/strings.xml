@@ -37,6 +37,8 @@
     <string name="format_choice">Seçmeli</string>
     <string name="format_typing">Yazma</string>
     <string name="format_listen">Dinleme</string>
+    <string name="format_cloze">Cümle boşluğu</string>
+    <string name="format_cloze_hint">Örnek cümledeki boşluğu doldur (Cloze).</string>
 
     <string name="library_title">Kütüphane</string>
     <string name="library_count">%1$d kelime</string>
@@ -62,15 +64,18 @@
     <string name="study_mode_choice">Seçmeli</string>
     <string name="study_mode_typing">Yazma</string>
     <string name="study_mode_listen">Dinleme</string>
+    <string name="study_mode_cloze">Cümle boşluğu</string>
     <string name="study_prompt_flashcard">Anlamını hatırla, sonra göster.</string>
     <string name="study_prompt_choice">Doğru anlamı seç.</string>
     <string name="study_prompt_typing">İngilizce karşılığını yaz.</string>
     <string name="study_prompt_listen">Dinle ve doğru anlamı seç.</string>
+    <string name="study_prompt_cloze_fallback">Örnek cümle yok. İngilizce karşılığını yaz.</string>
     <string name="study_play">Sesi çal</string>
     <string name="study_reveal">Anlamı göster</string>
     <string name="study_rating_hint">Ne kadar kolay hatırladın?</string>
     <string name="study_check">Kontrol et</string>
     <string name="study_typing_hint">İngilizce kelime</string>
+    <string name="study_cloze_hint">Eksik kelime</string>
     <string name="study_correct">Doğru</string>
     <string name="study_wrong">Yanlış</string>
     <string name="study_correct_answer">Doğru cevap: %1$s</string>

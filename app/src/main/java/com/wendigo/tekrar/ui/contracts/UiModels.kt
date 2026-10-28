@@ -6,7 +6,7 @@ import com.wendigo.tekrar.repo.AppSettings
 
 enum class StudyMode { MIXED, REVIEW, NEW }
 
-enum class StudyFormat { FLASHCARD, CHOICE, TYPING, LISTEN }
+enum class StudyFormat { FLASHCARD, CHOICE, TYPING, LISTEN, CLOZE }
 
 enum class LibraryFilter { ALL, DUE, NEW, FAVORITE, SUSPENDED, LEECH }
 
@@ -50,6 +50,8 @@ data class StudyUiState(
     val answerCorrect: Boolean? = null,
     val selectedOption: String? = null,
     val typedAnswer: String = "",
+    val clozePrompt: String? = null,
+    val clozeAnswer: String? = null,
     val options: List<String> = emptyList(),
     val intervalLabels: List<String> = emptyList(),
     val position: Int = 0,

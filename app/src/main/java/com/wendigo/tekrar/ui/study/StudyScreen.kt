@@ -79,9 +79,16 @@ fun StudyScreen(
         val speakTerm = when (state.format) {
             StudyFormat.LISTEN -> true
             StudyFormat.FLASHCARD -> autoSpeak
-            StudyFormat.CHOICE, StudyFormat.TYPING -> false
+            StudyFormat.CHOICE, StudyFormat.TYPING, StudyFormat.CLOZE -> false
         }
         if (speakTerm) speaker.speak(card.term)
+    }
+    LaunchedEffect(state.card?.id, state.answered, state.format, speechRate) {
+        val card = state.card ?: return@LaunchedEffect
+        if (state.format != StudyFormat.CLOZE || !state.answered) return@LaunchedEffect
+        speaker.setRate(speechRate)
+        val sentence = card.example.ifBlank { card.term }
+        if (sentence.isNotBlank()) speaker.speak(sentence)
     }
 
     Box(
@@ -205,6 +212,7 @@ private fun StudyContent(
                 StudyFormat.CHOICE -> stringResource(R.string.study_mode_choice)
                 StudyFormat.TYPING -> stringResource(R.string.study_mode_typing)
                 StudyFormat.LISTEN -> stringResource(R.string.study_mode_listen)
+                StudyFormat.CLOZE -> stringResource(R.string.study_mode_cloze)
             },
         )
 
@@ -233,6 +241,24 @@ private fun StudyContent(
                 answered = state.answered,
                 onSpeak = onSpeak,
             )
+
+            StudyFormat.CLOZE -> {
+                val prompt = state.clozePrompt
+                if (prompt != null) {
+                    ClozeCard(
+                        card = card,
+                        prompt = prompt,
+                        answered = state.answered,
+                    )
+                } else {
+                    PromptCard(
+                        card = card,
+                        showTerm = false,
+                        showMeaning = true,
+                        hint = stringResource(R.string.study_prompt_cloze_fallback),
+                    )
+                }
+            }
         }
 
         when (state.format) {
@@ -276,31 +302,35 @@ private fun StudyContent(
 
             StudyFormat.TYPING -> {
                 if (!state.answered) {
-                    var typed by remember(card.id, state.position) { mutableStateOf("") }
-                    OutlinedTextField(
-                        value = typed,
-                        onValueChange = { typed = it },
-                        modifier = Modifier.fillMaxWidth(),
-                        singleLine = true,
-                        placeholder = { Text(text = stringResource(R.string.study_typing_hint)) },
-                        shape = RoundedCornerShape(14.dp),
-                        keyboardOptions = KeyboardOptions(
-                            keyboardType = KeyboardType.Text,
-                            imeAction = ImeAction.Done,
-                        ),
-                        keyboardActions = KeyboardActions(
-                            onDone = { onSubmitTyping(typed) },
-                        ),
-                    )
-                    PrimaryButton(
-                        text = stringResource(R.string.study_check),
-                        onClick = { onSubmitTyping(typed) },
-                        enabled = typed.isNotBlank(),
+                    TypingAnswerInput(
+                        card = card,
+                        position = state.position,
+                        placeholder = stringResource(R.string.study_typing_hint),
+                        onSubmitTyping = onSubmitTyping,
                     )
                 } else {
                     AnswerFeedback(
                         correct = state.answerCorrect == true,
                         answer = card.term,
+                        example = card.example,
+                        exampleTr = card.exampleTr,
+                        onContinue = onContinue,
+                    )
+                }
+            }
+
+            StudyFormat.CLOZE -> {
+                if (!state.answered) {
+                    TypingAnswerInput(
+                        card = card,
+                        position = state.position,
+                        placeholder = stringResource(R.string.study_cloze_hint),
+                        onSubmitTyping = onSubmitTyping,
+                    )
+                } else {
+                    AnswerFeedback(
+                        correct = state.answerCorrect == true,
+                        answer = state.clozeAnswer ?: card.term,
                         example = card.example,
                         exampleTr = card.exampleTr,
                         onContinue = onContinue,
@@ -420,6 +450,66 @@ private fun PromptCard(
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
     }
+}
+
+@Composable
+private fun ClozeCard(
+    card: StudyCardUi,
+    prompt: String,
+    answered: Boolean,
+) {
+    Panel(contentPadding = androidx.compose.foundation.layout.PaddingValues(22.dp)) {
+        if (card.pos.isNotBlank()) {
+            Text(
+                text = card.pos,
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.primary,
+            )
+        }
+        Text(
+            text = prompt,
+            style = MaterialTheme.typography.headlineSmall,
+            fontWeight = FontWeight.SemiBold,
+            color = MaterialTheme.colorScheme.onSurface,
+        )
+        if (answered && card.meaning.isNotBlank()) {
+            Text(
+                text = card.meaning,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+    }
+}
+
+@Composable
+private fun TypingAnswerInput(
+    card: StudyCardUi,
+    position: Int,
+    placeholder: String,
+    onSubmitTyping: (String) -> Unit,
+) {
+    var typed by remember(card.id, position) { mutableStateOf("") }
+    OutlinedTextField(
+        value = typed,
+        onValueChange = { typed = it },
+        modifier = Modifier.fillMaxWidth(),
+        singleLine = true,
+        placeholder = { Text(text = placeholder) },
+        shape = RoundedCornerShape(14.dp),
+        keyboardOptions = KeyboardOptions(
+            keyboardType = KeyboardType.Text,
+            imeAction = ImeAction.Done,
+        ),
+        keyboardActions = KeyboardActions(
+            onDone = { onSubmitTyping(typed) },
+        ),
+    )
+    PrimaryButton(
+        text = stringResource(R.string.study_check),
+        onClick = { onSubmitTyping(typed) },
+        enabled = typed.isNotBlank(),
+    )
 }
 
 @Composable

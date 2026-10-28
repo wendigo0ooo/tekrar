@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.wendigo.tekrar.R
 import com.wendigo.tekrar.core.AnswerCheck
+import com.wendigo.tekrar.core.Cloze
 import com.wendigo.tekrar.core.Srs
 import com.wendigo.tekrar.core.StudySession
 import com.wendigo.tekrar.data.Word
@@ -342,12 +343,18 @@ class StudyViewModel(
     }
 
     fun submitTyping(value: String) {
-        if (session.isBusy || format != StudyFormat.TYPING) return
+        if (session.isBusy) return
+        if (format != StudyFormat.TYPING && format != StudyFormat.CLOZE) return
         val current = _state.value
         if (current.answered || current.card == null) return
         val word = session.current ?: return
         if (word.id != current.card.id) return
-        val correct = AnswerCheck.matches(value, current.card.term)
+        val expected = if (format == StudyFormat.CLOZE) {
+            Cloze.build(current.card.example, current.card.term)?.answer ?: current.card.term
+        } else {
+            current.card.term
+        }
+        val correct = AnswerCheck.matches(value, expected)
         pendingWord = word
         pendingRating = if (correct) Srs.GOOD else Srs.AGAIN
         _state.update {
@@ -433,11 +440,18 @@ class StudyViewModel(
         } else {
             emptyList()
         }
+        val cloze = if (format == StudyFormat.CLOZE) {
+            Cloze.build(word.example, word.term)
+        } else {
+            null
+        }
         _state.value = StudyUiState(
             loading = false,
             card = word.toCard(),
             format = format,
             revealed = reveal,
+            clozePrompt = cloze?.sentence,
+            clozeAnswer = cloze?.answer,
             options = options,
             intervalLabels = if (format == StudyFormat.FLASHCARD) {
                 repository.previewIntervals(word)
