@@ -66,6 +66,7 @@ fun SettingsScreen(
     onClearMessage: () -> Unit,
     onNewPerDay: (Int) -> Unit,
     onDailyGoal: (Int) -> Unit,
+    onWeeklyGoal: (Int) -> Unit,
     onRetention: (Int) -> Unit,
     onThemeMode: (Int) -> Unit,
     onAutoSpeak: (Boolean) -> Unit,
@@ -179,6 +180,29 @@ fun SettingsScreen(
                     onIncrease = { onDailyGoal(settings.dailyGoal + 5) },
                     decreaseEnabled = settings.dailyGoal > SettingsStore.MIN_DAILY_GOAL,
                     increaseEnabled = settings.dailyGoal < SettingsStore.MAX_DAILY_GOAL,
+                )
+                HorizontalDivider(
+                    color = MaterialTheme.colorScheme.outline.copy(alpha = 0.35f),
+                )
+                Text(
+                    text = stringResource(R.string.settings_weekly_goal),
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
+                Text(
+                    text = stringResource(R.string.settings_weekly_goal_desc),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                Stepper(
+                    value = settings.weeklyGoalDays,
+                    onDecrease = { onWeeklyGoal(settings.weeklyGoalDays - 1) },
+                    onIncrease = { onWeeklyGoal(settings.weeklyGoalDays + 1) },
+                    decreaseEnabled =
+                        settings.weeklyGoalDays > SettingsStore.MIN_WEEKLY_GOAL_DAYS,
+                    increaseEnabled =
+                        settings.weeklyGoalDays < SettingsStore.MAX_WEEKLY_GOAL_DAYS,
+                    valueSuffix = stringResource(R.string.settings_weekly_goal_suffix),
                 )
                 HorizontalDivider(
                     color = MaterialTheme.colorScheme.outline.copy(alpha = 0.35f),

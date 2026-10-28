@@ -72,6 +72,7 @@ class BackupFormatTest {
         val settings = BackupSettings(
             newPerDay = 15,
             dailyGoal = 35,
+            weeklyGoalDays = 6,
             desiredRetention = 92,
             themeMode = 2,
             autoSpeak = false,
@@ -132,6 +133,7 @@ class BackupFormatTest {
         assertTrue(restored.logs.isEmpty())
         assertEquals(30, restored.settings?.dailyGoal ?: -1)
         assertEquals(20, restored.settings?.newPerDay ?: -1)
+        assertEquals(5, restored.settings?.weeklyGoalDays ?: -1)
     }
 
     @Test

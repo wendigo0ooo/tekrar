@@ -35,6 +35,7 @@ class AppContainer(context: Context) {
                 repository.seedIfEmpty()
                 repository.backfillExampleTr()
             }
+            runCatching { repository.syncStreakFreezes() }
             runCatching {
                 val current = settings.settings.first()
                 if (current.reminderEnabled) {

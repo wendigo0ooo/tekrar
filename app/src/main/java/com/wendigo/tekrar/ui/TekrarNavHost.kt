@@ -5,9 +5,11 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -52,6 +54,13 @@ fun TekrarNavHost(container: AppContainer) {
                     factory = viewModelFactory { DashboardViewModel(container.repository) },
                 )
                 val state by vm.state.collectAsStateWithLifecycle()
+                LifecycleResumeEffect(Unit) {
+                    vm.refresh()
+                    onPauseOrDispose { }
+                }
+                LaunchedEffect(state.reviewedToday > 0) {
+                    if (state.reviewedToday > 0) vm.refresh()
+                }
                 TodayScreen(
                     state = state,
                     onStudy = { mode, format ->
@@ -104,6 +113,7 @@ fun TekrarNavHost(container: AppContainer) {
                     onClearMessage = vm::clearMessage,
                     onNewPerDay = vm::setNewPerDay,
                     onDailyGoal = vm::setDailyGoal,
+                    onWeeklyGoal = vm::setWeeklyGoal,
                     onRetention = vm::setRetention,
                     onThemeMode = vm::setThemeMode,
                     onAutoSpeak = vm::setAutoSpeak,

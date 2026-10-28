@@ -5,16 +5,20 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.floatPreferencesKey
 import androidx.datastore.preferences.core.intPreferencesKey
+import androidx.datastore.preferences.core.stringSetPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.wendigo.tekrar.core.BackupSettings
+import com.wendigo.tekrar.core.StreakFreeze
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import java.time.LocalDate
 
 private val Context.tekrarDataStore by preferencesDataStore(name = "tekrar_settings")
 
 data class AppSettings(
     val newPerDay: Int = SettingsStore.DEFAULT_NEW_PER_DAY,
     val dailyGoal: Int = SettingsStore.DEFAULT_DAILY_GOAL,
+    val weeklyGoalDays: Int = SettingsStore.DEFAULT_WEEKLY_GOAL_DAYS,
     val desiredRetention: Int = SettingsStore.DEFAULT_RETENTION,
     val themeMode: Int = THEME_SYSTEM,
     val autoSpeak: Boolean = true,
@@ -23,6 +27,9 @@ data class AppSettings(
     val reminderHour: Int = 20,
     val reminderMinute: Int = 0,
     val seedApplied: Boolean = false,
+    val streakFreezes: Int = 0,
+    val lastFreezeMilestone: Int = 0,
+    val frozenDays: Set<LocalDate> = emptySet(),
 ) {
     val retentionFraction: Double get() = desiredRetention.coerceIn(70, 97) / 100.0
 
@@ -40,6 +47,7 @@ class SettingsStore(context: Context) {
     private object Keys {
         val newPerDay = intPreferencesKey("new_per_day")
         val dailyGoal = intPreferencesKey("daily_goal")
+        val weeklyGoalDays = intPreferencesKey("weekly_goal_days")
         val desiredRetention = intPreferencesKey("desired_retention")
         val themeMode = intPreferencesKey("theme_mode")
         val autoSpeak = booleanPreferencesKey("auto_speak")
@@ -48,6 +56,9 @@ class SettingsStore(context: Context) {
         val reminderHour = intPreferencesKey("reminder_hour")
         val reminderMinute = intPreferencesKey("reminder_minute")
         val seedApplied = booleanPreferencesKey("seed_applied")
+        val streakFreezes = intPreferencesKey("streak_freezes")
+        val lastFreezeMilestone = intPreferencesKey("last_freeze_milestone")
+        val frozenDays = stringSetPreferencesKey("frozen_days")
     }
 
     val settings: Flow<AppSettings> = appContext.tekrarDataStore.data.map { prefs ->
@@ -56,6 +67,8 @@ class SettingsStore(context: Context) {
                 .coerceIn(MIN_NEW_PER_DAY, MAX_NEW_PER_DAY),
             dailyGoal = (prefs[Keys.dailyGoal] ?: DEFAULT_DAILY_GOAL)
                 .coerceIn(MIN_DAILY_GOAL, MAX_DAILY_GOAL),
+            weeklyGoalDays = (prefs[Keys.weeklyGoalDays] ?: DEFAULT_WEEKLY_GOAL_DAYS)
+                .coerceIn(MIN_WEEKLY_GOAL_DAYS, MAX_WEEKLY_GOAL_DAYS),
             desiredRetention = (prefs[Keys.desiredRetention] ?: DEFAULT_RETENTION)
                 .coerceIn(MIN_RETENTION, MAX_RETENTION),
             themeMode = (prefs[Keys.themeMode] ?: AppSettings.THEME_SYSTEM)
@@ -66,6 +79,13 @@ class SettingsStore(context: Context) {
             reminderHour = (prefs[Keys.reminderHour] ?: 20).coerceIn(0, 23),
             reminderMinute = (prefs[Keys.reminderMinute] ?: 0).coerceIn(0, 59),
             seedApplied = prefs[Keys.seedApplied] ?: false,
+            streakFreezes = (prefs[Keys.streakFreezes] ?: 0)
+                .coerceIn(0, StreakFreeze.MAX_FREEZES),
+            lastFreezeMilestone = (prefs[Keys.lastFreezeMilestone] ?: 0).coerceAtLeast(0),
+            frozenDays = prefs[Keys.frozenDays].orEmpty()
+                .mapNotNull { it.toLongOrNull() }
+                .map { LocalDate.ofEpochDay(it) }
+                .toSet(),
         )
     }
 
@@ -80,6 +100,13 @@ class SettingsStore(context: Context) {
     suspend fun setDailyGoal(value: Int) {
         appContext.tekrarDataStore.edit { prefs ->
             prefs[Keys.dailyGoal] = value.coerceIn(MIN_DAILY_GOAL, MAX_DAILY_GOAL)
+        }
+    }
+
+    suspend fun setWeeklyGoalDays(value: Int) {
+        appContext.tekrarDataStore.edit { prefs ->
+            prefs[Keys.weeklyGoalDays] =
+                value.coerceIn(MIN_WEEKLY_GOAL_DAYS, MAX_WEEKLY_GOAL_DAYS)
         }
     }
 
@@ -118,12 +145,27 @@ class SettingsStore(context: Context) {
         appContext.tekrarDataStore.edit { prefs -> prefs[Keys.seedApplied] = value }
     }
 
+    suspend fun setFreezeState(stock: Int, frozenDays: Set<LocalDate>, milestone: Int) {
+        appContext.tekrarDataStore.edit { prefs ->
+            prefs[Keys.streakFreezes] = stock.coerceIn(0, StreakFreeze.MAX_FREEZES)
+            prefs[Keys.frozenDays] =
+                frozenDays.map { it.toEpochDay().toString() }.toSet()
+            prefs[Keys.lastFreezeMilestone] = milestone.coerceAtLeast(0)
+        }
+    }
+
+    suspend fun clearFreezeState() {
+        setFreezeState(stock = 0, frozenDays = emptySet(), milestone = 0)
+    }
+
     suspend fun applyAll(settings: BackupSettings) {
         appContext.tekrarDataStore.edit { prefs ->
             prefs[Keys.newPerDay] =
                 settings.newPerDay.coerceIn(MIN_NEW_PER_DAY, MAX_NEW_PER_DAY)
             prefs[Keys.dailyGoal] =
                 settings.dailyGoal.coerceIn(MIN_DAILY_GOAL, MAX_DAILY_GOAL)
+            prefs[Keys.weeklyGoalDays] =
+                settings.weeklyGoalDays.coerceIn(MIN_WEEKLY_GOAL_DAYS, MAX_WEEKLY_GOAL_DAYS)
             prefs[Keys.desiredRetention] =
                 settings.desiredRetention.coerceIn(MIN_RETENTION, MAX_RETENTION)
             prefs[Keys.themeMode] =
@@ -145,6 +187,10 @@ class SettingsStore(context: Context) {
         const val DEFAULT_DAILY_GOAL = 20
         const val MIN_DAILY_GOAL = 5
         const val MAX_DAILY_GOAL = 200
+
+        const val DEFAULT_WEEKLY_GOAL_DAYS = 5
+        const val MIN_WEEKLY_GOAL_DAYS = 3
+        const val MAX_WEEKLY_GOAL_DAYS = 7
 
         const val DEFAULT_RETENTION = 90
         const val MIN_RETENTION = 70

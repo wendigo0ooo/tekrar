@@ -31,11 +31,15 @@ object StatsMath {
         return map
     }
 
-    fun streak(days: Map<LocalDate, Int>, today: LocalDate): Int {
-        val todayCount = days[today] ?: 0
-        var cursor = if (todayCount > 0) today else today.minusDays(1)
+    fun streak(
+        days: Map<LocalDate, Int>,
+        today: LocalDate,
+        frozenDays: Set<LocalDate> = emptySet(),
+    ): Int {
+        val todayActive = (days[today] ?: 0) > 0 || today in frozenDays
+        var cursor = if (todayActive) today else today.minusDays(1)
         var streak = 0
-        while ((days[cursor] ?: 0) > 0) {
+        while ((days[cursor] ?: 0) > 0 || cursor in frozenDays) {
             streak++
             cursor = cursor.minusDays(1)
             if (streak > 3650) break
