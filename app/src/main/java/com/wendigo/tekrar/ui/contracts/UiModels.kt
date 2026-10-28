@@ -1,10 +1,11 @@
 package com.wendigo.tekrar.ui.contracts
 
 import com.wendigo.tekrar.core.DayCount
+import com.wendigo.tekrar.core.SessionHardWord
 import com.wendigo.tekrar.data.Word
 import com.wendigo.tekrar.repo.AppSettings
 
-enum class StudyMode { MIXED, REVIEW, NEW }
+enum class StudyMode { MIXED, REVIEW, NEW, LEECH }
 
 enum class StudyFormat { FLASHCARD, CHOICE, TYPING, LISTEN, CLOZE }
 
@@ -37,6 +38,8 @@ data class StudyCardUi(
     val tags: String,
     val pos: String,
     val favorite: Boolean,
+    val lapses: Int = 0,
+    val isLeech: Boolean = false,
 )
 
 data class StudyUiState(
@@ -61,6 +64,11 @@ data class StudyUiState(
     val againCount: Int = 0,
     val correctCount: Int = 0,
     val elapsedMs: Long = 0,
+    val strengthenedCount: Int = 0,
+    val strugglingCount: Int = 0,
+    val accuracyPercent: Int = 0,
+    val tomorrowDue: Int? = null,
+    val hardWords: List<SessionHardWord> = emptyList(),
 )
 
 data class StatsUiState(
@@ -85,6 +93,11 @@ data class SettingsUiState(
     val settings: AppSettings = AppSettings(),
     val totalWords: Int = 0,
     val reviewedToday: Int = 0,
+)
+
+data class LeechesUiState(
+    val loading: Boolean = true,
+    val words: List<Word> = emptyList(),
 )
 
 data class LibraryUiState(

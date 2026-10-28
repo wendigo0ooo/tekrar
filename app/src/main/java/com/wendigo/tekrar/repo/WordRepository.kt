@@ -3,6 +3,7 @@ package com.wendigo.tekrar.repo
 import android.content.Context
 import androidx.room.withTransaction
 import com.wendigo.tekrar.core.DueFormat
+import com.wendigo.tekrar.core.LeechPolicy
 import com.wendigo.tekrar.core.Srs
 import com.wendigo.tekrar.core.StatsMath
 import com.wendigo.tekrar.core.TermKey
@@ -85,7 +86,16 @@ class WordRepository(
             StudyMode.REVIEW -> due
             StudyMode.NEW -> fresh
             StudyMode.MIXED -> due + fresh
+            StudyMode.LEECH -> LeechPolicy.leeches(words.allWords())
         }
+    }
+
+    suspend fun dueTomorrowCount(): Int {
+        val zone = ZoneId.systemDefault()
+        val tomorrow = LocalDate.now(zone).plusDays(1)
+        val start = StatsMath.startOfDay(tomorrow, zone)
+        val end = StatsMath.startOfDay(tomorrow.plusDays(1), zone)
+        return words.dueCountBetween(start, end)
     }
 
     suspend fun previewIntervals(word: Word, now: Long = System.currentTimeMillis()): List<String> {

@@ -43,6 +43,12 @@ interface WordDao {
     @Query("SELECT COUNT(*) FROM words WHERE suspended = 0 AND introducedAt IS NOT NULL AND introducedAt >= :since")
     suspend fun introducedCountSince(since: Long): Int
 
+    @Query(
+        "SELECT COUNT(*) FROM words WHERE suspended = 0 AND state = 1 " +
+            "AND dueAt >= :start AND dueAt < :end"
+    )
+    suspend fun dueCountBetween(start: Long, end: Long): Int
+
     @Query("SELECT COUNT(*) FROM words")
     suspend fun countAll(): Int
 

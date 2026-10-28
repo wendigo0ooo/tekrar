@@ -24,6 +24,7 @@ import com.wendigo.tekrar.ui.contracts.LibraryFilter
 import com.wendigo.tekrar.ui.contracts.LibrarySort
 import com.wendigo.tekrar.ui.contracts.StudyFormat
 import com.wendigo.tekrar.ui.contracts.StudyMode
+import com.wendigo.tekrar.ui.leech.LeechesScreen
 import com.wendigo.tekrar.ui.library.LibraryScreen
 import com.wendigo.tekrar.ui.settings.SettingsScreen
 import com.wendigo.tekrar.ui.stats.StatsScreen
@@ -82,7 +83,28 @@ fun TekrarNavHost(container: AppContainer) {
                     factory = viewModelFactory { StatsViewModel(container.repository) },
                 )
                 val state by vm.state.collectAsStateWithLifecycle()
-                StatsScreen(state = state)
+                StatsScreen(
+                    state = state,
+                    onLeeches = { navController.navigate(ROUTE_LEECHES) },
+                )
+            }
+
+            composable(ROUTE_LEECHES) {
+                val vm: LeechesViewModel = viewModel(
+                    factory = viewModelFactory { LeechesViewModel(container.repository) },
+                )
+                val state by vm.state.collectAsStateWithLifecycle()
+                LeechesScreen(
+                    state = state,
+                    onBack = { navController.popBackStack() },
+                    onStudy = {
+                        navController.navigate(
+                            "$ROUTE_STUDY/${StudyMode.LEECH.name}/${StudyFormat.FLASHCARD.name}"
+                        )
+                    },
+                    onEdit = { id -> navController.navigate("$ROUTE_WORD_EDIT/$id") },
+                    onSuspend = vm::suspendWord,
+                )
             }
 
             composable(ROUTE_SETTINGS) {
@@ -241,6 +263,7 @@ private const val ROUTE_LIBRARY = "library"
 private const val ROUTE_STATS = "stats"
 private const val ROUTE_SETTINGS = "settings"
 private const val ROUTE_STUDY = "study"
+private const val ROUTE_LEECHES = "leeches"
 private const val ROUTE_WORD_NEW = "word/new"
 private const val ROUTE_WORD_EDIT = "word/edit"
 private const val ROUTE_WORD_PREFIX = "detail"
