@@ -19,9 +19,12 @@ object Notifications {
 
     const val CHANNEL_REMINDER = "tekrar_reminder"
     const val REMINDER_ID = 2001
+    const val CHANNEL_WEEKLY = "tekrar_weekly"
+    const val WEEKLY_ID = 2002
 
     private const val START_STUDY_REQUEST_CODE = 7301
     private const val SNOOZE_REQUEST_CODE = 7302
+    private const val WEEKLY_CONTENT_REQUEST_CODE = 7401
 
     fun ensureChannel(context: Context) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return
@@ -33,6 +36,21 @@ object Notifications {
             NotificationManager.IMPORTANCE_DEFAULT,
         ).apply {
             description = context.getString(R.string.notif_channel_desc)
+            setShowBadge(true)
+        }
+        manager.createNotificationChannel(channel)
+    }
+
+    fun ensureWeeklyChannel(context: Context) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return
+        val manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        if (manager.getNotificationChannel(CHANNEL_WEEKLY) != null) return
+        val channel = NotificationChannel(
+            CHANNEL_WEEKLY,
+            context.getString(R.string.notif_weekly_channel_name),
+            NotificationManager.IMPORTANCE_DEFAULT,
+        ).apply {
+            description = context.getString(R.string.notif_weekly_channel_desc)
             setShowBadge(true)
         }
         manager.createNotificationChannel(channel)
@@ -108,5 +126,32 @@ object Notifications {
         runCatching {
             NotificationManagerCompat.from(context).cancel(REMINDER_ID)
         }
+    }
+
+    fun showWeeklySummary(context: Context, text: String): Boolean {
+        if (!canPost(context)) return false
+        ensureWeeklyChannel(context)
+        val contentIntent = Intent(context, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+        }
+        val pending = PendingIntent.getActivity(
+            context,
+            WEEKLY_CONTENT_REQUEST_CODE,
+            contentIntent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+        )
+        val notification = NotificationCompat.Builder(context, CHANNEL_WEEKLY)
+            .setSmallIcon(R.drawable.ic_notif)
+            .setContentTitle(context.getString(R.string.notif_weekly_title))
+            .setContentText(text)
+            .setStyle(NotificationCompat.BigTextStyle().bigText(text))
+            .setContentIntent(pending)
+            .setAutoCancel(true)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .build()
+        return runCatching {
+            NotificationManagerCompat.from(context).notify(WEEKLY_ID, notification)
+            true
+        }.getOrDefault(false)
     }
 }

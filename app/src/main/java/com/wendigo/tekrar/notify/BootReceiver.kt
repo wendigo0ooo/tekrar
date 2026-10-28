@@ -35,6 +35,11 @@ class BootReceiver : BroadcastReceiver() {
                 } else {
                     ReminderScheduler.cancel(appContext)
                 }
+                if (settings.weeklySummaryEnabled) {
+                    WeeklySummaryScheduler.schedule(appContext)
+                } else {
+                    WeeklySummaryScheduler.cancel(appContext)
+                }
             } finally {
                 pending.finish()
             }

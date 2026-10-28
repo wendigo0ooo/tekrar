@@ -26,6 +26,7 @@ data class AppSettings(
     val reminderEnabled: Boolean = false,
     val reminderHour: Int = 20,
     val reminderMinute: Int = 0,
+    val weeklySummaryEnabled: Boolean = true,
     val seedApplied: Boolean = false,
     val streakFreezes: Int = 0,
     val lastFreezeMilestone: Int = 0,
@@ -55,6 +56,7 @@ class SettingsStore(context: Context) {
         val reminderEnabled = booleanPreferencesKey("reminder_enabled")
         val reminderHour = intPreferencesKey("reminder_hour")
         val reminderMinute = intPreferencesKey("reminder_minute")
+        val weeklySummaryEnabled = booleanPreferencesKey("weekly_summary_enabled")
         val seedApplied = booleanPreferencesKey("seed_applied")
         val streakFreezes = intPreferencesKey("streak_freezes")
         val lastFreezeMilestone = intPreferencesKey("last_freeze_milestone")
@@ -78,6 +80,7 @@ class SettingsStore(context: Context) {
             reminderEnabled = prefs[Keys.reminderEnabled] ?: false,
             reminderHour = (prefs[Keys.reminderHour] ?: 20).coerceIn(0, 23),
             reminderMinute = (prefs[Keys.reminderMinute] ?: 0).coerceIn(0, 59),
+            weeklySummaryEnabled = prefs[Keys.weeklySummaryEnabled] ?: true,
             seedApplied = prefs[Keys.seedApplied] ?: false,
             streakFreezes = (prefs[Keys.streakFreezes] ?: 0)
                 .coerceIn(0, StreakFreeze.MAX_FREEZES),
@@ -141,6 +144,10 @@ class SettingsStore(context: Context) {
         }
     }
 
+    suspend fun setWeeklySummaryEnabled(value: Boolean) {
+        appContext.tekrarDataStore.edit { prefs -> prefs[Keys.weeklySummaryEnabled] = value }
+    }
+
     suspend fun setSeedApplied(value: Boolean) {
         appContext.tekrarDataStore.edit { prefs -> prefs[Keys.seedApplied] = value }
     }
@@ -176,6 +183,7 @@ class SettingsStore(context: Context) {
             prefs[Keys.reminderEnabled] = settings.reminderEnabled
             prefs[Keys.reminderHour] = settings.reminderHour.coerceIn(0, 23)
             prefs[Keys.reminderMinute] = settings.reminderMinute.coerceIn(0, 59)
+            prefs[Keys.weeklySummaryEnabled] = settings.weeklySummaryEnabled
         }
     }
 

@@ -198,6 +198,7 @@ fun TekrarNavHost(
                     onAutoSpeak = vm::setAutoSpeak,
                     onSpeechRate = vm::setSpeechRate,
                     onReminder = vm::setReminder,
+                    onWeeklySummary = vm::setWeeklySummary,
                     onTestNotification = vm::testNotification,
                     onExportJson = vm::exportJson,
                     onImportJson = vm::importJson,

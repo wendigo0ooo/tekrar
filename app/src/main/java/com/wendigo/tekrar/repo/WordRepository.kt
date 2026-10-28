@@ -7,6 +7,7 @@ import com.wendigo.tekrar.core.DeckDefinition
 import com.wendigo.tekrar.core.DeckFormatException
 import com.wendigo.tekrar.core.DueFormat
 import com.wendigo.tekrar.core.LeechPolicy
+import com.wendigo.tekrar.core.ReviewPolicy
 import com.wendigo.tekrar.core.Srs
 import com.wendigo.tekrar.core.StatsMath
 import com.wendigo.tekrar.core.StreakFreeze
@@ -33,6 +34,7 @@ import java.util.Locale
 data class ReviewOutcome(
     val word: Word,
     val logId: Long,
+    val autoSuspended: Boolean = false,
 )
 
 data class BundledDeck(
@@ -292,7 +294,7 @@ class WordRepository(
         } else {
             now + result.intervalDays * DAY_MS
         }
-        val updated = word.copy(
+        val reviewed = word.copy(
             state = Word.STATE_REVIEW,
             stability = result.stability,
             difficulty = result.difficulty,
@@ -302,6 +304,8 @@ class WordRepository(
             reps = word.reps + 1,
             lapses = word.lapses + if (!isNew && rating == Srs.AGAIN) 1 else 0,
         )
+        val autoSuspended = ReviewPolicy.shouldAutoSuspend(reviewed.lapses, reviewed.suspended)
+        val updated = ReviewPolicy.withAutoSuspend(reviewed)
         val logId = db.withTransaction {
             words.update(updated)
             logs.insert(
@@ -319,12 +323,15 @@ class WordRepository(
                 )
             )
         }
-        return ReviewOutcome(updated, logId)
+        return ReviewOutcome(updated, logId, autoSuspended)
     }
 
     suspend fun undoReview(logId: Long, previous: Word) {
         db.withTransaction {
-            words.update(previous)
+            val current = words.getById(previous.id)
+            if (current != null) {
+                words.update(ReviewPolicy.restoreAfterUndo(current, previous))
+            }
             logs.deleteById(logId)
         }
     }
