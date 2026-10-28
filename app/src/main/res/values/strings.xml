@@ -205,7 +205,7 @@
     <string name="settings_speech_rate_value">%1$s×</string>
     <string name="settings_reminder">Hatırlatıcı</string>
     <string name="settings_reminder_time">Günlük hatırlatıcı</string>
-    <string name="settings_reminder_desc">Her gün seçtiğin saatte tekrar hatırlatması. 22:00–08:00 arasında seçilirse 08:00'e alınır.</string>
+    <string name="settings_reminder_desc">Her gün seçtiğin saatte tekrar hatırlatması. 22:00–08:00 arasında seçilirse 08:00\'e alınır.</string>
     <string name="settings_reminder_change">Saati değiştir</string>
     <string name="settings_test_notification">Test bildirimi</string>
     <string name="settings_reminder_on">Hatırlatıcı açıldı.</string>
