@@ -5,6 +5,7 @@ import android.content.Context
 import com.wendigo.tekrar.data.AppDatabase
 import com.wendigo.tekrar.notify.Notifications
 import com.wendigo.tekrar.notify.ReminderScheduler
+import com.wendigo.tekrar.notify.WeeklySummaryScheduler
 import com.wendigo.tekrar.repo.BackupManager
 import com.wendigo.tekrar.repo.SettingsStore
 import com.wendigo.tekrar.repo.WordRepository
@@ -31,6 +32,7 @@ class AppContainer(context: Context) {
 
     fun start() {
         Notifications.ensureChannel(appContext)
+        Notifications.ensureWeeklyChannel(appContext)
         DueWidgetProvider.refresh(appContext)
         scope.launch {
             runCatching {
@@ -47,6 +49,11 @@ class AppContainer(context: Context) {
                         current.reminderHour,
                         current.reminderMinute,
                     )
+                }
+                if (current.weeklySummaryEnabled) {
+                    WeeklySummaryScheduler.schedule(appContext)
+                } else {
+                    WeeklySummaryScheduler.cancel(appContext)
                 }
             }
         }

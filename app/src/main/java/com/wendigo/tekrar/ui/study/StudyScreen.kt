@@ -23,6 +23,10 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.SnackbarDuration
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -70,8 +74,21 @@ fun StudyScreen(
 ) {
     val context = LocalContext.current
     val speaker = remember { Speaker(context) }
+    val snackbar = remember { SnackbarHostState() }
     DisposableEffect(Unit) {
         onDispose { speaker.shutdown() }
+    }
+    LaunchedEffect(state.feedbackNonce) {
+        if (state.feedbackNonce == 0L || state.finished || state.empty) return@LaunchedEffect
+        val text = state.autoSuspendedTerm?.let {
+            context.getString(R.string.study_auto_suspended, it)
+        } ?: context.getString(R.string.study_saved)
+        val result = snackbar.showSnackbar(
+            message = text,
+            actionLabel = context.getString(R.string.study_undo),
+            duration = SnackbarDuration.Short,
+        )
+        if (result == SnackbarResult.ActionPerformed) onUndo()
     }
     LaunchedEffect(state.card?.id, state.position, state.format, autoSpeak, speechRate) {
         val card = state.card ?: return@LaunchedEffect
@@ -186,6 +203,13 @@ fun StudyScreen(
                 }
             }
         }
+
+        SnackbarHost(
+            hostState = snackbar,
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(horizontal = 12.dp, vertical = 8.dp),
+        )
     }
 }
 

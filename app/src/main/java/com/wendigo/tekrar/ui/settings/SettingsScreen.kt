@@ -72,6 +72,7 @@ fun SettingsScreen(
     onAutoSpeak: (Boolean) -> Unit,
     onSpeechRate: (Float) -> Unit,
     onReminder: (Boolean, Int, Int) -> Unit,
+    onWeeklySummary: (Boolean) -> Unit,
     onTestNotification: () -> Unit,
     onExportJson: (android.net.Uri) -> Unit,
     onImportJson: (android.net.Uri) -> Unit,
@@ -340,6 +341,15 @@ fun SettingsScreen(
                 ) {
                     Text(text = stringResource(R.string.settings_test_notification))
                 }
+                HorizontalDivider(
+                    color = MaterialTheme.colorScheme.outline.copy(alpha = 0.35f),
+                )
+                LabeledSwitch(
+                    title = stringResource(R.string.settings_weekly_summary),
+                    description = stringResource(R.string.settings_weekly_summary_desc),
+                    checked = settings.weeklySummaryEnabled,
+                    onCheckedChange = onWeeklySummary,
+                )
             }
 
             SectionTitle(text = stringResource(R.string.settings_data))

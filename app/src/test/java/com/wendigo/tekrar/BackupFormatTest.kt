@@ -82,6 +82,7 @@ class BackupFormatTest {
             reminderEnabled = true,
             reminderHour = 21,
             reminderMinute = 45,
+            weeklySummaryEnabled = false,
         )
         val packageToWrite = BackupPackage(
             exportedAt = 999L,
@@ -136,6 +137,7 @@ class BackupFormatTest {
         assertEquals(30, restored.settings?.dailyGoal ?: -1)
         assertEquals(20, restored.settings?.newPerDay ?: -1)
         assertEquals(5, restored.settings?.weeklyGoalDays ?: -1)
+        assertEquals(true, restored.settings?.weeklySummaryEnabled ?: false)
     }
 
     @Test

@@ -18,6 +18,7 @@ data class BackupSettings(
     val reminderEnabled: Boolean = false,
     val reminderHour: Int = 20,
     val reminderMinute: Int = 0,
+    val weeklySummaryEnabled: Boolean = true,
 ) {
     companion object {
         const val DEFAULT_NEW_PER_DAY = 20
@@ -209,6 +210,7 @@ object BackupFormat {
                 reminderEnabled = item.bool("reminderEnabled", false),
                 reminderHour = item.int("reminderHour", 20),
                 reminderMinute = item.int("reminderMinute", 0),
+                weeklySummaryEnabled = item.bool("weeklySummaryEnabled", true),
             )
         }
 
@@ -276,6 +278,7 @@ object BackupFormat {
             "reminderEnabled" to J.of(settings.reminderEnabled),
             "reminderHour" to J.of(settings.reminderHour),
             "reminderMinute" to J.of(settings.reminderMinute),
+            "weeklySummaryEnabled" to J.of(settings.weeklySummaryEnabled),
         )
     )
 

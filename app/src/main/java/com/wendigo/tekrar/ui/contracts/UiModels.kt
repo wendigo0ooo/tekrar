@@ -72,6 +72,8 @@ data class StudyUiState(
     val accuracyPercent: Int = 0,
     val tomorrowDue: Int? = null,
     val hardWords: List<SessionHardWord> = emptyList(),
+    val feedbackNonce: Long = 0,
+    val autoSuspendedTerm: String? = null,
 )
 
 data class StatsUiState(

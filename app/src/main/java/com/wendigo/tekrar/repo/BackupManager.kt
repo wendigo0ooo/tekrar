@@ -159,5 +159,6 @@ class BackupManager(
         reminderEnabled = reminderEnabled,
         reminderHour = reminderHour,
         reminderMinute = reminderMinute,
+        weeklySummaryEnabled = weeklySummaryEnabled,
     )
 }

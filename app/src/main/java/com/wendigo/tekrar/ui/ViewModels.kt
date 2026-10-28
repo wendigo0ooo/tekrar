@@ -16,6 +16,7 @@ import com.wendigo.tekrar.core.StudySession
 import com.wendigo.tekrar.data.Word
 import com.wendigo.tekrar.notify.Notifications
 import com.wendigo.tekrar.notify.ReminderScheduler
+import com.wendigo.tekrar.notify.WeeklySummaryScheduler
 import com.wendigo.tekrar.repo.BackupManager
 import com.wendigo.tekrar.repo.BundledDeck
 import com.wendigo.tekrar.repo.FileIo
@@ -553,6 +554,7 @@ class StudyViewModel(
     private var lastUndo: Undo? = null
     private var pendingRating: Int? = null
     private var pendingWord: Word? = null
+    private var feedbackNonce = 0L
 
     private data class Undo(
         val word: Word,
@@ -560,6 +562,8 @@ class StudyViewModel(
         val rating: Int,
         val requeued: Boolean,
     )
+
+    private data class Feedback(val autoSuspendedTerm: String?)
 
     init {
         load()
@@ -594,6 +598,7 @@ class StudyViewModel(
                 lastUndo = null
                 pendingRating = null
                 pendingWord = null
+                feedbackNonce = 0L
                 startedAt = System.currentTimeMillis()
                 if (items.isEmpty()) {
                     _state.value = StudyUiState(
@@ -743,14 +748,21 @@ class StudyViewModel(
                     requeues++
                 }
                 lastUndo = Undo(word, outcome.logId, rating, requeue && removed)
-                showCurrent()
+                showCurrent(
+                    feedback = Feedback(
+                        autoSuspendedTerm = if (outcome.autoSuspended) outcome.word.term else null,
+                    ),
+                )
             } finally {
                 session.release()
             }
         }
     }
 
-    private suspend fun showCurrent(reveal: Boolean = false) {
+    private suspend fun showCurrent(
+        reveal: Boolean = false,
+        feedback: Feedback? = null,
+    ) {
         val word = session.advance()
         if (word == null) {
             finish()
@@ -788,6 +800,8 @@ class StudyViewModel(
             strengthenedCount = strengthenedCount,
             strugglingCount = againCount,
             accuracyPercent = SessionSummary.accuracyPercent(correctCount, done),
+            feedbackNonce = feedback?.let { ++feedbackNonce } ?: 0L,
+            autoSuspendedTerm = feedback?.autoSuspendedTerm,
         )
     }
 
@@ -923,6 +937,19 @@ class SettingsViewModel(
         }
     }
 
+    fun setWeeklySummary(enabled: Boolean) {
+        viewModelScope.launch {
+            settings.setWeeklySummaryEnabled(enabled)
+            if (enabled) {
+                WeeklySummaryScheduler.schedule(appContext)
+                _message.value = appContext.getString(R.string.settings_weekly_summary_on)
+            } else {
+                WeeklySummaryScheduler.cancel(appContext)
+                _message.value = appContext.getString(R.string.settings_weekly_summary_off)
+            }
+        }
+    }
+
     fun testNotification() {
         val sent = Notifications.showReminder(
             appContext,
@@ -967,6 +994,11 @@ class SettingsViewModel(
                     }
                 } else {
                     ReminderScheduler.cancel(appContext)
+                }
+                if (restored.weeklySummaryEnabled) {
+                    WeeklySummaryScheduler.schedule(appContext)
+                } else {
+                    WeeklySummaryScheduler.cancel(appContext)
                 }
             }
             _message.value = result.fold(

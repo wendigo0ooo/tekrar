@@ -106,6 +106,8 @@
 
     <string name="study_close">Kapat</string>
     <string name="study_undo">Geri al</string>
+    <string name="study_saved">Kaydedildi</string>
+    <string name="study_auto_suspended">%1$s zor kelime olduğu için askıya alındı</string>
     <string name="study_progress">%1$d / %2$d</string>
     <string name="study_mode_flashcard">Kart</string>
     <string name="study_mode_choice">Seçmeli</string>
@@ -258,6 +260,10 @@
     <string name="settings_reminder_off">Hatırlatıcı kapatıldı.</string>
     <string name="settings_reminder_permission_denied">Bildirim izni verilmedi; hatırlatıcı açılamadı.</string>
     <string name="settings_reminder_test_sent">Test bildirimi gönderildi.</string>
+    <string name="settings_weekly_summary">Haftalık özet</string>
+    <string name="settings_weekly_summary_desc">Her pazar 18:00\'de haftalık çalışma özeti bildirimi.</string>
+    <string name="settings_weekly_summary_on">Haftalık özet açıldı.</string>
+    <string name="settings_weekly_summary_off">Haftalık özet kapatıldı.</string>
     <string name="settings_notification_failed">Bildirim gönderilemedi; izin veya sistem bildirim ayarlarını kontrol et.</string>
     <string name="settings_data">Veriler</string>
     <string name="settings_total_words">Toplam kelime</string>
@@ -291,4 +297,7 @@
     <string name="notif_test_text">Bildirimler çalışıyor. Tekrar zamanı geldiğinde haber vereceğiz.</string>
     <string name="notif_action_start">10 kart başlat</string>
     <string name="notif_action_snooze">1 saat ertele</string>
+    <string name="notif_weekly_channel_name">Haftalık özet</string>
+    <string name="notif_weekly_channel_desc">Pazar akşamları haftalık çalışma özetini gönderir.</string>
+    <string name="notif_weekly_title">Haftalık özet</string>
 </resources>

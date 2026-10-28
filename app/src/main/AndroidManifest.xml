@@ -37,6 +37,10 @@
             android:exported="false" />
 
         <receiver
+            android:name=".notify.WeeklySummaryReceiver"
+            android:exported="false" />
+
+        <receiver
             android:name=".widget.DueWidgetProvider"
             android:exported="false">
             <intent-filter>
