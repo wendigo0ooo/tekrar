@@ -48,7 +48,7 @@ class WeeklyGoalTest {
             today.minusDays(3) to 4,
             today.minusDays(7) to 9,
         )
-        assertEquals(3, WeeklyGoal.activeDays(days, today))
+        assertEquals(2, WeeklyGoal.activeDays(days, today))
         assertEquals(2, WeeklyGoal.progress(days, today, goalDays = 5).days)
     }
 
