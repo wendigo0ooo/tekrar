@@ -6,6 +6,7 @@ import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.floatPreferencesKey
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import com.wendigo.tekrar.core.BackupSettings
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
@@ -21,6 +22,7 @@ data class AppSettings(
     val reminderEnabled: Boolean = false,
     val reminderHour: Int = 20,
     val reminderMinute: Int = 0,
+    val seedApplied: Boolean = false,
 ) {
     val retentionFraction: Double get() = desiredRetention.coerceIn(70, 97) / 100.0
 
@@ -45,6 +47,7 @@ class SettingsStore(context: Context) {
         val reminderEnabled = booleanPreferencesKey("reminder_enabled")
         val reminderHour = intPreferencesKey("reminder_hour")
         val reminderMinute = intPreferencesKey("reminder_minute")
+        val seedApplied = booleanPreferencesKey("seed_applied")
     }
 
     val settings: Flow<AppSettings> = appContext.tekrarDataStore.data.map { prefs ->
@@ -62,6 +65,7 @@ class SettingsStore(context: Context) {
             reminderEnabled = prefs[Keys.reminderEnabled] ?: false,
             reminderHour = (prefs[Keys.reminderHour] ?: 20).coerceIn(0, 23),
             reminderMinute = (prefs[Keys.reminderMinute] ?: 0).coerceIn(0, 59),
+            seedApplied = prefs[Keys.seedApplied] ?: false,
         )
     }
 
@@ -107,6 +111,29 @@ class SettingsStore(context: Context) {
             prefs[Keys.reminderEnabled] = enabled
             prefs[Keys.reminderHour] = hour.coerceIn(0, 23)
             prefs[Keys.reminderMinute] = minute.coerceIn(0, 59)
+        }
+    }
+
+    suspend fun setSeedApplied(value: Boolean) {
+        appContext.tekrarDataStore.edit { prefs -> prefs[Keys.seedApplied] = value }
+    }
+
+    suspend fun applyAll(settings: BackupSettings) {
+        appContext.tekrarDataStore.edit { prefs ->
+            prefs[Keys.newPerDay] =
+                settings.newPerDay.coerceIn(MIN_NEW_PER_DAY, MAX_NEW_PER_DAY)
+            prefs[Keys.dailyGoal] =
+                settings.dailyGoal.coerceIn(MIN_DAILY_GOAL, MAX_DAILY_GOAL)
+            prefs[Keys.desiredRetention] =
+                settings.desiredRetention.coerceIn(MIN_RETENTION, MAX_RETENTION)
+            prefs[Keys.themeMode] =
+                settings.themeMode.coerceIn(AppSettings.THEME_SYSTEM, AppSettings.THEME_DARK)
+            prefs[Keys.autoSpeak] = settings.autoSpeak
+            prefs[Keys.speechRate] =
+                settings.speechRate.coerceIn(MIN_SPEECH_RATE, MAX_SPEECH_RATE)
+            prefs[Keys.reminderEnabled] = settings.reminderEnabled
+            prefs[Keys.reminderHour] = settings.reminderHour.coerceIn(0, 23)
+            prefs[Keys.reminderMinute] = settings.reminderMinute.coerceIn(0, 59)
         }
     }
 

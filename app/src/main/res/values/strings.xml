@@ -114,6 +114,7 @@
     <string name="add_title">Yeni kelime</string>
     <string name="edit_title">Kelimeyi düzenle</string>
     <string name="field_term">İngilizce kelime</string>
+    <string name="add_duplicate_term">Bu kelime zaten kütüphanede var.</string>
     <string name="field_meaning">Türkçe anlamı</string>
     <string name="field_pos">Tür (isim, fiil, sıfat…)</string>
     <string name="field_example">Örnek cümle (İngilizce)</string>

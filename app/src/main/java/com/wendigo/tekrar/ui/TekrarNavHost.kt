@@ -163,6 +163,7 @@ fun TekrarNavHost(container: AppContainer) {
                         vm.save(term, meaning, example, exampleTr, notes, tags, pos, onSaved)
                     },
                     onDelete = { onDeleted -> vm.delete(onDeleted) },
+                    onClearDuplicateError = vm::clearDuplicateError,
                     onBack = { navController.popBackStack() },
                 )
             }
@@ -181,6 +182,7 @@ fun TekrarNavHost(container: AppContainer) {
                         vm.save(term, meaning, example, exampleTr, notes, tags, pos, onSaved)
                     },
                     onDelete = { onDeleted -> vm.delete(onDeleted) },
+                    onClearDuplicateError = vm::clearDuplicateError,
                     onBack = { navController.popBackStack() },
                 )
             }
