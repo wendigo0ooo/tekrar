@@ -242,6 +242,20 @@ fun WordDetailScreen(
                     .toLocalDate()
                     .format(DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.forLanguageTag("tr"))),
             )
+            if (word.deck.isNotBlank()) {
+                DividerLine()
+                InfoRow(
+                    label = stringResource(R.string.word_deck),
+                    value = word.deck,
+                )
+            }
+            if (word.cefr.isNotBlank()) {
+                DividerLine()
+                InfoRow(
+                    label = stringResource(R.string.word_cefr),
+                    value = word.cefr,
+                )
+            }
         }
 
         OutlinedButton(

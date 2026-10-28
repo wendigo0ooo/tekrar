@@ -9,6 +9,7 @@ import com.wendigo.tekrar.R
 import com.wendigo.tekrar.core.AnswerCheck
 import com.wendigo.tekrar.core.Cloze
 import com.wendigo.tekrar.core.LeechPolicy
+import com.wendigo.tekrar.core.Placement
 import com.wendigo.tekrar.core.SessionSummary
 import com.wendigo.tekrar.core.Srs
 import com.wendigo.tekrar.core.StudySession
@@ -16,15 +17,20 @@ import com.wendigo.tekrar.data.Word
 import com.wendigo.tekrar.notify.Notifications
 import com.wendigo.tekrar.notify.ReminderScheduler
 import com.wendigo.tekrar.repo.BackupManager
+import com.wendigo.tekrar.repo.BundledDeck
 import com.wendigo.tekrar.repo.FileIo
 import com.wendigo.tekrar.repo.SettingsStore
 import com.wendigo.tekrar.repo.WordRepository
 import com.wendigo.tekrar.repo.WordWriteResult
 import com.wendigo.tekrar.ui.contracts.DashboardUiState
+import com.wendigo.tekrar.ui.contracts.DeckCardUi
+import com.wendigo.tekrar.ui.contracts.DecksUiState
 import com.wendigo.tekrar.ui.contracts.LeechesUiState
 import com.wendigo.tekrar.ui.contracts.LibraryFilter
 import com.wendigo.tekrar.ui.contracts.LibrarySort
 import com.wendigo.tekrar.ui.contracts.LibraryUiState
+import com.wendigo.tekrar.ui.contracts.PlacementQuestionUi
+import com.wendigo.tekrar.ui.contracts.PlacementUiState
 import com.wendigo.tekrar.ui.contracts.SettingsUiState
 import com.wendigo.tekrar.ui.contracts.StatsUiState
 import com.wendigo.tekrar.ui.contracts.StudyCardUi
@@ -188,6 +194,207 @@ class LibraryViewModel(repository: WordRepository) : ViewModel() {
     }
 }
 
+class DecksViewModel(
+    private val repository: WordRepository,
+    private val appContext: Context,
+) : ViewModel() {
+
+    private val bundled = MutableStateFlow<List<BundledDeck>>(emptyList())
+    private val loading = MutableStateFlow(true)
+    private val busy = MutableStateFlow(false)
+
+    private val _message = MutableStateFlow<String?>(null)
+    val message: StateFlow<String?> = _message.asStateFlow()
+
+    val state: StateFlow<DecksUiState> = combine(
+        repository.observeLibrary(),
+        bundled,
+        loading,
+        busy,
+    ) { allWords, bundledDecks, isLoading, isBusy ->
+        buildState(allWords, bundledDecks, isLoading, isBusy)
+    }.stateIn(
+        scope = viewModelScope,
+        started = SharingStarted.WhileSubscribed(5_000),
+        initialValue = DecksUiState(),
+    )
+
+    init {
+        viewModelScope.launch {
+            val decks = runCatching { repository.bundledDecks() }.getOrDefault(emptyList())
+            bundled.value = decks
+            loading.value = false
+        }
+    }
+
+    fun install(card: DeckCardUi) {
+        val assetName = card.assetName ?: return
+        if (busy.value) return
+        busy.value = true
+        viewModelScope.launch {
+            val result = runCatching { repository.installDeck(assetName) }
+            busy.value = false
+            result.fold(
+                onSuccess = {
+                    _message.value = appContext.getString(
+                        R.string.decks_added,
+                        it.deckName,
+                        it.added,
+                        it.skipped,
+                    )
+                },
+                onFailure = {
+                    _message.value = appContext.getString(
+                        R.string.decks_install_failed,
+                        it.message ?: "",
+                    )
+                },
+            )
+        }
+    }
+
+    fun clearMessage() {
+        _message.value = null
+    }
+
+    private fun buildState(
+        allWords: List<Word>,
+        bundledDecks: List<BundledDeck>,
+        isLoading: Boolean,
+        isBusy: Boolean,
+    ): DecksUiState {
+        val now = System.currentTimeMillis()
+        fun dueCount(items: List<Word>): Int =
+            items.count { !it.suspended && !it.isNew && it.dueAt <= now }
+
+        val byDeck = allWords.filter { it.deck.isNotBlank() }.groupBy { it.deck }
+        val libraryWords = allWords.filter { it.deck.isBlank() }
+        val bundledCards = bundledDecks.map { bundledDeck ->
+            val definition = bundledDeck.definition
+            val installedWords = byDeck[definition.name].orEmpty()
+            DeckCardUi(
+                name = definition.name,
+                description = definition.description,
+                cefr = definition.cefrRange,
+                wordCount = if (installedWords.isEmpty()) {
+                    definition.words.size
+                } else {
+                    installedWords.size
+                },
+                dueCount = dueCount(installedWords),
+                assetName = bundledDeck.assetName,
+                installed = installedWords.isNotEmpty(),
+            )
+        }
+        val bundledNames = bundledCards.map { it.name }.toHashSet()
+        val installed = bundledCards.filter { it.installed }.toMutableList()
+        byDeck.forEach { (name, items) ->
+            if (name !in bundledNames) {
+                installed += DeckCardUi(
+                    name = name,
+                    wordCount = items.size,
+                    dueCount = dueCount(items),
+                    installed = true,
+                )
+            }
+        }
+        installed.sortBy { it.name.lowercase(Locale.ROOT) }
+        return DecksUiState(
+            loading = isLoading,
+            available = bundledCards.filter { !it.installed },
+            installed = installed,
+            library = DeckCardUi(
+                name = appContext.getString(R.string.decks_library),
+                description = appContext.getString(R.string.decks_library_desc),
+                wordCount = libraryWords.size,
+                dueCount = dueCount(libraryWords),
+                installed = true,
+            ),
+            busy = isBusy,
+        )
+    }
+}
+
+class PlacementViewModel(private val repository: WordRepository) : ViewModel() {
+
+    private val _state = MutableStateFlow(PlacementUiState())
+    val state: StateFlow<PlacementUiState> = _state.asStateFlow()
+
+    private val knownIds = LinkedHashSet<Long>()
+    private var result: PlacementResultView? = null
+
+    private data class PlacementResultView(val band: String, val newPerDay: Int)
+
+    init {
+        load()
+    }
+
+    fun load() {
+        viewModelScope.launch {
+            _state.value = PlacementUiState()
+            knownIds.clear()
+            result = null
+            val words = runCatching { repository.placementWords() }.getOrDefault(emptyList())
+            if (words.isEmpty()) {
+                _state.value = PlacementUiState(loading = false, empty = true)
+                return@launch
+            }
+            _state.value = PlacementUiState(
+                loading = false,
+                questions = words.map {
+                    PlacementQuestionUi(
+                        id = it.id,
+                        term = it.term,
+                        meaning = it.meaning,
+                        cefr = it.cefr,
+                    )
+                },
+            )
+        }
+    }
+
+    fun answer(known: Boolean) {
+        val current = _state.value
+        val question = current.current ?: return
+        if (current.answered || current.finished) return
+        if (known) knownIds += question.id
+        _state.value = current.copy(
+            answered = true,
+            known = current.known + if (known) 1 else 0,
+        )
+    }
+
+    fun next() {
+        val current = _state.value
+        if (!current.answered || current.finished) return
+        if (current.index + 1 >= current.questions.size) {
+            finish(current)
+        } else {
+            _state.value = current.copy(index = current.index + 1, answered = false)
+        }
+    }
+
+    fun apply() {
+        val current = _state.value
+        val placement = result ?: return
+        if (current.applied) return
+        viewModelScope.launch {
+            runCatching { repository.applyPlacement(knownIds, placement.newPerDay) }
+                .onSuccess { _state.update { it.copy(applied = true) } }
+        }
+    }
+
+    private fun finish(current: PlacementUiState) {
+        val scored = Placement.score(current.known, current.questions.size)
+        result = PlacementResultView(scored.band, scored.recommendedNewPerDay)
+        _state.value = current.copy(
+            finished = true,
+            band = scored.band,
+            recommendedNewPerDay = scored.recommendedNewPerDay,
+        )
+    }
+}
+
 class LeechesViewModel(private val repository: WordRepository) : ViewModel() {
 
     val state: StateFlow<LeechesUiState> = repository.observeLibrary()
@@ -320,6 +527,7 @@ class StudyViewModel(
     private val repository: WordRepository,
     private val mode: StudyMode,
     val format: StudyFormat,
+    private val deck: String? = null,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(StudyUiState(format = format))
@@ -356,8 +564,16 @@ class StudyViewModel(
         viewModelScope.launch {
             try {
                 _state.value = StudyUiState(loading = true, format = format)
-                pool = runCatching { repository.allWords() }.getOrDefault(emptyList())
-                val items = runCatching { repository.loadQueue(mode) }.getOrDefault(emptyList())
+                val allWords = runCatching { repository.allWords() }.getOrDefault(emptyList())
+                pool = if (deck == null) {
+                    allWords
+                } else {
+                    allWords.filter { it.deck == deck }
+                }
+                val items = runCatching {
+                    if (deck == null) repository.loadQueue(mode)
+                    else repository.loadDeckQueue(deck)
+                }.getOrDefault(emptyList())
                 session.load(items)
                 initialTotal = items.size
                 requeues = 0

@@ -115,6 +115,47 @@ data class LibraryUiState(
     val sort: LibrarySort = LibrarySort.DUE,
 )
 
+data class DeckCardUi(
+    val name: String,
+    val description: String = "",
+    val cefr: String = "",
+    val wordCount: Int = 0,
+    val dueCount: Int = 0,
+    val assetName: String? = null,
+    val installed: Boolean = false,
+)
+
+data class DecksUiState(
+    val loading: Boolean = true,
+    val available: List<DeckCardUi> = emptyList(),
+    val installed: List<DeckCardUi> = emptyList(),
+    val library: DeckCardUi = DeckCardUi(name = "Kitaplığım"),
+    val busy: Boolean = false,
+)
+
+data class PlacementQuestionUi(
+    val id: Long,
+    val term: String,
+    val meaning: String,
+    val cefr: String = "",
+)
+
+data class PlacementUiState(
+    val loading: Boolean = true,
+    val empty: Boolean = false,
+    val questions: List<PlacementQuestionUi> = emptyList(),
+    val index: Int = 0,
+    val answered: Boolean = false,
+    val known: Int = 0,
+    val finished: Boolean = false,
+    val band: String = "",
+    val recommendedNewPerDay: Int = 0,
+    val applied: Boolean = false,
+) {
+    val total: Int get() = questions.size
+    val current: PlacementQuestionUi? get() = questions.getOrNull(index)
+}
+
 data class WordEditorUiState(
     val loading: Boolean = true,
     val word: Word? = null,

@@ -1,0 +1,1143 @@
+{
+  "deck": "YDS/YÖKDİL",
+  "description": "YDS ve YÖKDİL için yüksek frekanslı akademik kelimeler.",
+  "cefr": "B1-C1",
+  "words": [
+    {
+      "term": "abolish",
+      "meaning": "yürürlükten kaldırmak",
+      "example": "The government decided to abolish the old tax.",
+      "exampleTr": "Hükümet eski vergiyi kaldırmaya karar verdi.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "abundant",
+      "meaning": "bol, bereketli",
+      "example": "The region has abundant natural resources.",
+      "exampleTr": "Bölge bol doğal kaynaklara sahip.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "accelerate",
+      "meaning": "hızlandırmak",
+      "example": "New policies may accelerate economic growth.",
+      "exampleTr": "Yeni politikalar ekonomik büyümeyi hızlandırabilir.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "accessible",
+      "meaning": "erişilebilir",
+      "example": "The building is accessible to wheelchair users.",
+      "exampleTr": "Bina tekerlekli sandalye kullanıcıları için erişilebilir.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "accommodate",
+      "meaning": "barındırmak, uyum sağlamak",
+      "example": "The hotel can accommodate 300 guests.",
+      "exampleTr": "Otel 300 misafiri barındırabilir.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "accumulate",
+      "meaning": "birikmek",
+      "example": "Dust had accumulated on the shelves.",
+      "exampleTr": "Raflarda toz birikmişti.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "acknowledge",
+      "meaning": "kabul etmek",
+      "example": "She acknowledged the mistake immediately.",
+      "exampleTr": "Hatayı hemen kabul etti.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "adequate",
+      "meaning": "yeterli",
+      "example": "The team lacked adequate funding.",
+      "exampleTr": "Ekibin yeterli finansmanı yoktu.",
+      "pos": "adjective",
+      "cefr": "B1"
+    },
+    {
+      "term": "adjacent",
+      "meaning": "bitişik",
+      "example": "Our office is adjacent to the library.",
+      "exampleTr": "Ofisimiz kütüphanenin bitişiğinde.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "advocate",
+      "meaning": "savunmak",
+      "example": "Many experts advocate stricter rules.",
+      "exampleTr": "Birçok uzman daha katı kuralları savunuyor.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "aesthetic",
+      "meaning": "estetik",
+      "example": "The design has great aesthetic value.",
+      "exampleTr": "Tasarımın büyük estetik değeri var.",
+      "pos": "adjective",
+      "cefr": "C1"
+    },
+    {
+      "term": "allocate",
+      "meaning": "tahsis etmek",
+      "example": "The council allocated more money to schools.",
+      "exampleTr": "Belediye okullara daha fazla para tahsis etti.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "alter",
+      "meaning": "değiştirmek",
+      "example": "We had to alter our plans.",
+      "exampleTr": "Planlarımızı değiştirmek zorunda kaldık.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "ambiguous",
+      "meaning": "belirsiz, muğlak",
+      "example": "His answer was deliberately ambiguous.",
+      "exampleTr": "Cevabı kasten belirsizdi.",
+      "pos": "adjective",
+      "cefr": "C1"
+    },
+    {
+      "term": "anticipate",
+      "meaning": "öngörmek",
+      "example": "We anticipate a rise in demand.",
+      "exampleTr": "Talepte bir artış öngörüyoruz.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "apparent",
+      "meaning": "apaçık, görünen",
+      "example": "It soon became apparent that he was lying.",
+      "exampleTr": "Yalan söylediği kısa sürede apaçık ortaya çıktı.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "appropriate",
+      "meaning": "uygun",
+      "example": "Wear appropriate clothes for the interview.",
+      "exampleTr": "Mülakat için uygun kıyafetler giy.",
+      "pos": "adjective",
+      "cefr": "B1"
+    },
+    {
+      "term": "arbitrary",
+      "meaning": "keyfi",
+      "example": "The decision seemed arbitrary and unfair.",
+      "exampleTr": "Karar keyfi ve adaletsiz görünüyordu.",
+      "pos": "adjective",
+      "cefr": "C1"
+    },
+    {
+      "term": "assess",
+      "meaning": "değerlendirmek",
+      "example": "Officials assessed the damage after the storm.",
+      "exampleTr": "Yetkililer fırtınadan sonra hasarı değerlendirdi.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "assume",
+      "meaning": "varsaymak",
+      "example": "I assume you have read the report.",
+      "exampleTr": "Raporu okuduğunu varsayıyorum.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "attribute",
+      "meaning": "atfetmek",
+      "example": "She attributes her success to hard work.",
+      "exampleTr": "Başarısını sıkı çalışmaya atfediyor.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "authentic",
+      "meaning": "otantik, özgün",
+      "example": "The museum displays authentic Roman coins.",
+      "exampleTr": "Müze otantik Roma sikkeleri sergiliyor.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "autonomous",
+      "meaning": "özerk",
+      "example": "The region became autonomous in 1995.",
+      "exampleTr": "Bölge 1995'te özerk oldu.",
+      "pos": "adjective",
+      "cefr": "C1"
+    },
+    {
+      "term": "bias",
+      "meaning": "önyargı",
+      "example": "The study was criticized for its bias.",
+      "exampleTr": "Çalışma önyargısı nedeniyle eleştirildi.",
+      "pos": "noun",
+      "cefr": "B2"
+    },
+    {
+      "term": "capacity",
+      "meaning": "kapasite",
+      "example": "The stadium has a capacity of 50,000.",
+      "exampleTr": "Stadyumun kapasitesi 50.000.",
+      "pos": "noun",
+      "cefr": "B1"
+    },
+    {
+      "term": "cease",
+      "meaning": "son vermek",
+      "example": "The factory ceased production last year.",
+      "exampleTr": "Fabrika geçen yıl üretime son verdi.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "coherent",
+      "meaning": "tutarlı",
+      "example": "She gave a coherent explanation.",
+      "exampleTr": "Tutarlı bir açıklama yaptı.",
+      "pos": "adjective",
+      "cefr": "C1"
+    },
+    {
+      "term": "coincide",
+      "meaning": "çakışmak",
+      "example": "The festival coincides with the holiday.",
+      "exampleTr": "Festival tatille çakışıyor.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "collapse",
+      "meaning": "çökmek",
+      "example": "The old bridge collapsed during the flood.",
+      "exampleTr": "Eski köprü sel sırasında çöktü.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "commence",
+      "meaning": "başlamak",
+      "example": "The ceremony will commence at noon.",
+      "exampleTr": "Tören öğlen başlayacak.",
+      "pos": "verb",
+      "cefr": "C1"
+    },
+    {
+      "term": "compensate",
+      "meaning": "telafi etmek",
+      "example": "The company compensated customers for the delay.",
+      "exampleTr": "Şirket gecikme için müşterileri telafi etti.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "competent",
+      "meaning": "yetkin",
+      "example": "She is a competent engineer.",
+      "exampleTr": "O yetkin bir mühendis.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "comprehensive",
+      "meaning": "kapsamlı",
+      "example": "The report offers a comprehensive analysis.",
+      "exampleTr": "Rapor kapsamlı bir analiz sunuyor.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "comprise",
+      "meaning": "oluşmak, oluşturmak",
+      "example": "The course comprises ten modules.",
+      "exampleTr": "Kurs on modülden oluşuyor.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "conceal",
+      "meaning": "gizlemek",
+      "example": "He tried to conceal his disappointment.",
+      "exampleTr": "Hayal kırıklığını gizlemeye çalıştı.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "concentrate",
+      "meaning": "yoğunlaşmak",
+      "example": "It is hard to concentrate in a noisy room.",
+      "exampleTr": "Gürültülü bir odada yoğunlaşmak zor.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "conclude",
+      "meaning": "sonuca varmak, sonuçlandırmak",
+      "example": "The researchers concluded that the method works.",
+      "exampleTr": "Araştırmacılar yöntemin işe yaradığı sonucuna vardı.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "conduct",
+      "meaning": "yürütmek",
+      "example": "They conducted a survey among students.",
+      "exampleTr": "Öğrenciler arasında bir anket yürüttüler.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "confirm",
+      "meaning": "doğrulamak",
+      "example": "Please confirm your reservation by email.",
+      "exampleTr": "Lütfen rezervasyonunuzu e-postayla doğrulayın.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "conflict",
+      "meaning": "çatışma, çelişki",
+      "example": "The two reports are in conflict.",
+      "exampleTr": "İki rapor çelişiyor.",
+      "pos": "noun",
+      "cefr": "B1"
+    },
+    {
+      "term": "consequence",
+      "meaning": "sonuç",
+      "example": "Climate change has serious consequences.",
+      "exampleTr": "İklim değişikliğinin ciddi sonuçları var.",
+      "pos": "noun",
+      "cefr": "B1"
+    },
+    {
+      "term": "considerable",
+      "meaning": "önemli, hatırı sayılır",
+      "example": "The project required considerable effort.",
+      "exampleTr": "Proje önemli ölçüde çaba gerektirdi.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "consist",
+      "meaning": "oluşmak",
+      "example": "The committee consists of five members.",
+      "exampleTr": "Komite beş üyeden oluşuyor.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "constant",
+      "meaning": "sabit, sürekli",
+      "example": "The machine needs constant maintenance.",
+      "exampleTr": "Makine sürekli bakım gerektiriyor.",
+      "pos": "adjective",
+      "cefr": "B1"
+    },
+    {
+      "term": "constitute",
+      "meaning": "oluşturmak",
+      "example": "Women constitute half of the workforce.",
+      "exampleTr": "Kadınlar iş gücünün yarısını oluşturuyor.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "constrain",
+      "meaning": "kısıtlamak",
+      "example": "Limited time constrained the discussion.",
+      "exampleTr": "Sınırlı zaman tartışmayı kısıtladı.",
+      "pos": "verb",
+      "cefr": "C1"
+    },
+    {
+      "term": "consume",
+      "meaning": "tüketmek",
+      "example": "Modern homes consume less energy.",
+      "exampleTr": "Modern evler daha az enerji tüketir.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "contemporary",
+      "meaning": "çağdaş",
+      "example": "The gallery shows contemporary art.",
+      "exampleTr": "Galeri çağdaş sanat sergiliyor.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "contradict",
+      "meaning": "çelişmek",
+      "example": "The new data contradict the earlier findings.",
+      "exampleTr": "Yeni veriler önceki bulgularla çelişiyor.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "controversial",
+      "meaning": "tartışmalı",
+      "example": "The plan remains highly controversial.",
+      "exampleTr": "Plan son derece tartışmalı olmaya devam ediyor.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "crucial",
+      "meaning": "hayati, çok önemli",
+      "example": "Sleep is crucial for good health.",
+      "exampleTr": "Uyku iyi sağlık için hayati önem taşır.",
+      "pos": "adjective",
+      "cefr": "B1"
+    },
+    {
+      "term": "cumulative",
+      "meaning": "birikimli",
+      "example": "The cumulative effect was significant.",
+      "exampleTr": "Birikimli etki önemliydi.",
+      "pos": "adjective",
+      "cefr": "C1"
+    },
+    {
+      "term": "decline",
+      "meaning": "azalmak, reddetmek",
+      "example": "Sales declined sharply last quarter.",
+      "exampleTr": "Satışlar geçen çeyrekte keskin biçimde azaldı.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "deduce",
+      "meaning": "çıkarım yapmak",
+      "example": "From the evidence we can deduce the cause.",
+      "exampleTr": "Kanıtlardan nedeni çıkarabiliriz.",
+      "pos": "verb",
+      "cefr": "C1"
+    },
+    {
+      "term": "define",
+      "meaning": "tanımlamak",
+      "example": "The law defines the rights of employees.",
+      "exampleTr": "Yasa çalışanların haklarını tanımlar.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "demonstrate",
+      "meaning": "göstermek",
+      "example": "The experiment demonstrates the principle.",
+      "exampleTr": "Deney ilkeyi gösteriyor.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "denote",
+      "meaning": "ifade etmek, göstermek",
+      "example": "The symbol denotes a warning.",
+      "exampleTr": "Sembol bir uyarıyı ifade eder.",
+      "pos": "verb",
+      "cefr": "C1"
+    },
+    {
+      "term": "derive",
+      "meaning": "türetmek, elde etmek",
+      "example": "The word derives from Latin.",
+      "exampleTr": "Kelime Latince'den türetilmiştir.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "deteriorate",
+      "meaning": "kötüleşmek",
+      "example": "His health deteriorated rapidly.",
+      "exampleTr": "Sağlığı hızla kötüleşti.",
+      "pos": "verb",
+      "cefr": "C1"
+    },
+    {
+      "term": "determine",
+      "meaning": "belirlemek",
+      "example": "Tests determine the cause of the illness.",
+      "exampleTr": "Testler hastalığın nedenini belirler.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "diminish",
+      "meaning": "azalmak",
+      "example": "The noise gradually diminished.",
+      "exampleTr": "Gürültü yavaş yavaş azaldı.",
+      "pos": "verb",
+      "cefr": "C1"
+    },
+    {
+      "term": "discrete",
+      "meaning": "ayrı, kesikli",
+      "example": "The data are divided into discrete categories.",
+      "exampleTr": "Veriler ayrı kategorilere ayrılmıştır.",
+      "pos": "adjective",
+      "cefr": "C1"
+    },
+    {
+      "term": "distort",
+      "meaning": "çarpıtmak",
+      "example": "The media can distort the facts.",
+      "exampleTr": "Medya gerçekleri çarpıtabilir.",
+      "pos": "verb",
+      "cefr": "C1"
+    },
+    {
+      "term": "distribute",
+      "meaning": "dağıtmak",
+      "example": "Volunteers distributed food to families.",
+      "exampleTr": "Gönüllüler ailelere yiyecek dağıttı.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "diverse",
+      "meaning": "çeşitli",
+      "example": "The city has a diverse population.",
+      "exampleTr": "Şehrin çeşitli bir nüfusu var.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "dominate",
+      "meaning": "hükmetmek, egemen olmak",
+      "example": "One company dominates the market.",
+      "exampleTr": "Bir şirket pazara hükmediyor.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "eliminate",
+      "meaning": "ortadan kaldırmak",
+      "example": "We must eliminate waste in the process.",
+      "exampleTr": "Süreçteki israfı ortadan kaldırmalıyız.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "emerge",
+      "meaning": "ortaya çıkmak",
+      "example": "New evidence emerged during the trial.",
+      "exampleTr": "Duruşma sırasında yeni kanıtlar ortaya çıktı.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "emphasize",
+      "meaning": "vurgulamak",
+      "example": "The teacher emphasized the importance of practice.",
+      "exampleTr": "Öğretmen pratiğin önemini vurguladı.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "empirical",
+      "meaning": "deneysel, gözleme dayalı",
+      "example": "The theory lacks empirical support.",
+      "exampleTr": "Teori deneysel desteğe sahip değil.",
+      "pos": "adjective",
+      "cefr": "C1"
+    },
+    {
+      "term": "enhance",
+      "meaning": "geliştirmek",
+      "example": "Training can enhance performance.",
+      "exampleTr": "Eğitim performansı geliştirebilir.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "ensure",
+      "meaning": "sağlamak, emin olmak",
+      "example": "Please ensure the door is locked.",
+      "exampleTr": "Lütfen kapının kilitli olduğundan emin ol.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "equivalent",
+      "meaning": "eşdeğer",
+      "example": "One mile is equivalent to 1.6 kilometres.",
+      "exampleTr": "Bir mil 1,6 kilometreye eşdeğerdir.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "establish",
+      "meaning": "kurmak",
+      "example": "They established a new research centre.",
+      "exampleTr": "Yeni bir araştırma merkezi kurdular.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "evaluate",
+      "meaning": "değerlendirmek",
+      "example": "We need to evaluate the results carefully.",
+      "exampleTr": "Sonuçları dikkatle değerlendirmemiz gerekiyor.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "evolve",
+      "meaning": "evrimleşmek, gelişmek",
+      "example": "Languages evolve over time.",
+      "exampleTr": "Diller zamanla evrimleşir.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "exclude",
+      "meaning": "hariç tutmak, dışlamak",
+      "example": "The price excludes taxes.",
+      "exampleTr": "Fiyat vergileri içermiyor.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "expand",
+      "meaning": "genişlemek",
+      "example": "The company plans to expand overseas.",
+      "exampleTr": "Şirket yurt dışına genişlemeyi planlıyor.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "explicit",
+      "meaning": "açık, net",
+      "example": "The instructions were clear and explicit.",
+      "exampleTr": "Talimatlar açık ve netti.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "exploit",
+      "meaning": "sömürmek, yararlanmak",
+      "example": "Some companies exploit cheap labour.",
+      "exampleTr": "Bazı şirketler ucuz emeği sömürüyor.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "facilitate",
+      "meaning": "kolaylaştırmak",
+      "example": "Good tools facilitate learning.",
+      "exampleTr": "İyi araçlar öğrenmeyi kolaylaştırır.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "fluctuate",
+      "meaning": "dalgalanmak",
+      "example": "Oil prices fluctuate constantly.",
+      "exampleTr": "Petrol fiyatları sürekli dalgalanır.",
+      "pos": "verb",
+      "cefr": "C1"
+    },
+    {
+      "term": "framework",
+      "meaning": "çerçeve",
+      "example": "The study provides a theoretical framework.",
+      "exampleTr": "Çalışma teorik bir çerçeve sunuyor.",
+      "pos": "noun",
+      "cefr": "B2"
+    },
+    {
+      "term": "fundamental",
+      "meaning": "temel",
+      "example": "Trust is fundamental to any relationship.",
+      "exampleTr": "Güven her ilişkinin temelidir.",
+      "pos": "adjective",
+      "cefr": "B1"
+    },
+    {
+      "term": "hypothesis",
+      "meaning": "hipotez",
+      "example": "The hypothesis was tested in the lab.",
+      "exampleTr": "Hipotez laboratuvarda test edildi.",
+      "pos": "noun",
+      "cefr": "B2"
+    },
+    {
+      "term": "implement",
+      "meaning": "uygulamak",
+      "example": "The school implemented a new policy.",
+      "exampleTr": "Okul yeni bir politika uyguladı.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "imply",
+      "meaning": "ima etmek",
+      "example": "Silence does not always imply agreement.",
+      "exampleTr": "Sessizlik her zaman anlaşma anlamına gelmez.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "impose",
+      "meaning": "empoze etmek, dayatmak",
+      "example": "The government imposed new taxes.",
+      "exampleTr": "Hükümet yeni vergiler koydu.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "incentive",
+      "meaning": "teşvik",
+      "example": "Bonuses provide an incentive to work harder.",
+      "exampleTr": "Primler daha çok çalışmak için teşvik sağlar.",
+      "pos": "noun",
+      "cefr": "B2"
+    },
+    {
+      "term": "indicate",
+      "meaning": "belirtmek, işaret etmek",
+      "example": "The results indicate a clear trend.",
+      "exampleTr": "Sonuçlar net bir eğilime işaret ediyor.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "inevitable",
+      "meaning": "kaçınılmaz",
+      "example": "Change is inevitable in every organisation.",
+      "exampleTr": "Değişim her kuruluşta kaçınılmazdır.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "infer",
+      "meaning": "sonuç çıkarmak",
+      "example": "We can infer his mood from his voice.",
+      "exampleTr": "Sesinden ruh halini çıkarabiliriz.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "inhibit",
+      "meaning": "engellemek",
+      "example": "Fear can inhibit learning.",
+      "exampleTr": "Korku öğrenmeyi engelleyebilir.",
+      "pos": "verb",
+      "cefr": "C1"
+    },
+    {
+      "term": "innovative",
+      "meaning": "yenilikçi",
+      "example": "The company is known for innovative products.",
+      "exampleTr": "Şirket yenilikçi ürünleriyle tanınıyor.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "integrate",
+      "meaning": "entegre etmek, bütünleştirmek",
+      "example": "The app integrates with the calendar.",
+      "exampleTr": "Uygulama takvimle entegre olur.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "interpret",
+      "meaning": "yorumlamak",
+      "example": "How do you interpret these results?",
+      "exampleTr": "Bu sonuçları nasıl yorumluyorsun?",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "intrinsic",
+      "meaning": "içsel",
+      "example": "Curiosity is an intrinsic motivation.",
+      "exampleTr": "Merak içsel bir motivasyondur.",
+      "pos": "adjective",
+      "cefr": "C1"
+    },
+    {
+      "term": "justify",
+      "meaning": "haklı çıkarmak",
+      "example": "Nothing can justify such violence.",
+      "exampleTr": "Hiçbir şey böyle bir şiddeti haklı çıkaramaz.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "legitimate",
+      "meaning": "meşru",
+      "example": "She has a legitimate reason to complain.",
+      "exampleTr": "Şikâyet etmek için meşru bir nedeni var.",
+      "pos": "adjective",
+      "cefr": "C1"
+    },
+    {
+      "term": "manipulate",
+      "meaning": "manipüle etmek",
+      "example": "Advertisers manipulate consumer emotions.",
+      "exampleTr": "Reklamcılar tüketici duygularını manipüle eder.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "mitigate",
+      "meaning": "hafifletmek",
+      "example": "Trees help mitigate air pollution.",
+      "exampleTr": "Ağaçlar hava kirliliğini hafifletmeye yardımcı olur.",
+      "pos": "verb",
+      "cefr": "C1"
+    },
+    {
+      "term": "modify",
+      "meaning": "değiştirmek",
+      "example": "We modified the design after feedback.",
+      "exampleTr": "Geri bildirimden sonra tasarımı değiştirdik.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "mutual",
+      "meaning": "karşılıklı",
+      "example": "The agreement was based on mutual trust.",
+      "exampleTr": "Anlaşma karşılıklı güvene dayanıyordu.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "negotiate",
+      "meaning": "müzakere etmek",
+      "example": "They negotiated a better price.",
+      "exampleTr": "Daha iyi bir fiyat için müzakere ettiler.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "notion",
+      "meaning": "kavram, fikir",
+      "example": "The notion of privacy has changed.",
+      "exampleTr": "Mahremiyet kavramı değişti.",
+      "pos": "noun",
+      "cefr": "B2"
+    },
+    {
+      "term": "objective",
+      "meaning": "amaç, hedef",
+      "example": "The main objective is to reduce costs.",
+      "exampleTr": "Ana amaç maliyetleri düşürmek.",
+      "pos": "noun",
+      "cefr": "B1"
+    },
+    {
+      "term": "obstacle",
+      "meaning": "engel",
+      "example": "Lack of money is a major obstacle.",
+      "exampleTr": "Para eksikliği büyük bir engel.",
+      "pos": "noun",
+      "cefr": "B2"
+    },
+    {
+      "term": "occupy",
+      "meaning": "işgal etmek, kaplamak",
+      "example": "The books occupy two shelves.",
+      "exampleTr": "Kitaplar iki rafı kaplıyor.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "offset",
+      "meaning": "dengelemek",
+      "example": "Savings offset the higher fuel costs.",
+      "exampleTr": "Tasarruflar daha yüksek yakıt maliyetlerini dengeledi.",
+      "pos": "verb",
+      "cefr": "C1"
+    },
+    {
+      "term": "perceive",
+      "meaning": "algılamak",
+      "example": "People perceive risk differently.",
+      "exampleTr": "İnsanlar riski farklı algılar.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "persist",
+      "meaning": "ısrar etmek, sürmek",
+      "example": "The problem persists despite repairs.",
+      "exampleTr": "Sorun onarımlara rağmen sürüyor.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "phenomenon",
+      "meaning": "olgu",
+      "example": "Migration is a global phenomenon.",
+      "exampleTr": "Göç küresel bir olgudur.",
+      "pos": "noun",
+      "cefr": "B2"
+    },
+    {
+      "term": "potential",
+      "meaning": "potansiyel",
+      "example": "The idea has great potential.",
+      "exampleTr": "Fikrin büyük potansiyeli var.",
+      "pos": "noun",
+      "cefr": "B1"
+    },
+    {
+      "term": "precise",
+      "meaning": "kesin",
+      "example": "We need precise measurements.",
+      "exampleTr": "Kesin ölçümlere ihtiyacımız var.",
+      "pos": "adjective",
+      "cefr": "B1"
+    },
+    {
+      "term": "predict",
+      "meaning": "tahmin etmek",
+      "example": "Experts predict a mild winter.",
+      "exampleTr": "Uzmanlar ılıman bir kış tahmin ediyor.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "preliminary",
+      "meaning": "ön, başlangıç niteliğinde",
+      "example": "Preliminary results look promising.",
+      "exampleTr": "Ön sonuçlar umut verici görünüyor.",
+      "pos": "adjective",
+      "cefr": "C1"
+    },
+    {
+      "term": "preserve",
+      "meaning": "korumak",
+      "example": "The museum preserves local history.",
+      "exampleTr": "Müze yerel tarihi koruyor.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "prohibit",
+      "meaning": "yasaklamak",
+      "example": "The rules prohibit smoking indoors.",
+      "exampleTr": "Kurallar kapalı alanda sigara içmeyi yasaklıyor.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "pursue",
+      "meaning": "peşinden gitmek, sürdürmek",
+      "example": "She decided to pursue a career in law.",
+      "exampleTr": "Hukuk kariyerinin peşinden gitmeye karar verdi.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "radical",
+      "meaning": "radikal, köklü",
+      "example": "The plan requires radical changes.",
+      "exampleTr": "Plan köklü değişiklikler gerektiriyor.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "reinforce",
+      "meaning": "pekiştirmek",
+      "example": "Repetition reinforces memory.",
+      "exampleTr": "Tekrar hafızayı güçlendirir.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "relevant",
+      "meaning": "ilgili, alakalı",
+      "example": "Please include only relevant information.",
+      "exampleTr": "Lütfen yalnızca ilgili bilgileri ekle.",
+      "pos": "adjective",
+      "cefr": "B1"
+    },
+    {
+      "term": "reluctant",
+      "meaning": "isteksiz",
+      "example": "He was reluctant to admit his mistake.",
+      "exampleTr": "Hatasını kabul etmeye isteksizdi.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "retain",
+      "meaning": "korumak, tutmak",
+      "example": "The soil retains water well.",
+      "exampleTr": "Toprak suyu iyi tutar.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "reveal",
+      "meaning": "ortaya çıkarmak",
+      "example": "The survey revealed a surprising result.",
+      "exampleTr": "Anket şaşırtıcı bir sonucu ortaya çıkardı.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "rigid",
+      "meaning": "katı, esnek olmayan",
+      "example": "The rules are too rigid.",
+      "exampleTr": "Kurallar çok katı.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "significant",
+      "meaning": "önemli",
+      "example": "There was a significant increase in sales.",
+      "exampleTr": "Satışlarda önemli bir artış oldu.",
+      "pos": "adjective",
+      "cefr": "B1"
+    },
+    {
+      "term": "simultaneous",
+      "meaning": "eşzamanlı",
+      "example": "The two events were simultaneous.",
+      "exampleTr": "İki olay eşzamanlıydı.",
+      "pos": "adjective",
+      "cefr": "C1"
+    },
+    {
+      "term": "sophisticated",
+      "meaning": "karmaşık, gelişmiş",
+      "example": "They use sophisticated software.",
+      "exampleTr": "Gelişmiş yazılım kullanıyorlar.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "stable",
+      "meaning": "istikrarlı",
+      "example": "The patient is now in a stable condition.",
+      "exampleTr": "Hasta şu anda istikrarlı bir durumda.",
+      "pos": "adjective",
+      "cefr": "B1"
+    },
+    {
+      "term": "subsequent",
+      "meaning": "sonraki",
+      "example": "Subsequent studies confirmed the finding.",
+      "exampleTr": "Sonraki çalışmalar bulguyu doğruladı.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "substantial",
+      "meaning": "önemli, büyük",
+      "example": "The project received substantial funding.",
+      "exampleTr": "Proje önemli miktarda fon aldı.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "sufficient",
+      "meaning": "yeterli",
+      "example": "We have sufficient time to finish.",
+      "exampleTr": "Bitirmek için yeterli zamanımız var.",
+      "pos": "adjective",
+      "cefr": "B1"
+    },
+    {
+      "term": "sustain",
+      "meaning": "sürdürmek",
+      "example": "The economy cannot sustain such growth.",
+      "exampleTr": "Ekonomi böyle bir büyümeyi sürdüremez.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "transform",
+      "meaning": "dönüştürmek",
+      "example": "Technology has transformed education.",
+      "exampleTr": "Teknoloji eğitimi dönüştürdü.",
+      "pos": "verb",
+      "cefr": "B1"
+    },
+    {
+      "term": "transparent",
+      "meaning": "şeffaf",
+      "example": "The process should be transparent.",
+      "exampleTr": "Süreç şeffaf olmalı.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "undermine",
+      "meaning": "zayıflatmak",
+      "example": "Constant criticism can undermine confidence.",
+      "exampleTr": "Sürekli eleştiri güveni zayıflatabilir.",
+      "pos": "verb",
+      "cefr": "C1"
+    },
+    {
+      "term": "undergo",
+      "meaning": "geçirmek",
+      "example": "The building will undergo renovation.",
+      "exampleTr": "Bina yenileme geçirecek.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "uniform",
+      "meaning": "tek tip",
+      "example": "The school requires a uniform dress code.",
+      "exampleTr": "Okul tek tip bir kıyafet kuralı gerektiriyor.",
+      "pos": "adjective",
+      "cefr": "B2"
+    },
+    {
+      "term": "valid",
+      "meaning": "geçerli",
+      "example": "Your ticket is valid for one month.",
+      "exampleTr": "Biletiniz bir ay geçerlidir.",
+      "pos": "adjective",
+      "cefr": "B1"
+    },
+    {
+      "term": "verify",
+      "meaning": "doğrulamak",
+      "example": "We need to verify the source of the data.",
+      "exampleTr": "Verinin kaynağını doğrulamamız gerekiyor.",
+      "pos": "verb",
+      "cefr": "B2"
+    },
+    {
+      "term": "vulnerable",
+      "meaning": "savunmasız, kırılgan",
+      "example": "Older people are more vulnerable to heat.",
+      "exampleTr": "Yaşlılar sıcağa karşı daha savunmasızdır.",
+      "pos": "adjective",
+      "cefr": "B2"
+    }
+  ]
+}

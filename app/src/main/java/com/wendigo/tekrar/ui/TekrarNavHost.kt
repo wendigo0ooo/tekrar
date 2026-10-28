@@ -1,5 +1,6 @@
 package com.wendigo.tekrar.ui
 
+import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -22,12 +23,14 @@ import com.wendigo.tekrar.AppContainer
 import com.wendigo.tekrar.R
 import com.wendigo.tekrar.ui.add.AddWordScreen
 import com.wendigo.tekrar.ui.components.BottomBar
+import com.wendigo.tekrar.ui.decks.DecksScreen
 import com.wendigo.tekrar.ui.contracts.LibraryFilter
 import com.wendigo.tekrar.ui.contracts.LibrarySort
 import com.wendigo.tekrar.ui.contracts.StudyFormat
 import com.wendigo.tekrar.ui.contracts.StudyMode
 import com.wendigo.tekrar.ui.leech.LeechesScreen
 import com.wendigo.tekrar.ui.library.LibraryScreen
+import com.wendigo.tekrar.ui.placement.PlacementScreen
 import com.wendigo.tekrar.ui.settings.SettingsScreen
 import com.wendigo.tekrar.ui.stats.StatsScreen
 import com.wendigo.tekrar.ui.study.StudyScreen
@@ -69,6 +72,53 @@ fun TekrarNavHost(container: AppContainer) {
                     },
                     onAddWord = { navController.navigate(ROUTE_WORD_NEW) },
                     onLibrary = { navController.navigateTab(ROUTE_LIBRARY) },
+                    onDecks = { navController.navigate(ROUTE_DECKS) },
+                    onPlacement = { navController.navigate(ROUTE_PLACEMENT) },
+                )
+            }
+
+            composable(ROUTE_DECKS) {
+                val vm: DecksViewModel = viewModel(
+                    factory = viewModelFactory {
+                        DecksViewModel(container.repository, container.appContext)
+                    },
+                )
+                val state by vm.state.collectAsStateWithLifecycle()
+                val message by vm.message.collectAsStateWithLifecycle()
+                DecksScreen(
+                    state = state,
+                    message = message,
+                    onClearMessage = vm::clearMessage,
+                    onInstall = vm::install,
+                    onStudy = { deck ->
+                        navController.navigate(
+                            "$ROUTE_STUDY_DECK/${Uri.encode(deck)}/${StudyFormat.FLASHCARD.name}"
+                        )
+                    },
+                    onStudyLibrary = {
+                        navController.navigate(
+                            "$ROUTE_STUDY/${StudyMode.MIXED.name}/${StudyFormat.FLASHCARD.name}"
+                        )
+                    },
+                    onPlacement = { navController.navigate(ROUTE_PLACEMENT) },
+                    onBack = { navController.popBackStack() },
+                )
+            }
+
+            composable(ROUTE_PLACEMENT) {
+                val vm: PlacementViewModel = viewModel(
+                    factory = viewModelFactory {
+                        PlacementViewModel(container.repository)
+                    },
+                )
+                val state by vm.state.collectAsStateWithLifecycle()
+                PlacementScreen(
+                    state = state,
+                    onAnswer = vm::answer,
+                    onNext = vm::next,
+                    onApply = vm::apply,
+                    onRetry = vm::load,
+                    onBack = { navController.popBackStack() },
                 )
             }
 
@@ -184,6 +234,43 @@ fun TekrarNavHost(container: AppContainer) {
                 )
             }
 
+            composable("$ROUTE_STUDY_DECK/{deck}/{format}") { entry ->
+                val deck = Uri.decode(entry.arguments?.getString("deck").orEmpty())
+                val format = runCatching {
+                    StudyFormat.valueOf(
+                        entry.arguments?.getString("format") ?: StudyFormat.FLASHCARD.name
+                    )
+                }.getOrDefault(StudyFormat.FLASHCARD)
+                val vm: StudyViewModel = viewModel(
+                    factory = viewModelFactory {
+                        StudyViewModel(
+                            repository = container.repository,
+                            mode = StudyMode.MIXED,
+                            format = format,
+                            deck = deck,
+                        )
+                    },
+                )
+                val state by vm.state.collectAsStateWithLifecycle()
+                val settings by container.settings.settings.collectAsStateWithLifecycle(
+                    initialValue = com.wendigo.tekrar.repo.AppSettings(),
+                )
+                StudyScreen(
+                    state = state,
+                    autoSpeak = settings.autoSpeak,
+                    speechRate = settings.speechRate,
+                    onReveal = vm::reveal,
+                    onRate = vm::rate,
+                    onChoose = vm::choose,
+                    onSubmitTyping = vm::submitTyping,
+                    onContinue = vm::continueAfterAnswer,
+                    onUndo = vm::undo,
+                    onReload = vm::load,
+                    onExit = { navController.popBackStack() },
+                    onLibrary = { navController.navigateTab(ROUTE_LIBRARY) },
+                )
+            }
+
             composable(ROUTE_WORD_NEW) {
                 val vm: WordEditorViewModel = viewModel(
                     factory = viewModelFactory { WordEditorViewModel(container.repository, null) },
@@ -273,6 +360,9 @@ private const val ROUTE_LIBRARY = "library"
 private const val ROUTE_STATS = "stats"
 private const val ROUTE_SETTINGS = "settings"
 private const val ROUTE_STUDY = "study"
+private const val ROUTE_STUDY_DECK = "study-deck"
+private const val ROUTE_DECKS = "decks"
+private const val ROUTE_PLACEMENT = "placement"
 private const val ROUTE_LEECHES = "leeches"
 private const val ROUTE_WORD_NEW = "word/new"
 private const val ROUTE_WORD_EDIT = "word/edit"

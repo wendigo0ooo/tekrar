@@ -18,4 +18,14 @@ class SeedWordsTest {
         assertEquals("Her kelime için exampleTr olmalı", terms, translations)
         assertTrue("Seed listesi boş olmamalı", terms > 0)
     }
+
+    @Test
+    fun everySeedWordHasStartDeckAndValidCefr() {
+        val text = seedFile.readText()
+        val terms = Regex("\"term\"\\s*:\\s*\"").findAll(text).count()
+        val decks = Regex("\"deck\"\\s*:\\s*\"Başlangıç\"").findAll(text).count()
+        val levels = Regex("\"cefr\"\\s*:\\s*\"(A1|A2|B1|B2|C1)\"").findAll(text).count()
+        assertEquals("Her seed kelimesi Başlangıç destesinde olmalı", terms, decks)
+        assertEquals("Her seed kelimesinin geçerli CEFR değeri olmalı", terms, levels)
+    }
 }
