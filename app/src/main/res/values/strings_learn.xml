@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Öğren ana ekranı -->
+    <string name="learn_title">Öğren</string>
+    <string name="learn_streak_value">%1$d</string>
+    <string name="learn_streak_label">günlük seri</string>
+    <string name="learn_streak_none_hint">Bugün başla</string>
+    <string name="learn_goal_title">Günlük hedef</string>
+    <string name="learn_goal_progress">%1$d / %2$d tekrar</string>
+    <string name="learn_goal_remaining">%1$d tekrar kaldı</string>
+    <string name="learn_goal_done">Günlük hedef tamam</string>
+    <string name="learn_goal_no_target">%1$d tekrar</string>
+    <string name="learn_goal_no_goal_hint">Ayarlardan günlük hedef belirleyebilirsin.</string>
+    <string name="learn_goal_caption">hedef</string>
+    <string name="learn_level_fallback">Dil okulu</string>
+
+    <string name="learn_next_label">SIRADAKİ DERS</string>
+    <string name="learn_next_continue">Devam et</string>
+    <string name="learn_next_start">Derse başla</string>
+    <string name="learn_next_lesson_meta">%1$s · %2$d dk</string>
+    <string name="learn_next_lesson_number">Ders %1$d / %2$d</string>
+    <string name="learn_next_all_done">Tüm dersler tamam</string>
+    <string name="learn_next_all_done_hint">Pratik kartından kelimeleri canlı tut.</string>
+
+    <string name="learn_units_title">Ünite yolu</string>
+    <string name="learn_unit_lessons">%1$d / %2$d ders</string>
+    <string name="learn_unit_locked_hint">Önceki üniteyi tamamla.</string>
+    <string name="learn_unit_complete">Ünite tamam</string>
+
+    <string name="learn_status_locked">Kilitli</string>
+    <string name="learn_status_available">Açık</string>
+    <string name="learn_status_in_progress">Devam</string>
+    <string name="learn_status_completed">Tamam</string>
+    <string name="learn_status_mastered">Ustalaşıldı</string>
+
+    <string name="learn_lesson_est">%1$d dk</string>
+    <string name="learn_roleplay_title">Rol yapma · %1$s</string>
+
+    <string name="learn_practice_title">Pratik</string>
+    <string name="learn_practice_due">%1$d tekrar bekliyor</string>
+    <string name="learn_practice_none">Şimdilik bekleyen tekrar yok</string>
+    <string name="learn_practice_hint">Kelimeleri kısa bir turla gözden geçir.</string>
+    <string name="learn_practice_start">Tekrara başla</string>
+
+    <string name="learn_ai_title">AI Koç</string>
+    <string name="learn_ai_soon_badge">Yakında</string>
+    <string name="learn_ai_soon_desc">Sohbet, rol yapma ve cümle düzeltme çok yakında.</string>
+    <string name="learn_ai_ready_desc">Sohbet et, rol yap, cümleni düzelt.</string>
+    <string name="learn_ai_open">AI koçu aç</string>
+    <string name="learn_ai_ready_badge">Hazır</string>
+
+    <string name="learn_loading">Dersler yükleniyor…</string>
+    <string name="learn_error_title">Dersler yüklenemedi</string>
+    <string name="learn_error_hint">İçerik cihazda; tekrar denemek yeterli.</string>
+    <string name="learn_retry">Tekrar dene</string>
+    <string name="learn_empty_title">Henüz ders yok</string>
+    <string name="learn_empty_hint">Kurs içeriği eklenince burada görünecek.</string>
+
+    <!-- Ders ekranı -->
+    <string name="learn_lesson_close">Kapat</string>
+    <string name="learn_lesson_loading">Ders yükleniyor…</string>
+    <string name="learn_lesson_load_error">Ders yüklenemedi.</string>
+    <string name="learn_lesson_load_error_hint">İçerik cihazda; tekrar denemek yeterli.</string>
+    <string name="learn_lesson_teach">Öğren</string>
+    <string name="learn_lesson_teach_badge">ÖĞREN</string>
+    <string name="learn_lesson_progress">%1$d / %2$d</string>
+    <string name="learn_lesson_continue">Devam</string>
+    <string name="learn_lesson_check">Kontrol et</string>
+    <string name="learn_lesson_saving">Ders kaydediliyor…</string>
+    <string name="learn_lesson_submit_error">Cevap değerlendirilemedi. Tekrar dene.</string>
+    <string name="learn_lesson_tip">İpucu: %1$s</string>
+
+    <string name="learn_lesson_type_choice">SEÇMELİ</string>
+    <string name="learn_lesson_type_listen">DİNLEME</string>
+    <string name="learn_lesson_type_dialogue">DİYALOG</string>
+    <string name="learn_lesson_type_match">EŞLEŞTİRME</string>
+    <string name="learn_lesson_type_order">KELİME SIRASI</string>
+    <string name="learn_lesson_type_cloze">BOŞLUK DOLDURMA</string>
+    <string name="learn_lesson_type_translate">ÇEVİRİ</string>
+    <string name="learn_lesson_type_speak">KONUŞMA</string>
+    <string name="learn_lesson_type_write">YAZMA</string>
+
+    <string name="learn_lesson_play">Sesi çal</string>
+    <string name="learn_lesson_transcript_placeholder">Söylediğin metin burada görünecek</string>
+    <string name="learn_lesson_mic">Mikrofon</string>
+    <string name="learn_lesson_listening">Dinleniyor…</string>
+    <string name="learn_lesson_mic_permission">Mikrofon izni verilmedi. Yazarak devam edebilirsin.</string>
+    <string name="learn_lesson_mic_unavailable">Cihazda konuşma tanıma yok. Yazarak devam et.</string>
+    <string name="learn_lesson_mic_error">Ses anlaşılamadı. Tekrar dene veya yazarak devam et.</string>
+    <string name="learn_lesson_mic_network">Konuşma tanıma için internet gerekiyor. Yazarak devam edebilirsin.</string>
+    <string name="learn_lesson_mic_busy">Mikrofon meşgul. Biraz sonra tekrar dene.</string>
+    <string name="learn_lesson_mic_permission_error">Mikrofon izni gerekiyor.</string>
+
+    <string name="learn_lesson_match_hint">Önce bir ifadeye, sonra eşleştiği karşılığa dokun.</string>
+    <string name="learn_lesson_match_progress">%1$d / %2$d eşleşti</string>
+    <string name="learn_lesson_order_hint">Kelimelere sırayla dokun.</string>
+    <string name="learn_lesson_order_empty">Cümlen burada oluşacak.</string>
+    <string name="learn_lesson_order_undo">Geri al</string>
+    <string name="learn_lesson_order_translation">Çeviri: %1$s</string>
+    <string name="learn_lesson_cloze_text_hint">Eksik kelimeyi yaz</string>
+    <string name="learn_lesson_translate_hint">İpucu: %1$s</string>
+    <string name="learn_lesson_translate_placeholder">İngilizce cevabını yaz</string>
+    <string name="learn_lesson_write_min">%1$d kelime gerekli</string>
+    <string name="learn_lesson_write_count">%1$d kelime</string>
+    <string name="learn_lesson_write_keywords">Anahtar kelimeler: %1$s</string>
+    <string name="learn_lesson_write_placeholder">İngilizce cevabını yaz</string>
+    <string name="learn_lesson_speech_hint">Yazarak da cevap verebilirsin.</string>
+    <string name="learn_lesson_speak_target">Hedef cümle</string>
+
+    <string name="learn_lesson_feedback_correct">Doğru</string>
+    <string name="learn_lesson_feedback_wrong">Tekrar deneyelim</string>
+    <string name="learn_lesson_feedback_answer">Doğru cevap</string>
+    <string name="learn_lesson_feedback_target">Hedef cümle</string>
+    <string name="learn_lesson_feedback_sample">Örnek cevap</string>
+    <string name="learn_lesson_feedback_similarity">Benzerlik: %1$d%%</string>
+
+    <string name="learn_lesson_hint_choice">Bir seçenek seç.</string>
+    <string name="learn_lesson_hint_match">Tüm eşleşmeleri tamamla.</string>
+    <string name="learn_lesson_hint_order">Tüm kelimeleri kullan.</string>
+    <string name="learn_lesson_hint_text">Cevabını yaz.</string>
+    <string name="learn_lesson_hint_speak">Mikrofonu kullan veya yazarak cevapla.</string>
+
+    <string name="learn_lesson_exit_title">Dersten çıkılsın mı?</string>
+    <string name="learn_lesson_exit_text">Bu denemedeki cevaplar kaydedilmez. Daha sonra dersin başından başlayabilirsin.</string>
+    <string name="learn_lesson_exit_confirm">Çık</string>
+    <string name="learn_lesson_exit_cancel">Kal</string>
+
+    <!-- Ders sonucu -->
+    <string name="learn_result_title">Ders tamamlandı</string>
+    <string name="learn_result_accuracy_caption">doğru</string>
+    <string name="learn_result_correct">Doğru</string>
+    <string name="learn_result_words">Yeni kelime</string>
+    <string name="learn_result_added">Tekrara eklendi</string>
+    <string name="learn_result_added_desc">%1$d kelime tekrar kuyruğuna eklendi.</string>
+    <string name="learn_result_added_none">Kelimeler zaten tekrar kuyruğunda.</string>
+    <string name="learn_result_seed_error">Kelimeler tekrar kuyruğuna eklenemedi.</string>
+    <string name="learn_result_next_title">Sıradaki adım</string>
+    <string name="learn_result_next_lesson">Sıradaki ders: %1$s</string>
+    <string name="learn_result_next_unit_done">Bu ünitenin tüm dersleri tamam.</string>
+    <string name="learn_result_next_roleplay">Rol yapma senaryosu açıldı.</string>
+    <string name="learn_result_next_unknown">Öğren ekranından devam edebilirsin.</string>
+    <string name="learn_result_back">Öğren\'e dön</string>
+    <string name="learn_result_practice">Tekrar et</string>
+    <string name="learn_result_save_error">Ders kaydedilemedi. Kaydetmeyi tekrar dene.</string>
+    <string name="learn_result_retry_save">Kaydetmeyi dene</string>
+</resources>

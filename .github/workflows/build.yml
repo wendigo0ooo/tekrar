@@ -2,7 +2,7 @@ name: Build APK
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main, master, feat/dil-okulu ]
   pull_request:
     branches: [ main, master ]
   workflow_dispatch:
@@ -40,6 +40,9 @@ jobs:
             echo "No keystore secret found; release APK will be unsigned."
           fi
 
+      - name: Validate course content
+        run: python3 tools/content/validate.py
+
       - name: Test and build APKs
         env:
           RELEASE_KEYSTORE_PATH: ${{ runner.temp }}/release.jks
@@ -68,11 +71,11 @@ jobs:
         if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v2.0-build${{ github.run_number }}
+          tag_name: v3.0-build${{ github.run_number }}
           name: Tekrar (build ${{ github.run_number }})
           body: |
             Otomatik derlenen Tekrar APK'ları (debug + imzalı release).
-            Sürüm: 2.0
+            Sürüm: 3.0.0 (Dil Okulu)
             Commit: ${{ github.sha }}
           files: out/*.apk
           fail_on_unmatched_files: true

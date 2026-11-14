@@ -53,13 +53,13 @@ import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.sin
 
-enum class NavKind { TODAY, LIBRARY, STATS, SETTINGS }
+enum class NavKind { LEARN, TODAY, LIBRARY, PROFILE, STATS, SETTINGS }
 
 private val navKinds = listOf(
+    NavKind.LEARN,
     NavKind.TODAY,
     NavKind.LIBRARY,
-    NavKind.STATS,
-    NavKind.SETTINGS,
+    NavKind.PROFILE,
 )
 
 @Composable
@@ -438,6 +438,29 @@ fun NavIcon(kind: NavKind, tint: Color, modifier: Modifier = Modifier) {
         val h = size.height
         val stroke = 1.9.dp.toPx()
         when (kind) {
+            NavKind.LEARN -> {
+                drawLine(
+                    color = tint,
+                    start = Offset(w * 0.50f, h * 0.18f),
+                    end = Offset(w * 0.50f, h * 0.85f),
+                    strokeWidth = stroke,
+                    cap = StrokeCap.Round,
+                )
+                drawLine(
+                    color = tint,
+                    start = Offset(w * 0.50f, h * 0.18f),
+                    end = Offset(w * 0.20f, h * 0.50f),
+                    strokeWidth = stroke,
+                    cap = StrokeCap.Round,
+                )
+                drawLine(
+                    color = tint,
+                    start = Offset(w * 0.50f, h * 0.18f),
+                    end = Offset(w * 0.80f, h * 0.50f),
+                    strokeWidth = stroke,
+                    cap = StrokeCap.Round,
+                )
+            }
             NavKind.TODAY -> {
                 drawCircle(color = tint, radius = w * 0.17f, center = center)
                 for (index in 0 until 8) {
@@ -507,6 +530,21 @@ fun NavIcon(kind: NavKind, tint: Color, modifier: Modifier = Modifier) {
                     topLeft = Offset(w * 0.66f, h * 0.17f),
                     size = Size(barWidth, h * 0.67f),
                     cornerRadius = CornerRadius(barWidth / 2f),
+                )
+            }
+            NavKind.PROFILE -> {
+                drawCircle(
+                    color = tint,
+                    radius = w * 0.15f,
+                    center = Offset(w * 0.50f, h * 0.30f),
+                    style = Stroke(width = stroke),
+                )
+                drawRoundRect(
+                    color = tint,
+                    topLeft = Offset(w * 0.20f, h * 0.60f),
+                    size = Size(w * 0.60f, h * 0.24f),
+                    cornerRadius = CornerRadius(w * 0.12f),
+                    style = Stroke(width = stroke),
                 )
             }
             NavKind.SETTINGS -> {

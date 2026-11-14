@@ -1,0 +1,195 @@
+{
+  "schema": 1,
+  "id": "a1-u03-l01",
+  "unit": "a1-u03",
+  "cefr": "A1",
+  "title": "Günün Saatleri",
+  "objective_tr": "Günün bölümlerini ve saati sormayı/söylemeyi kullan.",
+  "est_min": 4,
+  "vocab": [
+    {
+      "term": "morning",
+      "meaning_tr": "sabah",
+      "pos": "isim",
+      "example": "I get up early in the morning.",
+      "example_tr": "Sabah erken kalkarım."
+    },
+    {
+      "term": "afternoon",
+      "meaning_tr": "öğleden sonra",
+      "pos": "isim",
+      "example": "I work in the afternoon.",
+      "example_tr": "Öğleden sonra çalışırım."
+    },
+    {
+      "term": "evening",
+      "meaning_tr": "akşam",
+      "pos": "isim",
+      "example": "We watch TV in the evening.",
+      "example_tr": "Akşam televizyon izleriz."
+    },
+    {
+      "term": "night",
+      "meaning_tr": "gece",
+      "pos": "isim",
+      "example": "I sleep at night.",
+      "example_tr": "Gece uyurum."
+    },
+    {
+      "term": "o'clock",
+      "meaning_tr": "tam saat",
+      "pos": "zarf",
+      "example": "It's seven o'clock.",
+      "example_tr": "Saat yedi.",
+      "ipa": "əˈklɒk"
+    },
+    {
+      "term": "what time",
+      "meaning_tr": "saat kaç",
+      "pos": "ifade",
+      "example": "What time is it?",
+      "example_tr": "Saat kaç?"
+    },
+    {
+      "term": "early",
+      "meaning_tr": "erken",
+      "pos": "zarf",
+      "example": "I get up early.",
+      "example_tr": "Erken kalkarım."
+    }
+  ],
+  "grammar": [
+    {
+      "title_tr": "Saat sorma ve söyleme",
+      "explanation_tr": "Saat sorarken 'What time is it?' denir. Tam saatlerde sayı ve 'o'clock' kullanılır: It's seven o'clock. Bir olayın saatini söylerken 'at' eklenir: at seven o'clock.",
+      "examples": [
+        { "en": "What time is it? It's seven o'clock.", "tr": "Saat kaç? Saat yedi." },
+        { "en": "I get up at seven o'clock.", "tr": "Yedide kalkarım." }
+      ]
+    },
+    {
+      "title_tr": "Günün bölümleri",
+      "explanation_tr": "Günün bölümleri morning, afternoon, evening ve night'tır. Gündüz bölümleriyle 'in' kullanılır: in the morning, in the evening. Gece için 'at night' denir.",
+      "examples": [
+        { "en": "I work in the afternoon.", "tr": "Öğleden sonra çalışırım." },
+        { "en": "I sleep at night.", "tr": "Gece uyurum." }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title": "Saat kaç?",
+    "lines": [
+      { "speaker": "Anna", "en": "What time is it?", "tr": "Saat kaç?" },
+      { "speaker": "Ben", "en": "It's seven o'clock.", "tr": "Saat yedi." },
+      { "speaker": "Anna", "en": "Thanks! I get up at seven in the morning.", "tr": "Teşekkürler! Sabah yedide kalkarım." },
+      { "speaker": "Ben", "en": "I get up at eight.", "tr": "Ben sekizde kalkarım." },
+      { "speaker": "Anna", "en": "Eight is early too!", "tr": "Sekiz de erken!" },
+      { "speaker": "Ben", "en": "Yes! See you in the evening!", "tr": "Evet! Akşam görüşürüz!" }
+    ]
+  },
+  "teach": [
+    {
+      "title_tr": "Günün bölümleri",
+      "body_tr": "Morning sabah, afternoon öğleden sonra, evening akşam, night gece demektir. Selamlaşırken 'Good morning' ve 'Good evening' kullanılır. Gece için 'Good night' yalnız ayrılırken söylenir.",
+      "examples": [
+        { "en": "Good morning!", "tr": "Günaydın!" },
+        { "en": "Good evening!", "tr": "İyi akşamlar!" }
+      ],
+      "tip_tr": "Sabah erken saatler için 'early' diyebilirsin: I get up early."
+    },
+    {
+      "title_tr": "Saat söyleme",
+      "body_tr": "Saat sormak için 'What time is it?' denir. Tam saatlerde sayı ve 'o'clock' kullanılır. Bir saatle birlikte 'at' kullanılır: at seven o'clock.",
+      "examples": [
+        { "en": "It's seven o'clock.", "tr": "Saat yedi." },
+        { "en": "I get up at seven o'clock.", "tr": "Yedide kalkarım." }
+      ],
+      "tip_tr": "Günlük dilde 'It's seven.' de anlaşılır."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt_tr": "'morning' ne demek?",
+      "options": ["sabah", "akşam", "gece"],
+      "answer": 0,
+      "explanation_tr": "'Morning' günün ilk bölümüdür; sabah anlamına gelir."
+    },
+    {
+      "type": "match",
+      "prompt_tr": "İngilizce kelimeleri Türkçe karşılıklarıyla eşleştir.",
+      "pairs": [
+        { "left": "morning", "right": "sabah" },
+        { "left": "afternoon", "right": "öğleden sonra" },
+        { "left": "evening", "right": "akşam" },
+        { "left": "night", "right": "gece" }
+      ]
+    },
+    {
+      "type": "listen_choice",
+      "prompt_tr": "Dinle ve ne söylendiğini seç.",
+      "audio_text": "It's seven o'clock.",
+      "options": ["Saat yedi.", "Saat dokuz.", "Saat altı."],
+      "answer": 0,
+      "explanation_tr": "'Seven' yedi demektir; 'o'clock' tam saati belirtir."
+    },
+    {
+      "type": "word_order",
+      "prompt_tr": "Kelimeleri doğru sıraya koy.",
+      "tokens": ["time", "is", "it", "What"],
+      "answer": ["What", "time", "is", "it"],
+      "translation_tr": "Saat kaç?"
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "It's seven ___.",
+      "options": ["o'clock", "time", "morning"],
+      "answer": 0,
+      "explanation_tr": "Tam saatlerde sayıdan sonra 'o'clock' gelir."
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "'What time is it?' ne demek?",
+      "options": ["Saat kaç?", "Saat kaçta?", "Hangi gün?"],
+      "answer": 0,
+      "explanation_tr": "Bu soru saatin kaç olduğunu sorar."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "I get up ___ seven.",
+      "options": ["at", "in", "by"],
+      "answer": 0,
+      "explanation_tr": "Saatten önce 'at' kullanılır: at seven."
+    },
+    {
+      "type": "dialogue_choice",
+      "prompt_tr": "Diyalogda Ben saatin kaç olduğunu söylüyor?",
+      "audio_text": "It's seven o'clock.",
+      "options": ["Saat yedi.", "Saat sekiz.", "Saat on bir."],
+      "answer": 0,
+      "explanation_tr": "'It's seven o'clock' saat yedi demektir."
+    },
+    {
+      "type": "translate",
+      "prompt_tr": "İngilizceye çevir: Saat yedi.",
+      "answers": ["It's seven o'clock.", "It is seven o'clock."],
+      "hint_tr": "'It's' ile başla ve 'o'clock' kullan."
+    },
+    {
+      "type": "speak",
+      "prompt_tr": "Cümleleri sesli söyle.",
+      "target": "What time is it? It's seven o'clock.",
+      "hint_tr": "Önce soruyu, sonra cevabı söyle."
+    },
+    {
+      "type": "write",
+      "prompt_tr": "Günün iki bölümünde ne yaptığını yaz. En az bir saat ifadesi kullan.",
+      "min_words": 6,
+      "keywords": ["morning", "evening"],
+      "sample": "In the morning, I ... In the evening, I ...",
+      "rubric_tr": "Günün iki bölümü ve en az bir saat ifadesi yeterli."
+    }
+  ]
+}

@@ -2,9 +2,13 @@ package com.wendigo.tekrar.data
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "words")
+@Entity(
+    tableName = "words",
+    indices = [Index(value = ["sourceKey"], unique = true)],
+)
 data class Word(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     val term: String,
@@ -33,6 +37,7 @@ data class Word(
     val reps: Int = 0,
     val lapses: Int = 0,
     val suspended: Boolean = false,
+    val sourceKey: String? = null,
 ) {
     val isNew: Boolean get() = state == STATE_NEW
     val isLeech: Boolean get() = lapses >= LEECH_LAPSES

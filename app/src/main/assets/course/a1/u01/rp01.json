@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "id": "a1-u01-rp01",
+  "unit": "a1-u01",
+  "cefr": "A1",
+  "title": "İlk tanışma",
+  "setting_tr": "Bir arkadaşının partisinde yeni biriyle tanışıyorsun. Müzik ve sohbet var.",
+  "role_en": "Sam, a friendly guest at a party who is meeting you for the first time.",
+  "goal_tr": "Selamlaş, adını söyle, karşındakinin adını ve nasıl olduğunu sor; sonunda kibarca vedalaş.",
+  "opening_en": "Hi, I'm Sam! How are you?",
+  "target_phrases": [
+    "Hi",
+    "My name is ...",
+    "How are you?",
+    "I'm fine, thanks",
+    "Nice to meet you",
+    "Goodbye"
+  ],
+  "suggested_turns": 6,
+  "success_criteria_tr": [
+    "Selamlaştın ve adını söyledin.",
+    "Karşındakinin adını sordun.",
+    "Nasıl olduğunu sordun ve cevap verdin.",
+    "Kibarca vedalaştın."
+  ]
+}

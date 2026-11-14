@@ -1,0 +1,201 @@
+{
+  "schema": 1,
+  "id": "a1-u03-l03",
+  "unit": "a1-u03",
+  "cefr": "A1",
+  "title": "İş ve Okul",
+  "objective_tr": "Çalıştığın veya okuduğun yeri ve ulaşımı anlat; 'Do you ...?' sorularını kullan.",
+  "est_min": 4,
+  "vocab": [
+    {
+      "term": "work",
+      "meaning_tr": "çalışmak",
+      "pos": "fiil",
+      "example": "I work at a school.",
+      "example_tr": "Bir okulda çalışırım."
+    },
+    {
+      "term": "study",
+      "meaning_tr": "okumak, öğrenim görmek",
+      "pos": "fiil",
+      "example": "I study at a university.",
+      "example_tr": "Bir üniversitede okuyorum."
+    },
+    {
+      "term": "school",
+      "meaning_tr": "okul",
+      "pos": "isim",
+      "example": "I go to school at eight.",
+      "example_tr": "Sekizde okula giderim."
+    },
+    {
+      "term": "shop",
+      "meaning_tr": "dükkân",
+      "pos": "isim",
+      "example": "I work at a shop.",
+      "example_tr": "Bir dükkânda çalışırım."
+    },
+    {
+      "term": "hospital",
+      "meaning_tr": "hastane",
+      "pos": "isim",
+      "example": "I work at a hospital.",
+      "example_tr": "Bir hastanede çalışırım."
+    },
+    {
+      "term": "teacher",
+      "meaning_tr": "öğretmen",
+      "pos": "isim",
+      "example": "I am a teacher.",
+      "example_tr": "Ben bir öğretmenim."
+    },
+    {
+      "term": "student",
+      "meaning_tr": "öğrenci",
+      "pos": "isim",
+      "example": "I am a student.",
+      "example_tr": "Ben bir öğrenciyim."
+    },
+    {
+      "term": "by bus",
+      "meaning_tr": "otobüsle",
+      "pos": "ifade",
+      "example": "I go to work by bus.",
+      "example_tr": "İşe otobüsle giderim."
+    }
+  ],
+  "grammar": [
+    {
+      "title_tr": "work at / study at",
+      "explanation_tr": "Çalıştığın veya okuduğun yeri söylerken 'work at' ve 'study at' kullanılır: I work at a hospital. I study at a university. Meslek söylerken 'I am a teacher' gibi 'a' kullanılır.",
+      "examples": [
+        { "en": "I work at a school.", "tr": "Bir okulda çalışırım." },
+        { "en": "I study at a university.", "tr": "Bir üniversitede okuyorum." }
+      ]
+    },
+    {
+      "title_tr": "Do you ...?",
+      "explanation_tr": "Present simple'da soru 'Do you ...?' ile başlar: Do you work at a shop? Kısa cevap 'Yes, I do.' veya 'No, I don't.' olur. Soruda fiil yalın kalır: Do you go ...?",
+      "examples": [
+        { "en": "Do you work at a school? Yes, I do.", "tr": "Bir okulda çalışır mısın? Evet." },
+        { "en": "Do you study at a university? No, I don't.", "tr": "Bir üniversitede okuyor musun? Hayır." }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title": "İş ve okul",
+    "lines": [
+      { "speaker": "Anna", "en": "Do you work at a school?", "tr": "Bir okulda çalışır mısın?" },
+      { "speaker": "Sam", "en": "Yes, I do. I am a teacher.", "tr": "Evet. Ben bir öğretmenim." },
+      { "speaker": "Anna", "en": "Do you go to work by bus?", "tr": "İşe otobüsle gider misin?" },
+      { "speaker": "Sam", "en": "No, I don't. I walk to work.", "tr": "Hayır. İşe yürürüm." },
+      { "speaker": "Anna", "en": "I study at a university. I go by bus.", "tr": "Ben üniversitede okuyorum. Otobüsle giderim." },
+      { "speaker": "Sam", "en": "Nice! See you tomorrow.", "tr": "Güzel! Yarın görüşürüz." }
+    ]
+  },
+  "teach": [
+    {
+      "title_tr": "İş ve okul konuşması",
+      "body_tr": "Nerede çalıştığını 'I work at ...' ile, nerede okuduğunu 'I study at ...' ile söylersin. Ulaşım için 'by bus' kullanılır. Meslek için 'I am a teacher' veya 'I am a student' denir.",
+      "examples": [
+        { "en": "I work at a hospital.", "tr": "Bir hastanede çalışırım." },
+        { "en": "I go to school by bus.", "tr": "Okula otobüsle giderim." }
+      ],
+      "tip_tr": "'Do you ...?' sorusuna kısa cevap 'Yes, I do.' veya 'No, I don't.' olur."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt_tr": "'by bus' ne demek?",
+      "options": ["otobüsle", "okulda", "öğretmen"],
+      "answer": 0,
+      "explanation_tr": "'By bus' ulaşım aracını belirtir: otobüsle."
+    },
+    {
+      "type": "match",
+      "prompt_tr": "İngilizce kelimeleri Türkçe karşılıklarıyla eşleştir.",
+      "pairs": [
+        { "left": "work", "right": "çalışmak" },
+        { "left": "study", "right": "okumak" },
+        { "left": "teacher", "right": "öğretmen" },
+        { "left": "student", "right": "öğrenci" },
+        { "left": "by bus", "right": "otobüsle" }
+      ]
+    },
+    {
+      "type": "listen_choice",
+      "prompt_tr": "Dinle ve ne söylendiğini seç.",
+      "audio_text": "I go to work by bus.",
+      "options": [
+        "İşe otobüsle giderim.",
+        "İşe yürüyerek giderim.",
+        "Okula otobüsle giderim."
+      ],
+      "answer": 0,
+      "explanation_tr": "'Go to work' işe gitmek, 'by bus' otobüsle demektir."
+    },
+    {
+      "type": "word_order",
+      "prompt_tr": "Kelimeleri doğru sıraya koy.",
+      "tokens": ["work", "I", "a", "at", "school"],
+      "answer": ["I", "work", "at", "a", "school"],
+      "translation_tr": "Bir okulda çalışırım."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "I go to work ___ bus.",
+      "options": ["by", "at", "in"],
+      "answer": 0,
+      "explanation_tr": "Ulaşım aracından önce 'by' kullanılır: by bus."
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "'Do you study at a school?' ne demek?",
+      "options": [
+        "Bir okulda okuyor musun?",
+        "Bir okulda çalışıyor musun?",
+        "Okula otobüsle mi gidiyorsun?"
+      ],
+      "answer": 0,
+      "explanation_tr": "'Study' okumak, 'at a school' bir okulda demektir."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "___ you work at a hospital?",
+      "options": ["Do", "Are", "Is"],
+      "answer": 0,
+      "explanation_tr": "Present simple soru 'Do' ile başlar: Do you ...?"
+    },
+    {
+      "type": "dialogue_choice",
+      "prompt_tr": "Diyalogda Sam işe nasıl gidiyor?",
+      "audio_text": "No, I don't. I walk to work.",
+      "options": ["Yürüyerek gidiyor.", "Otobüsle gidiyor.", "Araba ile gidiyor."],
+      "answer": 0,
+      "explanation_tr": "Sam 'I walk to work' diyor: işe yürüyerek gidiyor."
+    },
+    {
+      "type": "translate",
+      "prompt_tr": "İngilizceye çevir: İşe otobüsle giderim.",
+      "answers": ["I go to work by bus."],
+      "hint_tr": "'go to work' ve 'by bus' kalıplarını kullan."
+    },
+    {
+      "type": "speak",
+      "prompt_tr": "Cümleyi sesli söyle.",
+      "target": "Do you go to work by bus?",
+      "hint_tr": "Soru tonlamasını sonda yukarı çıkar."
+    },
+    {
+      "type": "write",
+      "prompt_tr": "İşin veya okulun hakkında 3 cümle yaz. Nerede çalıştığını ya da okuduğunu ve nasıl gittiğini anlat.",
+      "min_words": 8,
+      "keywords": ["work", "bus"],
+      "sample": "I work at a ... I go to work by bus. I start at nine.",
+      "rubric_tr": "Yer ve ulaşım bilgisi yeterli; kısa cümleler kullan."
+    }
+  ]
+}

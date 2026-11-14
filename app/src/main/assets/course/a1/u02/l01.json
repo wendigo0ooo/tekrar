@@ -1,0 +1,196 @@
+{
+  "schema": 1,
+  "id": "a1-u02-l01",
+  "unit": "a1-u02",
+  "cefr": "A1",
+  "title": "Adım...",
+  "objective_tr": "Adını sor ve söyle; 'my' ve 'your' iyeliklerini kullan.",
+  "est_min": 4,
+  "vocab": [
+    {
+      "term": "name",
+      "meaning_tr": "isim, ad",
+      "pos": "isim",
+      "example": "My name is Mia.",
+      "example_tr": "Benim adım Mia."
+    },
+    {
+      "term": "what's your name",
+      "meaning_tr": "adın ne",
+      "pos": "ifade",
+      "example": "Hi! What's your name?",
+      "example_tr": "Merhaba! Adın ne?"
+    },
+    {
+      "term": "my name is",
+      "meaning_tr": "benim adım",
+      "pos": "ifade",
+      "example": "My name is Leo.",
+      "example_tr": "Benim adım Leo."
+    },
+    {
+      "term": "I'm",
+      "meaning_tr": "ben (I am kısaltması)",
+      "pos": "ifade",
+      "example": "I'm Anna.",
+      "example_tr": "Ben Anna."
+    },
+    {
+      "term": "my",
+      "meaning_tr": "benim",
+      "pos": "sıfat",
+      "example": "My name is Sam.",
+      "example_tr": "Benim adım Sam."
+    },
+    {
+      "term": "your",
+      "meaning_tr": "senin",
+      "pos": "sıfat",
+      "example": "What's your name?",
+      "example_tr": "Adın ne?"
+    },
+    {
+      "term": "call me",
+      "meaning_tr": "bana ... de",
+      "pos": "ifade",
+      "example": "Call me Alex.",
+      "example_tr": "Bana Alex de."
+    },
+    {
+      "term": "nickname",
+      "meaning_tr": "takma ad",
+      "pos": "isim",
+      "example": "My nickname is Lex.",
+      "example_tr": "Takma adım Lex."
+    }
+  ],
+  "grammar": [
+    {
+      "title_tr": "What's your name? / My name is ...",
+      "explanation_tr": "Adını sorarken 'What's your name?' denir. Cevap 'My name is ...' ile verilir. Günlük dilde 'What is' yerine 'What's' kullanılır.",
+      "examples": [
+        { "en": "What's your name?", "tr": "Adın ne?" },
+        { "en": "My name is Mia.", "tr": "Benim adım Mia." }
+      ]
+    },
+    {
+      "title_tr": "my / your",
+      "explanation_tr": "'my' benim, 'your' senin demektir. İkisi de isimden önce gelir: my name, your name.",
+      "examples": [
+        { "en": "My nickname is Lex.", "tr": "Takma adım Lex." },
+        { "en": "Is your name Sam?", "tr": "Adın Sam mı?" }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title": "Partide tanışma",
+    "lines": [
+      { "speaker": "Mia", "en": "Hi! I'm Mia. What's your name?", "tr": "Merhaba! Ben Mia. Adın ne?" },
+      { "speaker": "Leo", "en": "Hello, Mia. My name is Leo.", "tr": "Merhaba Mia. Benim adım Leo." },
+      { "speaker": "Mia", "en": "Nice to meet you, Leo.", "tr": "Tanıştığıma memnun oldum, Leo." },
+      { "speaker": "Leo", "en": "Nice to meet you too. This is my friend Sam.", "tr": "Ben de tanıştığıma memnun oldum. Bu arkadaşım Sam." },
+      { "speaker": "Mia", "en": "Hi, Sam! Nice to meet you.", "tr": "Merhaba Sam! Tanıştığıma memnun oldum." },
+      { "speaker": "Sam", "en": "Nice to meet you too. My nickname is Sammy.", "tr": "Ben de tanıştığıma memnun oldum. Takma adım Sammy." }
+    ]
+  },
+  "teach": [
+    {
+      "title_tr": "Kendini tanıtma",
+      "body_tr": "Önce selamlaş, sonra adını söyle. 'My name is ...' ya da kısaca 'I'm ...' diyebilirsin. Ardından karşındakine 'What's your name?' diye sor.",
+      "examples": [
+        { "en": "Hi! I'm Mia. What's your name?", "tr": "Merhaba! Ben Mia. Adın ne?" },
+        { "en": "Hello! My name is Leo.", "tr": "Merhaba! Benim adım Leo." }
+      ],
+      "tip_tr": "Adını söylerken 'my name is' kalıbını kullanabilirsin."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt_tr": "'What's your name?' ne demek?",
+      "options": ["Adın ne?", "Nerelisin?", "Kaç yaşındasın?"],
+      "answer": 0,
+      "explanation_tr": "'What's your name?' birinin adını sormak için kullanılır."
+    },
+    {
+      "type": "match",
+      "prompt_tr": "İngilizce kelimeleri Türkçe karşılıklarıyla eşleştir.",
+      "pairs": [
+        { "left": "name", "right": "isim, ad" },
+        { "left": "my", "right": "benim" },
+        { "left": "your", "right": "senin" },
+        { "left": "nickname", "right": "takma ad" },
+        { "left": "call me", "right": "bana ... de" }
+      ]
+    },
+    {
+      "type": "listen_choice",
+      "prompt_tr": "Dinle ve ne söylendiğini seç.",
+      "audio_text": "Hi! My name is Leo.",
+      "options": [
+        "Merhaba! Benim adım Leo.",
+        "Merhaba! Adın ne?",
+        "Selam! Ben Mia."
+      ],
+      "answer": 0,
+      "explanation_tr": "'My name is Leo' benim adım Leo demektir."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "My ___ is Mia.",
+      "options": ["name", "your", "call"],
+      "answer": 0,
+      "explanation_tr": "'My name is ...' benim adım ... demektir."
+    },
+    {
+      "type": "word_order",
+      "prompt_tr": "Kelimeleri doğru sıraya koy.",
+      "tokens": ["is", "name", "My", "Leo"],
+      "answer": ["My", "name", "is", "Leo"],
+      "translation_tr": "Benim adım Leo."
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "'I'm Anna.' ne demek?",
+      "options": ["Ben Anna.", "Sen Anna'sın.", "Onun adı Anna."],
+      "answer": 0,
+      "explanation_tr": "'I'm' yani 'I am' ben demektir."
+    },
+    {
+      "type": "translate",
+      "prompt_tr": "İngilizceye çevir: Benim adım Sam.",
+      "answers": [
+        "My name is Sam.",
+        "My name's Sam."
+      ],
+      "hint_tr": "'my name is' kalıbını kullan."
+    },
+    {
+      "type": "dialogue_choice",
+      "prompt_tr": "Diyalogda Leo, Mia'ya ne söylüyor?",
+      "audio_text": "Hello, Mia. My name is Leo.",
+      "options": [
+        "Adını söylüyor.",
+        "Mia'ya nereli olduğunu soruyor.",
+        "Mia'ya yaşını soruyor."
+      ],
+      "answer": 0,
+      "explanation_tr": "'My name is Leo' cümlesiyle Leo adını söylüyor."
+    },
+    {
+      "type": "speak",
+      "prompt_tr": "Cümleyi sesli söyle.",
+      "target": "Hi, my name is Leo. What's your name?",
+      "hint_tr": "Adını söylerken net ve yavaş konuş."
+    },
+    {
+      "type": "write",
+      "prompt_tr": "Kendini 2 cümleyle tanıt: adını söyle ve karşındakinin adını sor.",
+      "min_words": 6,
+      "keywords": ["name", "your"],
+      "sample": "Hi! My name is ... What's your name?",
+      "rubric_tr": "Adını söylemen ve karşındakinin adını sorman yeterli."
+    }
+  ]
+}

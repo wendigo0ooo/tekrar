@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "id": "a1-u03-rp01",
+  "unit": "a1-u03",
+  "cefr": "A1",
+  "title": "Bir gününü anlat",
+  "setting_tr": "Bir kafede arkadaşın Alex ile oturuyorsunuz. Günlük rutininiz hakkında sohbet ediyorsunuz.",
+  "role_en": "Alex, a friendly classmate who is curious about your daily routine and asks simple questions.",
+  "goal_tr": "Sabah, öğle ve akşam rutinini saatlerle anlat; sıklık zarflarını kullan ve Alex'e rutini hakkında sorular sor.",
+  "opening_en": "Hi, what time do you usually get up?",
+  "target_phrases": [
+    "I get up at ...",
+    "I usually ...",
+    "I have breakfast ...",
+    "I go to work by bus",
+    "In the evening, I ...",
+    "What time do you ...?"
+  ],
+  "suggested_turns": 7,
+  "success_criteria_tr": [
+    "Sabah, öğle ve akşam rutininden en az birer şey söyledin.",
+    "En az iki saat ifadesi kullandın.",
+    "always, usually veya sometimes zarflarından en az birini kullandın.",
+    "Alex'e en az bir soru sordun."
+  ]
+}

@@ -21,6 +21,7 @@ data class ImportResult(
     val skippedLogs: Int = 0,
     val settingsApplied: Boolean = false,
     val replaced: Boolean = false,
+    val lessons: Int = 0,
 ) {
     val words: Int get() = added
 
@@ -30,6 +31,7 @@ data class ImportResult(
             buildString {
                 append("$added kelime")
                 if (logs > 0) append(", $logs tekrar kaydı")
+                if (lessons > 0) append(", $lessons ders ilerlemesi")
                 if (settingsApplied) append(", ayarlar")
                 append(" geri yüklendi")
                 if (invalid > 0) append("; $invalid geçersiz/atlanan satır")
@@ -47,6 +49,7 @@ class BackupManager(
 
     private val words = db.wordDao()
     private val logs = db.reviewLogDao()
+    private val progress = db.lessonProgressDao()
 
     suspend fun exportJson(): String = withContext(Dispatchers.IO) {
         val appSettings = settings.settings.first()
@@ -55,6 +58,7 @@ class BackupManager(
             words = words.allWords().sortedWith(compareBy { TermKey.normalize(it.term) }),
             logs = logs.allLogs(),
             settings = appSettings.toBackupSettings(),
+            lessonProgress = progress.getAll(),
         )
         BackupFormat.build(payload)
     }
@@ -63,9 +67,11 @@ class BackupManager(
         val payload = BackupFormat.parse(raw)
         var wordCount = 0
         var logCount = 0
+        var lessonCount = 0
         db.withTransaction {
             logs.deleteAll()
             words.deleteAll()
+            progress.deleteAll()
             for (word in payload.words) {
                 words.insert(word)
                 wordCount++
@@ -73,6 +79,10 @@ class BackupManager(
             for (log in payload.logs) {
                 logs.insert(log)
                 logCount++
+            }
+            for (item in payload.lessonProgress) {
+                progress.upsert(item)
+                lessonCount++
             }
         }
         settings.setSeedApplied(true)
@@ -85,6 +95,7 @@ class BackupManager(
             skippedLogs = payload.skippedLogs,
             settingsApplied = payload.settings != null,
             replaced = true,
+            lessons = lessonCount,
         )
     }
 

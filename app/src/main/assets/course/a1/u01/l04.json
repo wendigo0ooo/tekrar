@@ -1,0 +1,203 @@
+{
+  "schema": 1,
+  "id": "a1-u01-l04",
+  "unit": "a1-u01",
+  "cefr": "A1",
+  "title": "Vedalaşma",
+  "objective_tr": "Vedalaşma ifadelerini kullan ve U01'de öğrendiklerini pekiştir.",
+  "est_min": 5,
+  "vocab": [
+    {
+      "term": "good night",
+      "meaning_tr": "iyi geceler",
+      "pos": "ifade",
+      "example": "Good night, Mia!",
+      "example_tr": "İyi geceler, Mia!"
+    },
+    {
+      "term": "take care",
+      "meaning_tr": "kendine iyi bak",
+      "pos": "ifade",
+      "example": "Take care, Ben!",
+      "example_tr": "Kendine iyi bak, Ben!"
+    },
+    {
+      "term": "see you tomorrow",
+      "meaning_tr": "yarın görüşürüz",
+      "pos": "ifade",
+      "example": "See you tomorrow, Anna!",
+      "example_tr": "Yarın görüşürüz, Anna!"
+    },
+    {
+      "term": "tomorrow",
+      "meaning_tr": "yarın",
+      "pos": "zarf",
+      "example": "See you tomorrow!",
+      "example_tr": "Yarın görüşürüz!"
+    },
+    {
+      "term": "later",
+      "meaning_tr": "daha sonra",
+      "pos": "zarf",
+      "example": "See you later!",
+      "example_tr": "Sonra görüşürüz!"
+    },
+    {
+      "term": "have a nice day",
+      "meaning_tr": "iyi günler",
+      "pos": "ifade",
+      "example": "Have a nice day, Sam!",
+      "example_tr": "İyi günler, Sam!"
+    },
+    {
+      "term": "goodbye",
+      "meaning_tr": "hoşça kal",
+      "pos": "ünlem",
+      "example": "Goodbye, Anna. Take care!",
+      "example_tr": "Hoşça kal, Anna. Kendine iyi bak!"
+    },
+    {
+      "term": "bye",
+      "meaning_tr": "bay bay",
+      "pos": "ünlem",
+      "example": "Bye, Ben! See you later!",
+      "example_tr": "Bay bay, Ben! Sonra görüşürüz!"
+    }
+  ],
+  "grammar": [
+    {
+      "title_tr": "Vedalaşma kalıpları",
+      "explanation_tr": "Yakın bir zamanda görüşmek için 'See you tomorrow' (yarın görüşürüz) veya 'See you later' (sonra görüşürüz) denir. 'Good night' yalnız akşam ayrılırken kullanılır.",
+      "examples": [
+        { "en": "See you tomorrow!", "tr": "Yarın görüşürüz!" },
+        { "en": "Good night, Mia!", "tr": "İyi geceler, Mia!" }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title": "Günün sonu",
+    "lines": [
+      { "speaker": "Anna", "en": "Goodbye, Ben!", "tr": "Hoşça kal, Ben!" },
+      { "speaker": "Ben", "en": "Goodbye, Anna! Have a nice day!", "tr": "Hoşça kal, Anna! İyi günler!" },
+      { "speaker": "Anna", "en": "Thanks! See you tomorrow.", "tr": "Teşekkürler! Yarın görüşürüz." },
+      { "speaker": "Ben", "en": "See you tomorrow. Take care!", "tr": "Yarın görüşürüz. Kendine iyi bak!" }
+    ]
+  },
+  "teach": [
+    {
+      "title_tr": "Kibar vedalaşma",
+      "body_tr": "Ayrılırken 'Goodbye' veya 'Bye' denir. 'Take care' ve 'Have a nice day' sıcak bir kapanıştır. Akşam 'Good night', gündüz 'Have a nice day' uygundur.",
+      "examples": [
+        { "en": "Goodbye! Take care!", "tr": "Hoşça kal! Kendine iyi bak!" },
+        { "en": "Have a nice day!", "tr": "İyi günler!" }
+      ]
+    },
+    {
+      "title_tr": "U01 tekrar",
+      "body_tr": "Selamlaşma: Hello, Hi, Good morning. Nasılsın: How are you? I'm fine, thanks. Tanışma: What's your name? My name is ...",
+      "examples": [
+        { "en": "Hi! How are you?", "tr": "Selam! Nasılsın?" },
+        { "en": "My name is Leo. Nice to meet you.", "tr": "Benim adım Leo. Tanıştığıma memnun oldum." }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt_tr": "'Good night' ne zaman kullanılır?",
+      "options": ["Akşam ayrılırken", "Sabah karşılaşınca", "Adını söylerken"],
+      "answer": 0,
+      "explanation_tr": "'Good night' iyi geceler demektir; akşam ayrılırken söylenir."
+    },
+    {
+      "type": "match",
+      "prompt_tr": "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
+      "pairs": [
+        { "left": "good night", "right": "iyi geceler" },
+        { "left": "take care", "right": "kendine iyi bak" },
+        { "left": "see you tomorrow", "right": "yarın görüşürüz" },
+        { "left": "have a nice day", "right": "iyi günler" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "Karşılaşınca hangi ifade kullanılır?",
+      "options": ["Good morning!", "Good night!", "See you tomorrow!"],
+      "answer": 0,
+      "explanation_tr": "'Good morning' bir selamlamadır; diğer ikisi vedalaşmadır."
+    },
+    {
+      "type": "listen_choice",
+      "prompt_tr": "Dinle ve ne söylendiğini seç.",
+      "audio_text": "Goodbye, Mia. See you tomorrow.",
+      "options": [
+        "Hoşça kal Mia. Yarın görüşürüz.",
+        "Günaydın Mia. Nasılsın?",
+        "İyi geceler Mia. Adın ne?"
+      ],
+      "answer": 0,
+      "explanation_tr": "'Goodbye' hoşça kal, 'See you tomorrow' yarın görüşürüz demektir."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "See you ___!",
+      "options": ["tomorrow", "name", "fine"],
+      "answer": 0,
+      "explanation_tr": "'See you tomorrow' yarın görüşürüz demektir."
+    },
+    {
+      "type": "word_order",
+      "prompt_tr": "Kelimeleri doğru sıraya koy.",
+      "tokens": ["a", "Sam", "day", "Have", "nice"],
+      "answer": ["Have", "a", "nice", "day", "Sam"],
+      "translation_tr": "İyi günler, Sam!"
+    },
+    {
+      "type": "translate",
+      "prompt_tr": "İngilizceye çevir: Yarın görüşürüz.",
+      "answers": ["See you tomorrow."],
+      "hint_tr": "'See you' ile başla."
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "'Take care' ne demek?",
+      "options": ["Kendine iyi bak.", "İyi geceler.", "Adın ne?"],
+      "answer": 0,
+      "explanation_tr": "'Take care' ayrılırken söylenen sıcak bir ifadedir."
+    },
+    {
+      "type": "dialogue_choice",
+      "prompt_tr": "Diyalogda Ben, Anna'ya ne diliyor?",
+      "audio_text": "Goodbye, Anna! Have a nice day!",
+      "options": [
+        "İyi günler diliyor.",
+        "Yarın görüşmek istemiyor.",
+        "Anna'nın adını soruyor."
+      ],
+      "answer": 0,
+      "explanation_tr": "'Have a nice day' iyi günler dilemek için kullanılır."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu yaz.",
+      "sentence": "Hi, Anna! How ___ you?",
+      "answers": ["are"],
+      "explanation_tr": "'You' ile birlikte 'are' kullanılır."
+    },
+    {
+      "type": "speak",
+      "prompt_tr": "Cümleyi sesli söyle.",
+      "target": "Goodbye, Anna. See you tomorrow. Take care!",
+      "hint_tr": "Üç kısa ifadeyi art arda söyle."
+    },
+    {
+      "type": "write",
+      "prompt_tr": "Bir arkadaşına kısa bir vedalaşma mesajı yaz. Veda et, iyi bir dilek ekle ve yarın görüşeceğini söyle.",
+      "min_words": 8,
+      "keywords": ["goodbye", "tomorrow"],
+      "sample": "Goodbye, Anna! Have a nice day. See you tomorrow. Take care!",
+      "rubric_tr": "Veda + iyi dilek + 'See you tomorrow' cümlesi yeterli."
+    }
+  ]
+}

@@ -357,8 +357,8 @@
     <string name="settings_reset_confirm">Sıfırla</string>
     <string name="settings_reset_done">İlerleme sıfırlandı.</string>
     <string name="settings_about">Hakkında</string>
-    <string name="settings_about_text">Sürüm %1$s · FSRS-5 aralıklı tekrar · tamamen çevrimdışı.</string>
-    <string name="settings_note">Veriler yalnız bu cihazda saklanır. İnternet izni yoktur; reklam ve analitik yoktur.</string>
+    <string name="settings_about_text">Sürüm %1$s · FSRS-5 aralıklı tekrar · dersler çevrimdışı, AI isteğe bağlı.</string>
+    <string name="settings_note">Veriler yalnız bu cihazda saklanır. Dersler ve tekrar çevrimdışı çalışır; AI koç için internet gerekir. Reklam ve analitik yoktur.</string>
 
     <string name="notif_channel_name">Günlük tekrar</string>
     <string name="notif_channel_desc">Tekrar zamanı geldiğinde hatırlatır.</string>

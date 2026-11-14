@@ -1,0 +1,216 @@
+{
+  "schema": 1,
+  "id": "a1-u02-l02",
+  "unit": "a1-u02",
+  "cefr": "A1",
+  "title": "Nerelisin?",
+  "objective_tr": "Nereli olduğunu söyle, karşındakine 'Where are you from?' diye sor; ülke ve milliyet adlarını kullan.",
+  "est_min": 4,
+  "vocab": [
+    {
+      "term": "where are you from",
+      "meaning_tr": "nerelisin",
+      "pos": "ifade",
+      "example": "Where are you from?",
+      "example_tr": "Nerelisin?"
+    },
+    {
+      "term": "I'm from",
+      "meaning_tr": "...lıyım, ...danım",
+      "pos": "ifade",
+      "example": "I'm from Turkey.",
+      "example_tr": "Ben Türkiye'denim."
+    },
+    {
+      "term": "Turkey",
+      "meaning_tr": "Türkiye",
+      "pos": "isim",
+      "example": "I'm from Turkey.",
+      "example_tr": "Ben Türkiye'denim."
+    },
+    {
+      "term": "Turkish",
+      "meaning_tr": "Türk",
+      "pos": "sıfat",
+      "example": "I'm Turkish.",
+      "example_tr": "Ben Türküm."
+    },
+    {
+      "term": "England",
+      "meaning_tr": "İngiltere",
+      "pos": "isim",
+      "example": "London is in England.",
+      "example_tr": "Londra İngiltere'de."
+    },
+    {
+      "term": "English",
+      "meaning_tr": "İngiliz",
+      "pos": "sıfat",
+      "example": "I'm English.",
+      "example_tr": "Ben İngilizim."
+    },
+    {
+      "term": "Germany",
+      "meaning_tr": "Almanya",
+      "pos": "isim",
+      "example": "I'm from Germany.",
+      "example_tr": "Ben Almanya'danım."
+    },
+    {
+      "term": "German",
+      "meaning_tr": "Alman",
+      "pos": "sıfat",
+      "example": "I'm German.",
+      "example_tr": "Ben Almanım."
+    },
+    {
+      "term": "Spain",
+      "meaning_tr": "İspanya",
+      "pos": "isim",
+      "example": "I'm from Spain.",
+      "example_tr": "Ben İspanya'danım."
+    },
+    {
+      "term": "Spanish",
+      "meaning_tr": "İspanyol",
+      "pos": "sıfat",
+      "example": "I'm Spanish.",
+      "example_tr": "Ben İspanyolum."
+    }
+  ],
+  "grammar": [
+    {
+      "title_tr": "Where are you from? / I'm from ...",
+      "explanation_tr": "Nereli olduğunu sormak için 'Where are you from?' denir. Cevap 'I'm from ...' ile verilir. Şehir de söylenebilir: I'm from Istanbul.",
+      "examples": [
+        { "en": "Where are you from?", "tr": "Nerelisin?" },
+        { "en": "I'm from Turkey.", "tr": "Türkiye'denim." }
+      ]
+    },
+    {
+      "title_tr": "Ülke ve milliyet",
+      "explanation_tr": "Ülke adı bir yeri, milliyet adı o yerden olan kişiyi anlatır: Turkey, Turkish. Milliyet adları İngilizcede büyük harfle başlar.",
+      "examples": [
+        { "en": "I'm from Spain. I'm Spanish.", "tr": "İspanya'danım. İspanyolum." },
+        { "en": "I'm from Germany. I'm German.", "tr": "Almanya'danım. Almanım." }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title": "Nerelisin?",
+    "lines": [
+      { "speaker": "Mia", "en": "Hi, Leo! Where are you from?", "tr": "Merhaba Leo! Nerelisin?" },
+      { "speaker": "Leo", "en": "I'm from Turkey. I'm from Istanbul.", "tr": "Türkiye'denim. İstanbul'danım." },
+      { "speaker": "Mia", "en": "I'm from England. I'm English.", "tr": "İngiltere'denim. İngilizim." },
+      { "speaker": "Leo", "en": "I'm Turkish. Are you from London?", "tr": "Ben Türküm. Londra'dan mısın?" },
+      { "speaker": "Mia", "en": "Yes, I'm from London.", "tr": "Evet, Londra'danım." },
+      { "speaker": "Leo", "en": "London is nice!", "tr": "Londra güzel!" }
+    ]
+  },
+  "teach": [
+    {
+      "title_tr": "Ülkeler ve milliyetler",
+      "body_tr": "Ülke adı yerdir, milliyet adı kişidir: Turkey, Turkish. 'Where are you from?' sorusuna 'I'm from ...' diye cevap ver. İstersen şehir de ekleyebilirsin: I'm from Istanbul.",
+      "examples": [
+        { "en": "I'm from England. I'm English.", "tr": "İngiltere'denim. İngilizim." },
+        { "en": "I'm from Turkey. I'm Turkish.", "tr": "Türkiye'denim. Türküm." }
+      ],
+      "tip_tr": "Milliyet adlarını büyük harfle yaz: Turkish, English, German, Spanish."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt_tr": "'Where are you from?' ne demek?",
+      "options": ["Nerelisin?", "Adın ne?", "Ne iş yapıyorsun?"],
+      "answer": 0,
+      "explanation_tr": "'Where are you from?' birinin memleketini sormak için kullanılır."
+    },
+    {
+      "type": "match",
+      "prompt_tr": "Ülke adlarını Türkçe karşılıklarıyla eşleştir.",
+      "pairs": [
+        { "left": "Turkey", "right": "Türkiye" },
+        { "left": "England", "right": "İngiltere" },
+        { "left": "Germany", "right": "Almanya" },
+        { "left": "Spain", "right": "İspanya" }
+      ]
+    },
+    {
+      "type": "listen_choice",
+      "prompt_tr": "Dinle ve ne söylendiğini seç.",
+      "audio_text": "I'm from Istanbul, Turkey.",
+      "options": [
+        "İstanbul, Türkiye'denim.",
+        "İstanbul'u seviyorum.",
+        "İstanbul'a gidiyorum."
+      ],
+      "answer": 0,
+      "explanation_tr": "'I'm from ...' nereden geldiğini söyler."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "I'm ___ Turkey.",
+      "options": ["from", "in", "at"],
+      "answer": 0,
+      "explanation_tr": "Memleket söylerken 'from' kullanılır: I'm from Turkey."
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "Hangi cümle doğru?",
+      "options": ["I'm from Spain.", "I'm Spain from.", "From I'm Spain."],
+      "answer": 0,
+      "explanation_tr": "'from' ülke adından önce gelir: from Spain."
+    },
+    {
+      "type": "word_order",
+      "prompt_tr": "Kelimeleri doğru sıraya koy.",
+      "tokens": ["from", "Germany", "I'm"],
+      "answer": ["I'm", "from", "Germany"],
+      "translation_tr": "Ben Almanya'danım."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu yaz.",
+      "sentence": "I'm from Spain. I'm ___.",
+      "answers": ["Spanish"],
+      "explanation_tr": "Spain ülke adıdır; milliyet 'Spanish' olur."
+    },
+    {
+      "type": "translate",
+      "prompt_tr": "İngilizceye çevir: Ben Türkiye'denim.",
+      "answers": [
+        "I'm from Turkey.",
+        "I am from Turkey."
+      ],
+      "hint_tr": "'I'm from' kalıbını kullan."
+    },
+    {
+      "type": "dialogue_choice",
+      "prompt_tr": "Diyalogda Leo nereli?",
+      "audio_text": "I'm from Turkey. I'm from Istanbul.",
+      "options": [
+        "Türkiye'den, İstanbul'dan.",
+        "İngiltere'den, Londra'dan.",
+        "Almanya'dan."
+      ],
+      "answer": 0,
+      "explanation_tr": "Leo 'I'm from Turkey' ve 'I'm from Istanbul' diyor."
+    },
+    {
+      "type": "speak",
+      "prompt_tr": "Cümleyi sesli söyle.",
+      "target": "Hi, I'm from Turkey. I'm Turkish.",
+      "hint_tr": "Ülke ve milliyet adlarını net söyle."
+    },
+    {
+      "type": "write",
+      "prompt_tr": "Türkiye'den olduğunu ve Türk olduğunu söyle; istersen şehrini de ekle.",
+      "min_words": 7,
+      "keywords": ["from", "Turkish"],
+      "sample": "I'm from Turkey. I'm from Istanbul. I'm Turkish.",
+      "rubric_tr": "Nereli olduğun ve milliyetin yeterli; şehir eklemek artı."
+    }
+  ]
+}

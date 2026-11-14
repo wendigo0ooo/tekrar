@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "a1-u02",
+  "cefr": "A1",
+  "title": "Kendini Tanıtma",
+  "subtitle": "Adın, memleketin, mesleğin",
+  "icon": "badge",
+  "color": "#35A77C",
+  "lessons": [
+    { "id": "a1-u02-l01", "title": "Adım...", "file": "l01.json", "est_min": 4 },
+    { "id": "a1-u02-l02", "title": "Nerelisin?", "file": "l02.json", "est_min": 4 },
+    { "id": "a1-u02-l03", "title": "Mesleğim", "file": "l03.json", "est_min": 4 },
+    { "id": "a1-u02-l04", "title": "Yaş ve Sayılar", "file": "l04.json", "est_min": 5 }
+  ],
+  "roleplay": { "id": "a1-u02-rp01", "title": "Tanışma partisi", "file": "rp01.json", "est_min": 5 }
+}

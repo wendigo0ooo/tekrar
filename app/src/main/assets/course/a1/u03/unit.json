@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "a1-u03",
+  "cefr": "A1",
+  "title": "Günlük Rutin",
+  "subtitle": "Bir günüm",
+  "icon": "clock",
+  "color": "#D9822B",
+  "lessons": [
+    { "id": "a1-u03-l01", "title": "Günün Saatleri", "file": "l01.json", "est_min": 4 },
+    { "id": "a1-u03-l02", "title": "Sabah Rutini", "file": "l02.json", "est_min": 4 },
+    { "id": "a1-u03-l03", "title": "İş ve Okul", "file": "l03.json", "est_min": 4 },
+    { "id": "a1-u03-l04", "title": "Akşam Rutini", "file": "l04.json", "est_min": 5 }
+  ],
+  "roleplay": { "id": "a1-u03-rp01", "title": "Bir gününü anlat", "file": "rp01.json", "est_min": 5 }
+}

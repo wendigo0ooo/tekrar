@@ -6,6 +6,7 @@ import com.wendigo.tekrar.core.BackupPackage
 import com.wendigo.tekrar.core.BackupSettings
 import com.wendigo.tekrar.data.ReviewLog
 import com.wendigo.tekrar.data.Word
+import com.wendigo.tekrar.data.learn.LessonProgressEntity
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertThrows
 import org.junit.Assert.assertTrue
@@ -138,6 +139,34 @@ class BackupFormatTest {
         assertEquals(20, restored.settings?.newPerDay ?: -1)
         assertEquals(5, restored.settings?.weeklyGoalDays ?: -1)
         assertEquals(true, restored.settings?.weeklySummaryEnabled ?: false)
+    }
+
+    @Test
+    fun roundTripPreservesLessonProgress() {
+        val item = LessonProgressEntity(
+            lessonId = "a1-u01-l01",
+            unitId = "a1-u01",
+            status = "completed",
+            bestScore = 88,
+            lastScore = 75,
+            attempts = 2,
+            completedAt = 111L,
+            completedEpochDay = 222L,
+            contentVersion = "2026-11-14",
+            lastOpenedAt = 333L,
+            updatedAt = 444L,
+        )
+        val restored = BackupFormat.parse(
+            BackupFormat.build(
+                BackupPackage(
+                    exportedAt = 0L,
+                    words = emptyList(),
+                    lessonProgress = listOf(item),
+                ),
+            ),
+        )
+
+        assertEquals(listOf(item), restored.lessonProgress)
     }
 
     @Test

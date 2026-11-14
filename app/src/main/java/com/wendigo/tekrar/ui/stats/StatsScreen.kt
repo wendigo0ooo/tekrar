@@ -40,7 +40,11 @@ import com.wendigo.tekrar.ui.contracts.StatsUiState
 import java.util.Locale
 
 @Composable
-fun StatsScreen(state: StatsUiState, onLeeches: () -> Unit) {
+fun StatsScreen(
+    state: StatsUiState,
+    onLeeches: () -> Unit,
+    onBack: (() -> Unit)? = null,
+) {
     val goalProgress = if (state.dailyGoal > 0) {
         state.reviewedToday.toFloat() / state.dailyGoal
     } else {
@@ -58,6 +62,7 @@ fun StatsScreen(state: StatsUiState, onLeeches: () -> Unit) {
         ScreenHeader(
             title = stringResource(R.string.stats_title),
             subtitle = stringResource(R.string.stats_subtitle),
+            onBack = onBack,
         )
 
         Panel {

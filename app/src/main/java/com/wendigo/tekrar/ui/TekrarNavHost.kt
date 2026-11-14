@@ -23,7 +23,15 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.wendigo.tekrar.AppContainer
 import com.wendigo.tekrar.R
+import com.wendigo.tekrar.ai.AiSessionProfile
+import com.wendigo.tekrar.audio.Speaker
 import com.wendigo.tekrar.core.CustomSession
+import com.wendigo.tekrar.ui.ai.AiChatMode
+import com.wendigo.tekrar.ui.ai.AiChatRequest
+import com.wendigo.tekrar.ui.ai.AiChatScreen
+import com.wendigo.tekrar.ui.ai.AiChatViewModel
+import com.wendigo.tekrar.ui.ai.AiSettingsScreen
+import com.wendigo.tekrar.ui.ai.AiSettingsViewModel
 import com.wendigo.tekrar.ui.add.AddWordScreen
 import com.wendigo.tekrar.ui.components.BottomBar
 import com.wendigo.tekrar.ui.contracts.CustomSessionRequest
@@ -34,9 +42,14 @@ import com.wendigo.tekrar.ui.contracts.LibrarySort
 import com.wendigo.tekrar.ui.contracts.StudyFormat
 import com.wendigo.tekrar.ui.contracts.StudyMode
 import com.wendigo.tekrar.ui.leech.LeechesScreen
+import com.wendigo.tekrar.ui.learn.LearnHomeScreen
+import com.wendigo.tekrar.ui.learn.LearnHomeViewModel
+import com.wendigo.tekrar.ui.learn.LessonScreen
+import com.wendigo.tekrar.ui.learn.LessonViewModel
 import com.wendigo.tekrar.ui.library.LibraryScreen
 import com.wendigo.tekrar.ui.mine.MineScreen
 import com.wendigo.tekrar.ui.placement.PlacementScreen
+import com.wendigo.tekrar.ui.profile.ProfileScreen
 import com.wendigo.tekrar.ui.settings.SettingsScreen
 import com.wendigo.tekrar.ui.stats.StatsScreen
 import com.wendigo.tekrar.ui.study.StudyScreen
@@ -61,9 +74,82 @@ fun TekrarNavHost(
     ) {
         NavHost(
             navController = navController,
-            startDestination = ROUTE_TODAY,
+            startDestination = ROUTE_LEARN,
             modifier = Modifier.weight(1f),
         ) {
+            composable(ROUTE_LEARN) {
+                val vm: LearnHomeViewModel = viewModel(
+                    factory = viewModelFactory {
+                        LearnHomeViewModel(
+                            container.courseRepository,
+                            container.courseProgress,
+                            container.repository,
+                        )
+                    },
+                )
+                val state by vm.state.collectAsStateWithLifecycle()
+                LifecycleResumeEffect(Unit) {
+                    vm.refresh()
+                    onPauseOrDispose { }
+                }
+                LearnHomeScreen(
+                    state = state,
+                    onLesson = { unitId, lessonId ->
+                        navController.navigate(
+                            "$ROUTE_LESSON/${Uri.encode(unitId)}/${Uri.encode(lessonId)}"
+                        )
+                    },
+                    onRoleplay = { unitId, _ ->
+                        navController.navigate("$ROUTE_AI_CHAT?unitId=${Uri.encode(unitId)}")
+                    },
+                    onPractice = {
+                        navController.navigate(
+                            "$ROUTE_STUDY/${StudyMode.MIXED.name}/${StudyFormat.FLASHCARD.name}"
+                        )
+                    },
+                    onRetry = vm::retry,
+                    onAiCoach = { navController.navigate(ROUTE_AI_CHAT) },
+                )
+            }
+
+            composable("$ROUTE_LESSON/{unitId}/{lessonId}") { entry ->
+                val unitId = entry.arguments?.getString("unitId").orEmpty()
+                val lessonId = entry.arguments?.getString("lessonId").orEmpty()
+                val vm: LessonViewModel = viewModel(
+                    factory = viewModelFactory {
+                        LessonViewModel(
+                            container.courseRepository,
+                            container.courseProgress,
+                            Speaker(container.appContext),
+                        )
+                    },
+                )
+                LaunchedEffect(unitId, lessonId) {
+                    vm.start(Uri.decode(unitId), Uri.decode(lessonId))
+                }
+                val state by vm.state.collectAsStateWithLifecycle()
+                LessonScreen(
+                    state = state,
+                    onClose = { navController.popBackStack() },
+                    onSpeak = vm::speak,
+                    onContinueTeach = vm::continueFromTeach,
+                    onSubmitChoice = vm::submitChoice,
+                    onSubmitMatch = vm::submitMatch,
+                    onSubmitTokens = vm::submitTokens,
+                    onSubmitText = vm::submitText,
+                    onSubmitSpeech = vm::submitSpeech,
+                    onNext = vm::next,
+                    onRetryLoad = vm::retryStart,
+                    onResultBack = { navController.popBackStack() },
+                    onResultPractice = {
+                        navController.navigate(
+                            "$ROUTE_STUDY/${StudyMode.MIXED.name}/${StudyFormat.FLASHCARD.name}"
+                        )
+                    },
+                    onRetrySave = vm::finish,
+                )
+            }
+
             composable(ROUTE_TODAY) {
                 val vm: DashboardViewModel = viewModel(
                     factory = viewModelFactory { DashboardViewModel(container.repository) },
@@ -194,6 +280,91 @@ fun TekrarNavHost(
                 )
             }
 
+            composable(ROUTE_PROFILE) {
+                ProfileScreen(
+                    onStats = { navController.navigate(ROUTE_STATS) },
+                    onSettings = { navController.navigate(ROUTE_SETTINGS) },
+                    onAiSettings = { navController.navigate(ROUTE_AI_SETTINGS) },
+                )
+            }
+
+            composable(
+                route = "$ROUTE_AI_CHAT?unitId={unitId}",
+                arguments = listOf(
+                    navArgument("unitId") {
+                        type = NavType.StringType
+                        nullable = true
+                        defaultValue = null
+                    },
+                ),
+            ) { entry ->
+                val unitId = entry.arguments?.getString("unitId")
+                val vm: AiChatViewModel = viewModel(
+                    factory = viewModelFactory {
+                        AiChatViewModel(
+                            container.aiRepository,
+                            container.aiSettings,
+                            container.appContext,
+                        )
+                    },
+                )
+                LifecycleResumeEffect(Unit) {
+                    vm.refreshKeyState()
+                    onPauseOrDispose { }
+                }
+                LaunchedEffect(unitId) {
+                    vm.start(buildAiChatRequest(container, unitId))
+                }
+                val state by vm.state.collectAsStateWithLifecycle()
+                val appSettings by container.settings.settings.collectAsStateWithLifecycle(
+                    initialValue = com.wendigo.tekrar.repo.AppSettings(),
+                )
+                AiChatScreen(
+                    state = state,
+                    onDraftChange = vm::onDraftChange,
+                    onSend = vm::send,
+                    onRetry = vm::retryLast,
+                    onEndSession = vm::endSession,
+                    onNewSession = { vm.newSession() },
+                    onClearError = vm::clearError,
+                    onOpenSettings = { navController.navigate(ROUTE_AI_SETTINGS) },
+                    onClose = {
+                        vm.close()
+                        navController.popBackStack()
+                    },
+                    speechRate = appSettings.speechRate,
+                )
+            }
+
+            composable(ROUTE_AI_SETTINGS) {
+                val vm: AiSettingsViewModel = viewModel(
+                    factory = viewModelFactory {
+                        AiSettingsViewModel(
+                            container.aiRepository,
+                            container.aiSettings,
+                            container.appContext,
+                        )
+                    },
+                )
+                val state by vm.state.collectAsStateWithLifecycle()
+                AiSettingsScreen(
+                    state = state,
+                    onBack = { navController.popBackStack() },
+                    onProviderChange = vm::onProviderChange,
+                    onBaseUrlChange = vm::onBaseUrlChange,
+                    onBaseUrlCommit = vm::onBaseUrlCommit,
+                    onModelChange = vm::onModelChange,
+                    onKeyDraftChange = vm::onKeyDraftChange,
+                    onSaveKey = vm::saveKey,
+                    onDeleteKey = vm::deleteKey,
+                    onTestConnection = vm::testConnection,
+                    onDailyLimitChange = vm::onDailyLimitChange,
+                    onAutoSpeakChange = vm::onAutoSpeakChange,
+                    onClearHistory = vm::clearHistory,
+                    onClearMessage = vm::clearMessage,
+                )
+            }
+
             composable(ROUTE_STATS) {
                 val vm: StatsViewModel = viewModel(
                     factory = viewModelFactory { StatsViewModel(container.repository) },
@@ -202,6 +373,7 @@ fun TekrarNavHost(
                 StatsScreen(
                     state = state,
                     onLeeches = { navController.navigate(ROUTE_LEECHES) },
+                    onBack = { navController.popBackStack() },
                 )
             }
 
@@ -255,6 +427,7 @@ fun TekrarNavHost(
                     onExportCsv = vm::exportCsv,
                     onImportCsv = vm::importCsv,
                     onResetAll = vm::resetAllProgress,
+                    onBack = { navController.popBackStack() },
                 )
             }
 
@@ -525,20 +698,75 @@ fun TekrarNavHost(
             onLaunchRequestConsumed()
         }
 
-        val tabs = listOf(ROUTE_TODAY, ROUTE_LIBRARY, ROUTE_STATS, ROUTE_SETTINGS)
+        val tabs = listOf(ROUTE_LEARN, ROUTE_TODAY, ROUTE_LIBRARY, ROUTE_PROFILE)
         val selectedIndex = tabs.indexOf(route)
         if (selectedIndex >= 0) {
             BottomBar(
                 selectedIndex = selectedIndex,
                 labels = listOf(
+                    stringResource(R.string.nav_learn),
                     stringResource(R.string.nav_today),
                     stringResource(R.string.nav_library),
-                    stringResource(R.string.nav_stats),
-                    stringResource(R.string.nav_settings),
+                    stringResource(R.string.nav_profile),
                 ),
                 onSelect = { index -> navController.navigateTab(tabs[index]) },
             )
         }
+    }
+}
+
+private suspend fun buildAiChatRequest(
+    container: AppContainer,
+    unitId: String?,
+): AiChatRequest {
+    val id = unitId?.trim().orEmpty()
+    if (id.isEmpty()) {
+        return AiChatRequest(
+            mode = AiChatMode.CHAT,
+            profile = AiSessionProfile(level = "A1"),
+        )
+    }
+    return try {
+        val index = container.courseRepository.loadIndex()
+        val unitRef = index.levels.flatMap { it.units }.firstOrNull { it.id == id }
+            ?: return AiChatRequest(
+                mode = AiChatMode.CHAT,
+                profile = AiSessionProfile(level = "A1"),
+            )
+        val unit = container.courseRepository.loadUnit(unitRef)
+        val roleplayRef = unit.roleplay
+        val roleplay = roleplayRef?.let {
+            container.courseRepository.loadRoleplay(unitRef, it)
+        }
+        if (roleplay == null) {
+            AiChatRequest(
+                mode = AiChatMode.CHAT,
+                title = unit.title,
+                unitId = unit.id,
+                profile = AiSessionProfile(level = unit.cefr),
+            )
+        } else {
+            AiChatRequest(
+                mode = AiChatMode.ROLEPLAY,
+                title = roleplay.title,
+                unitId = roleplay.unit,
+                scenarioId = roleplay.id,
+                openingEn = roleplay.openingEn,
+                profile = AiSessionProfile(
+                    level = roleplay.cefr,
+                    scenarioTitle = roleplay.title,
+                    settingTr = roleplay.settingTr,
+                    roleEn = roleplay.roleEn,
+                    goalTr = roleplay.goalTr,
+                    targetPhrases = roleplay.targetPhrases,
+                ),
+            )
+        }
+    } catch (error: Exception) {
+        AiChatRequest(
+            mode = AiChatMode.CHAT,
+            profile = AiSessionProfile(level = "A1"),
+        )
     }
 }
 
@@ -566,6 +794,11 @@ private fun customStudyRoute(request: CustomSessionRequest): String {
         "&cram=${request.cram}"
 }
 
+private const val ROUTE_LEARN = "learn"
+private const val ROUTE_LESSON = "learn/lesson"
+private const val ROUTE_PROFILE = "profile"
+private const val ROUTE_AI_CHAT = "ai/chat"
+private const val ROUTE_AI_SETTINGS = "ai/settings"
 private const val ROUTE_TODAY = "today"
 private const val ROUTE_LIBRARY = "library"
 private const val ROUTE_STATS = "stats"

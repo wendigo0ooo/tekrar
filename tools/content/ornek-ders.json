@@ -1,0 +1,185 @@
+{
+  "schema": 1,
+  "id": "a1-u01-l01",
+  "unit": "a1-u01",
+  "cefr": "A1",
+  "title": "Merhaba!",
+  "objective_tr": "Selamlaşma, adını söyleme ve vedalaşma ifadelerini kullan.",
+  "est_min": 4,
+  "vocab": [
+    {
+      "term": "hello",
+      "meaning_tr": "merhaba",
+      "pos": "ünlem",
+      "example": "Hello, how are you?",
+      "example_tr": "Merhaba, nasılsın?",
+      "ipa": "həˈloʊ"
+    },
+    {
+      "term": "hi",
+      "meaning_tr": "selam",
+      "pos": "ünlem",
+      "example": "Hi, I'm Anna.",
+      "example_tr": "Selam, ben Anna."
+    },
+    {
+      "term": "goodbye",
+      "meaning_tr": "hoşça kal",
+      "pos": "ünlem",
+      "example": "Goodbye, see you tomorrow!",
+      "example_tr": "Hoşça kal, yarın görüşürüz!"
+    },
+    {
+      "term": "bye",
+      "meaning_tr": "bay bay",
+      "pos": "ünlem",
+      "example": "Bye, Anna!",
+      "example_tr": "Bay bay, Anna!"
+    },
+    {
+      "term": "name",
+      "meaning_tr": "isim, ad",
+      "pos": "isim",
+      "example": "My name is Ben.",
+      "example_tr": "Benim adım Ben."
+    },
+    {
+      "term": "nice to meet you",
+      "meaning_tr": "tanıştığıma memnun oldum",
+      "pos": "ifade",
+      "example": "Nice to meet you, Mia.",
+      "example_tr": "Tanıştığıma memnun oldum, Mia."
+    }
+  ],
+  "grammar": [
+    {
+      "title_tr": "I am / My name is",
+      "explanation_tr": "Kendini tanıtırken 'I am ...' ya da 'My name is ...' kullanılır. İkisi de aynı anlama gelir.",
+      "examples": [
+        { "en": "I am Anna.", "tr": "Ben Anna." },
+        { "en": "My name is Ben.", "tr": "Benim adım Ben." }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title": "İlk karşılaşma",
+    "lines": [
+      { "speaker": "Anna", "en": "Hi! I'm Anna.", "tr": "Merhaba! Ben Anna." },
+      { "speaker": "Ben", "en": "Hello, Anna. My name is Ben.", "tr": "Merhaba Anna. Benim adım Ben." },
+      { "speaker": "Anna", "en": "Nice to meet you, Ben.", "tr": "Tanıştığıma memnun oldum, Ben." },
+      { "speaker": "Ben", "en": "Nice to meet you too.", "tr": "Ben de tanıştığıma memnun oldum." }
+    ]
+  },
+  "teach": [
+    {
+      "title_tr": "Selamlaşma",
+      "body_tr": "Tanıdık biriyle karşılaşınca 'Hello' veya 'Hi' denir. 'Hi' daha samimi, 'Hello' daha nötrdür.",
+      "examples": [
+        { "en": "Hello!", "tr": "Merhaba!" },
+        { "en": "Hi, Anna!", "tr": "Selam, Anna!" }
+      ],
+      "tip_tr": "Sabahları 'Good morning' de diyebilirsin."
+    },
+    {
+      "title_tr": "Vedalaşma",
+      "body_tr": "Ayrılırken 'Goodbye' veya 'Bye' kullanılır. 'Bye' günlük konuşmada daha yaygındır.",
+      "examples": [
+        { "en": "Goodbye!", "tr": "Hoşça kal!" },
+        { "en": "Bye, see you!", "tr": "Bay bay, görüşürüz!" }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt_tr": "'hello' ne demek?",
+      "options": ["merhaba", "hoşça kal", "teşekkürler"],
+      "answer": 0,
+      "explanation_tr": "'Hello' merhaba demektir."
+    },
+    {
+      "type": "match",
+      "prompt_tr": "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
+      "pairs": [
+        { "left": "hello", "right": "merhaba" },
+        { "left": "hi", "right": "selam" },
+        { "left": "goodbye", "right": "hoşça kal" },
+        { "left": "bye", "right": "bay bay" }
+      ]
+    },
+    {
+      "type": "listen_choice",
+      "prompt_tr": "Dinle ve ne söylendiğini seç.",
+      "audio_text": "Hello, my name is Anna.",
+      "options": [
+        "Merhaba, benim adım Anna.",
+        "Hoşça kal, Anna.",
+        "Tanıştığıma memnun oldum."
+      ],
+      "answer": 0,
+      "explanation_tr": "Cümlede 'my name is Anna' deniyor: benim adım Anna."
+    },
+    {
+      "type": "word_order",
+      "prompt_tr": "Kelimeleri doğru sıraya koy.",
+      "tokens": ["Anna", "name", "My", "is"],
+      "answer": ["My", "name", "is", "Anna"],
+      "translation_tr": "Benim adım Anna."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "Hello, my ___ is Ben.",
+      "options": ["name", "bye", "hi"],
+      "answer": 0,
+      "explanation_tr": "'My name is ...' kalıbı 'Benim adım ...' demektir."
+    },
+    {
+      "type": "translate",
+      "prompt_tr": "İngilizceye çevir: Merhaba, benim adım Anna.",
+      "answers": [
+        "Hello, my name is Anna.",
+        "Hi, my name is Anna.",
+        "Hello, my name's Anna."
+      ],
+      "hint_tr": "'my name is' kalıbını kullan."
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "'Nice to meet you' ne demek?",
+      "options": [
+        "Tanıştığıma memnun oldum.",
+        "Görüşürüz.",
+        "Nasılsın?"
+      ],
+      "answer": 0,
+      "explanation_tr": "Yeni tanıştığın birine söylenir."
+    },
+    {
+      "type": "dialogue_choice",
+      "prompt_tr": "Diyalogda Anna kendini nasıl tanıtıyor?",
+      "audio_text": "Hi! I'm Anna.",
+      "options": [
+        "Merhaba! Ben Anna.",
+        "Hoşça kal, Anna.",
+        "Benim adım Ben."
+      ],
+      "answer": 0,
+      "explanation_tr": "'I'm Anna' = Ben Anna."
+    },
+    {
+      "type": "speak",
+      "prompt_tr": "Cümleyi sesli söyle.",
+      "target": "Hello, my name is Anna.",
+      "hint_tr": "Önce yavaş, sonra normal hızda dene."
+    },
+    {
+      "type": "write",
+      "prompt_tr": "Kendini 2 cümleyle tanıt. Selamlaşma ve adını söyleme kalıbını kullan.",
+      "min_words": 5,
+      "keywords": ["hello", "name"],
+      "sample": "Hello! My name is ...",
+      "rubric_tr": "Selamlaşma + adını söyleme + kısa bir kapanış yeterli."
+    }
+  ]
+}

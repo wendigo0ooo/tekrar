@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "language": "en",
+  "native": "tr",
+  "levels": [
+    {
+      "id": "a1",
+      "title": "A1 · Başlangıç",
+      "units": [
+        { "id": "a1-u01", "file": "a1/u01/unit.json" },
+        { "id": "a1-u02", "file": "a1/u02/unit.json" },
+        { "id": "a1-u03", "file": "a1/u03/unit.json" }
+      ]
+    }
+  ]
+}

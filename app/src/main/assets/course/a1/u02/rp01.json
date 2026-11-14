@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "id": "a1-u02-rp01",
+  "unit": "a1-u02",
+  "cefr": "A1",
+  "title": "Tanışma partisi",
+  "setting_tr": "Bir arkadaşının düzenlediği tanışma partisindesin. Müzik çalıyor ve yeni insanlarla tanışıyorsun.",
+  "role_en": "Mia, a friendly guest at a party who is meeting you for the first time.",
+  "goal_tr": "Selamlaş, adını söyle. Karşındakinin adını, memleketini, mesleğini ve yaşını sor; sen de kendi bilgilerini paylaş.",
+  "opening_en": "Hi, I'm Mia! What's your name?",
+  "target_phrases": [
+    "My name is ...",
+    "Where are you from?",
+    "I'm from ...",
+    "What do you do?",
+    "I'm a ...",
+    "How old are you?"
+  ],
+  "suggested_turns": 7,
+  "success_criteria_tr": [
+    "Adını söyledin ve karşındakinin adını sordun.",
+    "Nereli olduğunu söyledin ve karşındakine sordun.",
+    "Mesleğini söyledin ve karşındakine sordun.",
+    "Yaşını söyledin ve karşındakinin yaşını sordun."
+  ]
+}

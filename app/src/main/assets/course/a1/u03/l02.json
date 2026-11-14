@@ -1,0 +1,201 @@
+{
+  "schema": 1,
+  "id": "a1-u03-l02",
+  "unit": "a1-u03",
+  "cefr": "A1",
+  "title": "Sabah Rutini",
+  "objective_tr": "Sabah rutinini present simple ile anlat ve sıklık zarflarını kullan.",
+  "est_min": 4,
+  "vocab": [
+    {
+      "term": "get up",
+      "meaning_tr": "kalkmak",
+      "pos": "fiil",
+      "example": "I get up at seven.",
+      "example_tr": "Yedide kalkarım."
+    },
+    {
+      "term": "have breakfast",
+      "meaning_tr": "kahvaltı yapmak",
+      "pos": "ifade",
+      "example": "I have breakfast at eight.",
+      "example_tr": "Sekizde kahvaltı yaparım."
+    },
+    {
+      "term": "brush my teeth",
+      "meaning_tr": "dişlerimi fırçalamak",
+      "pos": "ifade",
+      "example": "I brush my teeth in the morning.",
+      "example_tr": "Sabah dişlerimi fırçalarım."
+    },
+    {
+      "term": "go to work",
+      "meaning_tr": "işe gitmek",
+      "pos": "ifade",
+      "example": "I go to work at nine.",
+      "example_tr": "Dokuzda işe giderim."
+    },
+    {
+      "term": "always",
+      "meaning_tr": "her zaman",
+      "pos": "zarf",
+      "example": "I always get up early.",
+      "example_tr": "Her zaman erken kalkarım."
+    },
+    {
+      "term": "usually",
+      "meaning_tr": "genellikle",
+      "pos": "zarf",
+      "example": "I usually have breakfast at home.",
+      "example_tr": "Genellikle evde kahvaltı yaparım."
+    },
+    {
+      "term": "sometimes",
+      "meaning_tr": "bazen",
+      "pos": "zarf",
+      "example": "Sometimes I get up late.",
+      "example_tr": "Bazen geç kalkarım."
+    },
+    {
+      "term": "late",
+      "meaning_tr": "geç",
+      "pos": "zarf",
+      "example": "I get up late.",
+      "example_tr": "Geç kalkarım."
+    }
+  ],
+  "grammar": [
+    {
+      "title_tr": "Present simple: I / you / we / they",
+      "explanation_tr": "I, you, we ve they ile fiil yalın hâlde kullanılır: I get up, we have breakfast. Olumsuz cümlede fiilden önce 'don't' gelir: I don't get up late.",
+      "examples": [
+        { "en": "I get up at seven.", "tr": "Yedide kalkarım." },
+        { "en": "We have breakfast at eight.", "tr": "Sekizde kahvaltı yaparız." }
+      ]
+    },
+    {
+      "title_tr": "Sıklık zarfları: always / usually / sometimes",
+      "explanation_tr": "'Always' her zaman, 'usually' genellikle, 'sometimes' bazen demektir. Bu zarflar genellikle ana fiilden önce gelir: I always get up early. 'Sometimes' cümle başında da kullanılabilir: Sometimes I get up late.",
+      "examples": [
+        { "en": "I usually have breakfast at home.", "tr": "Genellikle evde kahvaltı yaparım." },
+        { "en": "Sometimes I get up late.", "tr": "Bazen geç kalkarım." }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title": "Sabah sohbeti",
+    "lines": [
+      { "speaker": "Mia", "en": "What time do you get up?", "tr": "Saat kaçta kalkarsın?" },
+      { "speaker": "Leo", "en": "I usually get up at seven.", "tr": "Genellikle yedide kalkarım." },
+      { "speaker": "Mia", "en": "I always get up at six.", "tr": "Ben her zaman altıda kalkarım." },
+      { "speaker": "Leo", "en": "Six is early! Do you have breakfast at home?", "tr": "Altı erken! Evde kahvaltı yapar mısın?" },
+      { "speaker": "Mia", "en": "Yes, I do. I sometimes have breakfast at work.", "tr": "Evet. Bazen işte kahvaltı yaparım." },
+      { "speaker": "Leo", "en": "I always have breakfast at home.", "tr": "Ben her zaman evde kahvaltı yaparım." }
+    ]
+  },
+  "teach": [
+    {
+      "title_tr": "Sabah rutini",
+      "body_tr": "Sabah rutini için 'get up', 'brush my teeth' ve 'have breakfast' kullanılır. İşe gitmek için 'go to work' denir. Saat belirtirken 'at' eklenir: at seven.",
+      "examples": [
+        { "en": "I get up at seven.", "tr": "Yedide kalkarım." },
+        { "en": "I have breakfast at eight.", "tr": "Sekizde kahvaltı yaparım." }
+      ],
+      "tip_tr": "Sıklık zarfını fiilden önce söyle: I usually get up at seven."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt_tr": "'get up' ne demek?",
+      "options": ["kalkmak", "yatmak", "çalışmak"],
+      "answer": 0,
+      "explanation_tr": "Yataktan kalkmak için 'get up' kullanılır."
+    },
+    {
+      "type": "match",
+      "prompt_tr": "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
+      "pairs": [
+        { "left": "get up", "right": "kalkmak" },
+        { "left": "have breakfast", "right": "kahvaltı yapmak" },
+        { "left": "brush my teeth", "right": "dişlerimi fırçalamak" },
+        { "left": "go to work", "right": "işe gitmek" },
+        { "left": "late", "right": "geç" }
+      ]
+    },
+    {
+      "type": "listen_choice",
+      "prompt_tr": "Dinle ve ne söylendiğini seç.",
+      "audio_text": "I usually get up at seven.",
+      "options": [
+        "Genellikle yedide kalkarım.",
+        "Her zaman sekizde kalkarım.",
+        "Bazen dokuzda kalkarım."
+      ],
+      "answer": 0,
+      "explanation_tr": "'Usually' genellikle demektir; 'seven' yedidir."
+    },
+    {
+      "type": "word_order",
+      "prompt_tr": "Kelimeleri doğru sıraya koy.",
+      "tokens": ["at", "up", "I", "seven", "get"],
+      "answer": ["I", "get", "up", "at", "seven"],
+      "translation_tr": "Yedide kalkarım."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur. 'Her zaman' anlamını ver.",
+      "sentence": "I ___ get up early.",
+      "options": ["always", "usually", "sometimes"],
+      "answer": 0,
+      "explanation_tr": "'Always' her zaman anlamına gelir."
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "'sometimes' ne demek?",
+      "options": ["bazen", "her zaman", "genellikle"],
+      "answer": 0,
+      "explanation_tr": "'Sometimes' bazen demektir."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "I brush my teeth ___ the morning.",
+      "options": ["in", "at", "on"],
+      "answer": 0,
+      "explanation_tr": "Günün bölümleriyle 'in' kullanılır: in the morning."
+    },
+    {
+      "type": "dialogue_choice",
+      "prompt_tr": "Diyalogda Leo sabahları ne yapıyor?",
+      "audio_text": "I usually get up at seven. I always have breakfast at home.",
+      "options": [
+        "Genellikle yedide kalkıyor ve her zaman evde kahvaltı yapıyor.",
+        "Her zaman dokuzda kalkıyor ve işe gidiyor.",
+        "Bazen kahvaltı yapmıyor."
+      ],
+      "answer": 0,
+      "explanation_tr": "Leo 'usually get up at seven' ve 'always have breakfast at home' diyor."
+    },
+    {
+      "type": "translate",
+      "prompt_tr": "İngilizceye çevir: Genellikle yedide kalkarım.",
+      "answers": ["I usually get up at seven.", "Usually, I get up at seven."],
+      "hint_tr": "'Usually' zarfını fiilden önce koy."
+    },
+    {
+      "type": "speak",
+      "prompt_tr": "Cümleyi sesli söyle.",
+      "target": "I always have breakfast at home.",
+      "hint_tr": "Zarfı fiilden önce söyle."
+    },
+    {
+      "type": "write",
+      "prompt_tr": "Sabah rutinini 3 kısa cümleyle anlat. En az bir sıklık zarfı kullan.",
+      "min_words": 8,
+      "keywords": ["get up", "breakfast"],
+      "sample": "I usually get up at seven. I have breakfast at eight. I go to work at nine.",
+      "rubric_tr": "Üç eylem ve en az bir sıklık zarfı yeterli."
+    }
+  ]
+}

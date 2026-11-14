@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="profile_title">Profil</string>
+    <string name="profile_subtitle">İlerleme, ayarlar ve AI koç</string>
+    <string name="profile_stats">İstatistik</string>
+    <string name="profile_stats_desc">Tekrar geçmişi, tutundurma ve iş yükü.</string>
+    <string name="profile_settings">Ayarlar</string>
+    <string name="profile_settings_desc">Çalışma, görünüm, bildirim ve yedekleme.</string>
+    <string name="profile_ai">AI Koç</string>
+    <string name="profile_ai_desc">Sağlayıcı, model, anahtar ve günlük limit.</string>
+    <string name="profile_version">Tekrar · sürüm %1$s</string>
+</resources>

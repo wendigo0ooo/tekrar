@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "a1-u01",
+  "cefr": "A1",
+  "title": "Selamlaşma",
+  "subtitle": "Merhaba, nasılsın?",
+  "icon": "wave",
+  "color": "#4F8EF7",
+  "lessons": [
+    { "id": "a1-u01-l01", "title": "Merhaba!", "file": "l01.json", "est_min": 4 },
+    { "id": "a1-u01-l02", "title": "Nasılsın?", "file": "l02.json", "est_min": 4 },
+    { "id": "a1-u01-l03", "title": "Tanışma", "file": "l03.json", "est_min": 4 },
+    { "id": "a1-u01-l04", "title": "Vedalaşma", "file": "l04.json", "est_min": 5 }
+  ],
+  "roleplay": { "id": "a1-u01-rp01", "title": "İlk tanışma", "file": "rp01.json", "est_min": 5 }
+}

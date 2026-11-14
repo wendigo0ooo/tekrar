@@ -1,0 +1,196 @@
+{
+  "schema": 1,
+  "id": "a1-u01-l02",
+  "unit": "a1-u01",
+  "cefr": "A1",
+  "title": "Nasılsın?",
+  "objective_tr": "Nasıl olduğunu söyle ve karşındakine 'How are you?' diye sor.",
+  "est_min": 4,
+  "vocab": [
+    {
+      "term": "how are you",
+      "meaning_tr": "nasılsın",
+      "pos": "ifade",
+      "example": "Hi, Anna! How are you?",
+      "example_tr": "Merhaba, Anna! Nasılsın?"
+    },
+    {
+      "term": "I'm fine",
+      "meaning_tr": "iyiyim",
+      "pos": "ifade",
+      "example": "I'm fine, thanks.",
+      "example_tr": "İyiyim, teşekkürler.",
+      "ipa": "aɪm faɪn"
+    },
+    {
+      "term": "thanks",
+      "meaning_tr": "teşekkürler",
+      "pos": "ünlem",
+      "example": "Thanks, Ben!",
+      "example_tr": "Teşekkürler, Ben!"
+    },
+    {
+      "term": "and you",
+      "meaning_tr": "ya sen",
+      "pos": "ifade",
+      "example": "I'm fine, and you?",
+      "example_tr": "İyiyim, ya sen?"
+    },
+    {
+      "term": "not bad",
+      "meaning_tr": "fena değil",
+      "pos": "ifade",
+      "example": "I'm not bad, thanks.",
+      "example_tr": "Fena değilim, teşekkürler."
+    },
+    {
+      "term": "tired",
+      "meaning_tr": "yorgun",
+      "pos": "sıfat",
+      "example": "I'm tired today.",
+      "example_tr": "Bugün yorgunum."
+    },
+    {
+      "term": "okay",
+      "meaning_tr": "iyi",
+      "pos": "sıfat",
+      "example": "I'm okay, thanks.",
+      "example_tr": "İyiyim, teşekkürler."
+    },
+    {
+      "term": "great",
+      "meaning_tr": "harika",
+      "pos": "sıfat",
+      "example": "I'm great, thanks!",
+      "example_tr": "Harikayım, teşekkürler!"
+    }
+  ],
+  "grammar": [
+    {
+      "title_tr": "I am + sıfat",
+      "explanation_tr": "Nasıl olduğunu söylerken 'I am' + sıfat kullanılır: I am tired, I am fine. Günlük dilde 'I'm tired' biçimi yaygındır. 'And you?' ile soruyu geri sorabilirsin.",
+      "examples": [
+        { "en": "I'm fine, thanks.", "tr": "İyiyim, teşekkürler." },
+        { "en": "I'm tired today.", "tr": "Bugün yorgunum." }
+      ]
+    },
+    {
+      "title_tr": "How are you? / And you?",
+      "explanation_tr": "'How are you?' nasılsın demektir. Cevaptan sonra 'And you?' diyerek karşındakine aynı soruyu sorabilirsin.",
+      "examples": [
+        { "en": "How are you?", "tr": "Nasılsın?" },
+        { "en": "I'm fine, and you?", "tr": "İyiyim, ya sen?" }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title": "Nasılsın?",
+    "lines": [
+      { "speaker": "Anna", "en": "Hi, Ben! How are you?", "tr": "Merhaba, Ben! Nasılsın?" },
+      { "speaker": "Ben", "en": "I'm fine, thanks. And you?", "tr": "İyiyim, teşekkürler. Ya sen?" },
+      { "speaker": "Anna", "en": "Not bad, thanks. And you?", "tr": "Fena değilim, teşekkürler. Ya sen?" },
+      { "speaker": "Ben", "en": "I'm tired today.", "tr": "Bugün yorgunum." },
+      { "speaker": "Anna", "en": "See you, Ben!", "tr": "Görüşürüz, Ben!" },
+      { "speaker": "Ben", "en": "See you, Anna!", "tr": "Görüşürüz, Anna!" }
+    ]
+  },
+  "teach": [
+    {
+      "title_tr": "Sık kullanılan cevaplar",
+      "body_tr": "Fine, not bad, okay ve great sık kullanılan cevaplardır. 'Tired' yorgun olduğunu söyler. Emin değilsen 'I'm okay' güvenli bir cevaptır.",
+      "examples": [
+        { "en": "I'm not bad.", "tr": "Fena değilim." },
+        { "en": "I'm great, thanks!", "tr": "Harikayım, teşekkürler!" }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt_tr": "'How are you?' ne demek?",
+      "options": ["Nasılsın?", "Adın ne?", "Görüşürüz"],
+      "answer": 0,
+      "explanation_tr": "'How are you?' birinin nasıl olduğunu sormak için kullanılır."
+    },
+    {
+      "type": "match",
+      "prompt_tr": "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
+      "pairs": [
+        { "left": "how are you", "right": "nasılsın" },
+        { "left": "I'm fine", "right": "iyiyim" },
+        { "left": "not bad", "right": "fena değil" },
+        { "left": "tired", "right": "yorgun" },
+        { "left": "and you", "right": "ya sen" }
+      ]
+    },
+    {
+      "type": "listen_choice",
+      "prompt_tr": "Dinle ve ne söylendiğini seç.",
+      "audio_text": "I'm fine, thanks. And you?",
+      "options": [
+        "İyiyim, teşekkürler. Ya sen?",
+        "Fena değilim, görüşürüz.",
+        "Yorgunum, adın ne?"
+      ],
+      "answer": 0,
+      "explanation_tr": "'I'm fine' iyiyim, 'And you?' ya sen demektir."
+    },
+    {
+      "type": "word_order",
+      "prompt_tr": "Kelimeleri doğru sıraya koy.",
+      "tokens": ["thank", "I", "fine", "am", "you"],
+      "answer": ["I", "am", "fine", "thank", "you"],
+      "translation_tr": "İyiyim, teşekkürler."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "How ___ you?",
+      "options": ["are", "is", "am"],
+      "answer": 0,
+      "explanation_tr": "'You' ile birlikte 'are' kullanılır: you are."
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "'I'm tired' ne demek?",
+      "options": ["Yorgunum.", "İyiyim.", "Fena değilim."],
+      "answer": 0,
+      "explanation_tr": "'Tired' yorgun demektir; 'I'm tired' yorgunum anlamına gelir."
+    },
+    {
+      "type": "dialogue_choice",
+      "prompt_tr": "Diyalogda Anna kendisi için ne söylüyor?",
+      "audio_text": "Not bad, thanks. And you?",
+      "options": [
+        "Fena değil diyor ve soruyu Ben'e geri soruyor.",
+        "Yorgun olduğunu söylüyor.",
+        "Ben'in adını soruyor."
+      ],
+      "answer": 0,
+      "explanation_tr": "'Not bad' fena değil demektir; 'And you?' ile soruyu geri soruyor."
+    },
+    {
+      "type": "translate",
+      "prompt_tr": "İngilizceye çevir: İyiyim, teşekkürler. Ya sen?",
+      "answers": [
+        "I'm fine, thanks. And you?",
+        "I am fine, thank you. And you?"
+      ],
+      "hint_tr": "'I'm fine' ve 'And you?' kalıplarını kullan."
+    },
+    {
+      "type": "speak",
+      "prompt_tr": "Cümleyi sesli söyle.",
+      "target": "I'm fine, thanks. And you?",
+      "hint_tr": "Cümleyi iki parça hâlinde söyle, sonra birleştir."
+    },
+    {
+      "type": "write",
+      "prompt_tr": "Nasıl olduğunu söyle ve karşındakine aynı soruyu sor. İki kısa cümle yeterli.",
+      "min_words": 6,
+      "keywords": ["fine", "you"],
+      "sample": "Hi! I'm fine today. How are you?",
+      "rubric_tr": "Durumunu söylemen ve 'How are you?' sorusu yeterli."
+    }
+  ]
+}

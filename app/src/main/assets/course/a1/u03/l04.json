@@ -1,0 +1,219 @@
+{
+  "schema": 1,
+  "id": "a1-u03-l04",
+  "unit": "a1-u03",
+  "cefr": "A1",
+  "title": "Akşam Rutini",
+  "objective_tr": "Akşam rutinini anlat ve U03'te öğrendiklerini pekiştir.",
+  "est_min": 5,
+  "vocab": [
+    {
+      "term": "come home",
+      "meaning_tr": "eve gelmek",
+      "pos": "ifade",
+      "example": "I come home at six.",
+      "example_tr": "Altıda eve gelirim."
+    },
+    {
+      "term": "have dinner",
+      "meaning_tr": "akşam yemeği yemek",
+      "pos": "ifade",
+      "example": "I have dinner at seven.",
+      "example_tr": "Yedide akşam yemeği yerim."
+    },
+    {
+      "term": "watch TV",
+      "meaning_tr": "televizyon izlemek",
+      "pos": "ifade",
+      "example": "I watch TV in the evening.",
+      "example_tr": "Akşam televizyon izlerim."
+    },
+    {
+      "term": "go to bed",
+      "meaning_tr": "yatağa gitmek",
+      "pos": "ifade",
+      "example": "I go to bed at eleven.",
+      "example_tr": "On birde yatarım."
+    },
+    {
+      "term": "sleep",
+      "meaning_tr": "uyumak",
+      "pos": "fiil",
+      "example": "I sleep at night.",
+      "example_tr": "Gece uyurum."
+    },
+    {
+      "term": "read",
+      "meaning_tr": "okumak",
+      "pos": "fiil",
+      "example": "I read a book at night.",
+      "example_tr": "Gece kitap okurum."
+    },
+    {
+      "term": "homework",
+      "meaning_tr": "ödev",
+      "pos": "isim",
+      "example": "I do my homework in the evening.",
+      "example_tr": "Akşam ödevimi yaparım."
+    },
+    {
+      "term": "after",
+      "meaning_tr": "sonra",
+      "pos": "edat",
+      "example": "I watch TV after dinner.",
+      "example_tr": "Akşam yemeğinden sonra televizyon izlerim."
+    }
+  ],
+  "grammar": [
+    {
+      "title_tr": "Akşam rutini ve sıklık zarfları",
+      "explanation_tr": "Akşam rutinini anlatırken I, you, we ve they ile present simple kullanılır: I come home at six. Sıklık zarfları fiilden önce gelir: I usually watch TV after dinner.",
+      "examples": [
+        { "en": "I have dinner at seven.", "tr": "Yedide akşam yemeği yerim." },
+        { "en": "I usually go to bed at eleven.", "tr": "Genellikle on birde yatarım." }
+      ]
+    },
+    {
+      "title_tr": "in the evening / at night",
+      "explanation_tr": "Günün bölümleriyle 'in' kullanılır: in the morning, in the afternoon, in the evening. Gece için 'at night' denir: I sleep at night.",
+      "examples": [
+        { "en": "I watch TV in the evening.", "tr": "Akşam televizyon izlerim." },
+        { "en": "I sleep at night.", "tr": "Gece uyurum." }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title": "Akşam sohbeti",
+    "lines": [
+      { "speaker": "Leo", "en": "What time do you come home?", "tr": "Saat kaçta eve gelirsin?" },
+      { "speaker": "Mia", "en": "I usually come home at six.", "tr": "Genellikle altıda eve gelirim." },
+      { "speaker": "Leo", "en": "Do you have dinner at seven?", "tr": "Yedide akşam yemeği yer misin?" },
+      { "speaker": "Mia", "en": "Yes, I do. After dinner, I watch TV.", "tr": "Evet. Akşam yemeğinden sonra televizyon izlerim." },
+      { "speaker": "Leo", "en": "I sometimes read at night.", "tr": "Ben bazen gece kitap okurum." },
+      { "speaker": "Mia", "en": "I always go to bed at eleven. Good night!", "tr": "Ben her zaman on birde yatarım. İyi geceler!" }
+    ]
+  },
+  "teach": [
+    {
+      "title_tr": "Akşam rutini",
+      "body_tr": "Akşam eve gelince 'come home', yemek için 'have dinner' kullanılır. Boş zamanında 'watch TV' veya 'read' yapabilirsin. Yatmadan önce 'go to bed' denir.",
+      "examples": [
+        { "en": "I come home at six.", "tr": "Altıda eve gelirim." },
+        { "en": "I go to bed at eleven.", "tr": "On birde yatarım." }
+      ]
+    },
+    {
+      "title_tr": "U03 tekrar",
+      "body_tr": "Saat sorma: What time is it? It's seven o'clock. Rutin: I get up, I have breakfast, I go to work. Sıklık: always, usually, sometimes.",
+      "examples": [
+        { "en": "I usually get up at seven.", "tr": "Genellikle yedide kalkarım." },
+        { "en": "I always go to bed at eleven.", "tr": "Her zaman on birde yatarım." }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt_tr": "'have dinner' ne demek?",
+      "options": ["akşam yemeği yemek", "kahvaltı yapmak", "eve gelmek"],
+      "answer": 0,
+      "explanation_tr": "'Dinner' akşam yemeğidir; 'have dinner' yemek yemek demektir."
+    },
+    {
+      "type": "match",
+      "prompt_tr": "U03'te öğrendiğin ifadeleri Türkçe karşılıklarıyla eşleştir.",
+      "pairs": [
+        { "left": "get up", "right": "kalkmak" },
+        { "left": "have breakfast", "right": "kahvaltı yapmak" },
+        { "left": "by bus", "right": "otobüsle" },
+        { "left": "go to bed", "right": "yatağa gitmek" },
+        { "left": "o'clock", "right": "tam saat" }
+      ]
+    },
+    {
+      "type": "listen_choice",
+      "prompt_tr": "Dinle ve ne söylendiğini seç.",
+      "audio_text": "I come home at six and have dinner at seven.",
+      "options": [
+        "Altıda eve gelirim ve yedide akşam yemeği yerim.",
+        "Yedide eve gelirim ve altıda yemek yerim.",
+        "Altıda yatarım ve yedide kalkarım."
+      ],
+      "answer": 0,
+      "explanation_tr": "'Come home at six' altıda eve gelmek, 'have dinner at seven' yedide yemek yemektir."
+    },
+    {
+      "type": "word_order",
+      "prompt_tr": "Kelimeleri doğru sıraya koy.",
+      "tokens": ["home", "I", "at", "come", "six"],
+      "answer": ["I", "come", "home", "at", "six"],
+      "translation_tr": "Altıda eve gelirim."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "I go to bed ___ eleven.",
+      "options": ["at", "in", "by"],
+      "answer": 0,
+      "explanation_tr": "Saatten önce 'at' kullanılır: at eleven."
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "'always' ne demek?",
+      "options": ["her zaman", "bazen", "genellikle"],
+      "answer": 0,
+      "explanation_tr": "'Always' her zaman anlamına gelir."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "I sleep ___ night.",
+      "options": ["at", "in", "on"],
+      "answer": 0,
+      "explanation_tr": "Gece için 'at night' kalıbı kullanılır."
+    },
+    {
+      "type": "dialogue_choice",
+      "prompt_tr": "Diyalogda Mia akşam yemeğinden sonra ne yapıyor?",
+      "audio_text": "Yes, I do. After dinner, I watch TV.",
+      "options": [
+        "Televizyon izliyor.",
+        "Ödevini yapıyor.",
+        "Yatağa gidiyor."
+      ],
+      "answer": 0,
+      "explanation_tr": "Mia 'After dinner, I watch TV' diyor: yemekten sonra televizyon izliyor."
+    },
+    {
+      "type": "translate",
+      "prompt_tr": "İngilizceye çevir: On birde yatarım.",
+      "answers": ["I go to bed at eleven.", "I go to bed at eleven o'clock."],
+      "hint_tr": "'go to bed' ve 'at eleven' kalıplarını kullan."
+    },
+    {
+      "type": "speak",
+      "prompt_tr": "Cümleyi sesli söyle.",
+      "target": "I usually come home at six in the evening.",
+      "hint_tr": "Cümleyi iki parça hâlinde söyle, sonra birleştir."
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "Hangi cümle doğru?",
+      "options": [
+        "I go to bed at eleven.",
+        "I go to bed in eleven.",
+        "I go to bed by eleven."
+      ],
+      "answer": 0,
+      "explanation_tr": "Saatten önce 'at' kullanılır: at eleven."
+    },
+    {
+      "type": "write",
+      "prompt_tr": "Akşam rutinini 4 kısa cümleyle anlat. Eve geliş, yemek ve yatma saatlerini yaz.",
+      "min_words": 10,
+      "keywords": ["dinner", "bed"],
+      "sample": "I usually come home at six. I have dinner at seven. I watch TV after dinner. I go to bed at eleven.",
+      "rubric_tr": "En az üç eylem ve bir saat ifadesi yeterli."
+    }
+  ]
+}

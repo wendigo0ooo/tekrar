@@ -1,0 +1,184 @@
+{
+  "schema": 1,
+  "id": "a1-u01-l03",
+  "unit": "a1-u01",
+  "cefr": "A1",
+  "title": "Tanışma",
+  "objective_tr": "Adını sor, adını söyle ve birini tanıt.",
+  "est_min": 4,
+  "vocab": [
+    {
+      "term": "name",
+      "meaning_tr": "isim, ad",
+      "pos": "isim",
+      "example": "My name is Leo.",
+      "example_tr": "Benim adım Leo."
+    },
+    {
+      "term": "what's your name",
+      "meaning_tr": "adın ne",
+      "pos": "ifade",
+      "example": "Hi! What's your name?",
+      "example_tr": "Merhaba! Adın ne?"
+    },
+    {
+      "term": "my name is",
+      "meaning_tr": "benim adım",
+      "pos": "ifade",
+      "example": "My name is Mia.",
+      "example_tr": "Benim adım Mia."
+    },
+    {
+      "term": "this is",
+      "meaning_tr": "bu ... (tanıtırken)",
+      "pos": "ifade",
+      "example": "This is Sam.",
+      "example_tr": "Bu Sam."
+    },
+    {
+      "term": "nice to meet you",
+      "meaning_tr": "tanıştığıma memnun oldum",
+      "pos": "ifade",
+      "example": "Nice to meet you, Anna.",
+      "example_tr": "Tanıştığıma memnun oldum, Anna."
+    },
+    {
+      "term": "friend",
+      "meaning_tr": "arkadaş",
+      "pos": "isim",
+      "example": "This is my friend Mia.",
+      "example_tr": "Bu arkadaşım Mia."
+    },
+    {
+      "term": "too",
+      "meaning_tr": "de, da",
+      "pos": "zarf",
+      "example": "Nice to meet you too.",
+      "example_tr": "Ben de tanıştığıma memnun oldum."
+    }
+  ],
+  "grammar": [
+    {
+      "title_tr": "What is your name? / My name is ...",
+      "explanation_tr": "Adını sorarken 'What is your name?' denir. Cevap 'My name is ...' ile verilir. Günlük dilde 'What's your name?' ve 'My name's ...' kısa biçimleri kullanılır.",
+      "examples": [
+        { "en": "What's your name?", "tr": "Adın ne?" },
+        { "en": "My name is Leo.", "tr": "Benim adım Leo." }
+      ]
+    },
+    {
+      "title_tr": "This is ... / my, your",
+      "explanation_tr": "Birini tanıtırken 'This is ...' kullanılır: This is my friend Mia. 'my' benim, 'your' senin demektir.",
+      "examples": [
+        { "en": "This is my friend Sam.", "tr": "Bu arkadaşım Sam." },
+        { "en": "You are my friend.", "tr": "Sen benim arkadaşımsın." }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title": "Partide tanışma",
+    "lines": [
+      { "speaker": "Mia", "en": "Hi! What's your name?", "tr": "Merhaba! Adın ne?" },
+      { "speaker": "Leo", "en": "Hello! My name is Leo. And you?", "tr": "Merhaba! Benim adım Leo. Ya sen?" },
+      { "speaker": "Mia", "en": "I'm Mia. This is my friend Sam.", "tr": "Ben Mia. Bu arkadaşım Sam." },
+      { "speaker": "Leo", "en": "Nice to meet you, Sam.", "tr": "Tanıştığıma memnun oldum, Sam." },
+      { "speaker": "Sam", "en": "Nice to meet you too, Leo.", "tr": "Ben de tanıştığıma memnun oldum, Leo." }
+    ]
+  },
+  "teach": [
+    {
+      "title_tr": "Tanışma sırası",
+      "body_tr": "Önce selamlaş, sonra adını söyle. Karşındakinin adını 'What's your name?' ile sor. Yeni tanıştığın kişiye 'Nice to meet you' denir.",
+      "examples": [
+        { "en": "Hi, I'm Mia. What's your name?", "tr": "Selam, ben Mia. Adın ne?" },
+        { "en": "Nice to meet you, Leo!", "tr": "Tanıştığıma memnun oldum, Leo!" }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt_tr": "'What's your name?' ne demek?",
+      "options": ["Adın ne?", "Nasılsın?", "Nereden geliyorsun?"],
+      "answer": 0,
+      "explanation_tr": "'What's your name?' birinin adını sormak için kullanılır."
+    },
+    {
+      "type": "match",
+      "prompt_tr": "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
+      "pairs": [
+        { "left": "what's your name", "right": "adın ne" },
+        { "left": "my name is", "right": "benim adım" },
+        { "left": "this is", "right": "bu ... (tanıtırken)" },
+        { "left": "nice to meet you", "right": "tanıştığıma memnun oldum" },
+        { "left": "friend", "right": "arkadaş" }
+      ]
+    },
+    {
+      "type": "listen_choice",
+      "prompt_tr": "Dinle ve ne söylendiğini seç.",
+      "audio_text": "Hi, my name is Leo.",
+      "options": [
+        "Merhaba, benim adım Leo.",
+        "Merhaba Leo, nasılsın?",
+        "Hoşça kal Leo."
+      ],
+      "answer": 0,
+      "explanation_tr": "'My name is Leo' benim adım Leo demektir."
+    },
+    {
+      "type": "word_order",
+      "prompt_tr": "Kelimeleri doğru sıraya koy.",
+      "tokens": ["your", "What", "name", "is"],
+      "answer": ["What", "is", "your", "name"],
+      "translation_tr": "Adın ne?"
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "My ___ is Mia.",
+      "options": ["name", "friend", "too"],
+      "answer": 0,
+      "explanation_tr": "'My name is ...' benim adım ... demektir."
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "'This is my friend Sam.' cümlesi ne anlama gelir?",
+      "options": ["Bu arkadaşım Sam.", "Adım Sam.", "Sam yorgun."],
+      "answer": 0,
+      "explanation_tr": "'This is ...' birini tanıtırken kullanılır."
+    },
+    {
+      "type": "translate",
+      "prompt_tr": "İngilizceye çevir: Adın ne?",
+      "answers": ["What's your name?", "What is your name?"],
+      "hint_tr": "Ad sorma kalıbını kullan."
+    },
+    {
+      "type": "dialogue_choice",
+      "prompt_tr": "Diyalogda Leo, Sam'e ne söylüyor?",
+      "audio_text": "Nice to meet you, Sam.",
+      "options": [
+        "Tanıştığına memnun olduğunu söylüyor.",
+        "Sam'den yardım istiyor.",
+        "Sam'a hoşça kal diyor."
+      ],
+      "answer": 0,
+      "explanation_tr": "'Nice to meet you' yeni tanıştığın kişiye söylenir."
+    },
+    {
+      "type": "speak",
+      "prompt_tr": "Cümleyi sesli söyle.",
+      "target": "Hi, my name is Leo. Nice to meet you.",
+      "hint_tr": "Adını söylerken net ve yavaş konuş."
+    },
+    {
+      "type": "write",
+      "prompt_tr": "Kendini ve bir arkadaşını 2-3 cümleyle tanıt. Adını söyle, arkadaşını 'This is ...' ile tanıt.",
+      "min_words": 8,
+      "keywords": ["name", "friend", "meet"],
+      "sample": "Hi! My name is ... This is my friend ... Nice to meet you.",
+      "rubric_tr": "Adını söylemen, arkadaşını tanıtman ve kapanış yapman yeterli."
+    }
+  ]
+}

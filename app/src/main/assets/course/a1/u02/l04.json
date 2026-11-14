@@ -1,0 +1,214 @@
+{
+  "schema": 1,
+  "id": "a1-u02-l04",
+  "unit": "a1-u02",
+  "cefr": "A1",
+  "title": "Yaş ve Sayılar",
+  "objective_tr": "1-20 arası sayıları kullan, yaşını söyle ve 'How old are you?' diye sor; U02'de öğrendiklerini tekrar et.",
+  "est_min": 5,
+  "vocab": [
+    {
+      "term": "how old are you",
+      "meaning_tr": "kaç yaşındasın",
+      "pos": "ifade",
+      "example": "How old are you?",
+      "example_tr": "Kaç yaşındasın?"
+    },
+    {
+      "term": "years old",
+      "meaning_tr": "yaşında",
+      "pos": "ifade",
+      "example": "I'm twenty years old.",
+      "example_tr": "Yirmi yaşındayım."
+    },
+    {
+      "term": "twenty",
+      "meaning_tr": "yirmi",
+      "pos": "sayı",
+      "example": "I'm twenty years old.",
+      "example_tr": "Yirmi yaşındayım."
+    },
+    {
+      "term": "thirteen",
+      "meaning_tr": "on üç",
+      "pos": "sayı",
+      "example": "I'm thirteen years old.",
+      "example_tr": "On üç yaşındayım."
+    },
+    {
+      "term": "seven",
+      "meaning_tr": "yedi",
+      "pos": "sayı",
+      "example": "My number is seven.",
+      "example_tr": "Numaram yedi."
+    },
+    {
+      "term": "twelve",
+      "meaning_tr": "on iki",
+      "pos": "sayı",
+      "example": "My number is twelve.",
+      "example_tr": "Numaram on iki."
+    },
+    {
+      "term": "eighteen",
+      "meaning_tr": "on sekiz",
+      "pos": "sayı",
+      "example": "I'm eighteen years old.",
+      "example_tr": "On sekiz yaşındayım."
+    },
+    {
+      "term": "number",
+      "meaning_tr": "sayı, numara",
+      "pos": "isim",
+      "example": "Seven is a number.",
+      "example_tr": "Yedi bir sayıdır."
+    },
+    {
+      "term": "birthday",
+      "meaning_tr": "doğum günü",
+      "pos": "isim",
+      "example": "My birthday is today.",
+      "example_tr": "Doğum günüm bugün."
+    },
+    {
+      "term": "happy birthday",
+      "meaning_tr": "doğum günün kutlu olsun",
+      "pos": "ifade",
+      "example": "Happy birthday, Mia!",
+      "example_tr": "Doğum günün kutlu olsun, Mia!"
+    }
+  ],
+  "grammar": [
+    {
+      "title_tr": "How old are you? / I'm ... years old",
+      "explanation_tr": "Yaş sormak için 'How old are you?' denir. Cevap 'I'm ... years old' olur. Günlük dilde 'years old' atlanabilir: I'm twenty.",
+      "examples": [
+        { "en": "How old are you?", "tr": "Kaç yaşındasın?" },
+        { "en": "I'm twenty years old.", "tr": "Yirmi yaşındayım." }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title": "Doğum günü partisi",
+    "lines": [
+      { "speaker": "Mia", "en": "Hi, Leo! How old are you?", "tr": "Merhaba Leo! Kaç yaşındasın?" },
+      { "speaker": "Leo", "en": "I'm twenty years old. And you?", "tr": "Yirmi yaşındayım. Ya sen?" },
+      { "speaker": "Mia", "en": "I'm nineteen.", "tr": "On dokuz yaşındayım." },
+      { "speaker": "Leo", "en": "My birthday is today. I'm twenty today!", "tr": "Doğum günüm bugün. Bugün yirmi yaşındayım!" },
+      { "speaker": "Mia", "en": "Happy birthday, Leo!", "tr": "Doğum günün kutlu olsun, Leo!" },
+      { "speaker": "Leo", "en": "Thanks, Mia!", "tr": "Teşekkürler, Mia!" }
+    ]
+  },
+  "teach": [
+    {
+      "title_tr": "Sayılar 1-20",
+      "body_tr": "1-12 arası sayılar tek tek öğrenilir: one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve. 13-19 arası sayılar '-teen' ile biter: thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen. Yirmi 'twenty'dir.",
+      "examples": [
+        { "en": "I'm thirteen years old.", "tr": "On üç yaşındayım." },
+        { "en": "I'm twenty years old.", "tr": "Yirmi yaşındayım." }
+      ],
+      "tip_tr": "Telefon numaranı yüksek sesle sayarak pratik yap."
+    },
+    {
+      "title_tr": "U02 tekrar",
+      "body_tr": "Kendini tanıtırken adını, memleketini, mesleğini ve yaşını söyleyebilirsin. Kısa cümleler kullanmak yeterlidir.",
+      "examples": [
+        { "en": "I'm Mia. I'm from England. I'm a teacher.", "tr": "Ben Mia. İngiltere'denim. Öğretmenim." },
+        { "en": "I'm Leo. I'm Turkish. I'm twenty years old.", "tr": "Ben Leo. Türküm. Yirmi yaşındayım." }
+      ],
+      "tip_tr": "Dört bilgiyi kısa cümlelerle tek tek söyle."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt_tr": "'How old are you?' ne demek?",
+      "options": ["Kaç yaşındasın?", "Nerelisin?", "Ne iş yapıyorsun?"],
+      "answer": 0,
+      "explanation_tr": "'How old are you?' birinin yaşını sormak için kullanılır."
+    },
+    {
+      "type": "match",
+      "prompt_tr": "Sayıları Türkçe karşılıklarıyla eşleştir.",
+      "pairs": [
+        { "left": "seven", "right": "yedi" },
+        { "left": "twelve", "right": "on iki" },
+        { "left": "thirteen", "right": "on üç" },
+        { "left": "twenty", "right": "yirmi" }
+      ]
+    },
+    {
+      "type": "listen_choice",
+      "prompt_tr": "Dinle ve ne söylendiğini seç.",
+      "audio_text": "I'm twenty years old.",
+      "options": [
+        "Yirmi yaşındayım.",
+        "On iki yaşındayım.",
+        "On üç yaşındayım."
+      ],
+      "answer": 0,
+      "explanation_tr": "'Twenty' yirmi demektir."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "I'm thirteen years ___.",
+      "options": ["old", "age", "number"],
+      "answer": 0,
+      "explanation_tr": "Yaş söylerken 'years old' kalıbı kullanılır."
+    },
+    {
+      "type": "word_order",
+      "prompt_tr": "Kelimeleri doğru sıraya koy.",
+      "tokens": ["old", "are", "How", "you"],
+      "answer": ["How", "old", "are", "you"],
+      "translation_tr": "Kaç yaşındasın?"
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "20 sayısının İngilizcesi hangisi?",
+      "options": ["twenty", "twelve", "two"],
+      "answer": 0,
+      "explanation_tr": "'Twenty' yirmi demektir; 'twelve' on ikidir."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu yaz.",
+      "sentence": "My birthday is ___.",
+      "answers": ["today"],
+      "explanation_tr": "'Today' bugün demektir."
+    },
+    {
+      "type": "translate",
+      "prompt_tr": "İngilizceye çevir: Yirmi yaşındayım.",
+      "answers": [
+        "I'm twenty years old.",
+        "I am twenty years old.",
+        "I'm twenty."
+      ],
+      "hint_tr": "'I'm ... years old' kalıbını kullan."
+    },
+    {
+      "type": "dialogue_choice",
+      "prompt_tr": "Diyalogda Leo kaç yaşında?",
+      "audio_text": "I'm twenty years old.",
+      "options": ["Yirmi", "On dokuz", "On iki"],
+      "answer": 0,
+      "explanation_tr": "Leo 'I'm twenty years old' diyor; yirmi yaşında."
+    },
+    {
+      "type": "speak",
+      "prompt_tr": "Cümleyi sesli söyle.",
+      "target": "How old are you? I'm twenty years old.",
+      "hint_tr": "Soruyu ve cevabı ayrı ayrı söyle, sonra birleştir."
+    },
+    {
+      "type": "write",
+      "prompt_tr": "Kendini tanıt: adın, memleketin, mesleğin ve yaşın. 3-4 kısa cümle yaz.",
+      "min_words": 10,
+      "keywords": ["from", "years"],
+      "sample": "Hi, I'm ... I'm from ... I'm a ... I'm ... years old.",
+      "rubric_tr": "Ad, memleket, meslek ve yaş bilgilerinin hepsi yeterli."
+    }
+  ]
+}

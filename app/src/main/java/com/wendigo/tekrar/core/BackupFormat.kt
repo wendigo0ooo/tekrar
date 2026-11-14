@@ -2,6 +2,7 @@ package com.wendigo.tekrar.core
 
 import com.wendigo.tekrar.data.ReviewLog
 import com.wendigo.tekrar.data.Word
+import com.wendigo.tekrar.data.learn.LessonProgressEntity
 
 /**
  * JSON yedek biçimi. Android Context/Room/org.json bağımlılığı yoktur; bu sayede
@@ -35,13 +36,14 @@ data class BackupPackage(
     val settings: BackupSettings? = null,
     val skippedWords: Int = 0,
     val skippedLogs: Int = 0,
+    val lessonProgress: List<LessonProgressEntity> = emptyList(),
 )
 
 class BackupFormatException(message: String) : IllegalArgumentException(message)
 
 object BackupFormat {
 
-    const val CURRENT_VERSION = 3
+    const val CURRENT_VERSION = 4
     const val MIN_VERSION = 2
 
     private const val APP_MARKER = "tekrar"
@@ -49,12 +51,14 @@ object BackupFormat {
     fun build(pkg: BackupPackage): String {
         val words = J.Arr(pkg.words.map { wordJson(it) })
         val logs = J.Arr(pkg.logs.map { logJson(it) })
+        val progress = J.Arr(pkg.lessonProgress.map { progressJson(it) })
         val root = LinkedHashMap<String, J>()
         root["app"] = J.of(APP_MARKER)
         root["format"] = J.of(CURRENT_VERSION)
         root["exportedAt"] = J.of(pkg.exportedAt)
         root["words"] = words
         root["reviewLogs"] = logs
+        root["lessonProgress"] = progress
         pkg.settings?.let { root["settings"] = settingsJson(it) }
         return Writer.encode(J.Obj(root))
     }
@@ -144,6 +148,7 @@ object BackupFormat {
                 reps = item.int("reps", 0).coerceAtLeast(0),
                 lapses = item.int("lapses", 0).coerceAtLeast(0),
                 suspended = item.bool("suspended", false),
+                sourceKey = item.string("sourceKey")?.trim()?.takeIf { it.isNotEmpty() },
             )
         }
 
@@ -214,6 +219,35 @@ object BackupFormat {
             )
         }
 
+        val progressArray = obj.values["lessonProgress"] as? J.Arr
+        val progress = ArrayList<LessonProgressEntity>(progressArray?.values?.size ?: 0)
+        val seenLessons = HashSet<String>()
+        if (progressArray != null) {
+            for (element in progressArray.values) {
+                val item = element as? J.Obj ?: continue
+                val lessonId = item.string("lessonId")?.trim().orEmpty()
+                val unitId = item.string("unitId")?.trim().orEmpty()
+                if (lessonId.isEmpty() || unitId.isEmpty() || !seenLessons.add(lessonId)) {
+                    continue
+                }
+                val now = System.currentTimeMillis()
+                progress += LessonProgressEntity(
+                    lessonId = lessonId,
+                    unitId = unitId,
+                    status = item.string("status")?.trim()?.lowercase()
+                        ?.takeIf { it.isNotEmpty() } ?: "completed",
+                    bestScore = item.int("bestScore", 0).coerceIn(0, 100),
+                    lastScore = item.int("lastScore", 0).coerceIn(0, 100),
+                    attempts = item.int("attempts", 0).coerceAtLeast(0),
+                    completedAt = item.longOrNull("completedAt")?.takeIf { it > 0L },
+                    completedEpochDay = item.longOrNull("completedEpochDay")?.takeIf { it > 0L },
+                    contentVersion = item.string("contentVersion")?.trim()?.takeIf { it.isNotEmpty() },
+                    lastOpenedAt = item.longOrNull("lastOpenedAt")?.takeIf { it > 0L },
+                    updatedAt = item.longOrNull("updatedAt")?.takeIf { it > 0L } ?: now,
+                )
+            }
+        }
+
         return BackupPackage(
             exportedAt = obj.longOrNull("exportedAt") ?: 0L,
             words = words,
@@ -221,6 +255,7 @@ object BackupFormat {
             settings = settings,
             skippedWords = skippedWords,
             skippedLogs = skippedLogs,
+            lessonProgress = progress,
         )
     }
 
@@ -247,6 +282,7 @@ object BackupFormat {
             "reps" to J.of(word.reps),
             "lapses" to J.of(word.lapses),
             "suspended" to J.of(word.suspended),
+            "sourceKey" to J.ofNullable(word.sourceKey),
         )
     )
 
@@ -263,6 +299,22 @@ object BackupFormat {
             "nextStability" to J.of(log.nextStability),
             "nextDifficulty" to J.of(log.nextDifficulty),
             "elapsedDays" to J.of(log.elapsedDays),
+        )
+    )
+
+    private fun progressJson(progress: LessonProgressEntity): J = J.Obj(
+        linkedMapOf(
+            "lessonId" to J.of(progress.lessonId),
+            "unitId" to J.of(progress.unitId),
+            "status" to J.of(progress.status),
+            "bestScore" to J.of(progress.bestScore),
+            "lastScore" to J.of(progress.lastScore),
+            "attempts" to J.of(progress.attempts),
+            "completedAt" to J.ofNullable(progress.completedAt),
+            "completedEpochDay" to J.ofNullable(progress.completedEpochDay),
+            "contentVersion" to J.ofNullable(progress.contentVersion),
+            "lastOpenedAt" to J.ofNullable(progress.lastOpenedAt),
+            "updatedAt" to J.of(progress.updatedAt),
         )
     )
 
@@ -298,6 +350,7 @@ object BackupFormat {
             fun of(value: Float): J = Num(if (value.isFinite()) value.toString() else "0")
             fun of(value: Double): J = Num(if (value.isFinite()) value.toString() else "0")
             fun ofNullable(value: Long?): J = value?.let { of(it) } ?: Null
+            fun ofNullable(value: String?): J = value?.let { of(it) } ?: Null
         }
     }
 

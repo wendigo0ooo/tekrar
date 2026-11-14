@@ -1,0 +1,182 @@
+{
+  "schema": 1,
+  "id": "a1-u01-l01",
+  "unit": "a1-u01",
+  "cefr": "A1",
+  "title": "Merhaba!",
+  "objective_tr": "Selamlaşma ve vedalaşma ifadelerini kullan; 'I am' ile kendini tanıt.",
+  "est_min": 4,
+  "vocab": [
+    {
+      "term": "hello",
+      "meaning_tr": "merhaba",
+      "pos": "ünlem",
+      "example": "Hello, Anna!",
+      "example_tr": "Merhaba, Anna!",
+      "ipa": "həˈloʊ"
+    },
+    {
+      "term": "hi",
+      "meaning_tr": "selam",
+      "pos": "ünlem",
+      "example": "Hi, Ben!",
+      "example_tr": "Selam, Ben!"
+    },
+    {
+      "term": "good morning",
+      "meaning_tr": "günaydın",
+      "pos": "ifade",
+      "example": "Good morning, Mia!",
+      "example_tr": "Günaydın, Mia!"
+    },
+    {
+      "term": "good evening",
+      "meaning_tr": "iyi akşamlar",
+      "pos": "ifade",
+      "example": "Good evening, Sam!",
+      "example_tr": "İyi akşamlar, Sam!"
+    },
+    {
+      "term": "goodbye",
+      "meaning_tr": "hoşça kal",
+      "pos": "ünlem",
+      "example": "Goodbye, Anna!",
+      "example_tr": "Hoşça kal, Anna!"
+    },
+    {
+      "term": "bye",
+      "meaning_tr": "bay bay",
+      "pos": "ünlem",
+      "example": "Bye, Ben!",
+      "example_tr": "Bay bay, Ben!"
+    },
+    {
+      "term": "see you",
+      "meaning_tr": "görüşürüz",
+      "pos": "ifade",
+      "example": "See you, Mia!",
+      "example_tr": "Görüşürüz, Mia!"
+    }
+  ],
+  "grammar": [
+    {
+      "title_tr": "I am / You are",
+      "explanation_tr": "Kendini tanıtırken 'I am' kullanılır: I am Anna. Karşındaki kişiyi kastederken 'you are' denir: You are Ben. Günlük dilde 'I'm' ve 'you're' kısa biçimleri yaygındır.",
+      "examples": [
+        { "en": "I am Anna.", "tr": "Ben Anna." },
+        { "en": "You are Ben.", "tr": "Sen Ben'sin." }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title": "Kısa karşılaşma",
+    "lines": [
+      { "speaker": "Anna", "en": "Hi! Good morning!", "tr": "Selam! Günaydın!" },
+      { "speaker": "Ben", "en": "Good morning, Anna! I am Ben.", "tr": "Günaydın, Anna! Ben Ben." },
+      { "speaker": "Anna", "en": "Hello, Ben!", "tr": "Merhaba, Ben!" },
+      { "speaker": "Ben", "en": "Goodbye, Anna! See you!", "tr": "Hoşça kal, Anna! Görüşürüz!" },
+      { "speaker": "Anna", "en": "Bye, Ben!", "tr": "Bay bay, Ben!" }
+    ]
+  },
+  "teach": [
+    {
+      "title_tr": "Selamlaşma",
+      "body_tr": "Tanıdık biriyle karşılaşınca 'Hello' veya 'Hi' denir. Sabah 'Good morning', akşam 'Good evening' kullanılır. 'Hi' daha samimi, 'Hello' daha nötrdür.",
+      "examples": [
+        { "en": "Hello!", "tr": "Merhaba!" },
+        { "en": "Good morning, Anna!", "tr": "Günaydın, Anna!" }
+      ],
+      "tip_tr": "Aynı kişiye gün boyunca 'Hi' diyebilirsin."
+    },
+    {
+      "title_tr": "Vedalaşma",
+      "body_tr": "Ayrılırken 'Goodbye' veya 'Bye' denir. 'See you' ise 'görüşürüz' demektir. 'Bye' günlük konuşmada daha yaygındır.",
+      "examples": [
+        { "en": "Goodbye, Anna!", "tr": "Hoşça kal, Anna!" },
+        { "en": "See you, Ben!", "tr": "Görüşürüz, Ben!" }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt_tr": "'hello' ne demek?",
+      "options": ["merhaba", "hoşça kal", "teşekkürler"],
+      "answer": 0,
+      "explanation_tr": "'Hello' merhaba demektir; biriyle karşılaşınca kullanılır."
+    },
+    {
+      "type": "match",
+      "prompt_tr": "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
+      "pairs": [
+        { "left": "hello", "right": "merhaba" },
+        { "left": "hi", "right": "selam" },
+        { "left": "good morning", "right": "günaydın" },
+        { "left": "goodbye", "right": "hoşça kal" },
+        { "left": "bye", "right": "bay bay" }
+      ]
+    },
+    {
+      "type": "listen_choice",
+      "prompt_tr": "Dinle ve ne söylendiğini seç.",
+      "audio_text": "Good morning, Anna!",
+      "options": ["Günaydın, Anna!", "İyi akşamlar, Anna!", "Hoşça kal, Anna!"],
+      "answer": 0,
+      "explanation_tr": "'Good morning' günaydın demektir; sabah kullanılır."
+    },
+    {
+      "type": "word_order",
+      "prompt_tr": "Kelimeleri doğru sıraya koy.",
+      "tokens": ["morning", "Good", "Mia"],
+      "answer": ["Good", "morning", "Mia"],
+      "translation_tr": "Günaydın, Mia."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "___ evening, Sam!",
+      "options": ["Good", "Hi", "Bye"],
+      "answer": 0,
+      "explanation_tr": "Akşam selamı 'Good evening' kalıbıyla verilir."
+    },
+    {
+      "type": "translate",
+      "prompt_tr": "İngilizceye çevir: Merhaba, Anna!",
+      "answers": ["Hello, Anna!", "Hi, Anna!"],
+      "hint_tr": "'hello' veya 'hi' ile başla."
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "'Good evening' ne demek?",
+      "options": ["İyi akşamlar", "Günaydın", "Görüşürüz"],
+      "answer": 0,
+      "explanation_tr": "'Good evening' akşam karşılaşınca söylenir."
+    },
+    {
+      "type": "dialogue_choice",
+      "prompt_tr": "Diyalogda Ben ne yapıyor?",
+      "audio_text": "Good morning, Anna! I am Ben.",
+      "options": [
+        "Anna'yı selamlıyor ve adını söylüyor.",
+        "Anna'dan yardım istiyor.",
+        "Anna'ya yarın görüşürüz diyor."
+      ],
+      "answer": 0,
+      "explanation_tr": "Ben önce 'Good morning' diyor, sonra 'I am Ben' ile kendini tanıtıyor."
+    },
+    {
+      "type": "speak",
+      "prompt_tr": "Cümleyi sesli söyle.",
+      "target": "Hello, Anna! Good morning!",
+      "hint_tr": "İki ifadeyi de net ve yavaş söyle."
+    },
+    {
+      "type": "write",
+      "prompt_tr": "Kısa bir karşılama ve vedalaşma yaz. Selamlaşmayla başla, vedalaşmayla bitir.",
+      "min_words": 5,
+      "keywords": ["hello", "goodbye"],
+      "sample": "Hello, Anna! ... Goodbye!",
+      "rubric_tr": "Selamlaşma ve vedalaşma ifadelerini kullanman yeterli."
+    }
+  ]
+}

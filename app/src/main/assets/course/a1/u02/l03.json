@@ -1,0 +1,200 @@
+{
+  "schema": 1,
+  "id": "a1-u02-l03",
+  "unit": "a1-u02",
+  "cefr": "A1",
+  "title": "Mesleğim",
+  "objective_tr": "Mesleğini 'I'm a ...' veya 'I'm an ...' ile söyle; karşındakine 'What do you do?' diye sor.",
+  "est_min": 4,
+  "vocab": [
+    {
+      "term": "what do you do",
+      "meaning_tr": "ne iş yapıyorsun",
+      "pos": "ifade",
+      "example": "What do you do?",
+      "example_tr": "Ne iş yapıyorsun?"
+    },
+    {
+      "term": "job",
+      "meaning_tr": "iş, meslek",
+      "pos": "isim",
+      "example": "My job is great.",
+      "example_tr": "İşim harika."
+    },
+    {
+      "term": "student",
+      "meaning_tr": "öğrenci",
+      "pos": "isim",
+      "example": "I'm a student.",
+      "example_tr": "Ben öğrenciyim."
+    },
+    {
+      "term": "teacher",
+      "meaning_tr": "öğretmen",
+      "pos": "isim",
+      "example": "I'm a teacher.",
+      "example_tr": "Ben öğretmenim."
+    },
+    {
+      "term": "engineer",
+      "meaning_tr": "mühendis",
+      "pos": "isim",
+      "example": "I'm an engineer.",
+      "example_tr": "Ben mühendisim."
+    },
+    {
+      "term": "doctor",
+      "meaning_tr": "doktor",
+      "pos": "isim",
+      "example": "I'm a doctor.",
+      "example_tr": "Ben doktorum."
+    },
+    {
+      "term": "nurse",
+      "meaning_tr": "hemşire",
+      "pos": "isim",
+      "example": "I'm a nurse.",
+      "example_tr": "Ben hemşireyim."
+    },
+    {
+      "term": "driver",
+      "meaning_tr": "şoför",
+      "pos": "isim",
+      "example": "I'm a driver.",
+      "example_tr": "Ben şoförüm."
+    }
+  ],
+  "grammar": [
+    {
+      "title_tr": "What do you do? / I'm a ...",
+      "explanation_tr": "Mesleğini sormak için 'What do you do?' denir. Cevap 'I'm a ...' kalıbıyla verilir: I'm a teacher.",
+      "examples": [
+        { "en": "What do you do?", "tr": "Ne iş yapıyorsun?" },
+        { "en": "I'm a teacher.", "tr": "Öğretmenim." }
+      ]
+    },
+    {
+      "title_tr": "a / an",
+      "explanation_tr": "Meslekten önce 'a' ya da 'an' kullanılır. Ünsüz sesle başlayan mesleklerde 'a': a teacher. Ünlü sesle başlayanlarda 'an': an engineer. 'an' söylenişe göre seçilir.",
+      "examples": [
+        { "en": "I'm a doctor.", "tr": "Doktorum." },
+        { "en": "I'm an engineer.", "tr": "Mühendisim." }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title": "Ne iş yapıyorsun?",
+    "lines": [
+      { "speaker": "Mia", "en": "Hi, Leo! What do you do?", "tr": "Merhaba Leo! Ne iş yapıyorsun?" },
+      { "speaker": "Leo", "en": "I'm an engineer. And you?", "tr": "Mühendisim. Ya sen?" },
+      { "speaker": "Mia", "en": "I'm a teacher. I'm an English teacher.", "tr": "Öğretmenim. İngilizce öğretmeniyim." },
+      { "speaker": "Leo", "en": "Nice! My job is great.", "tr": "Güzel! İşim harika." },
+      { "speaker": "Mia", "en": "My job is great, too.", "tr": "Benim işim de harika." },
+      { "speaker": "Leo", "en": "Great! See you, Mia.", "tr": "Harika! Görüşürüz, Mia." }
+    ]
+  },
+  "teach": [
+    {
+      "title_tr": "Meslek söyleme",
+      "body_tr": "Mesleğini söylerken 'I'm a ...' ya da 'I'm an ...' kullanılır. 'a' ve 'an' meslek adıyla birlikte kullanılır. Örneğin 'I'm a student' ve 'I'm an engineer'.",
+      "examples": [
+        { "en": "I'm a student.", "tr": "Öğrenciyim." },
+        { "en": "I'm an engineer.", "tr": "Mühendisim." }
+      ],
+      "tip_tr": "Meslek adından önce a veya an kullanmayı unutma."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt_tr": "'What do you do?' ne demek?",
+      "options": ["Ne iş yapıyorsun?", "Nerelisin?", "Kaç yaşındasın?"],
+      "answer": 0,
+      "explanation_tr": "'What do you do?' birinin mesleğini sormak için kullanılır."
+    },
+    {
+      "type": "match",
+      "prompt_tr": "Meslek adlarını Türkçe karşılıklarıyla eşleştir.",
+      "pairs": [
+        { "left": "student", "right": "öğrenci" },
+        { "left": "teacher", "right": "öğretmen" },
+        { "left": "engineer", "right": "mühendis" },
+        { "left": "doctor", "right": "doktor" },
+        { "left": "nurse", "right": "hemşire" }
+      ]
+    },
+    {
+      "type": "listen_choice",
+      "prompt_tr": "Dinle ve ne söylendiğini seç.",
+      "audio_text": "I'm an engineer.",
+      "options": [
+        "Ben mühendisim.",
+        "Ben öğretmenim.",
+        "Ben öğrenciyim."
+      ],
+      "answer": 0,
+      "explanation_tr": "'Engineer' mühendis demektir."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "I'm ___ teacher.",
+      "options": ["a", "an", "the"],
+      "answer": 0,
+      "explanation_tr": "'teacher' ünsüz sesle başlar; 'a teacher' kullanılır."
+    },
+    {
+      "type": "choice",
+      "prompt_tr": "Hangi cümle doğru?",
+      "options": ["I'm an doctor.", "I'm a doctor.", "I'm doctor a."],
+      "answer": 1,
+      "explanation_tr": "'doctor' ünsüz sesle başlar; 'a doctor' doğrudur."
+    },
+    {
+      "type": "cloze",
+      "prompt_tr": "Boşluğu doldur.",
+      "sentence": "I'm ___ engineer.",
+      "options": ["a", "an", "the"],
+      "answer": 1,
+      "explanation_tr": "'engineer' ünlü sesle başlar; 'an engineer' kullanılır."
+    },
+    {
+      "type": "word_order",
+      "prompt_tr": "Kelimeleri doğru sıraya koy.",
+      "tokens": ["a", "I'm", "student"],
+      "answer": ["I'm", "a", "student"],
+      "translation_tr": "Ben öğrenciyim."
+    },
+    {
+      "type": "translate",
+      "prompt_tr": "İngilizceye çevir: Ben öğretmenim.",
+      "answers": [
+        "I'm a teacher.",
+        "I am a teacher."
+      ],
+      "hint_tr": "Meslekten önce 'a' kullan."
+    },
+    {
+      "type": "dialogue_choice",
+      "prompt_tr": "Diyalogda Mia ne iş yapıyor?",
+      "audio_text": "I'm a teacher. I'm an English teacher.",
+      "options": ["Öğretmen.", "Mühendis.", "Doktor."],
+      "answer": 0,
+      "explanation_tr": "Mia 'I'm a teacher' diyor; öğretmen."
+    },
+    {
+      "type": "speak",
+      "prompt_tr": "Cümleyi sesli söyle.",
+      "target": "I'm an engineer. What do you do?",
+      "hint_tr": "'An engineer' ifadesini birleşik söyle."
+    },
+    {
+      "type": "write",
+      "prompt_tr": "Mesleğini söyle ve karşındakine 'What do you do?' sorusunu sor.",
+      "min_words": 6,
+      "keywords": ["do", "you"],
+      "sample": "I'm a student. What do you do?",
+      "rubric_tr": "Mesleğini 'a/an' ile söylemen ve soruyu sorman yeterli."
+    }
+  ]
+}

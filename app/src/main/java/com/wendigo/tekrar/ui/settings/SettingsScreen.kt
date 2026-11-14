@@ -79,6 +79,7 @@ fun SettingsScreen(
     onExportCsv: (android.net.Uri) -> Unit,
     onImportCsv: (android.net.Uri) -> Unit,
     onResetAll: () -> Unit,
+    onBack: (() -> Unit)? = null,
 ) {
     val settings = state.settings
     val context = LocalContext.current
@@ -141,6 +142,7 @@ fun SettingsScreen(
             ScreenHeader(
                 title = stringResource(R.string.settings_title),
                 subtitle = stringResource(R.string.settings_subtitle),
+                onBack = onBack,
             )
 
             SectionTitle(text = stringResource(R.string.settings_study))

@@ -2,11 +2,17 @@ package com.wendigo.tekrar
 
 import android.app.Application
 import android.content.Context
+import com.wendigo.tekrar.ai.AiRepository
+import com.wendigo.tekrar.ai.AiSettingsStore
+import com.wendigo.tekrar.ai.KeystoreAiKeyStore
+import com.wendigo.tekrar.ai.OpenAiCompatibleClient
 import com.wendigo.tekrar.data.AppDatabase
 import com.wendigo.tekrar.notify.Notifications
 import com.wendigo.tekrar.notify.ReminderScheduler
 import com.wendigo.tekrar.notify.WeeklySummaryScheduler
 import com.wendigo.tekrar.repo.BackupManager
+import com.wendigo.tekrar.repo.CourseProgressRepository
+import com.wendigo.tekrar.repo.CourseRepository
 import com.wendigo.tekrar.repo.DictionaryRepository
 import com.wendigo.tekrar.repo.SettingsStore
 import com.wendigo.tekrar.repo.WordRepository
@@ -32,6 +38,23 @@ class AppContainer(context: Context) {
     }
     val dictionary: DictionaryRepository by lazy {
         DictionaryRepository(appContext)
+    }
+    val courseRepository: CourseRepository by lazy {
+        CourseRepository(appContext, database)
+    }
+    val courseProgress: CourseProgressRepository by lazy {
+        CourseProgressRepository(database)
+    }
+    val aiSettings: AiSettingsStore by lazy {
+        AiSettingsStore(appContext)
+    }
+    val aiRepository: AiRepository by lazy {
+        AiRepository(
+            db = database,
+            client = OpenAiCompatibleClient(),
+            keyStore = KeystoreAiKeyStore(appContext),
+            settings = aiSettings,
+        )
     }
 
     fun start() {
