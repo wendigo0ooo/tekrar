@@ -444,5 +444,8 @@ strengths 2-3, fixes 2-3, next_focus tek cümle.
 - L1 tamam ve ana dala alındı: `core/learn` motoru, Room v5 entity/DAO, `Word.sourceKey`, 52 JVM testi (stub ile derlendi).
 - İçerik: U01-U03 hazır; 3 ünite, 12 ders, 3 rol yapma, 97 kelime, 130 alıştırma; `validate.py --strict` 0 hata.
 - Yedek v4: `lesson_progress` + `words.sourceKey` eklendi; AI geçmişi yedeğe girmiyor.
-- AI çekirdeği (L3) ve Öğren UI (L4) lane'leri devam ediyor.
-- Sırada: L3/L4 birleştirme → NavHost/DI → CI derlemesi → cihaz testi.
+- AI çekirdeği (L3), AI UI (L5) ve Öğren UI (L4) tamamlandı; NavHost/DI birleşti.
+- CI run `43591820961` yeşil; APK 3.0.0 (code 4):
+  `/storage/emulated/0/Download/Tekrar-release.apk` (7,8 MB) ve `Tekrar-debug.apk`.
+- Sırada: cihaz testi (v2.0→3.0 Room göçü, ders akışı, TTS/STT, AI anahtarı,
+  sohbet/rol yapma, 4 sekme) → geri bildirim düzeltmeleri → A1 genişletme + A2.
