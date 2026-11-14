@@ -125,11 +125,6 @@ class LessonViewModel(
         if (text.isNotBlank()) speaker.speak(text)
     }
 
-    override fun onCleared() {
-        speaker.shutdown()
-        super.onCleared()
-    }
-
     private fun begin(loadedLesson: Lesson, unitTitle: String) {
         val newSession = LessonSession(loadedLesson)
         session = newSession
