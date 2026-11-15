@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "id": "g-a1-farewells",
+  "cefr": "A1",
+  "title_tr": "Vedalaşma",
+  "subtitle_tr": "Görüşürüz, iyi geceler",
+  "objective_tr": "Bu konudan sonra kısa vedalaşma ifadeleriyle ayrılabileceksin.",
+  "est_min": 3,
+  "source_notes": [
+    "a1-u01-l04#0"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "Ayrılık",
+      "body_tr": "Ayrılırken kısa ve net ifadeler kullanılır. 'Goodbye' ve 'Bye' hoşça kal demektir. 'See you' ise görüşürüz anlamına gelir.",
+      "examples": [
+        {
+          "en": "Goodbye, Anna!",
+          "tr": "Hoşça kal, Anna!"
+        },
+        {
+          "en": "See you, Ben!",
+          "tr": "Görüşürüz, Ben!"
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "Zaman ekle",
+      "body_tr": "'See you' ifadesine zaman eklenebilir: 'See you tomorrow' yarın görüşürüz, 'See you later' sonra görüşürüz. 'Good night' yalnız akşam ayrılırken kullanılır.",
+      "pattern": "See you + tomorrow / later · Good night",
+      "examples": [
+        {
+          "en": "See you tomorrow!",
+          "tr": "Yarın görüşürüz!"
+        },
+        {
+          "en": "See you later!",
+          "tr": "Sonra görüşürüz!"
+        },
+        {
+          "en": "Good night, Mia!",
+          "tr": "İyi geceler, Mia!"
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "See you to tomorrow.",
+      "right_en": "See you tomorrow.",
+      "body_tr": "'See you' ifadesinden sonra 'to' gelmez."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "'Bye' günlük konuşmada daha yaygındır. Aynı gün içinde görüşeceksen 'See you later' yeterlidir.",
+      "examples": [
+        {
+          "en": "Bye, Ben!",
+          "tr": "Bay bay, Ben!"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "\\b([Ss])ee\\s+you\\s+to\\s+(tomorrow|later)\\b",
+      "replace": "$1ee you $2",
+      "note_tr": "'See you' ifadesinde 'to' kullanılmaz."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Yarın görüşeceğini söyle.",
+        "hint_tr": "See you ...",
+        "sample": "See you tomorrow!",
+        "min_words": 3,
+        "expect": [
+          {
+            "pattern": "\\bSee\\s+you\\s+tomorrow\\b",
+            "anchor": "\\bSee\\b",
+            "note_tr": "'See you tomorrow' yarın görüşürüz demektir."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Akşam ayrılırken iyi geceler dile.",
+        "hint_tr": "Good night, ...",
+        "sample": "Good night, Mia!",
+        "min_words": 3,
+        "expect": [
+          {
+            "pattern": "\\bGood\\s+night\\b",
+            "anchor": "\\bGood\\b",
+            "note_tr": "Akşam ayrılırken 'Good night' denir."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "İki vedalaşma yaz: biri kısa, biri zamanlı.",
+        "hint_tr": "Bye! See you later!",
+        "sample": "Bye, Ben! See you later!",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\bBye\\b",
+            "anchor": "\\bBye\\b",
+            "note_tr": "Kısa vedalaşma 'Bye' olur."
+          },
+          {
+            "pattern": "\\bSee\\s+you\\s+later\\b",
+            "anchor": "\\bSee\\b",
+            "note_tr": "'See you later' sonra görüşürüz demektir."
+          }
+        ]
+      }
+    ]
+  }
+}

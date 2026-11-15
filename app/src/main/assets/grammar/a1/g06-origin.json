@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "id": "g-a1-origin",
+  "cefr": "A1",
+  "title_tr": "Where are you from?",
+  "subtitle_tr": "Nerelisin?",
+  "objective_tr": "Bu konudan sonra nereli olduğunu sorup söyleyebileceksin.",
+  "est_min": 4,
+  "source_notes": [
+    "a1-u02-l02#0"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "Nereden?",
+      "body_tr": "'Where are you from?' nereli olduğunu sorar. Cevap 'I'm from ...' ile başlar. Şehir de ülke de söylenebilir.",
+      "examples": [
+        {
+          "en": "Where are you from?",
+          "tr": "Nerelisin?"
+        },
+        {
+          "en": "I'm from Istanbul.",
+          "tr": "İstanbulluyum."
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "Kalıp",
+      "body_tr": "Soru 'Where are you from?' biçiminde sabittir. Cevapta 'I am from' ve bir yer kullanılır. Kısa biçim 'I'm from ...' olur.",
+      "pattern": "Where are you from? → I'm from + yer",
+      "examples": [
+        {
+          "en": "Where are you from?",
+          "tr": "Nerelisin?"
+        },
+        {
+          "en": "I'm from Turkey.",
+          "tr": "Türkiye'denim."
+        },
+        {
+          "en": "I'm from Adana.",
+          "tr": "Adanalıyım."
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "I from Turkey.",
+      "right_en": "I am from Turkey.",
+      "body_tr": "'from' öncesinde 'am' fiili gerekir."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "Aynı kalıp başkaları için de çalışır: 'Where is she from?' ve 'She is from Spain.'",
+      "examples": [
+        {
+          "en": "She is from Spain.",
+          "tr": "O İspanya'dan."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "\\bI\\s+from\\b",
+      "replace": "I am from",
+      "note_tr": "'from' öncesinde 'am' kullanılır."
+    },
+    {
+      "pattern": "^\\s*Where\\s+you\\s+are\\s+from\\b(?=[^.!?]*\\?)",
+      "replace": "Where are you from",
+      "note_tr": "Soruda 'are' özneden önce gelir."
+    },
+    {
+      "pattern": "\\bI\\s+am\\s+come\\s+from\\b",
+      "replace": "I am from",
+      "note_tr": "'am come' yanlıştır; 'I am from' de."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Nereli olduğunu sor.",
+        "hint_tr": "Where are you ...?",
+        "sample": "Where are you from?",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\bWhere\\s+are\\s+you\\s+from\\b",
+            "anchor": "\\bWhere\\b",
+            "note_tr": "'Where are you from?' kalıbını kullan."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Bir şehirden olduğunu söyle.",
+        "hint_tr": "I'm from ...",
+        "sample": "I'm from Adana.",
+        "min_words": 3,
+        "expect": [
+          {
+            "pattern": "\\bI\\s*(am|'m)\\s+from\\b",
+            "anchor": "\\bI\\b",
+            "note_tr": "'I'm from ...' kalıbını kullan."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "Bir arkadaşının nereli olduğunu söyle.",
+        "hint_tr": "She is from ...",
+        "sample": "She is from Spain.",
+        "min_words": 3,
+        "expect": [
+          {
+            "pattern": "\\b(He|She)\\s*(is|'s)\\s+from\\b",
+            "anchor": "\\b(He|She)\\b",
+            "note_tr": "3. kişide 'is from' kullan."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "id": "g-a1-age",
+  "cefr": "A1",
+  "title_tr": "How old are you?",
+  "subtitle_tr": "Yaşını söyle",
+  "objective_tr": "Bu konudan sonra yaşını sorup 'I'm ... years old' kalıbıyla söyleyebileceksin.",
+  "est_min": 3,
+  "source_notes": [
+    "a1-u02-l04#0"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "Yaş sorusu",
+      "body_tr": "Yaş sormak için 'How old are you?' denir. Cevap 'I'm ... years old' kalıbıyla verilir. Günlük dilde 'years old' atlanabilir.",
+      "examples": [
+        {
+          "en": "How old are you?",
+          "tr": "Kaç yaşındasın?"
+        },
+        {
+          "en": "I'm twenty years old.",
+          "tr": "Yirmi yaşındayım."
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "Yaş ve old",
+      "body_tr": "Sayıdan sonra 'years old' gelir. 'I'm twenty.' da doğaldır; ama sorunun tam cevabı 'I'm twenty years old.' olur.",
+      "pattern": "I'm + sayı + (years old)",
+      "examples": [
+        {
+          "en": "I'm twenty years old.",
+          "tr": "Yirmi yaşındayım."
+        },
+        {
+          "en": "I'm twenty.",
+          "tr": "Yirmiyim."
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "I have 20 years.",
+      "right_en": "I am 20 years old.",
+      "body_tr": "Yaş İngilizcede 'have' ile değil, 'be' fiiliyle söylenir."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "Başkaları için 'He is ten years old.' denir. Soruya kısa cevap da yeterlidir: 'I'm twenty.'",
+      "examples": [
+        {
+          "en": "He is ten years old.",
+          "tr": "O on yaşında."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "^\\s*I\\s+have\\s+(\\d{1,3})\\s+years?\\b(?=\\s*[.!?,]|\\s*$)",
+      "replace": "I am $1 years old",
+      "note_tr": "Yaş 'I am ... years old' ile söylenir."
+    },
+    {
+      "pattern": "^\\s*I\\s+have\\s+(twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)\\s+years?\\b(?=\\s*[.!?,]|\\s*$)",
+      "replace": "I am $1 years old",
+      "note_tr": "Yaş 'I am ... years old' ile söylenir."
+    },
+    {
+      "pattern": "^\\s*([Hh]e|[Ss]he)\\s+have\\s+(\\d{1,3})\\s+years?\\b(?=\\s*[.!?,]|\\s*$)",
+      "replace": "$1 is $2 years old",
+      "note_tr": "Yaş için 'he/she is ... years old' kullanılır."
+    },
+    {
+      "pattern": "^\\s*([Yy]ou|[Ww]e|[Tt]hey)\\s+have\\s+(\\d{1,3})\\s+years?\\b(?=\\s*[.!?,]|\\s*$)",
+      "replace": "$1 are $2 years old",
+      "note_tr": "Yaş için 'are ... years old' kullanılır."
+    },
+    {
+      "pattern": "^\\s*How\\s+many\\s+years\\s+are\\s+you\\s*\\?",
+      "replace": "How old are you?",
+      "note_tr": "Yaş sorusu 'How old are you?' biçimindedir."
+    },
+    {
+      "pattern": "^\\s*How\\s+old\\s+you\\s+are\\b(?=[^.!?]*\\?)",
+      "replace": "How old are you",
+      "note_tr": "Soruda 'are' özneden önce gelir."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Yaşını sor.",
+        "hint_tr": "How old ...?",
+        "sample": "How old are you?",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\bHow\\s+old\\s+are\\s+you\\b",
+            "anchor": "\\bHow\\b",
+            "note_tr": "'How old are you?' kalıbını kullan."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Yaşını söyle.",
+        "hint_tr": "I'm ... years old.",
+        "sample": "I'm twenty years old.",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\bI\\s*(am|'m)\\s+\\w+\\s+years?\\s+old\\b",
+            "anchor": "\\bI\\b",
+            "note_tr": "'I'm ... years old' kalıbını kullan."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "Bir arkadaşının yaşını söyle.",
+        "hint_tr": "She is ... years old.",
+        "sample": "She is ten years old.",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\b(He|She)\\s*(is|'s)\\s+\\w+\\s+years?\\s+old\\b",
+            "anchor": "\\b(He|She)\\b",
+            "note_tr": "3. kişide 'is ... years old' kullan."
+          }
+        ]
+      }
+    ]
+  }
+}

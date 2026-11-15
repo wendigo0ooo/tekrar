@@ -1,0 +1,156 @@
+{
+  "schema": 1,
+  "id": "g-a1-possessives",
+  "cefr": "A1",
+  "title_tr": "my / your",
+  "subtitle_tr": "Benim ve senin",
+  "objective_tr": "Bu konudan sonra my ve your ile ait olduğun şeyleri ve arkadaşlarını anlatabileceksin.",
+  "est_min": 3,
+  "source_notes": [
+    "a1-u01-l03#1",
+    "a1-u02-l01#1"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "Kimin?",
+      "body_tr": "Bir şeyin kime ait olduğunu söylemek için 'my' ve 'your' kullanılır. 'my' benim, 'your' senin demektir. İkisi de isimden önce gelir.",
+      "examples": [
+        {
+          "en": "my name",
+          "tr": "benim adım"
+        },
+        {
+          "en": "your friend",
+          "tr": "senin arkadaşın"
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "İsimden önce",
+      "body_tr": "'my' ve 'your' tek başına kullanılmaz; arkasından bir isim gelir: my book, your pen. Birini tanıtırken 'This is my friend Mia.' denir.",
+      "pattern": "my + isim · your + isim",
+      "examples": [
+        {
+          "en": "This is my friend Sam.",
+          "tr": "Bu arkadaşım Sam."
+        },
+        {
+          "en": "You are my friend.",
+          "tr": "Sen benim arkadaşımsın."
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "title_tr": "Cümlede",
+      "examples": [
+        {
+          "en": "Is your name Sam?",
+          "tr": "Adın Sam mı?"
+        },
+        {
+          "en": "My nickname is Lex.",
+          "tr": "Takma adım Lex."
+        },
+        {
+          "en": "Your teacher is here.",
+          "tr": "Öğretmenin burada."
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "I friend is Ali.",
+      "right_en": "My friend is Ali.",
+      "body_tr": "Türkçede 'benim' deriz; İngilizcede isimden önce 'my' gerekir."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "'This is ...' ile tanıtım yaparken iyelik sıfatı ismin önünde durur: This is my sister.",
+      "examples": [
+        {
+          "en": "This is my sister.",
+          "tr": "Bu benim kız kardeşim."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "^\\s*I\\s+(friend|book|pen|name|teacher|mother|father|sister|brother)\\s+(is|are)\\b",
+      "replace": "My $1 $2",
+      "note_tr": "İyelik için 'my' kullanılır."
+    },
+    {
+      "pattern": "\\bI\\s+(friend|book|pen|name|teacher|mother|father|sister|brother)\\s+(is|are)\\b",
+      "replace": "my $1 $2",
+      "note_tr": "İyelik için 'my' kullanılır."
+    },
+    {
+      "pattern": "^\\s*[Yy]ou\\s+(friend|book|pen|name|teacher|mother|father|sister|brother)\\s+(is|are)\\b",
+      "replace": "Your $1 $2",
+      "note_tr": "İyelik için 'your' kullanılır."
+    },
+    {
+      "pattern": "\\b[Yy]ou\\s+(friend|book|pen|name|teacher|mother|father|sister|brother)\\s+(is|are)\\b",
+      "replace": "your $1 $2",
+      "note_tr": "İyelik için 'your' kullanılır."
+    },
+    {
+      "pattern": "\\b(my|your)\\s+name\\s+are\\b",
+      "replace": "$1 name is",
+      "note_tr": "'name' tekil olduğu için 'is' kullanılır."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Bir eşyanı tanıt: kitap veya defter.",
+        "hint_tr": "This is my ...",
+        "sample": "This is my book.",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\bmy\\s+\\w+\\b",
+            "anchor": "\\bmy\\b",
+            "note_tr": "İyelikte 'my' kullan."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Arkadaşını tanıt.",
+        "hint_tr": "This is my friend ...",
+        "sample": "This is my friend Sam.",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\bmy\\s+friend\\b",
+            "anchor": "\\bmy\\b",
+            "note_tr": "'my friend' kalıbını kullan."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "Karşındakine onun defterini sor.",
+        "hint_tr": "Is this your ...?",
+        "sample": "Is this your pen?",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\byour\\s+\\w+\\b",
+            "anchor": "\\byour\\b",
+            "note_tr": "Karşındakinin eşyası için 'your' kullan."
+          }
+        ]
+      }
+    ]
+  }
+}

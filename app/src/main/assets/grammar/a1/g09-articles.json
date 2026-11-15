@@ -1,0 +1,164 @@
+{
+  "schema": 1,
+  "id": "g-a1-articles",
+  "cefr": "A1",
+  "title_tr": "a / an",
+  "subtitle_tr": "Bir öğrenci, bir mühendis",
+  "objective_tr": "Bu konudan sonra a ve an artikelini doğru sesle eşleştirebileceksin.",
+  "est_min": 4,
+  "source_notes": [
+    "a1-u02-l03#1"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "Tek bir şey",
+      "body_tr": "İngilizcede tekil bir şeyden ilk kez bahsederken önüne 'a' veya 'an' gelir. Mesleklerde bu artikel neredeyse her zaman gerekir.",
+      "examples": [
+        {
+          "en": "a teacher",
+          "tr": "bir öğretmen"
+        },
+        {
+          "en": "an engineer",
+          "tr": "bir mühendis"
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "Ses önemli",
+      "body_tr": "'a' ünsüz sesle başlayan kelimelerde, 'an' ünlü sesle başlayanlarda kullanılır. Yazıya değil söylenişe bakılır: an hour, a university.",
+      "pattern": "a + ünsüz ses · an + ünlü ses",
+      "examples": [
+        {
+          "en": "I'm a doctor.",
+          "tr": "Doktorum."
+        },
+        {
+          "en": "I'm an engineer.",
+          "tr": "Mühendisim."
+        },
+        {
+          "en": "It takes an hour.",
+          "tr": "Bir saat sürer."
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "title_tr": "Mesleklerde",
+      "examples": [
+        {
+          "en": "She is a nurse.",
+          "tr": "O bir hemşire."
+        },
+        {
+          "en": "He is an actor.",
+          "tr": "O bir aktör."
+        },
+        {
+          "en": "I am a student.",
+          "tr": "Öğrenciyim."
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "I am engineer.",
+      "right_en": "I am an engineer.",
+      "body_tr": "Meslekten önce artikel atlanmaz."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "'an hour' doğrudur çünkü 'hour' ünlü sesle başlar. 'a university' doğrudur çünkü 'yuniversiti' diye okunur.",
+      "examples": [
+        {
+          "en": "an hour",
+          "tr": "bir saat"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "\\ba\\s+(engineer|actor|artist|accountant|electrician|apple|egg|elephant|umbrella|idea|office|orange)\\b",
+      "replace": "an $1",
+      "note_tr": "Ünlü sesle başlayan kelimeden önce 'an' kullanılır."
+    },
+    {
+      "pattern": "\\ban\\s+(teacher|student|doctor|nurse|driver|farmer|writer|book|car|house|job|pen|friend)\\b",
+      "replace": "a $1",
+      "note_tr": "Ünsüz sesle başlayan kelimeden önce 'a' kullanılır."
+    },
+    {
+      "pattern": "\\b(am|is)\\s+(student|teacher|doctor|nurse|driver|farmer|writer)\\b",
+      "replace": "$1 a $2",
+      "note_tr": "Meslekten önce 'a' kullanılır."
+    },
+    {
+      "pattern": "\\b(am|is)\\s+(engineer|actor|artist|accountant|electrician)\\b",
+      "replace": "$1 an $2",
+      "note_tr": "Meslekten önce 'an' kullanılır."
+    },
+    {
+      "pattern": "\\ban\\s+(university|user|uniform)\\b",
+      "replace": "a $1",
+      "note_tr": "'university' 'yu' sesiyle başlar; 'a university' denir."
+    },
+    {
+      "pattern": "\\ba\\s+(hour|honest)\\b",
+      "replace": "an $1",
+      "note_tr": "'hour' sessiz 'h' ile başlar; 'an hour' denir."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Öğrenci olduğunu söyle.",
+        "hint_tr": "I am a ...",
+        "sample": "I am a student.",
+        "min_words": 3,
+        "expect": [
+          {
+            "pattern": "\\bI\\s*(am|'m)\\s+a\\s+student\\b",
+            "anchor": "\\bstudent\\b",
+            "note_tr": "Meslekten önce 'a' kullan."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Mühendis olduğunu söyle.",
+        "hint_tr": "I am an ...",
+        "sample": "I am an engineer.",
+        "min_words": 3,
+        "expect": [
+          {
+            "pattern": "\\bI\\s*(am|'m)\\s+an\\s+engineer\\b",
+            "anchor": "\\bengineer\\b",
+            "note_tr": "Ünlü sesle başlayan meslekten önce 'an' kullan."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "Bir saat sürdüğünü söyle.",
+        "hint_tr": "It takes an ...",
+        "sample": "It takes an hour.",
+        "min_words": 3,
+        "expect": [
+          {
+            "pattern": "\\ban\\s+hour\\b",
+            "anchor": "\\bhour\\b",
+            "note_tr": "'hour' ünlü sesle başlar; 'an hour' denir."
+          }
+        ]
+      }
+    ]
+  }
+}

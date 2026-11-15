@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "id": "g-a1-day-parts",
+  "cefr": "A1",
+  "title_tr": "Günün bölümleri",
+  "subtitle_tr": "Sabah, öğleden sonra, gece",
+  "objective_tr": "Bu konudan sonra günün bölümlerini doğru edatlarla söyleyebileceksin.",
+  "est_min": 4,
+  "source_notes": ["a1-u03-l01#1", "a1-u03-l04#1"],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "Gün nasıl bölünür?",
+      "body_tr": "Gün dört bölüme ayrılır: morning, afternoon, evening ve night. Sabah, öğleden sonra ve akşam için 'in the' kullanılır.",
+      "examples": [
+        { "en": "in the morning", "tr": "sabah" },
+        { "en": "in the evening", "tr": "akşam" }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "in ve at",
+      "body_tr": "Gündüz bölümleriyle 'in the morning/afternoon/evening' denir. Gece için 'at night' kullanılır. 'in night' yanlıştır.",
+      "pattern": "in the morning · in the afternoon · in the evening · at night",
+      "examples": [
+        { "en": "I work in the afternoon.", "tr": "Öğleden sonra çalışırım." },
+        { "en": "I sleep at night.", "tr": "Gece uyurum." }
+      ]
+    },
+    {
+      "type": "examples",
+      "title_tr": "Rutinde",
+      "examples": [
+        { "en": "I read in the evening.", "tr": "Akşam okurum." },
+        { "en": "I run in the morning.", "tr": "Sabah koşarım." },
+        { "en": "She works at night.", "tr": "Gece çalışır." }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "I sleep in night.",
+      "right_en": "I sleep at night.",
+      "body_tr": "Gece için 'at night' denir."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "'Good morning' ve 'Good night' selamlaşmadır; zaman edatı değildir. 'Good night' yalnız ayrılırken söylenir.",
+      "examples": [
+        { "en": "Good night!", "tr": "İyi geceler!" }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "\\bin\\s+night\\b",
+      "replace": "at night",
+      "note_tr": "Gece için 'at night' kullanılır."
+    },
+    {
+      "pattern": "\\bin\\s+the\\s+night\\b",
+      "replace": "at night",
+      "note_tr": "Gece için 'at night' kullanılır."
+    },
+    {
+      "pattern": "\\bat\\s+the\\s+(morning|afternoon|evening)\\b",
+      "replace": "in the $1",
+      "note_tr": "Gündüz bölümleriyle 'in the' kullanılır."
+    },
+    {
+      "pattern": "\\bat\\s+(morning|afternoon|evening)\\b",
+      "replace": "in the $1",
+      "note_tr": "Gündüz bölümleriyle 'in the' kullanılır."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Sabah ne yaptığını söyle.",
+        "hint_tr": "In the morning ...",
+        "sample": "I run in the morning.",
+        "min_words": 5,
+        "expect": [
+          {
+            "pattern": "\\bin\\s+the\\s+morning\\b",
+            "anchor": "\\bmorning\\b",
+            "note_tr": "Sabah için 'in the morning' kullan."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Gece uyuduğunu söyle.",
+        "hint_tr": "I sleep at ...",
+        "sample": "I sleep at night.",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\bat\\s+night\\b",
+            "anchor": "\\bnight\\b",
+            "note_tr": "Gece için 'at night' kullan."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "Akşam çalıştığını söyle.",
+        "hint_tr": "I work in the ...",
+        "sample": "I work in the evening.",
+        "min_words": 5,
+        "expect": [
+          {
+            "pattern": "\\bin\\s+the\\s+evening\\b",
+            "anchor": "\\bevening\\b",
+            "note_tr": "Akşam için 'in the evening' kullan."
+          }
+        ]
+      }
+    ]
+  }
+}

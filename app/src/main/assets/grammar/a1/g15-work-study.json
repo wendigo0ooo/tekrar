@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "id": "g-a1-work-study",
+  "cefr": "A1",
+  "title_tr": "work at / study at",
+  "subtitle_tr": "Nerede çalışır, nerede okursun?",
+  "objective_tr": "Bu konudan sonra çalıştığın ve okuduğun yeri 'work at' ve 'study at' ile söyleyebileceksin.",
+  "est_min": 4,
+  "source_notes": [
+    "a1-u03-l03#0"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "Yer belirt",
+      "body_tr": "Çalıştığın yeri 'work at', okuduğun yeri 'study at' ile söylersin. Arkasından yer gelir: I work at a hospital.",
+      "examples": [
+        {
+          "en": "I work at a hospital.",
+          "tr": "Bir hastanede çalışırım."
+        },
+        {
+          "en": "I study at a university.",
+          "tr": "Bir üniversitede okuyorum."
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "Kalıp",
+      "body_tr": "'work at' ve 'study at' kalıpları sabittir; 'at' atlanmaz. Yerden önce 'a' ya da 'an' gelebilir: at a school, at an office.",
+      "pattern": "work at + yer · study at + yer",
+      "examples": [
+        {
+          "en": "I work at a school.",
+          "tr": "Bir okulda çalışırım."
+        },
+        {
+          "en": "I study at a university.",
+          "tr": "Bir üniversitede okuyorum."
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "I work a school.",
+      "right_en": "I work at a school.",
+      "body_tr": "'work' fiilinden sonra yer için 'at' gerekir."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "Meslek söylerken 'I am a teacher' denir; 'I work at a school' ise yeri anlatır. İkisini birlikte kullanabilirsin.",
+      "examples": [
+        {
+          "en": "I am a teacher. I work at a school.",
+          "tr": "Öğretmenim. Bir okulda çalışırım."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "\\b(work|study)\\s+(a|an|the)\\s+(school|hospital|office|university|shop|company|bank|restaurant|cafe|library|college)\\b",
+      "replace": "$1 at $2 $3",
+      "note_tr": "Yerden önce 'at' kullanılır."
+    },
+    {
+      "pattern": "\\bI\\s+am\\s+work\\b",
+      "replace": "I work",
+      "note_tr": "'work' fiildir; 'am' ile birlikte kullanılmaz."
+    },
+    {
+      "pattern": "\\bI\\s+am\\s+study\\b",
+      "replace": "I study",
+      "note_tr": "'study' fiildir; 'am' ile birlikte kullanılmaz."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Nerede çalıştığını söyle.",
+        "hint_tr": "I work at ...",
+        "sample": "I work at a school.",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\bwork\\s+at\\s+\\w+\\b",
+            "anchor": "\\bwork\\b",
+            "note_tr": "'work at' kalıbını kullan."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Nerede okuduğunu söyle.",
+        "hint_tr": "I study at ...",
+        "sample": "I study at a university.",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\bstudy\\s+at\\s+\\w+\\b",
+            "anchor": "\\bstudy\\b",
+            "note_tr": "'study at' kalıbını kullan."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "Mesleğini ve çalıştığın yeri birlikte söyle.",
+        "hint_tr": "I am a ... I work at ...",
+        "sample": "I am a teacher. I work at a school.",
+        "min_words": 6,
+        "expect": [
+          {
+            "pattern": "\\bI\\s*(am|'m)\\s+a\\s+\\w+\\b",
+            "anchor": "\\bI\\b",
+            "note_tr": "Mesleğini 'I am a ...' ile söyle."
+          },
+          {
+            "pattern": "\\bwork\\s+at\\b",
+            "anchor": "\\bwork\\b",
+            "note_tr": "Çalıştığın yeri 'work at' ile söyle."
+          }
+        ]
+      }
+    ]
+  }
+}

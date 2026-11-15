@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import subprocess
 import sys
 from collections import Counter
 from pathlib import Path
@@ -476,6 +477,15 @@ def check_course(root: Path) -> None:
                         err(uctx, "ünite cefr seviye ile uyuşmuyor")
 
 
+def run_grammar_validator() -> int:
+    """Gramer içeriğini ayrı doğrulayıcıyla denetler (varsa)."""
+    script = ROOT / "tools/content/validate_grammar.py"
+    if not script.exists():
+        print("UYARI gramer doğrulayıcı bulunamadı", file=sys.stderr)
+        return 0
+    return subprocess.call([sys.executable, str(script)])
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Dil Okulu içerik doğrulayıcı")
     parser.add_argument("--course", type=Path, default=DEFAULT_COURSE)
@@ -493,6 +503,10 @@ def main() -> int:
     else:
         check_course(args.course)
 
+    grammar_rc = 0
+    if not args.lesson and not args.unit:
+        grammar_rc = run_grammar_validator()
+
     for message in errors:
         print(f"HATA  {message}", file=sys.stderr)
     for message in warnings:
@@ -505,7 +519,7 @@ def main() -> int:
         f"{stats['exercise']} alıştırma | "
         f"{len(errors)} hata, {len(warnings)} uyarı"
     )
-    if errors or (args.strict and warnings):
+    if errors or (args.strict and warnings) or grammar_rc != 0:
         return 1
     return 0
 

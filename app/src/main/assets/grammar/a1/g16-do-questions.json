@@ -1,0 +1,163 @@
+{
+  "schema": 1,
+  "id": "g-a1-do-questions",
+  "cefr": "A1",
+  "title_tr": "Do you ...?",
+  "subtitle_tr": "Evet/hayır soruları",
+  "objective_tr": "Bu konudan sonra 'Do you ...?' ve 'Does he/she ...?' sorularını kurup kısa cevap verebileceksin.",
+  "est_min": 4,
+  "source_notes": [
+    "a1-u03-l03#1"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "Soru kur",
+      "body_tr": "Present simple'da evet/hayır sorusu 'Do you ...?' ile başlar. Fiil yalın kalır: Do you work at a shop?",
+      "examples": [
+        {
+          "en": "Do you work at a shop?",
+          "tr": "Bir dükkânda çalışır mısın?"
+        },
+        {
+          "en": "Do you like tea?",
+          "tr": "Çay sever misin?"
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "Kısa cevap",
+      "body_tr": "Kısa cevap 'Yes, I do.' veya 'No, I don't.' olur. 'Does' ile sorulan 3. kişide 'Yes, he does.' denir.",
+      "pattern": "Do you ...? → Yes, I do. / No, I don't.",
+      "examples": [
+        {
+          "en": "Do you work at a school? Yes, I do.",
+          "tr": "Bir okulda çalışır mısın? Evet."
+        },
+        {
+          "en": "Do you study at a university? No, I don't.",
+          "tr": "Bir üniversitede okuyor musun? Hayır."
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "Does he/she/it",
+      "body_tr": "He, she ve it için soru 'Does' ile başlar ve fiil yalın kalır: Does she work here? 'Does she works' yanlıştır.",
+      "pattern": "Do + I/you/we/they · Does + he/she/it + fiil",
+      "examples": [
+        {
+          "en": "Does she work here?",
+          "tr": "O burada çalışır mı?"
+        },
+        {
+          "en": "Does he like tea?",
+          "tr": "Çay sever mi?"
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "You like tea?",
+      "right_en": "Do you like tea?",
+      "body_tr": "Soru 'Do' ile başlar; 'Do' atlanmaz."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "'Do' sorusunda fiile '-s' eklenmez: 'Do you likes tea?' yanlıştır. 'Does' sorusunda da fiil yalın kalır.",
+      "examples": [
+        {
+          "en": "Do you like tea?",
+          "tr": "Çay sever misin?"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "^\\s*[Yy]ou\\s+(like|want|need|work|study|go|have|drink|play|live)\\b(?=[^.!?,]*\\?)",
+      "replace": "Do you $1",
+      "note_tr": "Soru 'Do you' ile başlar."
+    },
+    {
+      "pattern": "\\b(Do|Does)\\s+(he|she|it)\\s+likes\\b",
+      "replace": "$1 $2 like",
+      "note_tr": "Soru fiili yalın kalır: like."
+    },
+    {
+      "pattern": "\\b(Do|Does)\\s+(he|she|it)\\s+goes\\b",
+      "replace": "$1 $2 go",
+      "note_tr": "Soru fiili yalın kalır: go."
+    },
+    {
+      "pattern": "\\b(Do|Does)\\s+(he|she|it)\\s+has\\b",
+      "replace": "$1 $2 have",
+      "note_tr": "Soru fiili yalın kalır: have."
+    },
+    {
+      "pattern": "\\bDoes\\s+(you|we|they)\\b",
+      "replace": "Do $1",
+      "note_tr": "'you/we/they' ile 'Do' kullanılır."
+    },
+    {
+      "pattern": "\\bDo\\s+(he|she|it)\\s+(like|want|need|work|study|go|have|drink|play|live)\\b",
+      "replace": "Does $1 $2",
+      "note_tr": "'he/she/it' ile 'Does' kullanılır."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Arkadaşına çay sevip sevmediğini sor.",
+        "hint_tr": "Do you ...?",
+        "sample": "Do you like tea?",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\bDo\\s+you\\s+like\\b",
+            "anchor": "\\bDo\\b",
+            "note_tr": "Soruyu 'Do you' ile başlat."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Birine bir okulda çalışıp çalışmadığını sor ve kısa cevap ver.",
+        "hint_tr": "Do you work ...? Yes, I do.",
+        "sample": "Do you work at a school? Yes, I do.",
+        "min_words": 6,
+        "expect": [
+          {
+            "pattern": "\\bDo\\s+you\\s+work\\b",
+            "anchor": "\\bDo\\b",
+            "note_tr": "Soruyu 'Do you work' ile kur."
+          },
+          {
+            "pattern": "\\bYes,\\s*I\\s+do\\b",
+            "anchor": "\\bYes\\b",
+            "note_tr": "Kısa cevap 'Yes, I do.' olur."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "Bir arkadaşının burada çalışıp çalışmadığını sor.",
+        "hint_tr": "Does she ...?",
+        "sample": "Does she work here?",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\bDoes\\s+(he|she)\\s+work\\b",
+            "anchor": "\\bDoes\\b",
+            "note_tr": "3. kişide 'Does' ile sor."
+          }
+        ]
+      }
+    ]
+  }
+}

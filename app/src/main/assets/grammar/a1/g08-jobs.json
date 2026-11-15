@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "id": "g-a1-jobs",
+  "cefr": "A1",
+  "title_tr": "What do you do?",
+  "subtitle_tr": "Ne iş yapıyorsun?",
+  "objective_tr": "Bu konudan sonra mesleğini sorup 'I'm a ...' kalıbıyla cevap verebileceksin.",
+  "est_min": 4,
+  "source_notes": [
+    "a1-u02-l03#0"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "İş konuşması",
+      "body_tr": "Mesleğini sormak için 'What do you do?' denir. Türkçedeki 'Ne iş yapıyorsun?' ile aynı işi görür. Cevap 'I'm a ...' kalıbıyla verilir.",
+      "examples": [
+        {
+          "en": "What do you do?",
+          "tr": "Ne iş yapıyorsun?"
+        },
+        {
+          "en": "I'm a teacher.",
+          "tr": "Öğretmenim."
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "Meslek ve artikel",
+      "body_tr": "Cevapta meslekten önce 'a' ya da 'an' gelir. Fiil 'am' kalır: I'm a doctor. Soru daima 'What do you do?' biçimindedir.",
+      "pattern": "What do you do? → I'm a / an + meslek",
+      "examples": [
+        {
+          "en": "I'm a doctor.",
+          "tr": "Doktorum."
+        },
+        {
+          "en": "I'm an engineer.",
+          "tr": "Mühendisim."
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "I teacher.",
+      "right_en": "I am a teacher.",
+      "body_tr": "Meslek söylerken 'am' ve 'a' gerekir."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "Meslek adı çoğul olmaz: 'I'm a teachers' yanlıştır. Aynı kalıp 3. kişide de kullanılır: He's a driver.",
+      "examples": [
+        {
+          "en": "He's a driver.",
+          "tr": "O bir şoför."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "\\bI\\s+(teacher|doctor|student|nurse|driver|farmer|writer)\\b(?=\\s*[.!?]|\\s*$)",
+      "replace": "I am a $1",
+      "note_tr": "Meslekten önce 'am' ve 'a' kullanılır."
+    },
+    {
+      "pattern": "\\bI\\s+(engineer|artist|actor|accountant|electrician)\\b(?=\\s*[.!?]|\\s*$)",
+      "replace": "I am an $1",
+      "note_tr": "Ünlü sesle başlayan meslekten önce 'an' kullanılır."
+    },
+    {
+      "pattern": "\\bWhat\\s+you\\s+do\\b",
+      "replace": "What do you do",
+      "note_tr": "Soruda 'do' özneden önce gelir."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Mesleğini sor ve cevapla.",
+        "hint_tr": "What do you do? I'm a ...",
+        "sample": "What do you do? I'm a teacher.",
+        "min_words": 6,
+        "expect": [
+          {
+            "pattern": "\\bWhat\\s+do\\s+you\\s+do\\b",
+            "anchor": "\\bWhat\\b",
+            "note_tr": "Meslek sorusu 'What do you do?' biçimindedir."
+          },
+          {
+            "pattern": "\\bI\\s*(am|'m)\\s+(a|an)\\s+\\w+\\b",
+            "anchor": "\\bI\\b",
+            "note_tr": "Cevabı 'I'm a ...' kalıbıyla ver."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Mühendis olduğunu söyle.",
+        "hint_tr": "I'm an ...",
+        "sample": "I'm an engineer.",
+        "min_words": 3,
+        "expect": [
+          {
+            "pattern": "\\bI\\s*(am|'m)\\s+an\\s+engineer\\b",
+            "anchor": "\\bI\\b",
+            "note_tr": "Ünlü sesle başlayan meslekten önce 'an' kullan."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "Bir yakınının mesleğini söyle.",
+        "hint_tr": "She is a ...",
+        "sample": "She is a doctor.",
+        "min_words": 3,
+        "expect": [
+          {
+            "pattern": "\\b(He|She)\\s*(is|'s)\\s+a\\s+\\w+\\b",
+            "anchor": "\\b(He|She)\\b",
+            "note_tr": "Meslekten önce 'a' veya 'an' kullan."
+          }
+        ]
+      }
+    ]
+  }
+}

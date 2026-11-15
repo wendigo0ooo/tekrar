@@ -1,0 +1,146 @@
+{
+  "schema": 1,
+  "id": "g-a1-nationality",
+  "cefr": "A1",
+  "title_tr": "Ülke ve milliyet",
+  "subtitle_tr": "Türkiye'denim, Türküm",
+  "objective_tr": "Bu konudan sonra ülkeni ve milliyetini doğru kelimelerle söyleyebileceksin.",
+  "est_min": 4,
+  "source_notes": [
+    "a1-u02-l02#1"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "İki kelime",
+      "body_tr": "Ülke adı bir yeri, milliyet adı oradan olan kişiyi anlatır: Turkey ve Turkish. Milliyet adları İngilizcede büyük harfle başlar.",
+      "examples": [
+        {
+          "en": "I'm from Spain.",
+          "tr": "İspanya'danım."
+        },
+        {
+          "en": "I'm Spanish.",
+          "tr": "İspanyolum."
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "Ülke ve milliyet",
+      "body_tr": "Ülkeyi 'I'm from ...' ile, milliyeti 'I'm ...' ile söylersin. Milliyet sıfatı cümle içinde küçük yazılmaz.",
+      "pattern": "from + ülke · I'm + milliyet",
+      "examples": [
+        {
+          "en": "I'm from Germany.",
+          "tr": "Almanya'danım."
+        },
+        {
+          "en": "I'm German.",
+          "tr": "Almanım."
+        },
+        {
+          "en": "I'm from Turkey. I'm Turkish.",
+          "tr": "Türkiye'denim. Türküm."
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "I'm from Turkish.",
+      "right_en": "I'm from Turkey.",
+      "body_tr": "Ülke adı 'Turkey', milliyet 'Turkish' olur."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "Ülke ve milliyet her zaman aynı kökten gelmez; ikisini birlikte öğren.",
+      "examples": [
+        {
+          "en": "I'm from Canada. I'm Canadian.",
+          "tr": "Kanada'danım. Kanadalıyım."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "\\bfrom\\s+Turkish\\b",
+      "replace": "from Turkey",
+      "note_tr": "Ülke adı 'Turkey' olarak yazılır."
+    },
+    {
+      "pattern": "\\bI\\s+am\\s+(Turkey|Germany|Spain|Canada)\\b",
+      "replace": "I am from $1",
+      "note_tr": "Ülke adından önce 'from' kullanılır."
+    },
+    {
+      "pattern": "\\bturkish\\b",
+      "replace": "Turkish",
+      "note_tr": "Milliyet adları büyük harfle başlar."
+    },
+    {
+      "pattern": "\\benglish\\b",
+      "replace": "English",
+      "note_tr": "Milliyet adları büyük harfle başlar."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Ülkeni ve milliyetini söyle.",
+        "hint_tr": "I'm from ... I'm ...",
+        "sample": "I'm from Turkey. I'm Turkish.",
+        "min_words": 5,
+        "expect": [
+          {
+            "pattern": "\\bI\\s*(am|'m)\\s+from\\b",
+            "anchor": "\\bI\\b",
+            "note_tr": "Ülkeni 'I'm from ...' ile söyle."
+          },
+          {
+            "pattern": "\\bI\\s*(am|'m)\\s+(Turkish|German|Spanish|English|Canadian)\\b",
+            "anchor": "\\bI\\b",
+            "note_tr": "Milliyetini 'I'm Turkish' gibi söyle."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Gittiğin ülkeyi ve milliyetini yaz.",
+        "hint_tr": "I'm from ... I'm ...",
+        "sample": "I'm from Germany. I'm German.",
+        "min_words": 5,
+        "expect": [
+          {
+            "pattern": "\\bfrom\\s+Germany\\b",
+            "anchor": "\\bGermany\\b",
+            "note_tr": "Ülke adı 'Germany' olarak yazılır."
+          },
+          {
+            "pattern": "\\bI\\s*(am|'m)\\s+German\\b",
+            "anchor": "\\bI\\b",
+            "note_tr": "Milliyetini 'I'm German' gibi söyle."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "Bir arkadaşının milliyetini söyle.",
+        "hint_tr": "He is ...",
+        "sample": "He is Canadian.",
+        "min_words": 2,
+        "expect": [
+          {
+            "pattern": "\\b(He|She)\\s*(is|'s)\\s+(Canadian|Turkish|German|Spanish|English)\\b",
+            "anchor": "\\b(He|She)\\b",
+            "note_tr": "Milliyet adı büyük harfle başlar."
+          }
+        ]
+      }
+    ]
+  }
+}

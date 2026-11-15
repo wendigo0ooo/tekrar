@@ -1,0 +1,141 @@
+{
+  "schema": 1,
+  "id": "g-a1-time",
+  "cefr": "A1",
+  "title_tr": "Saat sorma",
+  "subtitle_tr": "Saat kaç?",
+  "objective_tr": "Bu konudan sonra saati sorup tam saatleri 'o'clock' ve 'at' ile söyleyebileceksin.",
+  "est_min": 4,
+  "source_notes": [
+    "a1-u03-l01#0"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "Saat",
+      "body_tr": "Saat sormak için 'What time is it?' denir. Tam saatlerde sayı ve 'o'clock' kullanılır: It's seven o'clock.",
+      "examples": [
+        {
+          "en": "What time is it?",
+          "tr": "Saat kaç?"
+        },
+        {
+          "en": "It's seven o'clock.",
+          "tr": "Saat yedi."
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "at ile saat",
+      "body_tr": "Bir olayın saatini söylerken saatten önce 'at' gelir: at seven o'clock. Saat sorusunun cevabı 'It's ...' ile başlar.",
+      "pattern": "What time is it? → It's + saat · at + saat",
+      "examples": [
+        {
+          "en": "It's seven o'clock.",
+          "tr": "Saat yedi."
+        },
+        {
+          "en": "I get up at seven o'clock.",
+          "tr": "Yedide kalkarım."
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "title_tr": "Günlük",
+      "examples": [
+        {
+          "en": "It's ten o'clock.",
+          "tr": "Saat on."
+        },
+        {
+          "en": "The class starts at nine o'clock.",
+          "tr": "Ders dokuzda başlar."
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "I get up in seven o'clock.",
+      "right_en": "I get up at seven o'clock.",
+      "body_tr": "Saatlerde 'in' değil 'at' kullanılır."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "'o'clock' yalnız tam saatlerde kullanılır: seven o'clock. Saatten önce her zaman 'at' gelir.",
+      "examples": [
+        {
+          "en": "at seven o'clock",
+          "tr": "saat yedide"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "\\bin\\s+([a-z]+\\s+o'clock)\\b",
+      "replace": "at $1",
+      "note_tr": "Saatlerde 'at' kullanılır."
+    },
+    {
+      "pattern": "^\\s*What\\s+time\\s+it\\s+is\\b(?=[^.!?]*\\?)",
+      "replace": "What time is it",
+      "note_tr": "Soruda 'is' özneden önce gelir."
+    },
+    {
+      "pattern": "^\\s*What\\s+time\\s+is\\s+now\\s*\\?",
+      "replace": "What time is it now?",
+      "note_tr": "Saat sorusu 'What time is it?' biçimindedir."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Saat kaç diye sor.",
+        "hint_tr": "What time ...?",
+        "sample": "What time is it?",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\bWhat\\s+time\\s+is\\s+it\\b",
+            "anchor": "\\bWhat\\b",
+            "note_tr": "'What time is it?' kalıbını kullan."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Saat yedi olduğunu söyle.",
+        "hint_tr": "It's seven ...",
+        "sample": "It's seven o'clock.",
+        "min_words": 3,
+        "expect": [
+          {
+            "pattern": "\\bIt('s| is)\\s+seven\\s+o'clock\\b",
+            "anchor": "\\bIt\\b",
+            "note_tr": "Tam saatlerde 'o'clock' kullan."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "Yedide kalktığını söyle.",
+        "hint_tr": "I get up at ...",
+        "sample": "I get up at seven o'clock.",
+        "min_words": 6,
+        "expect": [
+          {
+            "pattern": "\\bat\\s+seven\\s+o'clock\\b",
+            "anchor": "\\bat\\b",
+            "note_tr": "Saatten önce 'at' kullan."
+          }
+        ]
+      }
+    ]
+  }
+}

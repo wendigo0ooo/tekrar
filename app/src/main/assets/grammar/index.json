@@ -1,0 +1,183 @@
+{
+  "schema": 1,
+  "language": "en",
+  "native": "tr",
+  "topics": [
+    {
+      "id": "g-a1-to-be",
+      "title_tr": "am / is / are",
+      "subtitle_tr": "Kendini ve çevreni tanıt",
+      "cefr": "A1",
+      "file": "a1/g01-to-be.json",
+      "icon": "person",
+      "color": "#4F8EF7",
+      "est_min": 4,
+      "linked_lessons": ["a1-u01-l01", "a1-u01-l02"]
+    },
+    {
+      "id": "g-a1-how-are-you",
+      "title_tr": "How are you?",
+      "subtitle_tr": "Hal hatır sor",
+      "cefr": "A1",
+      "file": "a1/g02-how-are-you.json",
+      "icon": "chat",
+      "color": "#34C759",
+      "est_min": 3,
+      "linked_lessons": ["a1-u01-l02"]
+    },
+    {
+      "id": "g-a1-names",
+      "title_tr": "Ad sorma/söyleme",
+      "subtitle_tr": "Adını sor ve söyle",
+      "cefr": "A1",
+      "file": "a1/g03-names.json",
+      "icon": "tag",
+      "color": "#FF9F0A",
+      "est_min": 3,
+      "linked_lessons": ["a1-u01-l03", "a1-u02-l01"]
+    },
+    {
+      "id": "g-a1-possessives",
+      "title_tr": "my / your",
+      "subtitle_tr": "Benim ve senin",
+      "cefr": "A1",
+      "file": "a1/g04-possessives.json",
+      "icon": "home",
+      "color": "#AF52DE",
+      "est_min": 3,
+      "linked_lessons": ["a1-u01-l03", "a1-u02-l01"]
+    },
+    {
+      "id": "g-a1-farewells",
+      "title_tr": "Vedalaşma",
+      "subtitle_tr": "Görüşürüz, iyi geceler",
+      "cefr": "A1",
+      "file": "a1/g05-farewells.json",
+      "icon": "flag",
+      "color": "#FF3B30",
+      "est_min": 3,
+      "linked_lessons": ["a1-u01-l04"]
+    },
+    {
+      "id": "g-a1-origin",
+      "title_tr": "Where are you from?",
+      "subtitle_tr": "Nerelisin?",
+      "cefr": "A1",
+      "file": "a1/g06-origin.json",
+      "icon": "question",
+      "color": "#5AC8FA",
+      "est_min": 4,
+      "linked_lessons": ["a1-u02-l02"]
+    },
+    {
+      "id": "g-a1-nationality",
+      "title_tr": "Ülke ve milliyet",
+      "subtitle_tr": "Türkiye'denim, Türküm",
+      "cefr": "A1",
+      "file": "a1/g07-nationality.json",
+      "icon": "flag",
+      "color": "#FFCC00",
+      "est_min": 4,
+      "linked_lessons": ["a1-u02-l02"]
+    },
+    {
+      "id": "g-a1-jobs",
+      "title_tr": "What do you do?",
+      "subtitle_tr": "Ne iş yapıyorsun?",
+      "cefr": "A1",
+      "file": "a1/g08-jobs.json",
+      "icon": "briefcase",
+      "color": "#FF9500",
+      "est_min": 4,
+      "linked_lessons": ["a1-u02-l03"]
+    },
+    {
+      "id": "g-a1-articles",
+      "title_tr": "a / an",
+      "subtitle_tr": "Bir öğrenci, bir mühendis",
+      "cefr": "A1",
+      "file": "a1/g09-articles.json",
+      "icon": "book",
+      "color": "#5856D6",
+      "est_min": 4,
+      "linked_lessons": ["a1-u02-l03"]
+    },
+    {
+      "id": "g-a1-age",
+      "title_tr": "How old are you?",
+      "subtitle_tr": "Yaşını söyle",
+      "cefr": "A1",
+      "file": "a1/g10-age.json",
+      "icon": "clock",
+      "color": "#FF2D55",
+      "est_min": 3,
+      "linked_lessons": ["a1-u02-l04"]
+    },
+    {
+      "id": "g-a1-time",
+      "title_tr": "Saat sorma",
+      "subtitle_tr": "Saat kaç?",
+      "cefr": "A1",
+      "file": "a1/g11-time.json",
+      "icon": "clock",
+      "color": "#32ADE6",
+      "est_min": 4,
+      "linked_lessons": ["a1-u03-l01"]
+    },
+    {
+      "id": "g-a1-day-parts",
+      "title_tr": "Günün bölümleri",
+      "subtitle_tr": "Sabah, öğleden sonra, gece",
+      "cefr": "A1",
+      "file": "a1/g12-day-parts.json",
+      "icon": "sun",
+      "color": "#FFB340",
+      "est_min": 4,
+      "linked_lessons": ["a1-u03-l01", "a1-u03-l04"]
+    },
+    {
+      "id": "g-a1-present-simple",
+      "title_tr": "Present simple",
+      "subtitle_tr": "Her gün yaptıkların",
+      "cefr": "A1",
+      "file": "a1/g13-present-simple.json",
+      "icon": "book",
+      "color": "#30B0C7",
+      "est_min": 5,
+      "linked_lessons": ["a1-u03-l02", "a1-u03-l04"]
+    },
+    {
+      "id": "g-a1-frequency",
+      "title_tr": "Sıklık zarfları",
+      "subtitle_tr": "Her zaman, genellikle, bazen",
+      "cefr": "A1",
+      "file": "a1/g14-frequency.json",
+      "icon": "clock",
+      "color": "#64D2FF",
+      "est_min": 4,
+      "linked_lessons": ["a1-u03-l02"]
+    },
+    {
+      "id": "g-a1-work-study",
+      "title_tr": "work at / study at",
+      "subtitle_tr": "Nerede çalışır, nerede okursun?",
+      "cefr": "A1",
+      "file": "a1/g15-work-study.json",
+      "icon": "briefcase",
+      "color": "#A2845E",
+      "est_min": 4,
+      "linked_lessons": ["a1-u03-l03"]
+    },
+    {
+      "id": "g-a1-do-questions",
+      "title_tr": "Do you ...?",
+      "subtitle_tr": "Evet/hayır soruları",
+      "cefr": "A1",
+      "file": "a1/g16-do-questions.json",
+      "icon": "question",
+      "color": "#BF5AF2",
+      "est_min": 4,
+      "linked_lessons": ["a1-u03-l03"]
+    }
+  ]
+}

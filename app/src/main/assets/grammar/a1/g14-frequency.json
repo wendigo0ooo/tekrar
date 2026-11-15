@@ -1,0 +1,145 @@
+{
+  "schema": 1,
+  "id": "g-a1-frequency",
+  "cefr": "A1",
+  "title_tr": "Sıklık zarfları",
+  "subtitle_tr": "Her zaman, genellikle, bazen",
+  "objective_tr": "Bu konudan sonra always, usually ve sometimes ile rutinini sıklık belirterek anlatabileceksin.",
+  "est_min": 4,
+  "source_notes": [
+    "a1-u03-l02#1"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "Ne sıklıkla?",
+      "body_tr": "Bir işin ne sıklıkta yapıldığını anlatmak için sıklık zarfları kullanılır: always, usually, sometimes. 'Always' her zaman, 'usually' genellikle, 'sometimes' bazen demektir.",
+      "examples": [
+        {
+          "en": "I always get up early.",
+          "tr": "Her zaman erken kalkarım."
+        },
+        {
+          "en": "I usually have breakfast at home.",
+          "tr": "Genellikle evde kahvaltı yaparım."
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "Nereye gelir?",
+      "body_tr": "Bu zarflar genellikle ana fiilden önce gelir: I always get up early. 'Sometimes' cümle başında da olabilir: Sometimes I get up late.",
+      "pattern": "özne + zarf + fiil · Sometimes + özne + fiil",
+      "examples": [
+        {
+          "en": "I usually have breakfast at home.",
+          "tr": "Genellikle evde kahvaltı yaparım."
+        },
+        {
+          "en": "Sometimes I get up late.",
+          "tr": "Bazen geç kalkarım."
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "title_tr": "Cümlede",
+      "examples": [
+        {
+          "en": "She always drinks tea.",
+          "tr": "O her zaman çay içer."
+        },
+        {
+          "en": "We sometimes watch TV.",
+          "tr": "Bazen televizyon izleriz."
+        },
+        {
+          "en": "He usually works at home.",
+          "tr": "Genellikle evde çalışır."
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "I get up always early.",
+      "right_en": "I always get up early.",
+      "body_tr": "Sıklık zarfı fiilden önce gelir."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "'Sometimes' cümle başında ya da fiilden önce olabilir; anlam değişmez.",
+      "examples": [
+        {
+          "en": "Sometimes I read at night.",
+          "tr": "Bazen gece okurum."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "\\balway\\b",
+      "replace": "always",
+      "note_tr": "'always' sonunda 's' ile yazılır."
+    },
+    {
+      "pattern": "\\busualy\\b",
+      "replace": "usually",
+      "note_tr": "'usually' iki 'l' ile yazılır."
+    },
+    {
+      "pattern": "\\b([Ii]|[Yy]ou|[Ww]e|[Tt]hey|[Hh]e|[Ss]he)\\s+(get\\s+up|go|work|watch|have|drink|play|read|sleep)\\s+always\\b",
+      "replace": "$1 always $2",
+      "note_tr": "Sıklık zarfı fiilden önce gelir."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Her zaman erken kalktığını söyle.",
+        "hint_tr": "I always ...",
+        "sample": "I always get up early.",
+        "min_words": 5,
+        "expect": [
+          {
+            "pattern": "\\balways\\s+\\w+\\b",
+            "anchor": "\\balways\\b",
+            "note_tr": "'always' fiilden önce gelir."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Genellikle evde kahvaltı yaptığını söyle.",
+        "hint_tr": "I usually ...",
+        "sample": "I usually have breakfast at home.",
+        "min_words": 6,
+        "expect": [
+          {
+            "pattern": "\\busually\\s+\\w+\\b",
+            "anchor": "\\busually\\b",
+            "note_tr": "'usually' fiilden önce gelir."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "Bazen geç kalktığını söyle; 'sometimes' cümle başında olsun.",
+        "hint_tr": "Sometimes I ...",
+        "sample": "Sometimes I get up late.",
+        "min_words": 5,
+        "expect": [
+          {
+            "pattern": "\\bSometimes\\s+I\\b",
+            "anchor": "\\bSometimes\\b",
+            "note_tr": "'Sometimes' cümle başında kullanılabilir."
+          }
+        ]
+      }
+    ]
+  }
+}

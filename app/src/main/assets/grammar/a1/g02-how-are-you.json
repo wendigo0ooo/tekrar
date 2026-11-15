@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "id": "g-a1-how-are-you",
+  "cefr": "A1",
+  "title_tr": "How are you?",
+  "subtitle_tr": "Hal hatır sor",
+  "objective_tr": "Bu konudan sonra 'How are you?' ile hal hatır sorup kısa cevap verebileceksin.",
+  "est_min": 3,
+  "source_notes": [
+    "a1-u01-l02#1"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "İlk temas",
+      "body_tr": "Karşılaştığın kişiye 'How are you?' diyerek halini sorarsın. Cevap kısa olur: 'I'm fine, thanks.' Ardından 'And you?' ile soruyu geri çevirirsin.",
+      "examples": [
+        {
+          "en": "How are you?",
+          "tr": "Nasılsın?"
+        },
+        {
+          "en": "I'm fine, thanks.",
+          "tr": "İyiyim, teşekkürler."
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "Soru ve cevap",
+      "body_tr": "'How are you?' kalıbı değişmez; özne sonda kalır. Cevapta 'I'm' ve bir sıfat kullanılır. Kısa cevap günlük konuşmada yeterlidir.",
+      "pattern": "How are you? → I'm fine / I'm tired / I'm OK.",
+      "examples": [
+        {
+          "en": "How are you?",
+          "tr": "Nasılsın?"
+        },
+        {
+          "en": "I'm tired today.",
+          "tr": "Bugün yorgunum."
+        },
+        {
+          "en": "I'm OK, and you?",
+          "tr": "İyiyim, ya sen?"
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "How you are?",
+      "right_en": "How are you?",
+      "body_tr": "Soruda 'are' özneden önce gelir: How are you?"
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "'And you?' tek başına 'ya sen?' demektir. Aynı soruyu tekrar etmek zorunda değilsin.",
+      "examples": [
+        {
+          "en": "Fine, and you?",
+          "tr": "İyiyim, ya sen?"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "^\\s*How\\s+you\\s+are\\b(?=[^.!?]*\\?)",
+      "replace": "How are you",
+      "note_tr": "Soru kalıbı 'How are you?' biçimindedir."
+    },
+    {
+      "pattern": "^\\s*How\\s+is\\s+you\\b(?=[^.!?]*\\?)",
+      "replace": "How are you",
+      "note_tr": "'you' ile 'are' kullanılır."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Karşındakine nasıl olduğunu sor.",
+        "hint_tr": "How ...?",
+        "sample": "How are you?",
+        "min_words": 3,
+        "expect": [
+          {
+            "pattern": "\\bHow\\s+are\\s+you\\b",
+            "anchor": "\\bHow\\b",
+            "note_tr": "'How are you?' kalıbını kullan."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "İyi olduğunu söyle ve soruyu geri sor.",
+        "hint_tr": "I'm fine, and ...?",
+        "sample": "I'm fine, thanks. And you?",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\bI\\s*(am|'m)\\b",
+            "anchor": "\\bI\\b",
+            "note_tr": "Durumunu 'I am' veya 'I'm' ile söyle."
+          },
+          {
+            "pattern": "\\bAnd\\s+you\\b",
+            "anchor": "\\bAnd\\b",
+            "note_tr": "'And you?' ile soruyu geri sor."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "Bugün yorgun olduğunu söyle.",
+        "hint_tr": "I'm tired ...",
+        "sample": "I'm tired today.",
+        "min_words": 3,
+        "expect": [
+          {
+            "pattern": "\\bI\\s*(am|'m)\\b",
+            "anchor": "\\bI\\b",
+            "note_tr": "'I am' veya 'I'm' ile durumunu söyle."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -157,6 +157,39 @@ object PromptBuilder {
         )
     }
 
+    /** Gramer yazma görevi için ikincil AI kontrol prompt'u (kontrat 5). */
+    fun grammarCheckPrompt(
+        text: String,
+        topicTitleTr: String,
+        level: String = "A1",
+    ): String {
+        val cefr = level.trim().uppercase(Locale.ROOT).ifEmpty { "A1" }
+        val topic = topicTitleTr.trim().ifEmpty { "grammar" }
+        return buildString {
+            appendLine(
+                "Kullanıcının İngilizce cümlesini $cefr seviyesinde kontrol et. Konu: $topic."
+            )
+            appendLine("Yalnızca JSON döndür:")
+            appendLine(
+                "{\"has_error\": true, \"corrected\": \"...\", " +
+                    "\"issues\": [{\"wrong\": \"...\", \"correct\": \"...\", " +
+                    "\"note_tr\": \"...\"}], \"verdict_tr\": \"...\"}"
+            )
+            appendLine("Kurallar:")
+            appendLine(
+                "corrected tek cümle; issues en fazla 4; note_tr en fazla 12 kelime;"
+            )
+            appendLine(
+                "yazım hatalarını da düzelt; emin olmadığın şeyi uydurma; " +
+                    "JSON dışında metin yazma."
+            )
+            append("Cümle: ").append(text.trim())
+        }
+    }
+
+    /** [GrammarAi.parseJson] kısayolu; bozuk JSON'da null döner. */
+    fun parseGrammarCheckJson(raw: String): GrammarAiResult? = GrammarAi.parseJson(raw)
+
     private fun appendOptional(builder: StringBuilder, label: String, value: String?) {
         val text = value?.trim().orEmpty()
         if (text.isNotEmpty()) builder.appendLine("$label: $text")

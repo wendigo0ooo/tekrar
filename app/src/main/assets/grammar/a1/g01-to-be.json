@@ -1,0 +1,170 @@
+{
+  "schema": 1,
+  "id": "g-a1-to-be",
+  "cefr": "A1",
+  "title_tr": "am / is / are",
+  "subtitle_tr": "Kendini ve çevreni tanıt",
+  "objective_tr": "Bu konudan sonra am, is ve are ile kendin ve başkaları hakkında 3 cümle kurabileceksin.",
+  "est_min": 4,
+  "source_notes": [
+    "a1-u01-l01#0",
+    "a1-u01-l02#0"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "Neden önemli?",
+      "body_tr": "İngilizcede 'olmak' fiili kendini tanıtmanın temelidir. 'Ben Ali' demek için 'I am Ali' deriz; fiil atlanmaz.",
+      "examples": [
+        {
+          "en": "I am Ali.",
+          "tr": "Ben Ali."
+        },
+        {
+          "en": "You are Ben.",
+          "tr": "Sen Ben'sin."
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "Özneye göre seç",
+      "body_tr": "I ile am, you/we/they ile are, he/she/it ile is kullanılır. Kısa biçimler: I'm, you're, he's, she's, it's, we're, they're.",
+      "pattern": "I + am · you/we/they + are · he/she/it + is",
+      "examples": [
+        {
+          "en": "I am a student.",
+          "tr": "Öğrenciyim."
+        },
+        {
+          "en": "She is a teacher.",
+          "tr": "O bir öğretmen."
+        },
+        {
+          "en": "They are at home.",
+          "tr": "Onlar evde."
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "title_tr": "Günlük cümleler",
+      "examples": [
+        {
+          "en": "We are ready.",
+          "tr": "Hazırız."
+        },
+        {
+          "en": "He is tired.",
+          "tr": "O yorgun."
+        },
+        {
+          "en": "I'm fine, thanks.",
+          "tr": "İyiyim, teşekkürler."
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "I is a student.",
+      "right_en": "I am a student.",
+      "body_tr": "I ile her zaman am kullanılır; is ve are gelmez."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "Olumsuzda 'not' eklenir: I am not tired, she isn't here. Soruda fiil öne gelir: Are you ready?",
+      "examples": [
+        {
+          "en": "Are you ready?",
+          "tr": "Hazır mısın?"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "\\bI\\s+(is|are)\\b",
+      "replace": "I am",
+      "note_tr": "'I' ile 'am' kullanılır."
+    },
+    {
+      "pattern": "\\b([Hh]e|[Ss]he|[Ii]t)\\s+are\\b",
+      "replace": "$1 is",
+      "note_tr": "he/she/it ile 'is' kullanılır."
+    },
+    {
+      "pattern": "\\b([Ww]e|[Yy]ou|[Tt]hey)\\s+is\\b",
+      "replace": "$1 are",
+      "note_tr": "we/you/they ile 'are' kullanılır."
+    },
+    {
+      "pattern": "\\b([Hh]e|[Ss]he|[Ii]t)\\s+am\\b",
+      "replace": "$1 is",
+      "note_tr": "he/she/it ile 'is' kullanılır."
+    },
+    {
+      "pattern": "\\b([Tt])here\\s+is\\s+(two|three|four|five|six|seven|eight|nine|ten|many|several|some)\\b",
+      "replace": "$1here are $2",
+      "note_tr": "Çoğul isimle 'there are' kullanılır."
+    },
+    {
+      "pattern": "\\bamm\\b",
+      "replace": "am",
+      "note_tr": "'am' tek 'm' ile yazılır."
+    },
+    {
+      "pattern": "\\bi\\b",
+      "replace": "I",
+      "note_tr": "İngilizcede 'I' her zaman büyük yazılır."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Kendini tanıt: adın ve mesleğin.",
+        "hint_tr": "I am ... / I'm ...",
+        "sample": "I am Deniz. I am a student.",
+        "min_words": 5,
+        "expect": [
+          {
+            "pattern": "\\bI\\s*(am|'m)\\b",
+            "anchor": "\\bI\\b",
+            "note_tr": "Kendini tanıtırken 'I am' kullan."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Bir arkadaşını tanıt: adı ve özelliği.",
+        "hint_tr": "This is ... She is ...",
+        "sample": "This is Mia. She is my friend.",
+        "min_words": 5,
+        "expect": [
+          {
+            "pattern": "\\b(She|He)\\s*(is|'s)\\b",
+            "anchor": "\\b(She|He)\\b",
+            "note_tr": "3. kişide 'is' kullan."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "İki kişiden bahset: onlar ve bir yer.",
+        "hint_tr": "They are ... We are ...",
+        "sample": "They are at home. We are ready.",
+        "min_words": 3,
+        "expect": [
+          {
+            "pattern": "\\b(They|We)\\s*(are|'re)\\b",
+            "anchor": "\\b(They|We)\\b",
+            "note_tr": "Çoğul öznelerle 'are' kullan."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -14,6 +14,8 @@ import com.wendigo.tekrar.repo.BackupManager
 import com.wendigo.tekrar.repo.CourseProgressRepository
 import com.wendigo.tekrar.repo.CourseRepository
 import com.wendigo.tekrar.repo.DictionaryRepository
+import com.wendigo.tekrar.repo.GrammarProgressRepository
+import com.wendigo.tekrar.repo.GrammarRepository
 import com.wendigo.tekrar.repo.SettingsStore
 import com.wendigo.tekrar.repo.WordRepository
 import com.wendigo.tekrar.widget.DueWidgetProvider
@@ -44,6 +46,12 @@ class AppContainer(context: Context) {
     }
     val courseProgress: CourseProgressRepository by lazy {
         CourseProgressRepository(database)
+    }
+    val grammarRepository: GrammarRepository by lazy {
+        GrammarRepository(appContext)
+    }
+    val grammarProgress: GrammarProgressRepository by lazy {
+        GrammarProgressRepository(courseProgress)
     }
     val aiSettings: AiSettingsStore by lazy {
         AiSettingsStore(appContext)

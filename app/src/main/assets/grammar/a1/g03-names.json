@@ -1,0 +1,133 @@
+{
+  "schema": 1,
+  "id": "g-a1-names",
+  "cefr": "A1",
+  "title_tr": "Ad sorma/söyleme",
+  "subtitle_tr": "Adını sor ve söyle",
+  "objective_tr": "Bu konudan sonra adını sorup söyleyebilecek ve karşındakinin adını kontrol edebileceksin.",
+  "est_min": 3,
+  "source_notes": [
+    "a1-u01-l03#0",
+    "a1-u02-l01#0"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "Tanışma başlar",
+      "body_tr": "Adını sormak için 'What's your name?' denir. Cevap 'My name is ...' ile verilir. 'What is' yerine günlük dilde 'What's' kullanılır.",
+      "examples": [
+        {
+          "en": "What's your name?",
+          "tr": "Adın ne?"
+        },
+        {
+          "en": "My name is Leo.",
+          "tr": "Benim adım Leo."
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "Kısa biçimler",
+      "body_tr": "Soru: What is your name? → What's your name? Cevap: My name is Leo. → My name's Leo. Anlam değişmez, konuşma daha akıcı olur.",
+      "pattern": "What's your name? · My name is ... / My name's ...",
+      "examples": [
+        {
+          "en": "What is your name?",
+          "tr": "Adın ne?"
+        },
+        {
+          "en": "My name's Mia.",
+          "tr": "Benim adım Mia."
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "I name is Ali.",
+      "right_en": "My name is Ali.",
+      "body_tr": "İyelik için 'my' kullanılır; 'I name' yanlıştır."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "Takma ad da aynı kalıpla söylenir: 'My nickname is Lex.' Karşındakinin adını 'Is your name Sam?' diye kontrol edebilirsin.",
+      "examples": [
+        {
+          "en": "My nickname is Lex.",
+          "tr": "Takma adım Lex."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "^\\s*I\\s+name\\s+is\\b",
+      "replace": "My name is",
+      "note_tr": "İyelikte 'my name' kullanılır."
+    },
+    {
+      "pattern": "\\bI\\s+name\\s+is\\b",
+      "replace": "my name is",
+      "note_tr": "İyelikte 'my name' kullanılır."
+    },
+    {
+      "pattern": "\\bWhat\\s+is\\s+you\\s+name\\b",
+      "replace": "What is your name",
+      "note_tr": "'your name' kalıbında 'your' kullanılır."
+    },
+    {
+      "pattern": "\\b([Ww])hats\\b",
+      "replace": "$1hat's",
+      "note_tr": "Kısa biçim 'What's' olarak yazılır."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Birine adını sor.",
+        "hint_tr": "What's ...?",
+        "sample": "What's your name?",
+        "min_words": 3,
+        "expect": [
+          {
+            "pattern": "\\bWhat('s| is)\\s+your\\s+name\\b",
+            "anchor": "\\bWhat\\b",
+            "note_tr": "Ad sorusu 'What's your name?' biçimindedir."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Adını ve takma adını söyle.",
+        "hint_tr": "My name is ... My nickname is ...",
+        "sample": "My name is Leo. My nickname is Lex.",
+        "min_words": 5,
+        "expect": [
+          {
+            "pattern": "\\bMy\\s+name('s| is)\\b",
+            "anchor": "\\bMy\\b",
+            "note_tr": "'My name is ...' kalıbını kullan."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "Arkadaşının adını sor.",
+        "hint_tr": "Is your ...?",
+        "sample": "Is your name Mia?",
+        "min_words": 4,
+        "expect": [
+          {
+            "pattern": "\\bIs\\s+your\\s+name\\b",
+            "anchor": "\\bIs\\b",
+            "note_tr": "Adı kontrol ederken 'Is your name ...?' kullan."
+          }
+        ]
+      }
+    ]
+  }
+}

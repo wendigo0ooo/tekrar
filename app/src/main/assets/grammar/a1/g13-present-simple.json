@@ -1,0 +1,187 @@
+{
+  "schema": 1,
+  "id": "g-a1-present-simple",
+  "cefr": "A1",
+  "title_tr": "Present simple",
+  "subtitle_tr": "Her gün yaptıkların",
+  "objective_tr": "Bu konudan sonra günlük rutinini present simple ile anlatabileceksin.",
+  "est_min": 5,
+  "source_notes": [
+    "a1-u03-l02#0",
+    "a1-u03-l04#0"
+  ],
+  "steps": [
+    {
+      "type": "hook",
+      "title_tr": "Rutin",
+      "body_tr": "Present simple her gün tekrarlanan işleri anlatır. I, you, we ve they ile fiil yalın hâlde durur: I get up at seven.",
+      "examples": [
+        {
+          "en": "I get up at seven.",
+          "tr": "Yedide kalkarım."
+        },
+        {
+          "en": "We have breakfast at eight.",
+          "tr": "Sekizde kahvaltı yaparız."
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "Olumsuz cümle",
+      "body_tr": "Olumsuzda fiilden önce 'don't' gelir: I don't get up late. Fiil yine yalın kalır. 'I don't get up at six.' doğru bir cümledir.",
+      "pattern": "I/you/we/they + fiil · don't + fiil",
+      "examples": [
+        {
+          "en": "I don't get up late.",
+          "tr": "Geç kalkmam."
+        },
+        {
+          "en": "They don't work on Sunday.",
+          "tr": "Pazar günü çalışmazlar."
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "title_tr": "He, she, it",
+      "body_tr": "He, she ve it ile fiile '-s' eklenir: she works, he goes. Olumsuzda 'doesn't' kullanılır ve fiil yalın kalır: she doesn't work.",
+      "pattern": "he/she/it + fiil-s · doesn't + fiil",
+      "examples": [
+        {
+          "en": "She works at a school.",
+          "tr": "Bir okulda çalışır."
+        },
+        {
+          "en": "He doesn't work on Sunday.",
+          "tr": "Pazar günü çalışmaz."
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "title_tr": "Rutin cümleler",
+      "examples": [
+        {
+          "en": "I have dinner at seven.",
+          "tr": "Yedide akşam yemeği yerim."
+        },
+        {
+          "en": "She goes to bed at eleven.",
+          "tr": "On birde yatar."
+        },
+        {
+          "en": "I usually watch TV after dinner.",
+          "tr": "Genellikle akşam yemeğinden sonra televizyon izlerim."
+        }
+      ]
+    },
+    {
+      "type": "mistake",
+      "title_tr": "Sık yapılan hata",
+      "wrong_en": "She go to school.",
+      "right_en": "She goes to school.",
+      "body_tr": "He, she ve it ile fiile '-s' eklenir."
+    },
+    {
+      "type": "tip",
+      "title_tr": "Akılda tut",
+      "body_tr": "'can' sonrası fiil yalın kalır: I can swim. 'can to swim' yanlıştır.",
+      "examples": [
+        {
+          "en": "I can swim.",
+          "tr": "Yüzebilirim."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pattern": "^\\s*([Hh]e|[Ss]he|[Ii]t)\\s+go\\b",
+      "replace": "$1 goes",
+      "note_tr": "3. tekil kişide fiile '-es' eklenir: goes."
+    },
+    {
+      "pattern": "^\\s*([Hh]e|[Ss]he|[Ii]t)\\s+have\\b",
+      "replace": "$1 has",
+      "note_tr": "3. tekil kişide 'has' kullanılır."
+    },
+    {
+      "pattern": "^\\s*([Hh]e|[Ss]he|[Ii]t)\\s+do\\b",
+      "replace": "$1 does",
+      "note_tr": "3. tekil kişide 'does' kullanılır."
+    },
+    {
+      "pattern": "^\\s*([Hh]e|[Ss]he|[Ii]t)\\s+watch\\b",
+      "replace": "$1 watches",
+      "note_tr": "3. tekil kişide 'watches' yazılır."
+    },
+    {
+      "pattern": "^\\s*([Hh]e|[Ss]he|[Ii]t)\\s+study\\b",
+      "replace": "$1 studies",
+      "note_tr": "3. tekil kişide 'y' harfi 'ies' olur: studies."
+    },
+    {
+      "pattern": "^\\s*([Hh]e|[Ss]he|[Ii]t)\\s+don't\\b",
+      "replace": "$1 doesn't",
+      "note_tr": "3. tekil kişide 'doesn't' kullanılır."
+    },
+    {
+      "pattern": "\\b(can|could|must|should|will)\\s+to\\s+(\\w+)\\b",
+      "replace": "$1 $2",
+      "note_tr": "can/must gibi yardımcı fiillerden sonra 'to' gelmez."
+    }
+  ],
+  "write": {
+    "intro_tr": "Şimdi sıra sende. 3 cümle yaz; kontrol edince hatalarını kırmızı göreceksin.",
+    "tasks": [
+      {
+        "id": "w1",
+        "prompt_tr": "Sabah rutinini anlat.",
+        "hint_tr": "I get up at ... I have ...",
+        "sample": "I get up at seven. I have breakfast.",
+        "min_words": 5,
+        "expect": [
+          {
+            "pattern": "\\bI\\s+(get|have|go|work|watch|drink)\\b",
+            "anchor": "\\bI\\b",
+            "note_tr": "Rutini present simple ile anlat."
+          }
+        ]
+      },
+      {
+        "id": "w2",
+        "prompt_tr": "Bir arkadaşının her gün ne yaptığını anlat.",
+        "hint_tr": "She works ... He goes ...",
+        "sample": "She works at a school. He goes to bed at ten.",
+        "min_words": 5,
+        "expect": [
+          {
+            "pattern": "\\b(He|She)\\s+(works|goes|has|does|watches|studies|plays|likes)\\b",
+            "anchor": "\\b(He|She)\\b",
+            "note_tr": "3. tekil kişide fiile '-s' ekle."
+          }
+        ]
+      },
+      {
+        "id": "w3",
+        "prompt_tr": "İki olumsuz cümle yaz: biri 'I', biri 'she/he' ile.",
+        "hint_tr": "I don't ... / She doesn't ...",
+        "sample": "I don't get up late. She doesn't work on Sunday.",
+        "min_words": 6,
+        "expect": [
+          {
+            "pattern": "\\bdon't\\b",
+            "anchor": "\\bdon't\\b",
+            "note_tr": "Olumsuzda 'don't' kullan."
+          },
+          {
+            "pattern": "\\bdoesn't\\b",
+            "anchor": "\\bdoesn't\\b",
+            "note_tr": "3. tekil kişide 'doesn't' kullan."
+          }
+        ]
+      }
+    ]
+  }
+}

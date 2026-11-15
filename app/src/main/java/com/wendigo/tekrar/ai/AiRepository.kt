@@ -341,6 +341,79 @@ class AiRepository(
         return client.testConnection(config)
     }
 
+    /**
+     * Gramer yazma görevi için ikincil AI kontrolü. Oturum DB'ye yazılmaz.
+     * Başarısızlıkta [Result.failure]; yerel kontrol akışı etkilenmez.
+     */
+    suspend fun checkGrammar(
+        text: String,
+        topicTitleTr: String,
+        level: String = "A1",
+        sessionId: String = "grammar-check",
+    ): Result<GrammarAiResult> = withContext(Dispatchers.IO) {
+        val sentence = text.trim()
+        if (sentence.isEmpty()) {
+            return@withContext Result.failure(
+                AiClientException("Kontrol edilecek cümle boş.", false),
+            )
+        }
+        val configResult = currentConfig()
+        val config = configResult.getOrNull()
+            ?: return@withContext Result.failure(
+                configResult.exceptionOrNull()
+                    ?: AiClientException("AI anahtarı ayarlanmadı.", false),
+            )
+        val answer = StringBuilder()
+        var streamError: AiStreamEvent.Error? = null
+        try {
+            client.streamChat(
+                config = config.copy(
+                    temperature = GrammarAi.TEMPERATURE,
+                    maxTokens = GrammarAi.MAX_TOKENS,
+                ),
+                messages = listOf(
+                    AiChatMessage(
+                        AiRole.USER,
+                        PromptBuilder.grammarCheckPrompt(sentence, topicTitleTr, level),
+                    ),
+                ),
+                sessionId = sessionId,
+            ).collect { event ->
+                when (event) {
+                    is AiStreamEvent.Delta -> answer.append(event.text)
+                    is AiStreamEvent.Error -> streamError = event
+                    is AiStreamEvent.Done -> Unit
+                }
+            }
+        } catch (error: CancellationException) {
+            throw error
+        } catch (error: Exception) {
+            return@withContext Result.failure(
+                AiClientException(
+                    "AI kontrolü yapılamadı; yerel kontrol geçerli.",
+                    true,
+                ),
+            )
+        }
+        val failure = streamError
+        if (failure != null) {
+            return@withContext Result.failure(
+                AiClientException(
+                    "AI kontrolü yapılamadı; yerel kontrol geçerli.",
+                    failure.retryable,
+                ),
+            )
+        }
+        val parsed = GrammarAi.parseJson(answer.toString())
+            ?: return@withContext Result.failure(
+                AiClientException(
+                    "AI kontrolü yapılamadı; yerel kontrol geçerli.",
+                    true,
+                ),
+            )
+        Result.success(parsed)
+    }
+
     suspend fun deleteAllHistory() = withContext(Dispatchers.IO) {
         messages.deleteAll()
         sessions.deleteAll()
