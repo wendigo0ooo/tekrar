@@ -453,4 +453,5 @@ strengths 2-3, fixes 2-3, next_focus tek cümle.
   dönüştürüldü, 73 kart + 48 yazma görevi. Çevrimdışı checker hatalı aralıkları
   kırmızı/altı çizili, doğrusunu yeşil gösterir; opsiyonel AI derin kontrolü var.
   İlerleme `lesson_progress` (`grammar:<topicId>`), yeni Room migration yok.
-  Ayrıntı: `docs/gramer-kontrat.md`.
+  Ayrıntı: `docs/gramer-kontrat.md`. CI run `43709692290` yeşil; APK 3.1.0 code 5
+  `/storage/emulated/0/Download/tekrar-3.1.0/Tekrar-release.apk` (7,9 MB).

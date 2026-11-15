@@ -459,4 +459,6 @@ Cümle: ...
 - İçerik: 16 konu, 73 kart, 48 yazma görevi, 21/21 kaynak not; validator 0 hata.
 - UI: 5. sekme, ana ekran, konu anlatımı, 3 cümlelik yazma akışı, kırmızı/yeşil
   işaretleme ve AI kartı tamam; nav host/DI bağlandı.
-- Sürüm 3.1.0 (code 5), CI etiketi `v3.1-buildN`; CI/APK ve cihaz testi bekliyor.
+- Sürüm 3.1.0 (code 5), CI etiketi `v3.1-buildN`; CI run `43709692290` **yeşil**.
+- APK: `/storage/emulated/0/Download/tekrar-3.1.0/Tekrar-release.apk` (7,9 MB) ve
+  `Tekrar-debug.apk`. Cihaz testi bekliyor (5 sekme, bir konu, 3 cümle, kırmızı/yeşil).
