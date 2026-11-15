@@ -68,7 +68,7 @@ class AiClientTest {
         val request = captured!!
         assertEquals("Bearer oc_sk_test_key", request.header("Authorization"))
         assertEquals("ses_test", request.header("x-opencode-session"))
-        assertEquals("Tekrar/3.0 (Android)", request.header("User-Agent"))
+        assertEquals("Tekrar/3.1 (Android)", request.header("User-Agent"))
         assertEquals("text/event-stream", request.header("Accept"))
         assertEquals(
             "https://opencode.ai/inference/go/openai/v1/chat/completions",
