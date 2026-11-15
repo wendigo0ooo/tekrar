@@ -246,7 +246,8 @@ data class GrammarCheckResult(
 5. **Türkçe karakter:** `ı ş ğ ü ö ç` içeren kelime varsa `hintTr`:
    "İngilizce yazmayı dene." Cümle tamamen Türkçeyse skor 0.
 6. **Yazım:** `SpellingLexicon` ile; aşağıya bak.
-7. **Kısa cümle:** `min_words` altındaysa `hintTr`, skor 0; kırmızı aralık yok.
+7. **Kısa cümle:** `min_words` altındaysa `hintTr` + **-10**; cümle yine
+   kurallar/yazım/noktalama açısından kontrol edilir (kırmızı işaretleme sürer).
 
 ### 3.3 Konu kuralları
 
@@ -410,14 +411,14 @@ Cümle: ...
 | `I is a student.` | `I am a student.` · `is→am` |
 | `He are tired.` | `He is tired.` · `are→is` |
 | `i am happy` | `I am happy` · büyük harf |
-| `I am happy` | 100, issue yok |
+| `I am happy` | 100, issue yok (min_words ≤3 olan görevde) |
 | `I amm happy.` | `amm→am` yazım |
 | `She go to school.` | `go→goes` |
 | `Does he likes tea?` | `likes→like` |
 | `There is two cats.` | `is→are` |
-| `I can to swim.` | `to` silinir |
-| `a engineer` | `a→an` |
-| `an teacher` | `an→a` |
+| `I can to swim.` | (core sentetik test; içerikte ayrı konu yok) |
+| `a engineer` | `an engineer` (`a→an`; cümle başı büyütülür) |
+| `an teacher` | `a teacher` (`an→a`; cümle başı büyütülür) |
 | `I from Turkey.` | `I am from Turkey.` |
 | `How you are?` | `How are you?` |
 | `I have 20 years.` | `I am 20 years old.` |
@@ -451,3 +452,11 @@ Cümle: ...
 - [ ] AI anahtarı yokken tüm akış çalışır; AI düğmesi görünmez.
 - [ ] `lesson_progress` kaydı `grammar:<id>` olarak yazılır; yedek uyumlu.
 - [ ] `python3 tools/content/validate.py` 0 hata; CI yeşil; APK 3.1.0.
+
+## 11. Durum (2026-11-15)
+
+- Core/checker/lexicon/progress/AI köprüsü tamam; 67 JUnit testi geçti.
+- İçerik: 16 konu, 73 kart, 48 yazma görevi, 21/21 kaynak not; validator 0 hata.
+- UI: 5. sekme, ana ekran, konu anlatımı, 3 cümlelik yazma akışı, kırmızı/yeşil
+  işaretleme ve AI kartı tamam; nav host/DI bağlandı.
+- Sürüm 3.1.0 (code 5), CI etiketi `v3.1-buildN`; CI/APK ve cihaz testi bekliyor.

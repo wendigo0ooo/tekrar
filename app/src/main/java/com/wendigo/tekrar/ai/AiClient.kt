@@ -212,7 +212,7 @@ class OpenAiCompatibleClient(
     }
 
     companion object {
-        const val USER_AGENT = "Tekrar/3.0 (Android)"
+        const val USER_AGENT = "Tekrar/3.1 (Android)"
         const val RETRY_DELAY_MS = 1_500L
         const val MAX_ATTEMPTS = 2
         const val PROBE_MAX_TOKENS = 8

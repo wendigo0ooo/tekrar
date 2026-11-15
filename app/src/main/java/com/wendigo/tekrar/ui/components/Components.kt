@@ -39,7 +39,9 @@ import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
@@ -53,10 +55,11 @@ import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.sin
 
-enum class NavKind { LEARN, TODAY, LIBRARY, PROFILE, STATS, SETTINGS }
+enum class NavKind { LEARN, GRAMMAR, TODAY, LIBRARY, PROFILE, STATS, SETTINGS }
 
 private val navKinds = listOf(
     NavKind.LEARN,
+    NavKind.GRAMMAR,
     NavKind.TODAY,
     NavKind.LIBRARY,
     NavKind.PROFILE,
@@ -458,6 +461,59 @@ fun NavIcon(kind: NavKind, tint: Color, modifier: Modifier = Modifier) {
                     start = Offset(w * 0.50f, h * 0.18f),
                     end = Offset(w * 0.80f, h * 0.50f),
                     strokeWidth = stroke,
+                    cap = StrokeCap.Round,
+                )
+            }
+            NavKind.GRAMMAR -> {
+                val pageStyle = Stroke(
+                    width = stroke,
+                    cap = StrokeCap.Round,
+                    join = StrokeJoin.Round,
+                )
+                val leftPage = Path().apply {
+                    moveTo(w * 0.50f, h * 0.30f)
+                    lineTo(w * 0.30f, h * 0.23f)
+                    lineTo(w * 0.17f, h * 0.27f)
+                    lineTo(w * 0.17f, h * 0.75f)
+                    lineTo(w * 0.50f, h * 0.82f)
+                }
+                val rightPage = Path().apply {
+                    moveTo(w * 0.50f, h * 0.30f)
+                    lineTo(w * 0.70f, h * 0.23f)
+                    lineTo(w * 0.83f, h * 0.27f)
+                    lineTo(w * 0.83f, h * 0.75f)
+                    lineTo(w * 0.50f, h * 0.82f)
+                }
+                drawPath(path = leftPage, color = tint, style = pageStyle)
+                drawPath(path = rightPage, color = tint, style = pageStyle)
+                drawLine(
+                    color = tint,
+                    start = Offset(w * 0.50f, h * 0.30f),
+                    end = Offset(w * 0.50f, h * 0.82f),
+                    strokeWidth = stroke * 0.85f,
+                    cap = StrokeCap.Round,
+                )
+                // Sağ sayfada büyükçe "A" izi: kitap + gramer çağrışımı.
+                val aStroke = stroke * 0.66f
+                drawLine(
+                    color = tint,
+                    start = Offset(w * 0.595f, h * 0.70f),
+                    end = Offset(w * 0.660f, h * 0.36f),
+                    strokeWidth = aStroke,
+                    cap = StrokeCap.Round,
+                )
+                drawLine(
+                    color = tint,
+                    start = Offset(w * 0.660f, h * 0.36f),
+                    end = Offset(w * 0.725f, h * 0.70f),
+                    strokeWidth = aStroke,
+                    cap = StrokeCap.Round,
+                )
+                drawLine(
+                    color = tint,
+                    start = Offset(w * 0.623f, h * 0.570f),
+                    end = Offset(w * 0.697f, h * 0.570f),
+                    strokeWidth = aStroke,
                     cap = StrokeCap.Round,
                 )
             }

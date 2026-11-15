@@ -37,6 +37,10 @@ import com.wendigo.tekrar.ui.components.BottomBar
 import com.wendigo.tekrar.ui.contracts.CustomSessionRequest
 import com.wendigo.tekrar.ui.custom.CustomSessionScreen
 import com.wendigo.tekrar.ui.decks.DecksScreen
+import com.wendigo.tekrar.ui.grammar.GrammarHomeScreen
+import com.wendigo.tekrar.ui.grammar.GrammarHomeViewModel
+import com.wendigo.tekrar.ui.grammar.GrammarTopicScreen
+import com.wendigo.tekrar.ui.grammar.GrammarTopicViewModel
 import com.wendigo.tekrar.ui.contracts.LibraryFilter
 import com.wendigo.tekrar.ui.contracts.LibrarySort
 import com.wendigo.tekrar.ui.contracts.StudyFormat
@@ -109,6 +113,65 @@ fun TekrarNavHost(
                     },
                     onRetry = vm::retry,
                     onAiCoach = { navController.navigate(ROUTE_AI_CHAT) },
+                )
+            }
+
+            composable(ROUTE_GRAMMAR) {
+                val vm: GrammarHomeViewModel = viewModel(
+                    factory = viewModelFactory {
+                        GrammarHomeViewModel(
+                            container.grammarRepository,
+                            container.grammarProgress,
+                        )
+                    },
+                )
+                val state by vm.state.collectAsStateWithLifecycle()
+                LifecycleResumeEffect(Unit) {
+                    vm.refresh()
+                    onPauseOrDispose { }
+                }
+                GrammarHomeScreen(
+                    state = state,
+                    onOpenTopic = { topicId ->
+                        navController.navigate("$ROUTE_GRAMMAR_TOPIC/${Uri.encode(topicId)}")
+                    },
+                    onBack = { navController.navigateTab(ROUTE_LEARN) },
+                    onRetry = vm::retry,
+                    onContinue = { topicId ->
+                        navController.navigate("$ROUTE_GRAMMAR_TOPIC/${Uri.encode(topicId)}")
+                    },
+                )
+            }
+
+            composable("$ROUTE_GRAMMAR_TOPIC/{topicId}") { entry ->
+                val topicId = entry.arguments?.getString("topicId").orEmpty()
+                val vm: GrammarTopicViewModel = viewModel(
+                    factory = viewModelFactory {
+                        GrammarTopicViewModel(
+                            container.grammarRepository,
+                            container.grammarProgress,
+                            container.aiRepository,
+                            Speaker(container.appContext),
+                        )
+                    },
+                )
+                LaunchedEffect(topicId) {
+                    vm.start(Uri.decode(topicId))
+                }
+                val state by vm.state.collectAsStateWithLifecycle()
+                GrammarTopicScreen(
+                    state = state,
+                    onBack = { navController.popBackStack() },
+                    onSpeak = vm::speak,
+                    onContinueExplain = vm::continueExplain,
+                    onInputChange = vm::onInputChange,
+                    onCheck = vm::check,
+                    onRetry = vm::retry,
+                    onNext = vm::next,
+                    onFinish = { navController.popBackStack() },
+                    onAiCheck = vm::aiCheck,
+                    onRetryLoad = vm::retryLoad,
+                    onRetryComplete = vm::retryComplete,
                 )
             }
 
@@ -698,13 +761,20 @@ fun TekrarNavHost(
             onLaunchRequestConsumed()
         }
 
-        val tabs = listOf(ROUTE_LEARN, ROUTE_TODAY, ROUTE_LIBRARY, ROUTE_PROFILE)
+        val tabs = listOf(
+            ROUTE_LEARN,
+            ROUTE_GRAMMAR,
+            ROUTE_TODAY,
+            ROUTE_LIBRARY,
+            ROUTE_PROFILE,
+        )
         val selectedIndex = tabs.indexOf(route)
         if (selectedIndex >= 0) {
             BottomBar(
                 selectedIndex = selectedIndex,
                 labels = listOf(
                     stringResource(R.string.nav_learn),
+                    stringResource(R.string.nav_grammar),
                     stringResource(R.string.nav_today),
                     stringResource(R.string.nav_library),
                     stringResource(R.string.nav_profile),
@@ -795,6 +865,8 @@ private fun customStudyRoute(request: CustomSessionRequest): String {
 }
 
 private const val ROUTE_LEARN = "learn"
+private const val ROUTE_GRAMMAR = "grammar"
+private const val ROUTE_GRAMMAR_TOPIC = "grammar/topic"
 private const val ROUTE_LESSON = "learn/lesson"
 private const val ROUTE_PROFILE = "profile"
 private const val ROUTE_AI_CHAT = "ai/chat"

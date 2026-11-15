@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Gramer ana ekranı -->
+    <string name="grammar_title">Gramer</string>
+    <string name="grammar_home_subtitle">Kısa kartlarla kuralı gör, sonra üç cümleyle kendin dene.</string>
+    <string name="grammar_progress_title">Gramer yolculuğu</string>
+    <string name="grammar_progress_meta">%1$d dk</string>
+    <string name="grammar_progress_value">%1$d / %2$d konu</string>
+    <string name="grammar_progress_done">Tüm konular tamam. İstediğin konuyu yeniden açabilirsin.</string>
+    <string name="grammar_next_topic">Sıradaki: %1$s</string>
+    <string name="grammar_continue">Devam et</string>
+    <string name="grammar_continue_all">Baştan göz at</string>
+
+    <string name="grammar_section_basics">Temel</string>
+    <string name="grammar_section_meeting">Tanışma</string>
+    <string name="grammar_section_routine">Günlük rutin</string>
+    <string name="grammar_section_count">%1$d konu</string>
+
+    <string name="grammar_topic_est">%1$d dk</string>
+    <string name="grammar_status_done">Tamam</string>
+    <string name="grammar_status_in_progress">Devam</string>
+    <string name="grammar_status_open">Açık</string>
+
+    <string name="grammar_loading">Gramer konuları yükleniyor…</string>
+    <string name="grammar_error_title">Konular yüklenemedi</string>
+    <string name="grammar_error_hint">İçerik cihazda; tekrar denemek yeterli.</string>
+    <string name="grammar_retry">Tekrar dene</string>
+    <string name="grammar_empty_title">Henüz gramer konusu yok</string>
+    <string name="grammar_empty_hint">İçerik eklenince konular burada görünecek.</string>
+    <string name="grammar_empty_back">Öğren ekranına dön</string>
+
+    <!-- Konu ekranı -->
+    <string name="grammar_back">Geri</string>
+    <string name="grammar_topic_loading">Konu yükleniyor…</string>
+    <string name="grammar_topic_error_title">Konu açılamadı</string>
+    <string name="grammar_topic_error_hint">İçerik okunamadı; tekrar denemek yeterli.</string>
+    <string name="grammar_explain_progress">Anlatım %1$d/%2$d</string>
+    <string name="grammar_write_progress">Görev %1$d/%2$d</string>
+    <string name="grammar_summary_progress">Özet</string>
+    <string name="grammar_go_write">Yazmaya geç</string>
+
+    <string name="grammar_step_hook">ÖNEMLİ</string>
+    <string name="grammar_step_rule">KURAL</string>
+    <string name="grammar_step_examples">ÖRNEKLER</string>
+    <string name="grammar_step_mistake">SIK HATA</string>
+    <string name="grammar_step_tip">İPUCU</string>
+    <string name="grammar_pattern_label">KALIP</string>
+    <string name="grammar_listen">Dinle</string>
+
+    <string name="grammar_write_label">SIRA SENDE</string>
+    <string name="grammar_task_word_count">%1$d kelime</string>
+    <string name="grammar_task_min_words">En az %1$d kelime</string>
+    <string name="grammar_task_placeholder">Cümleni buraya yaz</string>
+    <string name="grammar_check">Kontrol et</string>
+    <string name="grammar_try_again">Tekrar dene</string>
+    <string name="grammar_next_sentence">Sonraki cümle</string>
+    <string name="grammar_finish">Bitir</string>
+
+    <string name="grammar_result_clean">Temiz cümle</string>
+    <string name="grammar_result_review">Düzeltmeler var</string>
+    <string name="grammar_result_score">Puan %1$d</string>
+    <string name="grammar_result_yours">Yazdığın cümle</string>
+    <string name="grammar_result_correct">Doğrusu</string>
+    <string name="grammar_result_missing">(eksik)</string>
+    <string name="grammar_hint_label">İpucu</string>
+
+    <string name="grammar_ai_check">AI ile derin kontrol</string>
+    <string name="grammar_ai_check_again">AI ile yeniden dene</string>
+    <string name="grammar_ai_loading">AI cümleni inceliyor…</string>
+    <string name="grammar_ai_failed">AI kontrolü yapılamadı; yerel kontrol geçerli.</string>
+    <string name="grammar_ai_title">AI kontrolü</string>
+    <string name="grammar_ai_suggestion">AI önerisi</string>
+    <string name="grammar_ai_note">AI ek kontroldür; yerel puan geçerli.</string>
+    <string name="grammar_ai_clean">AI kontrolüne göre cümle temiz.</string>
+
+    <!-- Özet -->
+    <string name="grammar_summary_title">Tebrikler</string>
+    <string name="grammar_summary_tasks">%1$d / %2$d görev</string>
+    <string name="grammar_summary_subtitle">Üç cümle yazdın. Hataları bir kez daha gözden geçir.</string>
+    <string name="grammar_summary_avg">ort. puan</string>
+    <string name="grammar_summary_correct">Doğru cümle</string>
+    <string name="grammar_summary_correct_value">%1$d / %2$d</string>
+    <string name="grammar_summary_errors">Hatalar</string>
+    <string name="grammar_summary_issues_title">Hataların</string>
+    <string name="grammar_summary_clean">Hiç hata yok. Temiz iş.</string>
+    <string name="grammar_summary_save_failed">İlerleme kaydedilemedi.</string>
+    <string name="grammar_summary_save_retry">Kaydetmeyi dene</string>
+    <string name="grammar_summary_finish">Konu tamam</string>
+</resources>

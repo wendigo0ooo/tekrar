@@ -176,7 +176,14 @@ class GrammarRepository(
         const val COURSE_ROOT = "course"
         const val DICTIONARY_PATH = "dictionary/en_tr.json"
 
-        val COURSE_BLACKLIST = setOf("ipa")
+        val COURSE_BLACKLIST = setOf(
+            "ipa",
+            "tr",
+            "pos",
+            "title",
+            "subtitle",
+            "speaker",
+        )
         val GRAMMAR_BLACKLIST = setOf(
             "schema",
             "id",
@@ -194,6 +201,7 @@ class GrammarRepository(
             "anchor",
             "replace",
             "min_words",
+            "tr",
         )
     }
 }

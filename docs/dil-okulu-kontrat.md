@@ -449,3 +449,8 @@ strengths 2-3, fixes 2-3, next_focus tek cümle.
   `/storage/emulated/0/Download/Tekrar-release.apk` (7,8 MB) ve `Tekrar-debug.apk`.
 - Sırada: cihaz testi (v2.0→3.0 Room göçü, ders akışı, TTS/STT, AI anahtarı,
   sohbet/rol yapma, 4 sekme) → geri bildirim düzeltmeleri → A1 genişletme + A2.
+- **3.1.0 (2026-11-15):** ayrı 5. sekme **Gramer** eklendi; 21 grammar notu 16 konuya
+  dönüştürüldü, 73 kart + 48 yazma görevi. Çevrimdışı checker hatalı aralıkları
+  kırmızı/altı çizili, doğrusunu yeşil gösterir; opsiyonel AI derin kontrolü var.
+  İlerleme `lesson_progress` (`grammar:<topicId>`), yeni Room migration yok.
+  Ayrıntı: `docs/gramer-kontrat.md`.
